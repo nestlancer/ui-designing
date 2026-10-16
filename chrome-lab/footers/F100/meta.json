@@ -22,6 +22,18 @@
       "marriott.com",
       "huge.com"
     ],
+    "evidence": [
+      {
+        "site": "marriott.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "huge.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

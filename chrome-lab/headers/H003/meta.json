@@ -22,6 +22,18 @@
       "toptal.com",
       "dribbble.com"
     ],
+    "evidence": [
+      {
+        "site": "toptal.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "dribbble.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

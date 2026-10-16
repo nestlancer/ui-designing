@@ -22,6 +22,18 @@
       "bbc.com",
       "toptal.com"
     ],
+    "evidence": [
+      {
+        "site": "bbc.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "toptal.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

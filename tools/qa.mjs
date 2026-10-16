@@ -201,12 +201,17 @@ function chromeSubtree(v) {
     if (!m.citations?.captured_sites || m.citations.captured_sites.length < 2) issues.push(`${v.id}: <2 cited sites`);
     for (const s of m.citations?.captured_sites || []) if (!capturedSites.includes(s)) issues.push(`${v.id}: cites uncaptured site ${s}`);
     if (!motionIds.has(m.axes.A4_motion_primitive)) issues.push(`${v.id}: motion ${m.axes.A4_motion_primitive} not in motion-index`);
+    if (!m.citations?.evidence) issues.push(`${v.id}: citation record missing evidence level`);
     if (!Array.isArray(m.diff_from_prev) || m.diff_from_prev.length < 3) issues.push(`${v.id}: diff_from_prev < 3 axes`);
     if (!m.signature_motion?.duration_ms && m.signature_motion?.duration_ms !== 0) issues.push(`${v.id}: signature motion lacks measured duration`);
   }
-  gate('G8', 'Traceability (≥2 captured sites + measured motion + diff axes)', issues.length === 0,
-    [`${all.length} meta.json files check against research/sites.json (${capturedSites.length} captured) and motion-index (${motionIds.size} primitives)`,
-     ...(issues.length ? issues.slice(0, 8) : [])]);
+  const verifiedSites = SITES.filter(s => s.verified).map(s => s.url.replace('https://', ''));
+  const liveCited = all.filter(v => (v.meta.citations.captured_sites || []).some(s => verifiedSites.includes(s))).length;
+  gate('G8', 'Traceability (≥2 sourced sites + measured motion + diff axes)', issues.length === 0,
+    [`${all.length} meta.json files check against research/sites.json (${capturedSites.length} records, ${verifiedSites.length} live-verified in-session) and motion-index (${motionIds.size} primitives)`,
+     `${liveCited}/${all.length} variants cite at least one live-verified page; the rest cite pattern-prior records (clearly labelled in sites.json)`,
+     ...(issues.length ? issues.slice(0, 8) : [])],
+    'SOURCE INTEGRITY: 134 records exist, but only 5 hosts were read live in this session (stripe.com, linear.app, vercel.com, razorpay.com, apple.com). The other 129 carry evidence:"pattern_prior" and verified:false — they must be converted by re-running tools/capture.mjs from a host with unrestricted egress before the research gate can be called closed.');
 }
 
 /* ---------------- G9 originality ---------------- */

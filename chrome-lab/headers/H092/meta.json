@@ -22,6 +22,18 @@
       "lovable.dev",
       "v0.dev"
     ],
+    "evidence": [
+      {
+        "site": "lovable.dev",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "v0.dev",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

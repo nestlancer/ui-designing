@@ -22,6 +22,18 @@
       "hubspot.com",
       "cred.club"
     ],
+    "evidence": [
+      {
+        "site": "hubspot.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "cred.club",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

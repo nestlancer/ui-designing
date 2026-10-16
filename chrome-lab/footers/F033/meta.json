@@ -22,6 +22,18 @@
       "jetbrains.com",
       "land-book.com"
     ],
+    "evidence": [
+      {
+        "site": "jetbrains.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "land-book.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

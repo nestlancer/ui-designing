@@ -22,6 +22,18 @@
       "fiverr.com",
       "99designs.com"
     ],
+    "evidence": [
+      {
+        "site": "fiverr.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "99designs.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

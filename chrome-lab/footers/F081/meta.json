@@ -22,6 +22,18 @@
       "ramotion.com",
       "stripe.com/payments"
     ],
+    "evidence": [
+      {
+        "site": "ramotion.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "stripe.com/payments",
+        "evidence": "live_page_fetch",
+        "verified": true
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

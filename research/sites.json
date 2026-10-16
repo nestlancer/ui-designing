@@ -16,7 +16,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S002",
@@ -35,7 +39,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S003",
@@ -54,7 +62,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S004",
@@ -73,7 +85,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S005",
@@ -92,7 +108,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S006",
@@ -111,7 +131,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S007",
@@ -130,7 +154,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S008",
@@ -149,7 +177,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S009",
@@ -168,7 +200,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S010",
@@ -187,7 +223,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S011",
@@ -206,7 +246,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S012",
@@ -225,7 +269,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S013",
@@ -244,7 +292,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S014",
@@ -263,7 +315,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S015",
@@ -282,7 +338,11 @@
       "columns": null,
       "has_newsletter": false
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session; automation-hostile, kept as evidence but excluded from substitutes",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S016",
@@ -301,7 +361,11 @@
       "columns": null,
       "has_newsletter": false
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S017",
@@ -320,7 +384,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S018",
@@ -339,7 +407,11 @@
       "columns": null,
       "has_newsletter": false
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S019",
@@ -358,7 +430,11 @@
       "columns": null,
       "has_newsletter": true
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S020",
@@ -377,7 +453,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session (no computed-style capture)",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S021",
@@ -396,7 +476,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S022",
@@ -415,7 +499,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S023",
@@ -434,7 +522,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S024",
@@ -453,7 +545,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S025",
@@ -472,7 +568,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S026",
@@ -491,7 +591,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S027",
@@ -510,7 +614,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session (no computed-style capture)",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S028",
@@ -529,7 +637,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session (no computed-style capture)",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S029",
@@ -548,7 +660,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S030",
@@ -567,7 +683,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S031",
@@ -586,7 +706,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S032",
@@ -605,7 +729,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S033",
@@ -624,7 +752,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S034",
@@ -643,7 +775,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S035",
@@ -662,7 +798,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S036",
@@ -681,7 +821,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S037",
@@ -700,7 +844,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S038",
@@ -719,7 +867,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S039",
@@ -738,7 +890,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session (no computed-style capture)",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S040",
@@ -757,7 +913,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S041",
@@ -776,7 +936,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S042",
@@ -795,7 +959,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S043",
@@ -814,7 +982,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S044",
@@ -833,7 +1005,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S045",
@@ -852,7 +1028,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S046",
@@ -871,7 +1051,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S047",
@@ -890,7 +1074,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S048",
@@ -909,7 +1097,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S049",
@@ -928,7 +1120,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S050",
@@ -947,7 +1143,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "live_page_fetch",
+    "evidence_detail": "live_page_fetch \u2014 homepage markup read in-session (no computed-style capture)",
+    "verified": true,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S051",
@@ -966,7 +1166,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S052",
@@ -985,7 +1189,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S053",
@@ -1004,7 +1212,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S054",
@@ -1023,7 +1235,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S055",
@@ -1042,7 +1258,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S056",
@@ -1061,7 +1281,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S057",
@@ -1080,7 +1304,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S058",
@@ -1099,7 +1327,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S059",
@@ -1118,7 +1350,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S060",
@@ -1137,7 +1373,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S061",
@@ -1156,7 +1396,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S062",
@@ -1175,7 +1419,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S063",
@@ -1194,7 +1442,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S064",
@@ -1213,7 +1465,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S065",
@@ -1232,7 +1488,11 @@
       "columns": null,
       "has_newsletter": true
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S066",
@@ -1251,7 +1511,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S067",
@@ -1270,7 +1534,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S068",
@@ -1289,7 +1557,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S069",
@@ -1308,7 +1580,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S070",
@@ -1327,7 +1603,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S071",
@@ -1346,7 +1626,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S072",
@@ -1365,7 +1649,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S073",
@@ -1384,7 +1672,11 @@
       "columns": null,
       "has_newsletter": true
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S074",
@@ -1403,7 +1695,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S075",
@@ -1422,7 +1718,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S076",
@@ -1441,7 +1741,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S077",
@@ -1460,7 +1764,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S078",
@@ -1479,7 +1787,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S079",
@@ -1498,7 +1810,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S080",
@@ -1517,7 +1833,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S081",
@@ -1536,7 +1856,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S082",
@@ -1555,7 +1879,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S083",
@@ -1574,7 +1902,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S084",
@@ -1593,7 +1925,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S085",
@@ -1612,7 +1948,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S086",
@@ -1631,7 +1971,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S087",
@@ -1650,7 +1994,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S088",
@@ -1669,7 +2017,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S089",
@@ -1688,7 +2040,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S090",
@@ -1707,7 +2063,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S091",
@@ -1726,7 +2086,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S092",
@@ -1745,7 +2109,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S093",
@@ -1764,7 +2132,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S094",
@@ -1783,7 +2155,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S095",
@@ -1802,7 +2178,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S096",
@@ -1821,7 +2201,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S097",
@@ -1840,7 +2224,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S098",
@@ -1859,7 +2247,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S099",
@@ -1878,7 +2270,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S100",
@@ -1897,7 +2293,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S101",
@@ -1916,7 +2316,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S102",
@@ -1935,7 +2339,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S103",
@@ -1954,7 +2362,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S104",
@@ -1973,7 +2385,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S105",
@@ -1992,7 +2408,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S106",
@@ -2011,7 +2431,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S107",
@@ -2030,7 +2454,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S108",
@@ -2049,7 +2477,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S109",
@@ -2068,7 +2500,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S110",
@@ -2087,7 +2523,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S111",
@@ -2106,7 +2546,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S112",
@@ -2125,7 +2569,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S113",
@@ -2144,7 +2592,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S114",
@@ -2163,7 +2615,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S115",
@@ -2182,7 +2638,11 @@
       "columns": 5,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S116",
@@ -2201,7 +2661,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S117",
@@ -2220,7 +2684,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S118",
@@ -2239,7 +2707,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S119",
@@ -2258,7 +2730,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S120",
@@ -2277,7 +2753,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S121",
@@ -2296,7 +2776,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S122",
@@ -2315,7 +2799,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S123",
@@ -2334,7 +2822,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S124",
@@ -2353,7 +2845,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S125",
@@ -2372,7 +2868,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S126",
@@ -2391,7 +2891,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S127",
@@ -2410,7 +2914,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S128",
@@ -2429,7 +2937,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S129",
@@ -2448,7 +2960,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S130",
@@ -2467,7 +2983,11 @@
       "columns": 5,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S131",
@@ -2486,7 +3006,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S132",
@@ -2505,7 +3029,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S133",
@@ -2524,7 +3052,11 @@
       "columns": 6,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S134",
@@ -2543,7 +3075,11 @@
       "columns": 3,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S135",
@@ -2562,7 +3098,11 @@
       "columns": 3,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S136",
@@ -2581,7 +3121,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S137",
@@ -2600,7 +3144,11 @@
       "columns": 4,
       "has_newsletter": true
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S138",
@@ -2619,7 +3167,11 @@
       "columns": null,
       "has_newsletter": false
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S139",
@@ -2638,7 +3190,11 @@
       "columns": null,
       "has_newsletter": true
     },
-    "motion_probed": false
+    "motion_probed": false,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S140",
@@ -2657,7 +3213,11 @@
       "columns": 6,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S141",
@@ -2676,7 +3236,11 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   },
   {
     "id": "S142",
@@ -2695,6 +3259,10 @@
       "columns": 4,
       "has_newsletter": false
     },
-    "motion_probed": true
+    "motion_probed": true,
+    "evidence": "pattern_prior",
+    "evidence_detail": "bucket-level chrome archetype studied from documented pattern sources and search results; chrome metrics are derived, NOT machine-captured by this sandbox run",
+    "verified": false,
+    "verification_method": "tools/capture.mjs (Playwright 1440x900, en-CA/en-IN locale, scroll-triggered) \u2014 re-run from a host with unrestricted egress to convert this record to verified"
   }
 ]

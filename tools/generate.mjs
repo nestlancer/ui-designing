@@ -832,7 +832,12 @@ for (const s of solved) {
       A6_cta_treatment: axes.A6
     },
     signature_motion: { id: axes.A4, name: motionById[axes.A4]?.name, trigger: motionById[axes.A4]?.trigger, duration_ms: motionById[axes.A4]?.duration_ms, easing: motionById[axes.A4]?.easing },
-    citations: { captured_sites: citationSites, motion_index: 'research/motion-index.json', pattern_index: 'research/pattern-index.json' },
+    citations: {
+      captured_sites: citationSites,
+      evidence: citationSites.map(s => { const rec = sites.find(x => x.url.replace('https://', '') === s); return { site: s, evidence: rec ? rec.evidence : 'pattern_prior', verified: !!(rec && rec.verified) }; }),
+      motion_index: 'research/motion-index.json',
+      pattern_index: 'research/pattern-index.json'
+    },
     diff_from_prev: diffAxes,
     tokens: 'chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)',
     responsive: ['360', '768', '1024', '1440', '1920'],

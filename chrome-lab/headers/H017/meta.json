@@ -22,6 +22,18 @@
       "ibm.com",
       "figma.com"
     ],
+    "evidence": [
+      {
+        "site": "ibm.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "figma.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

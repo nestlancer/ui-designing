@@ -22,6 +22,18 @@
       "salesforce.com",
       "groww.in"
     ],
+    "evidence": [
+      {
+        "site": "salesforce.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "groww.in",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

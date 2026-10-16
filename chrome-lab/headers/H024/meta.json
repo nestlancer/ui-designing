@@ -22,6 +22,18 @@
       "clerk.com",
       "bbc.com"
     ],
+    "evidence": [
+      {
+        "site": "clerk.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "bbc.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

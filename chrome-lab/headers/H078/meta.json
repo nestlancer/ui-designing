@@ -22,6 +22,18 @@
       "airbnb.com",
       "fantasy.co"
     ],
+    "evidence": [
+      {
+        "site": "airbnb.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "fantasy.co",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

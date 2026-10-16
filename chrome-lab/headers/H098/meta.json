@@ -22,6 +22,18 @@
       "akqa.com",
       "upwork.com"
     ],
+    "evidence": [
+      {
+        "site": "akqa.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "upwork.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

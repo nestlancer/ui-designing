@@ -22,6 +22,18 @@
       "wise.com",
       "ramotion.com"
     ],
+    "evidence": [
+      {
+        "site": "wise.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "ramotion.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

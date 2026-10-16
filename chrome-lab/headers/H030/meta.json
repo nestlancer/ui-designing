@@ -22,6 +22,18 @@
       "revolut.com",
       "basicagency.com"
     ],
+    "evidence": [
+      {
+        "site": "revolut.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "basicagency.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

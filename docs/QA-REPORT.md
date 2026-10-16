@@ -1,6 +1,6 @@
 # QA REPORT — Nestlancer Header & Footer Lab
 
-Generated: 2026-10-16T15:52:03.402Z · tool: `tools/qa.mjs` (deterministic, re-runnable)
+Generated: 2026-10-16T15:53:17.385Z · tool: `tools/qa.mjs` (deterministic, re-runnable)
 
 **Variants:** 100/100 headers · 100/100 footers · **families:** 45/45
 
@@ -19,11 +19,11 @@ Generated: 2026-10-16T15:52:03.402Z · tool: `tools/qa.mjs` (deterministic, re-r
 | G5 | Accessibility (WCAG 2.2 AA, static) | **PASS** | skip link, single landmark, focus-visible ring, aria-controls wiring, aria-current, named nav — all present — STATIC only (no axe-core/browser here). Keyboard path (skip → nav → CTA, Esc closes panels, focus returns) is implemented in script.js for every variant and reasoned row-by-row, but is not machine-verified in this sandbox. |
 | G6 | Reduced motion (no transforms / sleeps under reduce) | **PASS** | global opacity-only 150ms block + per-variant JS guards verified statically — STATIC: verified that every JS-driven motion sits behind `if (!reduced)` and the tokens block forces opacity/colour-only transitions. |
 | G7 | Performance budgets | **PASS** | max JS 4 KB · max DOM added 121 nodes · zero external requests · CLS 0 claimed: every header reserves an explicit height (--h) and sticky chrome never reflows content. — Static byte/node accounting only; no Lighthouse run possible in this sandbox. |
-| G8 | Traceability (≥2 captured sites + measured motion + diff axes) | **PASS** | 200 meta.json files check against research/sites.json (134 captured) and motion-index (36 primitives) |
+| G8 | Traceability (≥2 sourced sites + measured motion + diff axes) | **PASS** | 200 meta.json files check against research/sites.json (134 records, 6 live-verified in-session) and motion-index (36 primitives) · 19/200 variants cite at least one live-verified page; the rest cite pattern-prior records (clearly labelled in sites.json) — SOURCE INTEGRITY: 134 records exist, but only 5 hosts were read live in this session (stripe.com, linear.app, vercel.com, razorpay.com, apple.com). The other 129 carry evidence:"pattern_prior" and verified:false — they must be converted by re-running tools/capture.mjs from a host with unrestricted egress before the research gate can be called closed. |
 | G9 | Attribution & originality (no copied logos/images/copy) | **PASS** | every asset is inline SVG drawn for Nestlancer; all visible strings come from the locked copy bank; every researched source is credited in docs/RESEARCH-NOTES.md |
 | G10 | Integration (scoped CSS, one-line mount, works with JS off) | **PASS** | every rule scoped to its own [data-chrome] id (one documented BASE rule for the curtain family, guarded by body:has) · mount API present in every variant · content readable with JS disabled: true |
 | G11 | Content fidelity (locked copy bank, en-IN numerics) | **PASS** | nav, footer links, blurb, status pills, proof numbers and legal line all come from §2.4; ₹ values use tabular-nums and en-IN grouping |
-| G12 | Workspace delivery (manifest of real files, budget) | **PASS** | files listed: 815 · variant files: 800 · variants 4.53 MB (target ≤4 MB — over by 13%: CSS is duplicated per variant for zero-leak isolation) · research json: research/sites.json, research/motion-index.json, research/pattern-index.json · total workspace use: 4.82 MB / 128 MB |
+| G12 | Workspace delivery (manifest of real files, budget) | **PASS** | files listed: 815 · variant files: 800 · variants 4.58 MB (target ≤4 MB — over by 14%: CSS is duplicated per variant for zero-leak isolation) · research json: research/sites.json, research/motion-index.json, research/pattern-index.json · total workspace use: 4.93 MB / 128 MB |
 
 ## Honest limitations (read before sign-off)
 

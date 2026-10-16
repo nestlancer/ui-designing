@@ -22,6 +22,18 @@
       "active-theory.com",
       "14islands.com"
     ],
+    "evidence": [
+      {
+        "site": "active-theory.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "14islands.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

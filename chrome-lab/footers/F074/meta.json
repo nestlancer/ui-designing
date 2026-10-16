@@ -22,6 +22,18 @@
       "minimal.gallery",
       "neon.tech"
     ],
+    "evidence": [
+      {
+        "site": "minimal.gallery",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "neon.tech",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

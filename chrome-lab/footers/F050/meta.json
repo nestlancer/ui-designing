@@ -22,6 +22,18 @@
       "zoom.us",
       "perplexity.ai"
     ],
+    "evidence": [
+      {
+        "site": "zoom.us",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "perplexity.ai",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

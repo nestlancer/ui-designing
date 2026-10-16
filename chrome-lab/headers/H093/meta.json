@@ -22,6 +22,18 @@
       "character.ai",
       "resn.co.nz"
     ],
+    "evidence": [
+      {
+        "site": "character.ai",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "resn.co.nz",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

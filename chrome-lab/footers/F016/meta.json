@@ -22,6 +22,18 @@
       "stripe.com",
       "revolut.com"
     ],
+    "evidence": [
+      {
+        "site": "stripe.com",
+        "evidence": "live_page_fetch",
+        "verified": true
+      },
+      {
+        "site": "revolut.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

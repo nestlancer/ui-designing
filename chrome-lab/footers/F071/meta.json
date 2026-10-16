@@ -22,6 +22,18 @@
       "godly.website",
       "linear.app"
     ],
+    "evidence": [
+      {
+        "site": "godly.website",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "linear.app",
+        "evidence": "live_page_fetch",
+        "verified": true
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

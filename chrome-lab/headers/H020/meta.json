@@ -22,6 +22,18 @@
       "linear.app",
       "asana.com"
     ],
+    "evidence": [
+      {
+        "site": "linear.app",
+        "evidence": "live_page_fetch",
+        "verified": true
+      },
+      {
+        "site": "asana.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

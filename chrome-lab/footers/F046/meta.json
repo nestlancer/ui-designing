@@ -22,6 +22,18 @@
       "stripe.com/payments",
       "lyft.com"
     ],
+    "evidence": [
+      {
+        "site": "stripe.com/payments",
+        "evidence": "live_page_fetch",
+        "verified": true
+      },
+      {
+        "site": "lyft.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

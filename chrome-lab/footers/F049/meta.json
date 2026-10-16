@@ -22,6 +22,18 @@
       "slack.com",
       "anthropic.com"
     ],
+    "evidence": [
+      {
+        "site": "slack.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "anthropic.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

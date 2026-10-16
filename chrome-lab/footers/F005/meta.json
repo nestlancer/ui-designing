@@ -22,6 +22,18 @@
       "99designs.com",
       "freelancer.com"
     ],
+    "evidence": [
+      {
+        "site": "99designs.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "freelancer.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

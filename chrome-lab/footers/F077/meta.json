@@ -22,6 +22,18 @@
       "pentagram.com",
       "wise.com"
     ],
+    "evidence": [
+      {
+        "site": "pentagram.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "wise.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

@@ -22,6 +22,18 @@
       "cash.app",
       "warbyparker.com"
     ],
+    "evidence": [
+      {
+        "site": "cash.app",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "warbyparker.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

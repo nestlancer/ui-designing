@@ -22,6 +22,18 @@
       "raycast.com",
       "monday.com"
     ],
+    "evidence": [
+      {
+        "site": "raycast.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "monday.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

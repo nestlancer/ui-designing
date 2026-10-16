@@ -22,6 +22,18 @@
       "basicagency.com",
       "notion.so"
     ],
+    "evidence": [
+      {
+        "site": "basicagency.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "notion.so",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },

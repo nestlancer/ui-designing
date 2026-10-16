@@ -22,6 +22,18 @@
       "adidas.com",
       "hubspot.com"
     ],
+    "evidence": [
+      {
+        "site": "adidas.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "hubspot.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
     "motion_index": "research/motion-index.json",
     "pattern_index": "research/pattern-index.json"
   },
