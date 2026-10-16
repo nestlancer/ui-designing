@@ -1,0 +1,47 @@
+{
+ "id": "F002",
+ "type": "footer",
+ "family": "F01",
+ "family_name": "Classic 4-column grid + blurb",
+ "family_signature": "brand col + 3 link cols + legal row",
+ "A1_container": "full-bleed",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-39",
+ "A5_disclosure": "hover",
+ "A6_cta": "sticky-mobile-bar",
+ "A7_surface_skin": "solid-canvas",
+ "skin_notes": "flat --n-surface bar/footer + 1px --n-hairline, repo baseline discipline",
+ "signature_motion": "m-39 footer link roll-up",
+ "motion_ids": [
+  "m-39"
+ ],
+ "references": [
+  "github.com",
+  "stripe.com",
+  "paypal.com"
+ ],
+ "pattern_refs": [
+  "f-corporate-cols",
+  "f-sitemap-standard"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3195,
+  "css_exception": null,
+  "dom_nodes": 47,
+  "js_bytes": 678,
+  "js_gzip_bytes": 426,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F002\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

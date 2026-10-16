@@ -1,0 +1,47 @@
+{
+ "id": "F060",
+ "type": "footer",
+ "family": "F12",
+ "family_name": "Marquee wordmark reveal",
+ "family_signature": "giant wordmark scrolls in on enter",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-06",
+ "A5_disclosure": "hover-intent",
+ "A6_cta": "gradient-edge",
+ "A7_surface_skin": "elevated-soft",
+ "skin_notes": "solid surface + soft elevation shadow 0 8px 28px rgba(10,37,67,.10), no heavy border",
+ "signature_motion": "m-06 magnetic marquee CTA",
+ "motion_ids": [
+  "m-06"
+ ],
+ "references": [
+  "pentagram.com",
+  "framer.com",
+  "webflow.com"
+ ],
+ "pattern_refs": [
+  "f-wordmark-xl",
+  "f-social-row"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3328,
+  "css_exception": null,
+  "dom_nodes": 50,
+  "js_bytes": 1393,
+  "js_gzip_bytes": 649,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F060\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

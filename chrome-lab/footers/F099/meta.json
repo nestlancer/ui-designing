@@ -1,0 +1,47 @@
+{
+ "id": "F099",
+ "type": "footer",
+ "family": "F20",
+ "family_name": "Community & status",
+ "family_signature": "status pill, changelog RSS, system status row",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "inline",
+ "A3_scroll": "pinned-then-release",
+ "A4_motion": "m-20",
+ "A5_disclosure": "hover",
+ "A6_cta": "icon-only",
+ "A7_surface_skin": "glass-hairline",
+ "skin_notes": "color-mix translucent surface + blur 14px + hairline + soft shadow, @supports opaque fallback",
+ "signature_motion": "m-20 status curtain",
+ "motion_ids": [
+  "m-20"
+ ],
+ "references": [
+  "vercel.com",
+  "github.com",
+  "supabase.com"
+ ],
+ "pattern_refs": [
+  "f-status-row",
+  "f-community"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 5198,
+  "css_exception": null,
+  "dom_nodes": 66,
+  "js_bytes": 678,
+  "js_gzip_bytes": 426,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F099\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

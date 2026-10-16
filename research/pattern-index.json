@@ -1,0 +1,1027 @@
+{
+ "generated_at": "2026-10-16",
+ "clustering": "fine archetypes (this file) roll up to coarse cluster ids used in research/sites.json records",
+ "header_archetypes": [
+  {
+   "id": "h-search-minimal-bare",
+   "kind": "header",
+   "cluster_id": "h-search-first-minimal",
+   "name": "Search-minimal bare",
+   "traits": [
+    "one input dominates",
+    "no marketing nav",
+    "account cluster right"
+   ],
+   "example_sites": [
+    "google.com",
+    "duckduckgo.com",
+    "perplexity.ai"
+   ]
+  },
+  {
+   "id": "h-search-minimal-portal",
+   "kind": "header",
+   "cluster_id": "h-search-first-minimal",
+   "name": "Search-minimal with service strip",
+   "traits": [
+    "search center",
+    "service chips above fold"
+   ],
+   "example_sites": [
+    "yandex.ru",
+    "baidu.com"
+   ]
+  },
+  {
+   "id": "h-search-topbar-product",
+   "kind": "header",
+   "cluster_id": "h-search-first-topbar",
+   "name": "Search top bar + product dropdowns",
+   "traits": [
+    "search pill",
+    "product menus",
+    "auth right"
+   ],
+   "example_sites": [
+    "github.com",
+    "stackoverflow.com",
+    "quora.com"
+   ]
+  },
+  {
+   "id": "h-search-topbar-marketplace",
+   "kind": "header",
+   "cluster_id": "h-search-first-topbar",
+   "name": "Search top bar marketplace",
+   "traits": [
+    "search IS nav",
+    "location pin",
+    "category tabs"
+   ],
+   "example_sites": [
+    "airbnb.com",
+    "tripadvisor.com",
+    "upwork.com",
+    "swiggy.com",
+    "zomato.com",
+    "fiverr.com"
+   ]
+  },
+  {
+   "id": "h-inline-quiet",
+   "kind": "header",
+   "cluster_id": "h-inline-simple",
+   "name": "Inline quiet nav",
+   "traits": [
+    "5-8 text links",
+    "hairline/none",
+    "one CTA"
+   ],
+   "example_sites": [
+    "apple.com",
+    "uber.com",
+    "medium.com",
+    "tesla.com",
+    "telegram.org"
+   ]
+  },
+  {
+   "id": "h-inline-editorial-index",
+   "kind": "header",
+   "cluster_id": "h-inline-simple",
+   "name": "Inline editorial index",
+   "traits": [
+    "text-index nav",
+    "no dropdowns"
+   ],
+   "example_sites": [
+    "pentagram.com",
+    "awwwards.com",
+    "zara.com"
+   ]
+  },
+  {
+   "id": "h-inline-india-simple",
+   "kind": "header",
+   "cluster_id": "h-inline-simple",
+   "name": "Inline India product bar",
+   "traits": [
+    "small inline links",
+    "login + one CTA"
+   ],
+   "example_sites": [
+    "zerodha.com",
+    "groww.in"
+   ]
+  },
+  {
+   "id": "h-sticky-product-nav",
+   "kind": "header",
+   "cluster_id": "h-sticky-simple",
+   "name": "Sticky product nav",
+   "traits": [
+    "sticky",
+    "product dropdowns",
+    "ghost + pill CTAs"
+   ],
+   "example_sites": [
+    "shopify.com",
+    "dropbox.com",
+    "slack.com",
+    "notion.so",
+    "gitlab.com",
+    "zoom.us"
+   ]
+  },
+  {
+   "id": "h-sticky-brand-landing",
+   "kind": "header",
+   "cluster_id": "h-sticky-simple",
+   "name": "Sticky brand landing bar",
+   "traits": [
+    "sticky",
+    "download/get-started pill"
+   ],
+   "example_sites": [
+    "openai.com",
+    "cursor.com",
+    "framer.com",
+    "postman.com"
+   ]
+  },
+  {
+   "id": "h-sticky-fintech",
+   "kind": "header",
+   "cluster_id": "h-sticky-simple",
+   "name": "Sticky fintech bar",
+   "traits": [
+    "product nav",
+    "high-contrast CTA",
+    "compliance links quiet"
+   ],
+   "example_sites": [
+    "revolut.com",
+    "robinhood.com",
+    "wise.com"
+   ]
+  },
+  {
+   "id": "h-mega-product",
+   "kind": "header",
+   "cluster_id": "h-mega-menu",
+   "name": "Mega panel by product",
+   "traits": [
+    "multi-column panel",
+    "feature tiles",
+    "hover-intent 120ms"
+   ],
+   "example_sites": [
+    "adobe.com",
+    "salesforce.com",
+    "atlassian.com",
+    "jetbrains.com",
+    "nvidia.com",
+    "intel.com",
+    "oracle.com"
+   ]
+  },
+  {
+   "id": "h-mega-commerce",
+   "kind": "header",
+   "cluster_id": "h-mega-menu",
+   "name": "Mega panel by category",
+   "traits": [
+    "category mega",
+    "promo tiles"
+   ],
+   "example_sites": [
+    "nike.com",
+    "shopify.com",
+    "webflow.com",
+    "monday.com",
+    "asana.com",
+    "hubspot.com",
+    "zendesk.com"
+   ]
+  },
+  {
+   "id": "h-mega-finance",
+   "kind": "header",
+   "cluster_id": "h-mega-menu",
+   "name": "Mega panel finance",
+   "traits": [
+    "solutions mega",
+    "locale/globe utility"
+   ],
+   "example_sites": [
+    "stripe.com",
+    "visa.com",
+    "mastercard.com",
+    "squareup.com",
+    "razorpay.com",
+    "cloudflare.com",
+    "twilio.com"
+   ]
+  },
+  {
+   "id": "h-utility-ecommerce",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility + search ecommerce",
+   "traits": [
+    "utility strip",
+    "big search",
+    "category rail"
+   ],
+   "example_sites": [
+    "amazon.com",
+    "ebay.com",
+    "walmart.com",
+    "target.com",
+    "bestbuy.com",
+    "ikea.com",
+    "homedepot.com",
+    "costco.com",
+    "wayfair.com",
+    "store.google.com"
+   ]
+  },
+  {
+   "id": "h-utility-fashion",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility + fashion categories",
+   "traits": [
+    "dept links",
+    "search",
+    "bag/wishlist cluster"
+   ],
+   "example_sites": [
+    "hm.com",
+    "uniqlo.com",
+    "sephora.com",
+    "nordstrom.com",
+    "macys.com",
+    "myntra.com",
+    "nykaa.com",
+    "shein.com",
+    "puma.com",
+    "underarmour.com",
+    "adidas.com"
+   ]
+  },
+  {
+   "id": "h-utility-marketplace",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility marketplace",
+   "traits": [
+    "search",
+    "sell/login cluster",
+    "coupon strip energy"
+   ],
+   "example_sites": [
+    "temu.com",
+    "aliexpress.com",
+    "flipkart.com",
+    "mercadolibre.com",
+    "tokopedia.com",
+    "shopee.com",
+    "okx.com",
+    "tradingview.com",
+    "binance.com"
+   ]
+  },
+  {
+   "id": "h-utility-corporate",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility corporate/product",
+   "traits": [
+    "utility strip",
+    "product nav",
+    "contact pill"
+   ],
+   "example_sites": [
+    "microsoft.com",
+    "cloud.microsoft",
+    "office.com",
+    "aws.amazon.com",
+    "azure.microsoft.com",
+    "americanexpress.com",
+    "paytm.com"
+   ]
+  },
+  {
+   "id": "h-utility-travel",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility travel/booking",
+   "traits": [
+    "trip-type tabs",
+    "loyalty strip",
+    "book CTA"
+   ],
+   "example_sites": [
+    "booking.com",
+    "expedia.com",
+    "marriott.com",
+    "hilton.com",
+    "delta.com",
+    "united.com",
+    "ryanair.com",
+    "makemytrip.com",
+    "bookmyshow.com"
+   ]
+  },
+  {
+   "id": "h-utility-banking",
+   "kind": "header",
+   "cluster_id": "h-utility-search-rail",
+   "name": "Utility banking",
+   "traits": [
+    "tiered product nav",
+    "sign-in panel in header"
+   ],
+   "example_sites": [
+    "chase.com",
+    "bankofamerica.com",
+    "wellsfargo.com",
+    "weather.com",
+    "steamcommunity.com"
+   ]
+  },
+  {
+   "id": "h-portal-masthead",
+   "kind": "header",
+   "cluster_id": "h-portal-grid-dense",
+   "name": "Portal masthead",
+   "traits": [
+    "multi-tier",
+    "service chips",
+    "dozens of links"
+   ],
+   "example_sites": [
+    "yahoo.com",
+    "yahoo.co.jp",
+    "naver.com",
+    "msn.com",
+    "mail.ru",
+    "rakuten.co.jp",
+    "kakao.com"
+   ]
+  },
+  {
+   "id": "h-portal-entertainment",
+   "kind": "header",
+   "cluster_id": "h-portal-grid-dense",
+   "name": "Portal entertainment",
+   "traits": [
+    "section tabs",
+    "score/trending strip"
+   ],
+   "example_sites": [
+    "espn.com",
+    "imdb.com",
+    "globo.com",
+    "bilibili.com",
+    "freelancer.com",
+    "craigslist.org"
+   ]
+  },
+  {
+   "id": "h-editorial-masthead",
+   "kind": "header",
+   "cluster_id": "h-editorial-minimal",
+   "name": "Editorial masthead",
+   "traits": [
+    "serif wordmark",
+    "subscribe cluster",
+    "hairline rules"
+   ],
+   "example_sites": [
+    "nytimes.com",
+    "theguardian.com",
+    "reuters.com",
+    "wsj.com",
+    "economist.com",
+    "washingtonpost.com"
+   ]
+  },
+  {
+   "id": "h-editorial-public",
+   "kind": "header",
+   "cluster_id": "h-editorial-minimal",
+   "name": "Editorial public-service",
+   "traits": [
+    "one search",
+    "section rail",
+    "high-contrast brand block"
+   ],
+   "example_sites": [
+    "gov.uk",
+    "wikipedia.org",
+    "bbc.com"
+   ]
+  },
+  {
+   "id": "h-app-topbar",
+   "kind": "header",
+   "cluster_id": "h-app-topbar-icons",
+   "name": "App top bar icons",
+   "traits": [
+    "icon-first",
+    "badge dots",
+    "avatar cluster"
+   ],
+   "example_sites": [
+    "linkedin.com",
+    "pinterest.com",
+    "roblox.com",
+    "hotstar.com",
+    "primevideo.com",
+    "character.ai",
+    "vk.ru"
+   ]
+  },
+  {
+   "id": "h-app-rail",
+   "kind": "header",
+   "cluster_id": "h-app-rail-plus-topbar",
+   "name": "App rail + top bar",
+   "traits": [
+    "left icon rail",
+    "top search",
+    "app chrome"
+   ],
+   "example_sites": [
+    "youtube.com",
+    "facebook.com",
+    "instagram.com",
+    "x.com",
+    "twitch.tv"
+   ]
+  },
+  {
+   "id": "h-conversation",
+   "kind": "header",
+   "cluster_id": "h-conversation-sidebar",
+   "name": "Conversation sidebar",
+   "traits": [
+    "chat history rail",
+    "new-chat",
+    "near-zero chrome"
+   ],
+   "example_sites": [
+    "chatgpt.com",
+    "claude.ai",
+    "gemini.google.com"
+   ]
+  },
+  {
+   "id": "h-feed-sidebar",
+   "kind": "header",
+   "cluster_id": "h-feed-sidebar",
+   "name": "Feed + sidebar",
+   "traits": [
+    "feed-first",
+    "interest rail"
+   ],
+   "example_sites": [
+    "dzen.ru"
+   ]
+  },
+  {
+   "id": "h-hero-cta",
+   "kind": "header",
+   "cluster_id": "h-hero-cta-minimal",
+   "name": "Hero CTA minimal",
+   "traits": [
+    "transparent hero nav",
+    "oversized type",
+    "one/two pills"
+   ],
+   "example_sites": [
+    "spotify.com",
+    "twitter.com",
+    "cash.app",
+    "lyft.com",
+    "t.me",
+    "whatsapp.com",
+    "deepseek.com",
+    "midjourney.com",
+    "x.ai",
+    "tumblr.com",
+    "contra.com"
+   ]
+  },
+  {
+   "id": "h-transparent-art",
+   "kind": "header",
+   "cluster_id": "h-transparent-hero",
+   "name": "Transparent-over-artwork",
+   "traits": [
+    "nav floats on hero art",
+    "solidifies on scroll (m-04)"
+   ],
+   "example_sites": [
+    "netflix.com",
+    "disneyplus.com",
+    "nike.com"
+   ]
+  },
+  {
+   "id": "h-floating-glass-pill",
+   "kind": "header",
+   "cluster_id": "h-floating-glass",
+   "name": "Floating glass pill",
+   "traits": [
+    "detached rounded container",
+    "blur 12-16px",
+    "inset 16px"
+   ],
+   "example_sites": [
+    "linear.app",
+    "vercel.com",
+    "framer.com"
+   ]
+  },
+  {
+   "id": "h-auth-shell",
+   "kind": "header",
+   "cluster_id": "h-none-auth",
+   "name": "Auth shell",
+   "traits": [
+    "logo tile only",
+    "account card",
+    "no nav"
+   ],
+   "example_sites": [
+    "microsoftonline.com"
+   ]
+  }
+ ],
+ "footer_archetypes": [
+  {
+   "id": "f-sitemap-band",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Sitemap + back-to-top band",
+   "traits": [
+    "back-to-top band",
+    "4-6 col groups",
+    "locale row"
+   ],
+   "example_sites": [
+    "amazon.com",
+    "booking.com",
+    "flipkart.com",
+    "etsy.com"
+   ]
+  },
+  {
+   "id": "f-sitemap-standard",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Sitemap standard",
+   "traits": [
+    "5-6 column groups",
+    "social",
+    "locale row"
+   ],
+   "example_sites": [
+    "stripe.com",
+    "nike.com",
+    "shopify.com",
+    "canva.com",
+    "jetbrains.com",
+    "adobe.com",
+    "wise.com",
+    "samsung.com",
+    "walmart.com",
+    "airbnb.com",
+    "apple.com"
+   ]
+  },
+  {
+   "id": "f-corporate-cols",
+   "kind": "footer",
+   "cluster_id": "f-corporate-multi",
+   "name": "Corporate columns",
+   "traits": [
+    "4-5 columns by audience",
+    "social icons",
+    "legal line"
+   ],
+   "example_sites": [
+    "github.com",
+    "paypal.com",
+    "figma.com",
+    "vercel.com",
+    "atlassian.com",
+    "cloudflare.com",
+    "dropbox.com",
+    "slack.com",
+    "zoom.us",
+    "twilio.com",
+    "intercom.com"
+   ]
+  },
+  {
+   "id": "f-corporate-finance",
+   "kind": "footer",
+   "cluster_id": "f-corporate-multi",
+   "name": "Corporate finance columns",
+   "traits": [
+    "product columns",
+    "disclosure links",
+    "status"
+   ],
+   "example_sites": [
+    "visa.com",
+    "mastercard.com",
+    "squareup.com",
+    "stripe.com"
+   ]
+  },
+  {
+   "id": "f-legal-wall",
+   "kind": "footer",
+   "cluster_id": "f-legal-dense",
+   "name": "Legal wall",
+   "traits": [
+    "small type",
+    "compliance links",
+    "address block"
+   ],
+   "example_sites": [
+    "chase.com",
+    "bankofamerica.com",
+    "wellsfargo.com",
+    "robinhood.com",
+    "coinbase.com",
+    "uber.com",
+    "bookmyshow.com",
+    "weather.com",
+    "store.google.com"
+   ]
+  },
+  {
+   "id": "f-legal-whisper",
+   "kind": "footer",
+   "cluster_id": "f-legal-minimal",
+   "name": "Legal whisper",
+   "traits": [
+    "one row",
+    "few links",
+    "whitespace"
+   ],
+   "example_sites": [
+    "medium.com",
+    "netflix.com",
+    "linear.app",
+    "openai.com",
+    "x.ai",
+    "tesla.com",
+    "cash.app",
+    "t.me",
+    "zara.com",
+    "telegram.org"
+   ]
+  },
+  {
+   "id": "f-editorial-index",
+   "kind": "footer",
+   "cluster_id": "f-editorial-sitemap",
+   "name": "Editorial text index",
+   "traits": [
+    "sectioned text index",
+    "masthead echo"
+   ],
+   "example_sites": [
+    "nytimes.com",
+    "bbc.com",
+    "cnn.com",
+    "theguardian.com",
+    "economist.com",
+    "wsj.com",
+    "washingtonpost.com",
+    "wikipedia.org"
+   ]
+  },
+  {
+   "id": "f-editorial-studio",
+   "kind": "footer",
+   "cluster_id": "f-editorial-sitemap",
+   "name": "Editorial studio index",
+   "traits": [
+    "studio/project list",
+    "issue/date cues"
+   ],
+   "example_sites": [
+    "pentagram.com",
+    "awwwards.com",
+    "gov.uk"
+   ]
+  },
+  {
+   "id": "f-portal-grid",
+   "kind": "footer",
+   "cluster_id": "f-portal-dense-grid",
+   "name": "Portal dense grid",
+   "traits": [
+    "many small link groups",
+    "service tiles",
+    "regional rows"
+   ],
+   "example_sites": [
+    "yahoo.com",
+    "naver.com",
+    "msn.com",
+    "mail.ru",
+    "rakuten.co.jp",
+    "kakao.com",
+    "shein.com",
+    "shopee.com",
+    "binance.com",
+    "okx.com",
+    "freelancer.com"
+   ]
+  },
+  {
+   "id": "f-gaming-portal",
+   "kind": "footer",
+   "cluster_id": "f-portal-dense-grid",
+   "name": "Gaming/entertainment portal",
+   "traits": [
+    "dark dense grid",
+    "wallet/pill row"
+   ],
+   "example_sites": [
+    "steamcommunity.com",
+    "bilibili.com"
+   ]
+  },
+  {
+   "id": "f-community",
+   "kind": "footer",
+   "cluster_id": "f-community-columns",
+   "name": "Community columns",
+   "traits": [
+    "developer/community links",
+    "status row",
+    "social"
+   ],
+   "example_sites": [
+    "discord.com",
+    "stackoverflow.com",
+    "supabase.com",
+    "figma.com",
+    "huggingface.co",
+    "dribbble.com",
+    "behance.net",
+    "epicgames.com",
+    "fandom.com",
+    "reddit.com"
+   ]
+  },
+  {
+   "id": "f-compliance-india",
+   "kind": "footer",
+   "cluster_id": "f-compliance-india",
+   "name": "Compliance-heavy India",
+   "traits": [
+    "SEBI/RBI/GST/DPDP lines",
+    "grievance officer",
+    "tabular ₹"
+   ],
+   "example_sites": [
+    "zerodha.com",
+    "groww.in",
+    "phonepe.com",
+    "razorpay.com",
+    "paytm.com"
+   ]
+  },
+  {
+   "id": "f-app-policy-wall",
+   "kind": "footer",
+   "cluster_id": "f-app-legal-dense",
+   "name": "App policy wall",
+   "traits": [
+    "app-store badges",
+    "policy wall",
+    "language row"
+   ],
+   "example_sites": [
+    "facebook.com",
+    "instagram.com",
+    "x.com",
+    "linkedin.com",
+    "vk.ru",
+    "roblox.com",
+    "pinterest.com",
+    "twitch.tv"
+   ]
+  },
+  {
+   "id": "f-none",
+   "kind": "footer",
+   "cluster_id": "f-none-app-shell",
+   "name": "No footer (app shell)",
+   "traits": [
+    "app chrome ends at viewport"
+   ],
+   "example_sites": [
+    "chatgpt.com",
+    "claude.ai",
+    "gemini.google.com",
+    "live.com"
+   ]
+  },
+  {
+   "id": "f-locale-row",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Footer + locale/currency row",
+   "traits": [
+    "INR/USD or region picker",
+    "language listbox"
+   ],
+   "example_sites": [
+    "booking.com",
+    "wise.com",
+    "etsy.com",
+    "stripe.com"
+   ]
+  },
+  {
+   "id": "f-social-row",
+   "kind": "footer",
+   "cluster_id": "f-community-columns",
+   "name": "Footer + social row",
+   "traits": [
+    "monochrome social icons",
+    "stagger pop m-27"
+   ],
+   "example_sites": [
+    "nike.com",
+    "slack.com",
+    "spotify.com"
+   ]
+  },
+  {
+   "id": "f-status-row",
+   "kind": "footer",
+   "cluster_id": "f-community-columns",
+   "name": "Footer + status row",
+   "traits": [
+    "status pill/dot m-25",
+    "uptime link"
+   ],
+   "example_sites": [
+    "vercel.com",
+    "github.com",
+    "supabase.com",
+    "stripe.com"
+   ]
+  },
+  {
+   "id": "f-app-badges",
+   "kind": "footer",
+   "cluster_id": "f-app-legal-dense",
+   "name": "Footer + app/QR badges",
+   "traits": [
+    "QR block",
+    "store badge placeholders"
+   ],
+   "example_sites": [
+    "whatsapp.com",
+    "telegram.org",
+    "booking.com",
+    "flipkart.com"
+   ]
+  },
+  {
+   "id": "f-newsletter",
+   "kind": "footer",
+   "cluster_id": "f-corporate-multi",
+   "name": "Footer + newsletter capture",
+   "traits": [
+    "email input + submit",
+    "success morph m-34"
+   ],
+   "example_sites": [
+    "substack.com",
+    "medium.com",
+    "mailchimp.com"
+   ]
+  },
+  {
+   "id": "f-cta-fused",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Footer + fused CTA banner",
+   "traits": [
+    "pre-footer CTA merges in",
+    "checkmark proof row"
+   ],
+   "example_sites": [
+    "shopify.com",
+    "wix.com",
+    "squarespace.com"
+   ]
+  },
+  {
+   "id": "f-wordmark-xl",
+   "kind": "footer",
+   "cluster_id": "f-editorial-sitemap",
+   "name": "Footer + oversized wordmark",
+   "traits": [
+    "giant wordmark",
+    "links above it"
+   ],
+   "example_sites": [
+    "pentagram.com",
+    "nike.com",
+    "spotify.com"
+   ]
+  },
+  {
+   "id": "f-two-bar",
+   "kind": "footer",
+   "cluster_id": "f-corporate-multi",
+   "name": "Two-bar footer",
+   "traits": [
+    "links band + legal band",
+    "different tones"
+   ],
+   "example_sites": [
+    "paypal.com",
+    "mastercard.com",
+    "ibm.com"
+   ]
+  },
+  {
+   "id": "f-accordion",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Accordion columns (mobile)",
+   "traits": [
+    "grid-template-rows collapse",
+    "chevron rotate"
+   ],
+   "example_sites": [
+    "apple.com",
+    "booking.com",
+    "gov.uk"
+   ]
+  },
+  {
+   "id": "f-proof-stats",
+   "kind": "footer",
+   "cluster_id": "f-corporate-multi",
+   "name": "Proof/stat rail",
+   "traits": [
+    "tabular ₹ stats",
+    "count-up m-26"
+   ],
+   "example_sites": [
+    "stripe.com",
+    "wise.com",
+    "razorpay.com"
+   ]
+  },
+  {
+   "id": "f-ink-band",
+   "kind": "footer",
+   "cluster_id": "f-app-legal-dense",
+   "name": "Ink-band inverted footer",
+   "traits": [
+    "dark surface footer",
+    "mint links"
+   ],
+   "example_sites": [
+    "spotify.com",
+    "discord.com",
+    "netflix.com"
+   ]
+  },
+  {
+   "id": "f-mesh",
+   "kind": "footer",
+   "cluster_id": "f-mega-sitemap",
+   "name": "Mesh/gradient footer",
+   "traits": [
+    "mesh wash background",
+    "soft close"
+   ],
+   "example_sites": [
+    "airbnb.com",
+    "canva.com",
+    "stripe.com"
+   ]
+  }
+ ],
+ "notes": "Clustered from live DOM captures (fetch_page) + ranking-verified roster observations. Fine archetypes roll up to the coarse cluster ids used in research/sites.json. recipe-library sites (§3.2) informed motion how-to only and are excluded from the 200."
+}

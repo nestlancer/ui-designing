@@ -1,0 +1,49 @@
+{
+ "id": "H013",
+ "type": "header",
+ "family": "F04",
+ "family_name": "Mega-menu panel",
+ "family_signature": "multi-column panel with feature tiles, hover-intent 120ms",
+ "A1_container": "1200-contained",
+ "A2_nav": "mega-panel",
+ "A3_scroll": "sticky",
+ "A4_motion": "m-07",
+ "A5_disclosure": "hover-intent",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "elevated-soft",
+ "skin_notes": "solid surface + soft elevation shadow 0 8px 28px rgba(10,37,67,.10), no heavy border",
+ "signature_motion": "m-07 mega reveal + 35ms stagger",
+ "motion_ids": [
+  "m-07"
+ ],
+ "references": [
+  "shopify.com",
+  "adobe.com",
+  "stripe.com"
+ ],
+ "pattern_refs": [
+  "h-mega-product",
+  "f-sitemap-standard"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "burger-drawer",
+ "budget": {
+  "css_bytes": 6257,
+  "css_exception": null,
+  "dom_nodes": 58,
+  "js_bytes": 2852,
+  "js_gzip_bytes": 897,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H013\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

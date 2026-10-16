@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "F001",
+  "type": "footer",
+  "family": "F01",
+  "family_name": "Classic 4-column grid + blurb",
+  "signature_motion": "m-19 column stagger reveal",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F002",
+  "type": "footer",
+  "family": "F01",
+  "family_name": "Classic 4-column grid + blurb",
+  "signature_motion": "m-39 footer link roll-up",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F003",
+  "type": "footer",
+  "family": "F01",
+  "family_name": "Classic 4-column grid + blurb",
+  "signature_motion": "m-27 social stagger pop",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F004",
+  "type": "footer",
+  "family": "F01",
+  "family_name": "Classic 4-column grid + blurb",
+  "signature_motion": "m-23 back-to-top orbit",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F005",
+  "type": "footer",
+  "family": "F01",
+  "family_name": "Classic 4-column grid + blurb",
+  "signature_motion": "m-26 blurb stat count-up",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F006",
+  "type": "footer",
+  "family": "F02",
+  "family_name": "Oversized wordmark",
+  "signature_motion": "m-21 wordmark scale-in",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F007",
+  "type": "footer",
+  "family": "F02",
+  "family_name": "Oversized wordmark",
+  "signature_motion": "m-39 marquee wordmark reveal",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F008",
+  "type": "footer",
+  "family": "F02",
+  "family_name": "Oversized wordmark",
+  "signature_motion": "m-20 curtain reveal",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F009",
+  "type": "footer",
+  "family": "F02",
+  "family_name": "Oversized wordmark",
+  "signature_motion": "m-04 grain over wordmark",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F010",
+  "type": "footer",
+  "family": "F02",
+  "family_name": "Oversized wordmark",
+  "signature_motion": "m-28 giant wm link roll-up",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F011",
+  "type": "footer",
+  "family": "F03",
+  "family_name": "Newsletter-lead",
+  "signature_motion": "m-34 button→tick morph",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F012",
+  "type": "footer",
+  "family": "F03",
+  "family_name": "Newsletter-lead",
+  "signature_motion": "m-19 newsletter cols reveal",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F013",
+  "type": "footer",
+  "family": "F03",
+  "family_name": "Newsletter-lead",
+  "signature_motion": "m-06 magnetic subscribe",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F014",
+  "type": "footer",
+  "family": "F03",
+  "family_name": "Newsletter-lead",
+  "signature_motion": "m-26 subscriber count-up",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F015",
+  "type": "footer",
+  "family": "F03",
+  "family_name": "Newsletter-lead",
+  "signature_motion": "m-36 validation toast",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F016",
+  "type": "footer",
+  "family": "F04",
+  "family_name": "CTA banner fused to footer",
+  "signature_motion": "m-19 fused banner rise",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F017",
+  "type": "footer",
+  "family": "F04",
+  "family_name": "CTA banner fused to footer",
+  "signature_motion": "m-26 check-row count-up",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F018",
+  "type": "footer",
+  "family": "F04",
+  "family_name": "CTA banner fused to footer",
+  "signature_motion": "m-20 curtain behind CTA",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F019",
+  "type": "footer",
+  "family": "F04",
+  "family_name": "CTA banner fused to footer",
+  "signature_motion": "m-31 mesh grain drift",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F020",
+  "type": "footer",
+  "family": "F04",
+  "family_name": "CTA banner fused to footer",
+  "signature_motion": "m-36 magnetic banner CTA",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F021",
+  "type": "footer",
+  "family": "F05",
+  "family_name": "Mega sitemap",
+  "signature_motion": "m-22 accordion columns",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F022",
+  "type": "footer",
+  "family": "F05",
+  "family_name": "Mega sitemap",
+  "signature_motion": "m-19 sitemap col stagger",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F023",
+  "type": "footer",
+  "family": "F05",
+  "family_name": "Mega sitemap",
+  "signature_motion": "m-35 back-to-top band",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F024",
+  "type": "footer",
+  "family": "F05",
+  "family_name": "Mega sitemap",
+  "signature_motion": "m-24 locale listbox slide",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F025",
+  "type": "footer",
+  "family": "F05",
+  "family_name": "Mega sitemap",
+  "signature_motion": "m-28 sitemap roll-up",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F026",
+  "type": "footer",
+  "family": "F06",
+  "family_name": "Accordion columns",
+  "signature_motion": "m-25 grid-rows collapse",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "accordion"
+ },
+ {
+  "id": "F027",
+  "type": "footer",
+  "family": "F06",
+  "family_name": "Accordion columns",
+  "signature_motion": "m-37 nested accordion",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "accordion"
+ },
+ {
+  "id": "F028",
+  "type": "footer",
+  "family": "F06",
+  "family_name": "Accordion columns",
+  "signature_motion": "m-19 open-col stagger",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "accordion"
+ },
+ {
+  "id": "F029",
+  "type": "footer",
+  "family": "F06",
+  "family_name": "Accordion columns",
+  "signature_motion": "m-20 curtain + accordion",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "accordion"
+ },
+ {
+  "id": "F030",
+  "type": "footer",
+  "family": "F06",
+  "family_name": "Accordion columns",
+  "signature_motion": "m-03 accordion roll-up",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "accordion"
+ },
+ {
+  "id": "F031",
+  "type": "footer",
+  "family": "F07",
+  "family_name": "Minimal single-row",
+  "signature_motion": "m-28 whisper roll-up",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F032",
+  "type": "footer",
+  "family": "F07",
+  "family_name": "Minimal single-row",
+  "signature_motion": "m-03 status dot pulse",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F033",
+  "type": "footer",
+  "family": "F07",
+  "family_name": "Minimal single-row",
+  "signature_motion": "m-26 orbit top button",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F034",
+  "type": "footer",
+  "family": "F07",
+  "family_name": "Minimal single-row",
+  "signature_motion": "m-12 footer theme toggle",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F035",
+  "type": "footer",
+  "family": "F07",
+  "family_name": "Minimal single-row",
+  "signature_motion": "m-29 copy-link toast",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F036",
+  "type": "footer",
+  "family": "F08",
+  "family_name": "Two-bar (links bar + legal bar)",
+  "signature_motion": "m-01 bands reveal",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F037",
+  "type": "footer",
+  "family": "F08",
+  "family_name": "Two-bar (links bar + legal bar)",
+  "signature_motion": "m-27 social pop on legal band",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F038",
+  "type": "footer",
+  "family": "F08",
+  "family_name": "Two-bar (links bar + legal bar)",
+  "signature_motion": "m-24 currency slide",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F039",
+  "type": "footer",
+  "family": "F08",
+  "family_name": "Two-bar (links bar + legal bar)",
+  "signature_motion": "m-20 legal band curtain",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F040",
+  "type": "footer",
+  "family": "F08",
+  "family_name": "Two-bar (links bar + legal bar)",
+  "signature_motion": "m-26 band stat count-up",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F041",
+  "type": "footer",
+  "family": "F09",
+  "family_name": "Dark inverted + teal accents",
+  "signature_motion": "m-19 inverted col stagger",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F042",
+  "type": "footer",
+  "family": "F09",
+  "family_name": "Dark inverted + teal accents",
+  "signature_motion": "m-28 mint roll-up",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F043",
+  "type": "footer",
+  "family": "F09",
+  "family_name": "Dark inverted + teal accents",
+  "signature_motion": "m-25 live dot glow",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F044",
+  "type": "footer",
+  "family": "F09",
+  "family_name": "Dark inverted + teal accents",
+  "signature_motion": "m-20 dark curtain",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F045",
+  "type": "footer",
+  "family": "F09",
+  "family_name": "Dark inverted + teal accents",
+  "signature_motion": "m-31 dark grain drift",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F046",
+  "type": "footer",
+  "family": "F10",
+  "family_name": "Mesh / gradient footer",
+  "signature_motion": "m-26 mesh cols rise",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F047",
+  "type": "footer",
+  "family": "F10",
+  "family_name": "Mesh / gradient footer",
+  "signature_motion": "m-26 mesh stat count-up",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F048",
+  "type": "footer",
+  "family": "F10",
+  "family_name": "Mesh / gradient footer",
+  "signature_motion": "m-06 magnetic mesh CTA",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F049",
+  "type": "footer",
+  "family": "F10",
+  "family_name": "Mesh / gradient footer",
+  "signature_motion": "m-20 mesh curtain",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F050",
+  "type": "footer",
+  "family": "F10",
+  "family_name": "Mesh / gradient footer",
+  "signature_motion": "m-31 mesh grain",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F051",
+  "type": "footer",
+  "family": "F11",
+  "family_name": "Editorial / issue-style",
+  "signature_motion": "m-19 issue cols reveal",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F052",
+  "type": "footer",
+  "family": "F11",
+  "family_name": "Editorial / issue-style",
+  "signature_motion": "m-28 byline roll-up",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F053",
+  "type": "footer",
+  "family": "F11",
+  "family_name": "Editorial / issue-style",
+  "signature_motion": "m-21 masthead scale-on-scroll",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F054",
+  "type": "footer",
+  "family": "F11",
+  "family_name": "Editorial / issue-style",
+  "signature_motion": "m-05 issue curtain",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F055",
+  "type": "footer",
+  "family": "F11",
+  "family_name": "Editorial / issue-style",
+  "signature_motion": "m-31 paper grain drift",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F056",
+  "type": "footer",
+  "family": "F12",
+  "family_name": "Marquee wordmark reveal",
+  "signature_motion": "m-39 marquee wordmark enter",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F057",
+  "type": "footer",
+  "family": "F12",
+  "family_name": "Marquee wordmark reveal",
+  "signature_motion": "m-16 link ticker under wm",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F058",
+  "type": "footer",
+  "family": "F12",
+  "family_name": "Marquee wordmark reveal",
+  "signature_motion": "m-21 wm scrub scale",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F059",
+  "type": "footer",
+  "family": "F12",
+  "family_name": "Marquee wordmark reveal",
+  "signature_motion": "m-20 marquee curtain",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F060",
+  "type": "footer",
+  "family": "F12",
+  "family_name": "Marquee wordmark reveal",
+  "signature_motion": "m-06 magnetic marquee CTA",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F061",
+  "type": "footer",
+  "family": "F13",
+  "family_name": "Proof / stat rail",
+  "signature_motion": "m-26 stat count-up 1200ms",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F062",
+  "type": "footer",
+  "family": "F13",
+  "family_name": "Proof / stat rail",
+  "signature_motion": "m-19 stat cols reveal",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F063",
+  "type": "footer",
+  "family": "F13",
+  "family_name": "Proof / stat rail",
+  "signature_motion": "m-25 payout dot pulse",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F064",
+  "type": "footer",
+  "family": "F13",
+  "family_name": "Proof / stat rail",
+  "signature_motion": "m-20 stat curtain",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F065",
+  "type": "footer",
+  "family": "F13",
+  "family_name": "Proof / stat rail",
+  "signature_motion": "m-28 stat roll-up",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F066",
+  "type": "footer",
+  "family": "F14",
+  "family_name": "Locale + currency switcher",
+  "signature_motion": "m-24 listbox slide 180ms",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F067",
+  "type": "footer",
+  "family": "F14",
+  "family_name": "Locale + currency switcher",
+  "signature_motion": "m-35 currency seg thumb",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F068",
+  "type": "footer",
+  "family": "F14",
+  "family_name": "Locale + currency switcher",
+  "signature_motion": "m-40 locale badge tilt",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F069",
+  "type": "footer",
+  "family": "F14",
+  "family_name": "Locale + currency switcher",
+  "signature_motion": "m-23 orbit + locale",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F070",
+  "type": "footer",
+  "family": "F14",
+  "family_name": "Locale + currency switcher",
+  "signature_motion": "m-36 locale confirm toast",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F071",
+  "type": "footer",
+  "family": "F15",
+  "family_name": "Social-proof wall",
+  "signature_motion": "m-27 icon stagger pop 40ms",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F072",
+  "type": "footer",
+  "family": "F15",
+  "family_name": "Social-proof wall",
+  "signature_motion": "m-19 proof wall reveal",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F073",
+  "type": "footer",
+  "family": "F15",
+  "family_name": "Social-proof wall",
+  "signature_motion": "m-16 award ticker",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F074",
+  "type": "footer",
+  "family": "F15",
+  "family_name": "Social-proof wall",
+  "signature_motion": "m-20 proof curtain",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F075",
+  "type": "footer",
+  "family": "F15",
+  "family_name": "Social-proof wall",
+  "signature_motion": "m-26 award count-up",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F076",
+  "type": "footer",
+  "family": "F16",
+  "family_name": "Compact sticky mobile footer",
+  "signature_motion": "m-33 sticky bar badge pop",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "F077",
+  "type": "footer",
+  "family": "F16",
+  "family_name": "Compact sticky mobile footer",
+  "signature_motion": "m-25 live dot on sticky CTA",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "F078",
+  "type": "footer",
+  "family": "F16",
+  "family_name": "Compact sticky mobile footer",
+  "signature_motion": "m-23 sticky bar orbit",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "F079",
+  "type": "footer",
+  "family": "F16",
+  "family_name": "Compact sticky mobile footer",
+  "signature_motion": "m-15 sticky tab morph",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "F080",
+  "type": "footer",
+  "family": "F16",
+  "family_name": "Compact sticky mobile footer",
+  "signature_motion": "m-26 sticky stat count-up",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "F081",
+  "type": "footer",
+  "family": "F17",
+  "family_name": "Curtain reveal on overscroll",
+  "signature_motion": "m-20 sticky curtain reveal",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F082",
+  "type": "footer",
+  "family": "F17",
+  "family_name": "Curtain reveal on overscroll",
+  "signature_motion": "m-21 curtain wm scale",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F083",
+  "type": "footer",
+  "family": "F17",
+  "family_name": "Curtain reveal on overscroll",
+  "signature_motion": "m-31 curtain grain",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F084",
+  "type": "footer",
+  "family": "F17",
+  "family_name": "Curtain reveal on overscroll",
+  "signature_motion": "m-37 curtain col stagger",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F085",
+  "type": "footer",
+  "family": "F17",
+  "family_name": "Curtain reveal on overscroll",
+  "signature_motion": "m-01 magnetic curtain CTA",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F086",
+  "type": "footer",
+  "family": "F18",
+  "family_name": "App / QR download",
+  "signature_motion": "m-40 QR hover tilt",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F087",
+  "type": "footer",
+  "family": "F18",
+  "family_name": "App / QR download",
+  "signature_motion": "m-08 app cols reveal",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F088",
+  "type": "footer",
+  "family": "F18",
+  "family_name": "App / QR download",
+  "signature_motion": "m-12 store icon pop",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F089",
+  "type": "footer",
+  "family": "F18",
+  "family_name": "App / QR download",
+  "signature_motion": "m-23 QR orbit button",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F090",
+  "type": "footer",
+  "family": "F18",
+  "family_name": "App / QR download",
+  "signature_motion": "m-05 download link toast",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F091",
+  "type": "footer",
+  "family": "F19",
+  "family_name": "Compliance-heavy (India)",
+  "signature_motion": "m-19 compliance cols reveal",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F092",
+  "type": "footer",
+  "family": "F19",
+  "family_name": "Compliance-heavy (India)",
+  "signature_motion": "m-26 payout stat count-up",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F093",
+  "type": "footer",
+  "family": "F19",
+  "family_name": "Compliance-heavy (India)",
+  "signature_motion": "m-32 status pill pulse",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F094",
+  "type": "footer",
+  "family": "F19",
+  "family_name": "Compliance-heavy (India)",
+  "signature_motion": "m-28 legal roll-up",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F095",
+  "type": "footer",
+  "family": "F19",
+  "family_name": "Compliance-heavy (India)",
+  "signature_motion": "m-23 compliance orbit top",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F096",
+  "type": "footer",
+  "family": "F20",
+  "family_name": "Community & status",
+  "signature_motion": "m-25 system status pulse",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F097",
+  "type": "footer",
+  "family": "F20",
+  "family_name": "Community & status",
+  "signature_motion": "m-09 community cols reveal",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F098",
+  "type": "footer",
+  "family": "F20",
+  "family_name": "Community & status",
+  "signature_motion": "m-28 changelog roll-up",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F099",
+  "type": "footer",
+  "family": "F20",
+  "family_name": "Community & status",
+  "signature_motion": "m-20 status curtain",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "F100",
+  "type": "footer",
+  "family": "F20",
+  "family_name": "Community & status",
+  "signature_motion": "m-36 status toast",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H001",
+  "type": "header",
+  "family": "F01",
+  "family_name": "Classic centred/split nav",
+  "signature_motion": "m-05 sliding ink underline",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H002",
+  "type": "header",
+  "family": "F01",
+  "family_name": "Classic centred/split nav",
+  "signature_motion": "m-12 theme cross-fade",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H003",
+  "type": "header",
+  "family": "F01",
+  "family_name": "Classic centred/split nav",
+  "signature_motion": "m-28 link roll-up",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H004",
+  "type": "header",
+  "family": "F01",
+  "family_name": "Classic centred/split nav",
+  "signature_motion": "m-13 scroll progress line",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H005",
+  "type": "header",
+  "family": "F02",
+  "family_name": "Logo-left inline",
+  "signature_motion": "m-28 dual-layer roll-up",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H006",
+  "type": "header",
+  "family": "F02",
+  "family_name": "Logo-left inline",
+  "signature_motion": "m-05 ink bar glide",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H007",
+  "type": "header",
+  "family": "F02",
+  "family_name": "Logo-left inline",
+  "signature_motion": "m-03 glass engage",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H008",
+  "type": "header",
+  "family": "F02",
+  "family_name": "Logo-left inline",
+  "signature_motion": "m-37 hide-down/show-up",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H009",
+  "type": "header",
+  "family": "F03",
+  "family_name": "Two-tier utility + main",
+  "signature_motion": "m-25 live status pulse",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H010",
+  "type": "header",
+  "family": "F03",
+  "family_name": "Two-tier utility + main",
+  "signature_motion": "m-17 announce dismiss",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H011",
+  "type": "header",
+  "family": "F03",
+  "family_name": "Two-tier utility + main",
+  "signature_motion": "m-01 sticky shrink 72→56",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H012",
+  "type": "header",
+  "family": "F03",
+  "family_name": "Two-tier utility + main",
+  "signature_motion": "m-14 reading-progress ring",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H013",
+  "type": "header",
+  "family": "F04",
+  "family_name": "Mega-menu panel",
+  "signature_motion": "m-07 mega reveal + 35ms stagger",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "mega-panel"
+ },
+ {
+  "id": "H014",
+  "type": "header",
+  "family": "F04",
+  "family_name": "Mega-menu panel",
+  "signature_motion": "m-05 ink bar + mega tiles",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "mega-panel"
+ },
+ {
+  "id": "H015",
+  "type": "header",
+  "family": "F04",
+  "family_name": "Mega-menu panel",
+  "signature_motion": "m-37 nested drawer accordions",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "mega-panel"
+ },
+ {
+  "id": "H016",
+  "type": "header",
+  "family": "F04",
+  "family_name": "Mega-menu panel",
+  "signature_motion": "m-02 hide + mega fade",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "mega-panel"
+ },
+ {
+  "id": "H017",
+  "type": "header",
+  "family": "F05",
+  "family_name": "Floating glass pill",
+  "signature_motion": "m-03 glass engage at 8px",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H018",
+  "type": "header",
+  "family": "F05",
+  "family_name": "Floating glass pill",
+  "signature_motion": "m-06 magnetic CTA ±6px",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H019",
+  "type": "header",
+  "family": "F05",
+  "family_name": "Floating glass pill",
+  "signature_motion": "m-29 cursor spotlight",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H020",
+  "type": "header",
+  "family": "F05",
+  "family_name": "Floating glass pill",
+  "signature_motion": "m-04 hero → solid glass",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H021",
+  "type": "header",
+  "family": "F06",
+  "family_name": "Sticky shrink",
+  "signature_motion": "m-01 height+logo scale",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H022",
+  "type": "header",
+  "family": "F06",
+  "family_name": "Sticky shrink",
+  "signature_motion": "m-05 ink bar + shrink",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H023",
+  "type": "header",
+  "family": "F06",
+  "family_name": "Sticky shrink",
+  "signature_motion": "m-32 nav parallax ±12px",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H024",
+  "type": "header",
+  "family": "F06",
+  "family_name": "Sticky shrink",
+  "signature_motion": "m-33 badge pop on CTA",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H025",
+  "type": "header",
+  "family": "F07",
+  "family_name": "Auto-hide on scroll-down",
+  "signature_motion": "m-02 direction-hide 320ms",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H026",
+  "type": "header",
+  "family": "F07",
+  "family_name": "Auto-hide on scroll-down",
+  "signature_motion": "m-13 progress line while hidden",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H027",
+  "type": "header",
+  "family": "F07",
+  "family_name": "Auto-hide on scroll-down",
+  "signature_motion": "m-03 glass + auto-hide",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H028",
+  "type": "header",
+  "family": "F07",
+  "family_name": "Auto-hide on scroll-down",
+  "signature_motion": "m-28 roll-up + hide",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H029",
+  "type": "header",
+  "family": "F08",
+  "family_name": "Transparent-over-hero → solid",
+  "signature_motion": "m-04 hero-exit crossfade",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H030",
+  "type": "header",
+  "family": "F08",
+  "family_name": "Transparent-over-hero → solid",
+  "signature_motion": "m-21 wordmark scale-on-scroll",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H031",
+  "type": "header",
+  "family": "F08",
+  "family_name": "Transparent-over-hero → solid",
+  "signature_motion": "m-06 magnetic hero CTA",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H032",
+  "type": "header",
+  "family": "F08",
+  "family_name": "Transparent-over-hero → solid",
+  "signature_motion": "m-18 rotating status word",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H033",
+  "type": "header",
+  "family": "F09",
+  "family_name": "Fullscreen overlay nav",
+  "signature_motion": "m-08 clip-path wipe 480ms",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "fullscreen-overlay"
+ },
+ {
+  "id": "H034",
+  "type": "header",
+  "family": "F09",
+  "family_name": "Fullscreen overlay nav",
+  "signature_motion": "m-10 burger→X morph",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "fullscreen-overlay"
+ },
+ {
+  "id": "H035",
+  "type": "header",
+  "family": "F09",
+  "family_name": "Fullscreen overlay nav",
+  "signature_motion": "m-30 view-transition wipe",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "fullscreen-overlay"
+ },
+ {
+  "id": "H036",
+  "type": "header",
+  "family": "F09",
+  "family_name": "Fullscreen overlay nav",
+  "signature_motion": "m-29 spotlight across overlay",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "fullscreen-overlay"
+ },
+ {
+  "id": "H037",
+  "type": "header",
+  "family": "F10",
+  "family_name": "Side drawer nav",
+  "signature_motion": "m-09 drawer + scrim 300ms",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "drawer"
+ },
+ {
+  "id": "H038",
+  "type": "header",
+  "family": "F10",
+  "family_name": "Side drawer nav",
+  "signature_motion": "m-37 nested accordions",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "drawer"
+ },
+ {
+  "id": "H039",
+  "type": "header",
+  "family": "F10",
+  "family_name": "Side drawer nav",
+  "signature_motion": "m-24 locale listbox slide",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "drawer"
+ },
+ {
+  "id": "H040",
+  "type": "header",
+  "family": "F10",
+  "family_name": "Side drawer nav",
+  "signature_motion": "m-02 hide + drawer return",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "drawer"
+ },
+ {
+  "id": "H041",
+  "type": "header",
+  "family": "F11",
+  "family_name": "Bottom-docked mobile bar",
+  "signature_motion": "m-33 tab badge pop",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H042",
+  "type": "header",
+  "family": "F11",
+  "family_name": "Bottom-docked mobile bar",
+  "signature_motion": "m-15 active pill morph",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H043",
+  "type": "header",
+  "family": "F11",
+  "family_name": "Bottom-docked mobile bar",
+  "signature_motion": "m-25 live dot on hub tab",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H044",
+  "type": "header",
+  "family": "F11",
+  "family_name": "Bottom-docked mobile bar",
+  "signature_motion": "m-13 progress edge on bar",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H045",
+  "type": "header",
+  "family": "F12",
+  "family_name": "Split-identity switcher",
+  "signature_motion": "m-35 segment thumb slide",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H046",
+  "type": "header",
+  "family": "F12",
+  "family_name": "Split-identity switcher",
+  "signature_motion": "m-15 audience pill morph",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H047",
+  "type": "header",
+  "family": "F12",
+  "family_name": "Split-identity switcher",
+  "signature_motion": "m-18 rotating value line",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H048",
+  "type": "header",
+  "family": "F12",
+  "family_name": "Split-identity switcher",
+  "signature_motion": "m-02 hide + seg return",
+  "A7_surface_skin": "pill-float",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H049",
+  "type": "header",
+  "family": "F13",
+  "family_name": "Marketplace category rail",
+  "signature_motion": "m-15 active chip morph",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "dropdown"
+ },
+ {
+  "id": "H050",
+  "type": "header",
+  "family": "F13",
+  "family_name": "Marketplace category rail",
+  "signature_motion": "m-16 category ticker",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "dropdown"
+ },
+ {
+  "id": "H051",
+  "type": "header",
+  "family": "F13",
+  "family_name": "Marketplace category rail",
+  "signature_motion": "m-07 chip mega panel",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "dropdown"
+ },
+ {
+  "id": "H052",
+  "type": "header",
+  "family": "F13",
+  "family_name": "Marketplace category rail",
+  "signature_motion": "m-02 rail hides with bar",
+  "A7_surface_skin": "ink-band",
+  "A2_nav": "dropdown"
+ },
+ {
+  "id": "H053",
+  "type": "header",
+  "family": "F14",
+  "family_name": "Search-forward",
+  "signature_motion": "m-11 ⌘K search overlay",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "search-first"
+ },
+ {
+  "id": "H054",
+  "type": "header",
+  "family": "F14",
+  "family_name": "Search-forward",
+  "signature_motion": "m-15 intent pills under search",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "search-first"
+ },
+ {
+  "id": "H055",
+  "type": "header",
+  "family": "F14",
+  "family_name": "Search-forward",
+  "signature_motion": "m-36 search toast slide-in",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "search-first"
+ },
+ {
+  "id": "H056",
+  "type": "header",
+  "family": "F14",
+  "family_name": "Search-forward",
+  "signature_motion": "m-14 search progress ring",
+  "A7_surface_skin": "glass-hairline",
+  "A2_nav": "search-first"
+ },
+ {
+  "id": "H057",
+  "type": "header",
+  "family": "F15",
+  "family_name": "Command-palette native (⌘K)",
+  "signature_motion": "m-11 palette scale .98→1",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "command-palette"
+ },
+ {
+  "id": "H058",
+  "type": "header",
+  "family": "F15",
+  "family_name": "Command-palette native (⌘K)",
+  "signature_motion": "m-03 glass + palette",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "command-palette"
+ },
+ {
+  "id": "H059",
+  "type": "header",
+  "family": "F15",
+  "family_name": "Command-palette native (⌘K)",
+  "signature_motion": "m-36 command toast",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "command-palette"
+ },
+ {
+  "id": "H060",
+  "type": "header",
+  "family": "F15",
+  "family_name": "Command-palette native (⌘K)",
+  "signature_motion": "m-02 hide reveals palette",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "command-palette"
+ },
+ {
+  "id": "H061",
+  "type": "header",
+  "family": "F16",
+  "family_name": "Auth / app minimal",
+  "signature_motion": "m-12 theme cross-fade",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H062",
+  "type": "header",
+  "family": "F16",
+  "family_name": "Auth / app minimal",
+  "signature_motion": "m-33 notify badge pop",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H063",
+  "type": "header",
+  "family": "F16",
+  "family_name": "Auth / app minimal",
+  "signature_motion": "m-18 rotating support hint",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H064",
+  "type": "header",
+  "family": "F16",
+  "family_name": "Auth / app minimal",
+  "signature_motion": "m-25 intake dot pulse",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H065",
+  "type": "header",
+  "family": "F17",
+  "family_name": "Wizard / intake progress",
+  "signature_motion": "m-38 step dot advance",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H066",
+  "type": "header",
+  "family": "F17",
+  "family_name": "Wizard / intake progress",
+  "signature_motion": "m-13 step progress line",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H067",
+  "type": "header",
+  "family": "F17",
+  "family_name": "Wizard / intake progress",
+  "signature_motion": "m-01 shrink + step rail",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H068",
+  "type": "header",
+  "family": "F17",
+  "family_name": "Wizard / intake progress",
+  "signature_motion": "m-36 step toast confirm",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H069",
+  "type": "header",
+  "family": "F18",
+  "family_name": "Announcement bar + nav",
+  "signature_motion": "m-17 announce collapse 220ms",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H070",
+  "type": "header",
+  "family": "F18",
+  "family_name": "Announcement bar + nav",
+  "signature_motion": "m-18 rotating announce copy",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H071",
+  "type": "header",
+  "family": "F18",
+  "family_name": "Announcement bar + nav",
+  "signature_motion": "m-26 announce stat count-up",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H072",
+  "type": "header",
+  "family": "F18",
+  "family_name": "Announcement bar + nav",
+  "signature_motion": "m-02 bar hides with nav",
+  "A7_surface_skin": "mesh-zone",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H073",
+  "type": "header",
+  "family": "F19",
+  "family_name": "Marquee / ticker nav",
+  "signature_motion": "m-16 ticker 28s linear",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H074",
+  "type": "header",
+  "family": "F19",
+  "family_name": "Marquee / ticker nav",
+  "signature_motion": "m-31 grain drift over ticker",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H075",
+  "type": "header",
+  "family": "F19",
+  "family_name": "Marquee / ticker nav",
+  "signature_motion": "m-16 dual-lane ticker",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H076",
+  "type": "header",
+  "family": "F19",
+  "family_name": "Marquee / ticker nav",
+  "signature_motion": "m-21 ticker wordmark scrub",
+  "A7_surface_skin": "tint-wash",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H077",
+  "type": "header",
+  "family": "F20",
+  "family_name": "Scroll-progress header",
+  "signature_motion": "m-13 scrub progress line",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H078",
+  "type": "header",
+  "family": "F20",
+  "family_name": "Scroll-progress header",
+  "signature_motion": "m-14 % ring in header",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H079",
+  "type": "header",
+  "family": "F20",
+  "family_name": "Scroll-progress header",
+  "signature_motion": "m-32 label parallax ±12px",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H080",
+  "type": "header",
+  "family": "F20",
+  "family_name": "Scroll-progress header",
+  "signature_motion": "m-21 wordmark scale scrub",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H081",
+  "type": "header",
+  "family": "F21",
+  "family_name": "Docs / section nav",
+  "signature_motion": "m-05 tab ink bar",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H082",
+  "type": "header",
+  "family": "F21",
+  "family_name": "Docs / section nav",
+  "signature_motion": "m-15 tab pill morph",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H083",
+  "type": "header",
+  "family": "F21",
+  "family_name": "Docs / section nav",
+  "signature_motion": "m-13 doc progress line",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H084",
+  "type": "header",
+  "family": "F21",
+  "family_name": "Docs / section nav",
+  "signature_motion": "m-38 version stepper",
+  "A7_surface_skin": "dual-surface",
+  "A2_nav": "breadcrumb-row"
+ },
+ {
+  "id": "H085",
+  "type": "header",
+  "family": "F22",
+  "family_name": "Segmented tabs",
+  "signature_motion": "m-35 thumb slide 240ms",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H086",
+  "type": "header",
+  "family": "F22",
+  "family_name": "Segmented tabs",
+  "signature_motion": "m-15 seg pill morph",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H087",
+  "type": "header",
+  "family": "F22",
+  "family_name": "Segmented tabs",
+  "signature_motion": "m-02 seg bar hide",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H088",
+  "type": "header",
+  "family": "F22",
+  "family_name": "Segmented tabs",
+  "signature_motion": "m-14 seg progress edge",
+  "A7_surface_skin": "solid-canvas",
+  "A2_nav": "segmented"
+ },
+ {
+  "id": "H089",
+  "type": "header",
+  "family": "F23",
+  "family_name": "Dual-CTA split",
+  "signature_motion": "m-06 magnetic dual CTA",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H090",
+  "type": "header",
+  "family": "F23",
+  "family_name": "Dual-CTA split",
+  "signature_motion": "m-33 CTA badge pop",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H091",
+  "type": "header",
+  "family": "F23",
+  "family_name": "Dual-CTA split",
+  "signature_motion": "m-28 CTA roll-up pair",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H092",
+  "type": "header",
+  "family": "F23",
+  "family_name": "Dual-CTA split",
+  "signature_motion": "m-18 rotating CTA label",
+  "A7_surface_skin": "elevated-soft",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H093",
+  "type": "header",
+  "family": "F24",
+  "family_name": "Edge icon-rail + slim bar",
+  "signature_motion": "m-33 rail badge pop",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H094",
+  "type": "header",
+  "family": "F24",
+  "family_name": "Edge icon-rail + slim bar",
+  "signature_motion": "m-15 rail active pill",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H095",
+  "type": "header",
+  "family": "F24",
+  "family_name": "Edge icon-rail + slim bar",
+  "signature_motion": "m-29 rail spotlight",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H096",
+  "type": "header",
+  "family": "F24",
+  "family_name": "Edge icon-rail + slim bar",
+  "signature_motion": "m-13 rail progress track",
+  "A7_surface_skin": "invert-chrome",
+  "A2_nav": "bottom-tab-bar"
+ },
+ {
+  "id": "H097",
+  "type": "header",
+  "family": "F25",
+  "family_name": "Editorial typographic",
+  "signature_motion": "m-21 oversized wordmark scrub",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H098",
+  "type": "header",
+  "family": "F25",
+  "family_name": "Editorial typographic",
+  "signature_motion": "m-33 editorial roll-up",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H099",
+  "type": "header",
+  "family": "F25",
+  "family_name": "Editorial typographic",
+  "signature_motion": "m-05 thin ink rule glide",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ },
+ {
+  "id": "H100",
+  "type": "header",
+  "family": "F25",
+  "family_name": "Editorial typographic",
+  "signature_motion": "m-31 grain wash over rules",
+  "A7_surface_skin": "editorial-rules",
+  "A2_nav": "inline"
+ }
+]

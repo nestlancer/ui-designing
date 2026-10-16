@@ -1,0 +1,47 @@
+{
+ "id": "H051",
+ "type": "header",
+ "family": "F13",
+ "family_name": "Marketplace category rail",
+ "family_signature": "divider + category chips rail under the bar",
+ "A1_container": "asymmetric-8/4",
+ "A2_nav": "dropdown",
+ "A3_scroll": "static",
+ "A4_motion": "m-07",
+ "A5_disclosure": "hover-intent",
+ "A6_cta": "split-arrow-pill",
+ "A7_surface_skin": "ink-band",
+ "skin_notes": "--n-ink utility band with light text; main row stays surface",
+ "signature_motion": "m-07 chip mega panel",
+ "motion_ids": [
+  "m-07"
+ ],
+ "references": [
+  "etsy.com",
+  "flipkart.com",
+  "myntra.com"
+ ],
+ "pattern_refs": [
+  "h-utility-marketplace",
+  "f-sitemap-band"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "accordion-drawer",
+ "budget": {
+  "css_bytes": 5993,
+  "css_exception": null,
+  "dom_nodes": 54,
+  "js_bytes": 2460,
+  "js_gzip_bytes": 900,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H051\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

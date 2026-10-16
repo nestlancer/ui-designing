@@ -1,0 +1,46 @@
+{
+ "id": "F061",
+ "type": "footer",
+ "family": "F13",
+ "family_name": "Proof / stat rail",
+ "family_signature": "count-up ₹4.2L, payouts cleared — fintech proof",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-26",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "outline-pill",
+ "A7_surface_skin": "ink-band",
+ "skin_notes": "--n-ink utility band with light text; main row stays surface",
+ "signature_motion": "m-26 stat count-up 1200ms",
+ "motion_ids": [
+  "m-26"
+ ],
+ "references": [
+  "stripe.com",
+  "wise.com",
+  "razorpay.com"
+ ],
+ "pattern_refs": [
+  "f-proof-stats",
+  "f-compliance-india"
+ ],
+ "diff_from_prev": [
+  "A4",
+  "A5",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3453,
+  "css_exception": null,
+  "dom_nodes": 60,
+  "js_bytes": 1310,
+  "js_gzip_bytes": 713,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F061\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

@@ -1,0 +1,45 @@
+{
+ "id": "H018",
+ "type": "header",
+ "family": "F05",
+ "family_name": "Floating glass pill",
+ "family_signature": "detached rounded container, blur 14px, inset 16px",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "inline",
+ "A3_scroll": "sticky-shrink",
+ "A4_motion": "m-06",
+ "A5_disclosure": "hover-intent",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "glass-hairline",
+ "skin_notes": "color-mix translucent surface + blur 14px + hairline + soft shadow, @supports opaque fallback",
+ "signature_motion": "m-06 magnetic CTA ±6px",
+ "motion_ids": [
+  "m-06"
+ ],
+ "references": [
+  "linear.app",
+  "vercel.com",
+  "framer.com"
+ ],
+ "pattern_refs": [
+  "h-floating-glass-pill",
+  "f-legal-whisper"
+ ],
+ "diff_from_prev": [
+  "A3",
+  "A4",
+  "A5"
+ ],
+ "mobile_strategy": "burger-overlay",
+ "budget": {
+  "css_bytes": 5196,
+  "css_exception": null,
+  "dom_nodes": 43,
+  "js_bytes": 3175,
+  "js_gzip_bytes": 1115,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H018\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

@@ -1,0 +1,46 @@
+{
+ "id": "H043",
+ "type": "header",
+ "family": "F11",
+ "family_name": "Bottom-docked mobile bar",
+ "family_signature": "4–5 icon tabs docked bottom, safe-area padding",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "bottom-tab-bar",
+ "A3_scroll": "sticky",
+ "A4_motion": "m-25",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "icon-only",
+ "A7_surface_skin": "tint-wash",
+ "skin_notes": "--n-bg-tint-1 / --n-mint wash behind the chrome; teal-soft chip accents",
+ "signature_motion": "m-25 live dot on hub tab",
+ "motion_ids": [
+  "m-25"
+ ],
+ "references": [
+  "pinterest.com",
+  "roblox.com",
+  "instagram.com"
+ ],
+ "pattern_refs": [
+  "h-app-topbar",
+  "f-app-policy-wall"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5"
+ ],
+ "mobile_strategy": "bottom-bar",
+ "budget": {
+  "css_bytes": 4203,
+  "css_exception": null,
+  "dom_nodes": 45,
+  "js_bytes": 1174,
+  "js_gzip_bytes": 574,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H043\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}
