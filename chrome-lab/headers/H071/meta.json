@@ -1,0 +1,67 @@
+{
+  "id": "H071",
+  "type": "header",
+  "family": "Announcement bar + nav",
+  "axes": {
+    "A1_container_geometry": "asymmetric 8/4",
+    "A2_nav_paradigm": "drawer",
+    "A3_scroll_behaviour": "transparent→solid",
+    "A4_motion_primitive": "m-10",
+    "A5_disclosure": "hover-intent 120ms",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-10",
+    "name": "Burger to X morph",
+    "trigger": "toggle",
+    "duration_ms": 240,
+    "easing": "ease"
+  },
+  "citations": {
+    "captured_sites": [
+      "uniqlo.com",
+      "intercom.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A3",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 2974,
+    "css_bytes": 19220,
+    "html_bytes": 3864,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H071\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H071/index.html",
+    "css": "H071/style.css",
+    "js": "H071/script.js"
+  }
+}

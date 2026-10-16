@@ -1,0 +1,66 @@
+{
+  "id": "H033",
+  "type": "header",
+  "family": "Fullscreen overlay nav",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "fullscreen overlay",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-08",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "ghost text"
+  },
+  "signature_motion": {
+    "id": "m-08",
+    "name": "Fullscreen overlay wipe",
+    "trigger": "burger click",
+    "duration_ms": 480,
+    "easing": "cubic-bezier(.76,0,.24,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "ramp.com",
+      "aesop.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A3",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3323,
+    "css_bytes": 18737,
+    "html_bytes": 3815,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H033\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H033/index.html",
+    "css": "H033/style.css",
+    "js": "H033/script.js"
+  }
+}

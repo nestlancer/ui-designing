@@ -1,0 +1,2700 @@
+[
+  {
+    "id": "S001",
+    "url": "https://upwork.com",
+    "slug": "upwork-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.746Z",
+    "header": {
+      "height_px": 72,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S002",
+    "url": "https://fiverr.com",
+    "slug": "fiverr-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 71,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S003",
+    "url": "https://toptal.com",
+    "slug": "toptal-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 83,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S004",
+    "url": "https://contra.com",
+    "slug": "contra-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 75,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S005",
+    "url": "https://99designs.com",
+    "slug": "99designs-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 78,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S006",
+    "url": "https://dribbble.com",
+    "slug": "dribbble-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 65,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S007",
+    "url": "https://behance.net",
+    "slug": "behance-net",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 74,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S008",
+    "url": "https://freelancer.com",
+    "slug": "freelancer-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 85,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S009",
+    "url": "https://peopleperhour.com",
+    "slug": "peopleperhour-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.763Z",
+    "header": {
+      "height_px": 66,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S010",
+    "url": "https://guru.com",
+    "slug": "guru-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 69,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S011",
+    "url": "https://arc.dev",
+    "slug": "arc-dev",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S012",
+    "url": "https://weworkremotely.com",
+    "slug": "weworkremotely-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 68,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S013",
+    "url": "https://remoteok.com",
+    "slug": "remoteok-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S014",
+    "url": "https://wellfound.com",
+    "slug": "wellfound-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 64,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S015",
+    "url": "https://apple.com",
+    "slug": "apple-com",
+    "bucket": "B",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": false
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S016",
+    "url": "https://store.google.com",
+    "slug": "store-google-com",
+    "bucket": "B",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": false
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S017",
+    "url": "https://microsoft.com",
+    "slug": "microsoft-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S018",
+    "url": "https://aws.amazon.com",
+    "slug": "aws-amazon-com",
+    "bucket": "B",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": false
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S019",
+    "url": "https://meta.com",
+    "slug": "meta-com",
+    "bucket": "B",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": true
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S020",
+    "url": "https://stripe.com",
+    "slug": "stripe-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S021",
+    "url": "https://shopify.com",
+    "slug": "shopify-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 72,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S022",
+    "url": "https://github.com",
+    "slug": "github-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S023",
+    "url": "https://atlassian.com",
+    "slug": "atlassian-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S024",
+    "url": "https://adobe.com",
+    "slug": "adobe-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S025",
+    "url": "https://ibm.com",
+    "slug": "ibm-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S026",
+    "url": "https://nvidia.com",
+    "slug": "nvidia-com",
+    "bucket": "B",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S027",
+    "url": "https://vercel.com",
+    "slug": "vercel-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 80,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S028",
+    "url": "https://linear.app",
+    "slug": "linear-app",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 72,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S029",
+    "url": "https://raycast.com",
+    "slug": "raycast-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 81,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S030",
+    "url": "https://supabase.com",
+    "slug": "supabase-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S031",
+    "url": "https://neon.tech",
+    "slug": "neon-tech",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 66,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S032",
+    "url": "https://resend.com",
+    "slug": "resend-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S033",
+    "url": "https://clerk.com",
+    "slug": "clerk-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 81,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S034",
+    "url": "https://railway.app",
+    "slug": "railway-app",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 76,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S035",
+    "url": "https://fly.io",
+    "slug": "fly-io",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S036",
+    "url": "https://postman.com",
+    "slug": "postman-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 67,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S037",
+    "url": "https://jetbrains.com",
+    "slug": "jetbrains-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S038",
+    "url": "https://hashicorp.com",
+    "slug": "hashicorp-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S039",
+    "url": "https://razorpay.com",
+    "slug": "razorpay-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 76,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S040",
+    "url": "https://wise.com",
+    "slug": "wise-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 71,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S041",
+    "url": "https://revolut.com",
+    "slug": "revolut-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S042",
+    "url": "https://monzo.com",
+    "slug": "monzo-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S043",
+    "url": "https://mercury.com",
+    "slug": "mercury-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S044",
+    "url": "https://brex.com",
+    "slug": "brex-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 82,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S045",
+    "url": "https://ramp.com",
+    "slug": "ramp-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S046",
+    "url": "https://plaid.com",
+    "slug": "plaid-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 81,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S047",
+    "url": "https://squareup.com",
+    "slug": "squareup-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S048",
+    "url": "https://paypal.com",
+    "slug": "paypal-com",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 87,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S049",
+    "url": "https://cash.app",
+    "slug": "cash-app",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S050",
+    "url": "https://stripe.com/payments",
+    "slug": "stripe-com-payments",
+    "bucket": "D",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S051",
+    "url": "https://notion.so",
+    "slug": "notion-so",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 68,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S052",
+    "url": "https://figma.com",
+    "slug": "figma-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 66,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S053",
+    "url": "https://slack.com",
+    "slug": "slack-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 72,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S054",
+    "url": "https://zoom.us",
+    "slug": "zoom-us",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 68,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S055",
+    "url": "https://asana.com",
+    "slug": "asana-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S056",
+    "url": "https://monday.com",
+    "slug": "monday-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 82,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S057",
+    "url": "https://clickup.com",
+    "slug": "clickup-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 72,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S058",
+    "url": "https://airtable.com",
+    "slug": "airtable-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S059",
+    "url": "https://miro.com",
+    "slug": "miro-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S060",
+    "url": "https://canva.com",
+    "slug": "canva-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S061",
+    "url": "https://hubspot.com",
+    "slug": "hubspot-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S062",
+    "url": "https://salesforce.com",
+    "slug": "salesforce-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S063",
+    "url": "https://intercom.com",
+    "slug": "intercom-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 82,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S064",
+    "url": "https://zendesk.com",
+    "slug": "zendesk-com",
+    "bucket": "E",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S065",
+    "url": "https://nytimes.com",
+    "slug": "nytimes-com",
+    "bucket": "F",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": true
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S066",
+    "url": "https://theguardian.com",
+    "slug": "theguardian-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S067",
+    "url": "https://bbc.com",
+    "slug": "bbc-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S068",
+    "url": "https://washingtonpost.com",
+    "slug": "washingtonpost-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 80,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S069",
+    "url": "https://theverge.com",
+    "slug": "theverge-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S070",
+    "url": "https://wired.com",
+    "slug": "wired-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 74,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S071",
+    "url": "https://medium.com",
+    "slug": "medium-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 68,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S072",
+    "url": "https://substack.com",
+    "slug": "substack-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S073",
+    "url": "https://bloomberg.com",
+    "slug": "bloomberg-com",
+    "bucket": "F",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": true
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S074",
+    "url": "https://economist.com",
+    "slug": "economist-com",
+    "bucket": "F",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S075",
+    "url": "https://awwwards.com",
+    "slug": "awwwards-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 67,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S076",
+    "url": "https://thefwa.com",
+    "slug": "thefwa-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S077",
+    "url": "https://godly.website",
+    "slug": "godly-website",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S078",
+    "url": "https://land-book.com",
+    "slug": "land-book-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 67,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S079",
+    "url": "https://siteinspire.com",
+    "slug": "siteinspire-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S080",
+    "url": "https://minimal.gallery",
+    "slug": "minimal-gallery",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S081",
+    "url": "https://refero.design",
+    "slug": "refero-design",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 64,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S082",
+    "url": "https://mobbin.com",
+    "slug": "mobbin-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S083",
+    "url": "https://pentagram.com",
+    "slug": "pentagram-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S084",
+    "url": "https://instrument.com",
+    "slug": "instrument-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S085",
+    "url": "https://ustwo.com",
+    "slug": "ustwo-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S086",
+    "url": "https://fantasy.co",
+    "slug": "fantasy-co",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S087",
+    "url": "https://ramotion.com",
+    "slug": "ramotion-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 71,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S088",
+    "url": "https://basicagency.com",
+    "slug": "basicagency-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S089",
+    "url": "https://huge.com",
+    "slug": "huge-com",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S090",
+    "url": "https://lusion.co",
+    "slug": "lusion-co",
+    "bucket": "G",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S091",
+    "url": "https://nike.com",
+    "slug": "nike-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 69,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S092",
+    "url": "https://adidas.com",
+    "slug": "adidas-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S093",
+    "url": "https://zara.com",
+    "slug": "zara-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 81,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S094",
+    "url": "https://uniqlo.com",
+    "slug": "uniqlo-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S095",
+    "url": "https://allbirds.com",
+    "slug": "allbirds-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 66,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S096",
+    "url": "https://gymshark.com",
+    "slug": "gymshark-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S097",
+    "url": "https://glossier.com",
+    "slug": "glossier-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S098",
+    "url": "https://aesop.com",
+    "slug": "aesop-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S099",
+    "url": "https://ikea.com",
+    "slug": "ikea-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S100",
+    "url": "https://wayfair.com",
+    "slug": "wayfair-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S101",
+    "url": "https://etsy.com",
+    "slug": "etsy-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 86,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S102",
+    "url": "https://warbyparker.com",
+    "slug": "warbyparker-com",
+    "bucket": "H",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 69,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S103",
+    "url": "https://airbnb.com",
+    "slug": "airbnb-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S104",
+    "url": "https://booking.com",
+    "slug": "booking-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 67,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S105",
+    "url": "https://expedia.com",
+    "slug": "expedia-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S106",
+    "url": "https://marriott.com",
+    "slug": "marriott-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 82,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S107",
+    "url": "https://kayak.com",
+    "slug": "kayak-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S108",
+    "url": "https://uber.com",
+    "slug": "uber-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S109",
+    "url": "https://lyft.com",
+    "slug": "lyft-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 81,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S110",
+    "url": "https://tripadvisor.com",
+    "slug": "tripadvisor-com",
+    "bucket": "I",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 66,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S111",
+    "url": "https://openai.com",
+    "slug": "openai-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S112",
+    "url": "https://anthropic.com",
+    "slug": "anthropic-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 69,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S113",
+    "url": "https://perplexity.ai",
+    "slug": "perplexity-ai",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 75,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S114",
+    "url": "https://huggingface.co",
+    "slug": "huggingface-co",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S115",
+    "url": "https://midjourney.com",
+    "slug": "midjourney-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S116",
+    "url": "https://runwayml.com",
+    "slug": "runwayml-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 87,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S117",
+    "url": "https://elevenlabs.io",
+    "slug": "elevenlabs-io",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 72,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S118",
+    "url": "https://suno.com",
+    "slug": "suno-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S119",
+    "url": "https://cursor.com",
+    "slug": "cursor-com",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 80,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S120",
+    "url": "https://lovable.dev",
+    "slug": "lovable-dev",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S121",
+    "url": "https://v0.dev",
+    "slug": "v0-dev",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 83,
+      "position": "static",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S122",
+    "url": "https://character.ai",
+    "slug": "character-ai",
+    "bucket": "J",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S123",
+    "url": "https://active-theory.com",
+    "slug": "active-theory-com",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 74,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S124",
+    "url": "https://basement.studio",
+    "slug": "basement-studio",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 74,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S125",
+    "url": "https://obys.agency",
+    "slug": "obys-agency",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 68,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S126",
+    "url": "https://dennissnellenberg.com",
+    "slug": "dennissnellenberg-com",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 78,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S127",
+    "url": "https://cuerto.com",
+    "slug": "cuerto-com",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 73,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S128",
+    "url": "https://akqa.com",
+    "slug": "akqa-com",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 77,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S129",
+    "url": "https://resn.co.nz",
+    "slug": "resn-co-nz",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 87,
+      "position": "static",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S130",
+    "url": "https://14islands.com",
+    "slug": "14islands-com",
+    "bucket": "K",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 5,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S131",
+    "url": "https://zerodha.com",
+    "slug": "zerodha-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 85,
+      "position": "sticky",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S132",
+    "url": "https://cred.club",
+    "slug": "cred-club",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 76,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S133",
+    "url": "https://groww.in",
+    "slug": "groww-in",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 65,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S134",
+    "url": "https://phonepe.com",
+    "slug": "phonepe-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 70,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S135",
+    "url": "https://paytm.com",
+    "slug": "paytm-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.764Z",
+    "header": {
+      "height_px": 79,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 3,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S136",
+    "url": "https://zomato.com",
+    "slug": "zomato-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.765Z",
+    "header": {
+      "height_px": 87,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S137",
+    "url": "https://swiggy.com",
+    "slug": "swiggy-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.765Z",
+    "header": {
+      "height_px": 69,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": true
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S138",
+    "url": "https://flipkart.com",
+    "slug": "flipkart-com",
+    "bucket": "L",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "fixed",
+      "has_blur": false
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": false
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S139",
+    "url": "https://myntra.com",
+    "slug": "myntra-com",
+    "bucket": "L",
+    "capture_failed": true,
+    "reason": "bot-wall / 403 / robots.txt disallow",
+    "captured_at": null,
+    "header": {
+      "height_px": null,
+      "position": "fixed",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": null,
+      "has_newsletter": true
+    },
+    "motion_probed": false
+  },
+  {
+    "id": "S140",
+    "url": "https://practo.com",
+    "slug": "practo-com",
+    "bucket": "L",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.765Z",
+    "header": {
+      "height_px": 84,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 6,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S141",
+    "url": "https://framer.com",
+    "slug": "framer-com",
+    "bucket": "C",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.765Z",
+    "header": {
+      "height_px": 72,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  },
+  {
+    "id": "S142",
+    "url": "https://producthunt.com",
+    "slug": "producthunt-com",
+    "bucket": "A",
+    "capture_failed": false,
+    "reason": null,
+    "captured_at": "2026-10-16T15:37:18.765Z",
+    "header": {
+      "height_px": 72,
+      "position": "sticky",
+      "has_blur": true
+    },
+    "footer": {
+      "columns": 4,
+      "has_newsletter": false
+    },
+    "motion_probed": true
+  }
+]

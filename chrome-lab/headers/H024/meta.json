@@ -1,0 +1,68 @@
+{
+  "id": "H024",
+  "type": "header",
+  "family": "Sticky shrink",
+  "axes": {
+    "A1_container_geometry": "asymmetric 8/4",
+    "A2_nav_paradigm": "drawer",
+    "A3_scroll_behaviour": "sticky-shrink",
+    "A4_motion_primitive": "m-06",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-06",
+    "name": "Magnetic CTA",
+    "trigger": "pointer move inside CTA",
+    "duration_ms": 180,
+    "easing": "spring stiffness 200 damping 18"
+  },
+  "citations": {
+    "captured_sites": [
+      "clerk.com",
+      "bbc.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3350,
+    "css_bytes": 18895,
+    "html_bytes": 3588,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H024\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H024/index.html",
+    "css": "H024/style.css",
+    "js": "H024/script.js"
+  }
+}

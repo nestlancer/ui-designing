@@ -1,0 +1,66 @@
+{
+  "id": "F081",
+  "type": "footer",
+  "family": "Curtain reveal on overscroll",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-28",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "sticky mobile bar"
+  },
+  "signature_motion": {
+    "id": "m-28",
+    "name": "Link hover text roll-up (dual layer)",
+    "trigger": "hover",
+    "duration_ms": 260,
+    "easing": "cubic-bezier(.76,0,.24,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "ramotion.com",
+      "stripe.com/payments"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1841,
+    "css_bytes": 13376,
+    "html_bytes": 3925,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F081\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F081/index.html",
+    "css": "F081/style.css",
+    "js": "F081/script.js"
+  }
+}

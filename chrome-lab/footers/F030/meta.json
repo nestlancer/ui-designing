@@ -1,0 +1,68 @@
+{
+  "id": "F030",
+  "type": "footer",
+  "family": "Accordion columns",
+  "axes": {
+    "A1_container_geometry": "docked edge rail",
+    "A2_nav_paradigm": "accordion",
+    "A3_scroll_behaviour": "progress-linked",
+    "A4_motion_primitive": "m-24",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "icon-only"
+  },
+  "signature_motion": {
+    "id": "m-24",
+    "name": "Locale / currency switcher slide",
+    "trigger": "click listbox",
+    "duration_ms": 180,
+    "easing": "ease-out"
+  },
+  "citations": {
+    "captured_sites": [
+      "railway.app",
+      "washingtonpost.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 2718,
+    "css_bytes": 13056,
+    "html_bytes": 3773,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F030\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F030/index.html",
+    "css": "F030/style.css",
+    "js": "F030/script.js"
+  }
+}

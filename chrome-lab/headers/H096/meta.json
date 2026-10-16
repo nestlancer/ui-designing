@@ -1,0 +1,67 @@
+{
+  "id": "H096",
+  "type": "header",
+  "family": "Edge icon-rail + minimal bar",
+  "axes": {
+    "A1_container_geometry": "docked edge rail",
+    "A2_nav_paradigm": "mega-panel",
+    "A3_scroll_behaviour": "sticky-shrink",
+    "A4_motion_primitive": "m-08",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "split-arrow pill"
+  },
+  "signature_motion": {
+    "id": "m-08",
+    "name": "Fullscreen overlay wipe",
+    "trigger": "burger click",
+    "duration_ms": 480,
+    "easing": "cubic-bezier(.76,0,.24,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "obys.agency",
+      "cred.club"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A3",
+    "A6",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3017,
+    "css_bytes": 18509,
+    "html_bytes": 4604,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H096\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H096/index.html",
+    "css": "H096/style.css",
+    "js": "H096/script.js"
+  }
+}

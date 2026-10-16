@@ -1,0 +1,67 @@
+{
+  "id": "F026",
+  "type": "footer",
+  "family": "Accordion columns",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "accordion",
+    "A3_scroll_behaviour": "sticky",
+    "A4_motion_primitive": "m-16",
+    "A5_disclosure": "hover-intent 120ms",
+    "A6_cta_treatment": "split-arrow pill"
+  },
+  "signature_motion": {
+    "id": "m-16",
+    "name": "Ticker / marquee nav",
+    "trigger": "infinite CSS animation",
+    "duration_ms": 28000,
+    "easing": "linear"
+  },
+  "citations": {
+    "captured_sites": [
+      "supabase.com",
+      "intercom.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A3",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 711,
+    "css_bytes": 12439,
+    "html_bytes": 3465,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F026\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F026/index.html",
+    "css": "F026/style.css",
+    "js": "F026/script.js"
+  }
+}

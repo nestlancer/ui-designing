@@ -1,0 +1,67 @@
+{
+  "id": "F090",
+  "type": "footer",
+  "family": "App / QR download",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "transparent→solid",
+    "A4_motion_primitive": "m-31",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "icon-only"
+  },
+  "signature_motion": {
+    "id": "m-31",
+    "name": "Grain / noise drift",
+    "trigger": "infinite",
+    "duration_ms": 8000,
+    "easing": "steps"
+  },
+  "citations": {
+    "captured_sites": [
+      "gymshark.com",
+      "theguardian.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 742,
+    "css_bytes": 12928,
+    "html_bytes": 3730,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F090\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F090/index.html",
+    "css": "F090/style.css",
+    "js": "F090/script.js"
+  }
+}

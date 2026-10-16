@@ -1,0 +1,68 @@
+{
+  "id": "H014",
+  "type": "header",
+  "family": "Mega-menu panel",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "mega-panel",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-05",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "ghost text"
+  },
+  "signature_motion": {
+    "id": "m-05",
+    "name": "Sliding nav underline / ink bar",
+    "trigger": "hover focus route",
+    "duration_ms": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "shopify.com",
+      "monzo.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3757,
+    "css_bytes": 19070,
+    "html_bytes": 4153,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H014\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H014/index.html",
+    "css": "H014/style.css",
+    "js": "H014/script.js"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "H028",
+  "type": "header",
+  "family": "Auto-hide on scroll-down",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-02",
+    "A5_disclosure": "click",
+    "A6_cta_treatment": "teal pill"
+  },
+  "signature_motion": {
+    "id": "m-02",
+    "name": "Hide-down / show-up",
+    "trigger": "scroll direction change",
+    "duration_ms": 320,
+    "easing": "ease-out"
+  },
+  "citations": {
+    "captured_sites": [
+      "hashicorp.com",
+      "siteinspire.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3348,
+    "css_bytes": 18556,
+    "html_bytes": 3688,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H028\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H028/index.html",
+    "css": "H028/style.css",
+    "js": "H028/script.js"
+  }
+}

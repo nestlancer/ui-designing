@@ -1,0 +1,66 @@
+{
+  "id": "F083",
+  "type": "footer",
+  "family": "Curtain reveal on overscroll",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-25",
+    "A5_disclosure": "hover",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-25",
+    "name": "Live status dot pulse",
+    "trigger": "infinite",
+    "duration_ms": 2000,
+    "easing": "ease-in-out"
+  },
+  "citations": {
+    "captured_sites": [
+      "huge.com",
+      "figma.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1085,
+    "css_bytes": 12921,
+    "html_bytes": 3506,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F083\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F083/index.html",
+    "css": "F083/style.css",
+    "js": "F083/script.js"
+  }
+}

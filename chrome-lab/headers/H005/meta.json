@@ -1,0 +1,66 @@
+{
+  "id": "H005",
+  "type": "header",
+  "family": "Logo-left inline (+ hairline)",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-06",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-06",
+    "name": "Magnetic CTA",
+    "trigger": "pointer move inside CTA",
+    "duration_ms": 180,
+    "easing": "spring stiffness 200 damping 18"
+  },
+  "citations": {
+    "captured_sites": [
+      "dribbble.com",
+      "microsoft.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3587,
+    "css_bytes": 18893,
+    "html_bytes": 3625,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H005\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H005/index.html",
+    "css": "H005/style.css",
+    "js": "H005/script.js"
+  }
+}

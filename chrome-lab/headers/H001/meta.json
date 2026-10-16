@@ -1,0 +1,66 @@
+{
+  "id": "H001",
+  "type": "header",
+  "family": "Classic centred/split nav",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "sticky",
+    "A4_motion_primitive": "m-05",
+    "A5_disclosure": "hover",
+    "A6_cta_treatment": "teal pill"
+  },
+  "signature_motion": {
+    "id": "m-05",
+    "name": "Sliding nav underline / ink bar",
+    "trigger": "hover focus route",
+    "duration_ms": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "upwork.com",
+      "contra.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A4 (stated vs the next variant — no predecessor)",
+    "A5 (stated vs the next variant — no predecessor)",
+    "A6 (stated vs the next variant — no predecessor)"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3545,
+    "css_bytes": 18808,
+    "html_bytes": 3582,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H001\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H001/index.html",
+    "css": "H001/style.css",
+    "js": "H001/script.js"
+  }
+}

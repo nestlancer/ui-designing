@@ -1,0 +1,68 @@
+{
+  "id": "F033",
+  "type": "footer",
+  "family": "Minimal single-row",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "static",
+    "A4_motion_primitive": "m-23",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "icon-only"
+  },
+  "signature_motion": {
+    "id": "m-23",
+    "name": "Back-to-top orbit button",
+    "trigger": "appear after 60vh, click",
+    "duration_ms": 200,
+    "easing": "spring"
+  },
+  "citations": {
+    "captured_sites": [
+      "jetbrains.com",
+      "land-book.com"
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1443,
+    "css_bytes": 12492,
+    "html_bytes": 2098,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F033\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F033/index.html",
+    "css": "F033/style.css",
+    "js": "F033/script.js"
+  }
+}
