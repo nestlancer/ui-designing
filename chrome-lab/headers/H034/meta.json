@@ -1,0 +1,80 @@
+{
+  "id": "H034",
+  "type": "header",
+  "family": "Fullscreen overlay nav",
+  "axes": {
+    "A1_container_geometry": "asymmetric 8/4",
+    "A2_nav_paradigm": "fullscreen overlay",
+    "A3_scroll_behaviour": "transparent→solid",
+    "A4_motion_primitive": "m-05",
+    "A5_disclosure": "hover",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-05",
+    "name": "Sliding nav underline / ink bar",
+    "trigger": "hover focus route",
+    "duration_ms": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "plaid.com",
+      "ikea.com"
+    ],
+    "evidence": [
+      {
+        "site": "plaid.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "ikea.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3635,
+    "css_bytes": 19492,
+    "html_bytes": 3884,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H034\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H034/index.html",
+    "css": "H034/style.css",
+    "js": "H034/script.js"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "F058",
+  "type": "footer",
+  "family": "Marquee wordmark reveal",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "sticky-shrink",
+    "A4_motion_primitive": "m-16",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "teal pill"
+  },
+  "signature_motion": {
+    "id": "m-16",
+    "name": "Ticker / marquee nav",
+    "trigger": "infinite CSS animation",
+    "duration_ms": 28000,
+    "easing": "linear"
+  },
+  "citations": {
+    "captured_sites": [
+      "salesforce.com",
+      "groww.in"
+    ],
+    "evidence": [
+      {
+        "site": "salesforce.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "groww.in",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1307,
+    "css_bytes": 12885,
+    "html_bytes": 4062,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F058\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F058/index.html",
+    "css": "F058/style.css",
+    "js": "F058/script.js"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "F076",
+  "type": "footer",
+  "family": "Compact sticky mobile footer",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "progress-linked",
+    "A4_motion_primitive": "m-22",
+    "A5_disclosure": "hover",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-22",
+    "name": "Accordion footer columns",
+    "trigger": "mobile toggle click",
+    "duration_ms": 260,
+    "easing": "ease"
+  },
+  "citations": {
+    "captured_sites": [
+      "mobbin.com",
+      "razorpay.com"
+    ],
+    "evidence": [
+      {
+        "site": "mobbin.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "razorpay.com",
+        "evidence": "live_page_fetch",
+        "verified": true
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A6",
+    "A5"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1542,
+    "css_bytes": 13076,
+    "html_bytes": 4041,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F076\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F076/index.html",
+    "css": "F076/style.css",
+    "js": "F076/script.js"
+  }
+}

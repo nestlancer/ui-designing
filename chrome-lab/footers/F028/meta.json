@@ -1,0 +1,79 @@
+{
+  "id": "F028",
+  "type": "footer",
+  "family": "Accordion columns",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "accordion",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-21",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-21",
+    "name": "Oversized wordmark scale-on-scroll",
+    "trigger": "scroll-linked",
+    "duration_ms": 0,
+    "easing": "linear scrub"
+  },
+  "citations": {
+    "captured_sites": [
+      "resend.com",
+      "theguardian.com"
+    ],
+    "evidence": [
+      {
+        "site": "resend.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "theguardian.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1786,
+    "css_bytes": 12785,
+    "html_bytes": 3889,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F028\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F028/index.html",
+    "css": "F028/style.css",
+    "js": "F028/script.js"
+  }
+}

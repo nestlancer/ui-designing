@@ -1,0 +1,78 @@
+{
+  "id": "H085",
+  "type": "header",
+  "family": "Segmented tabs",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "segmented",
+    "A3_scroll_behaviour": "static",
+    "A4_motion_primitive": "m-01",
+    "A5_disclosure": "hover-intent 120ms",
+    "A6_cta_treatment": "outline pill"
+  },
+  "signature_motion": {
+    "id": "m-01",
+    "name": "Sticky shrink (height + logo scale)",
+    "trigger": "scroll > 24px",
+    "duration_ms": 200,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "anthropic.com",
+      "kayak.com"
+    ],
+    "evidence": [
+      {
+        "site": "anthropic.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "kayak.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3413,
+    "css_bytes": 18494,
+    "html_bytes": 3429,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H085\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H085/index.html",
+    "css": "H085/style.css",
+    "js": "H085/script.js"
+  }
+}

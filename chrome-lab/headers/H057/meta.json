@@ -1,0 +1,78 @@
+{
+  "id": "H057",
+  "type": "header",
+  "family": "Command-palette native (CmdK)",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "command palette",
+    "A3_scroll_behaviour": "static",
+    "A4_motion_primitive": "m-05",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "teal pill"
+  },
+  "signature_motion": {
+    "id": "m-05",
+    "name": "Sliding nav underline / ink bar",
+    "trigger": "hover focus route",
+    "duration_ms": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "godly.website",
+      "linear.app"
+    ],
+    "evidence": [
+      {
+        "site": "godly.website",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "linear.app",
+        "evidence": "live_page_fetch",
+        "verified": true
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 4383,
+    "css_bytes": 18709,
+    "html_bytes": 3896,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H057\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H057/index.html",
+    "css": "H057/style.css",
+    "js": "H057/script.js"
+  }
+}

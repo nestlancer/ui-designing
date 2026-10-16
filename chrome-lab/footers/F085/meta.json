@@ -1,0 +1,80 @@
+{
+  "id": "F085",
+  "type": "footer",
+  "family": "Curtain reveal on overscroll",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "progress-linked",
+    "A4_motion_primitive": "m-26",
+    "A5_disclosure": "hover-intent 120ms",
+    "A6_cta_treatment": "gradient edge"
+  },
+  "signature_motion": {
+    "id": "m-26",
+    "name": "Proof-stat count-up",
+    "trigger": "in view (IO)",
+    "duration_ms": 1200,
+    "easing": "cubic-bezier(.16,1,.3,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "nike.com",
+      "zoom.us"
+    ],
+    "evidence": [
+      {
+        "site": "nike.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "zoom.us",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1318,
+    "css_bytes": 13301,
+    "html_bytes": 3461,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F085\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F085/index.html",
+    "css": "F085/style.css",
+    "js": "F085/script.js"
+  }
+}

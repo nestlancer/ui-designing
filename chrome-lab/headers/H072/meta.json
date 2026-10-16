@@ -1,0 +1,81 @@
+{
+  "id": "H072",
+  "type": "header",
+  "family": "Announcement bar + nav",
+  "axes": {
+    "A1_container_geometry": "docked edge rail",
+    "A2_nav_paradigm": "bottom tab bar",
+    "A3_scroll_behaviour": "progress-linked",
+    "A4_motion_primitive": "m-06",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "icon-only"
+  },
+  "signature_motion": {
+    "id": "m-06",
+    "name": "Magnetic CTA",
+    "trigger": "pointer move inside CTA",
+    "duration_ms": 180,
+    "easing": "spring stiffness 200 damping 18"
+  },
+  "citations": {
+    "captured_sites": [
+      "allbirds.com",
+      "zendesk.com"
+    ],
+    "evidence": [
+      {
+        "site": "allbirds.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "zendesk.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3710,
+    "css_bytes": 18719,
+    "html_bytes": 4833,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H072\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H072/index.html",
+    "css": "H072/style.css",
+    "js": "H072/script.js"
+  }
+}

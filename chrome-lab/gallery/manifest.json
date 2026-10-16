@@ -1,0 +1,4662 @@
+{
+  "generated_at": "2026-10-16T15:53:10.475Z",
+  "headers": [
+    {
+      "id": "H001",
+      "family": "Classic centred/split nav",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "upwork.com",
+        "contra.com"
+      ],
+      "diff": [
+        "A4 (stated vs the next variant — no predecessor)",
+        "A5 (stated vs the next variant — no predecessor)",
+        "A6 (stated vs the next variant — no predecessor)"
+      ]
+    },
+    {
+      "id": "H002",
+      "family": "Classic centred/split nav",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-04",
+      "citations": [
+        "fiverr.com",
+        "99designs.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H003",
+      "family": "Classic centred/split nav",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-06",
+      "citations": [
+        "toptal.com",
+        "dribbble.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H004",
+      "family": "Classic centred/split nav",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-07",
+      "citations": [
+        "contra.com",
+        "behance.net"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H005",
+      "family": "Logo-left inline (+ hairline)",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-06",
+      "citations": [
+        "dribbble.com",
+        "microsoft.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H006",
+      "family": "Logo-left inline (+ hairline)",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-07",
+      "citations": [
+        "behance.net",
+        "stripe.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H007",
+      "family": "Logo-left inline (+ hairline)",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-08",
+      "citations": [
+        "freelancer.com",
+        "shopify.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H008",
+      "family": "Logo-left inline (+ hairline)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-09",
+      "citations": [
+        "peopleperhour.com",
+        "github.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H009",
+      "family": "Two-tier utility + main",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-07",
+      "citations": [
+        "arc.dev",
+        "supabase.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H010",
+      "family": "Two-tier utility + main",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-01",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-01",
+      "citations": [
+        "weworkremotely.com",
+        "neon.tech"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H011",
+      "family": "Two-tier utility + main",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "remoteok.com",
+        "resend.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H012",
+      "family": "Two-tier utility + main",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-03",
+      "citations": [
+        "wellfound.com",
+        "clerk.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H013",
+      "family": "Mega-menu panel",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-04",
+      "citations": [
+        "stripe.com",
+        "revolut.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H014",
+      "family": "Mega-menu panel",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-05",
+      "citations": [
+        "shopify.com",
+        "monzo.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H015",
+      "family": "Mega-menu panel",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-06",
+      "citations": [
+        "github.com",
+        "mercury.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H016",
+      "family": "Mega-menu panel",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-07",
+      "citations": [
+        "atlassian.com",
+        "brex.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H017",
+      "family": "Floating glass pill",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-06",
+      "citations": [
+        "ibm.com",
+        "figma.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H018",
+      "family": "Floating glass pill",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-07",
+      "citations": [
+        "nvidia.com",
+        "slack.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H019",
+      "family": "Floating glass pill",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-01",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-01",
+      "citations": [
+        "vercel.com",
+        "zoom.us"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H020",
+      "family": "Floating glass pill",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "linear.app",
+        "asana.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H021",
+      "family": "Sticky shrink",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "supabase.com",
+        "intercom.com"
+      ],
+      "diff": [
+        "A3",
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "id": "H022",
+      "family": "Sticky shrink",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-05",
+      "citations": [
+        "neon.tech",
+        "zendesk.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H023",
+      "family": "Sticky shrink",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-04",
+      "citations": [
+        "resend.com",
+        "theguardian.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H024",
+      "family": "Sticky shrink",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-06",
+      "citations": [
+        "clerk.com",
+        "bbc.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H025",
+      "family": "Auto-hide on scroll-down",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-05",
+      "citations": [
+        "fly.io",
+        "thefwa.com"
+      ],
+      "diff": [
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H026",
+      "family": "Auto-hide on scroll-down",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-07",
+      "citations": [
+        "postman.com",
+        "godly.website"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H027",
+      "family": "Auto-hide on scroll-down",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-08",
+      "citations": [
+        "jetbrains.com",
+        "land-book.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H028",
+      "family": "Auto-hide on scroll-down",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "hashicorp.com",
+        "siteinspire.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H029",
+      "family": "Transparent-over-hero to solid",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "wise.com",
+        "ramotion.com"
+      ],
+      "diff": [
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H030",
+      "family": "Transparent-over-hero to solid",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "revolut.com",
+        "basicagency.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H031",
+      "family": "Transparent-over-hero to solid",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-07",
+      "citations": [
+        "monzo.com",
+        "huge.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H032",
+      "family": "Transparent-over-hero to solid",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-06",
+      "citations": [
+        "mercury.com",
+        "lusion.co"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H033",
+      "family": "Fullscreen overlay nav",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-08",
+      "citations": [
+        "ramp.com",
+        "aesop.com"
+      ],
+      "diff": [
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H034",
+      "family": "Fullscreen overlay nav",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-05",
+      "citations": [
+        "plaid.com",
+        "ikea.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H035",
+      "family": "Fullscreen overlay nav",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-06",
+      "citations": [
+        "squareup.com",
+        "wayfair.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H036",
+      "family": "Fullscreen overlay nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-10",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-10",
+      "citations": [
+        "paypal.com",
+        "etsy.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H037",
+      "family": "Side drawer nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-07",
+      "citations": [
+        "stripe.com/payments",
+        "lyft.com"
+      ],
+      "diff": [
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H038",
+      "family": "Side drawer nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "notion.so",
+        "tripadvisor.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H039",
+      "family": "Side drawer nav",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "figma.com",
+        "openai.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H040",
+      "family": "Side drawer nav",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-08",
+      "citations": [
+        "slack.com",
+        "anthropic.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H041",
+      "family": "Bottom-docked mobile bar",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "asana.com",
+        "lovable.dev"
+      ],
+      "diff": [
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H042",
+      "family": "Bottom-docked mobile bar",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-04",
+      "citations": [
+        "monday.com",
+        "v0.dev"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H043",
+      "family": "Bottom-docked mobile bar",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-08",
+      "citations": [
+        "clickup.com",
+        "character.ai"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H044",
+      "family": "Bottom-docked mobile bar",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-09",
+      "citations": [
+        "airtable.com",
+        "active-theory.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H045",
+      "family": "Split-identity (client vs freelancer)",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-10",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-10",
+      "citations": [
+        "canva.com",
+        "zerodha.com"
+      ],
+      "diff": [
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H046",
+      "family": "Split-identity (client vs freelancer)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-11",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-11",
+      "citations": [
+        "hubspot.com",
+        "cred.club"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H047",
+      "family": "Split-identity (client vs freelancer)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "salesforce.com",
+        "groww.in"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H048",
+      "family": "Split-identity (client vs freelancer)",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "intercom.com",
+        "phonepe.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H049",
+      "family": "Marketplace category rail",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-06",
+      "citations": [
+        "theguardian.com",
+        "fiverr.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H050",
+      "family": "Marketplace category rail",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-04",
+      "citations": [
+        "bbc.com",
+        "toptal.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H051",
+      "family": "Marketplace category rail",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-05",
+      "citations": [
+        "washingtonpost.com",
+        "contra.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H052",
+      "family": "Marketplace category rail",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-09",
+      "citations": [
+        "theverge.com",
+        "99designs.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H053",
+      "family": "Search-forward",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "search-first",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-09",
+      "citations": [
+        "medium.com",
+        "remoteok.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A5"
+      ]
+    },
+    {
+      "id": "H054",
+      "family": "Search-forward",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "search-first",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-11",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-11",
+      "citations": [
+        "substack.com",
+        "wellfound.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H055",
+      "family": "Search-forward",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "search-first",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-08",
+      "citations": [
+        "economist.com",
+        "microsoft.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H056",
+      "family": "Search-forward",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "search-first",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-04",
+      "citations": [
+        "awwwards.com",
+        "stripe.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H057",
+      "family": "Command-palette native (CmdK)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "command palette",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "godly.website",
+        "linear.app"
+      ],
+      "diff": [
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H058",
+      "family": "Command-palette native (CmdK)",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "command palette",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "land-book.com",
+        "raycast.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H059",
+      "family": "Command-palette native (CmdK)",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "command palette",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-07",
+      "citations": [
+        "siteinspire.com",
+        "supabase.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H060",
+      "family": "Command-palette native (CmdK)",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "command palette",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-06",
+      "citations": [
+        "minimal.gallery",
+        "neon.tech"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H061",
+      "family": "Auth / app minimal",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-04",
+      "citations": [
+        "mobbin.com",
+        "razorpay.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H062",
+      "family": "Auth / app minimal",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-05",
+      "citations": [
+        "pentagram.com",
+        "wise.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H063",
+      "family": "Auth / app minimal",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-06",
+      "citations": [
+        "instrument.com",
+        "revolut.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H064",
+      "family": "Auth / app minimal",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-07",
+      "citations": [
+        "ustwo.com",
+        "monzo.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H065",
+      "family": "Wizard / intake progress",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-12",
+      "citations": [
+        "ramotion.com",
+        "stripe.com/payments"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H066",
+      "family": "Wizard / intake progress",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-06",
+      "citations": [
+        "basicagency.com",
+        "notion.so"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H067",
+      "family": "Wizard / intake progress",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-07",
+      "citations": [
+        "huge.com",
+        "figma.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H068",
+      "family": "Wizard / intake progress",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "lusion.co",
+        "slack.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H069",
+      "family": "Announcement bar + nav",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-07",
+      "citations": [
+        "adidas.com",
+        "hubspot.com"
+      ],
+      "diff": [
+        "A2",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H070",
+      "family": "Announcement bar + nav",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-05",
+      "citations": [
+        "zara.com",
+        "salesforce.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H071",
+      "family": "Announcement bar + nav",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-10",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-10",
+      "citations": [
+        "uniqlo.com",
+        "intercom.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H072",
+      "family": "Announcement bar + nav",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-06",
+      "citations": [
+        "allbirds.com",
+        "zendesk.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H073",
+      "family": "Marquee / ticker nav",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-08",
+      "citations": [
+        "glossier.com",
+        "economist.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H074",
+      "family": "Marquee / ticker nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-10",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-10",
+      "citations": [
+        "aesop.com",
+        "awwwards.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H075",
+      "family": "Marquee / ticker nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "ikea.com",
+        "thefwa.com"
+      ],
+      "diff": [
+        "A2",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H076",
+      "family": "Marquee / ticker nav",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-06",
+      "citations": [
+        "wayfair.com",
+        "godly.website"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H077",
+      "family": "Scroll-progress header",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-04",
+      "citations": [
+        "warbyparker.com",
+        "ustwo.com"
+      ],
+      "diff": [
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H078",
+      "family": "Scroll-progress header",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "airbnb.com",
+        "fantasy.co"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H079",
+      "family": "Scroll-progress header",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-05",
+      "citations": [
+        "booking.com",
+        "ramotion.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H080",
+      "family": "Scroll-progress header",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-07",
+      "citations": [
+        "expedia.com",
+        "basicagency.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H081",
+      "family": "Docs / section nav",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-05",
+      "citations": [
+        "kayak.com",
+        "gymshark.com"
+      ],
+      "diff": [
+        "A2",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H082",
+      "family": "Docs / section nav",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-09",
+      "citations": [
+        "uber.com",
+        "glossier.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H083",
+      "family": "Docs / section nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-08",
+      "citations": [
+        "lyft.com",
+        "aesop.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H084",
+      "family": "Docs / section nav",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "breadcrumb row",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-02",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-02",
+      "citations": [
+        "tripadvisor.com",
+        "ikea.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H085",
+      "family": "Segmented tabs",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-01",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-01",
+      "citations": [
+        "anthropic.com",
+        "kayak.com"
+      ],
+      "diff": [
+        "A2",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H086",
+      "family": "Segmented tabs",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-05",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-05",
+      "citations": [
+        "perplexity.ai",
+        "uber.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H087",
+      "family": "Segmented tabs",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-06",
+      "citations": [
+        "huggingface.co",
+        "lyft.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H088",
+      "family": "Segmented tabs",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-09",
+      "citations": [
+        "midjourney.com",
+        "tripadvisor.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H089",
+      "family": "Dual-CTA split",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-04",
+      "citations": [
+        "elevenlabs.io",
+        "suno.com"
+      ],
+      "diff": [
+        "A6",
+        "A2",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H090",
+      "family": "Dual-CTA split",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-09",
+      "citations": [
+        "suno.com",
+        "cursor.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H091",
+      "family": "Dual-CTA split",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-07",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-07",
+      "citations": [
+        "cursor.com",
+        "lovable.dev"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H092",
+      "family": "Dual-CTA split",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-08",
+      "citations": [
+        "lovable.dev",
+        "v0.dev"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H093",
+      "family": "Edge icon-rail + minimal bar",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "segmented",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-12",
+      "citations": [
+        "character.ai",
+        "resn.co.nz"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H094",
+      "family": "Edge icon-rail + minimal bar",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-04",
+      "citations": [
+        "active-theory.com",
+        "14islands.com"
+      ],
+      "diff": [
+        "A2",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H095",
+      "family": "Edge icon-rail + minimal bar",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "dropdown",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-03",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-03",
+      "citations": [
+        "basement.studio",
+        "zerodha.com"
+      ],
+      "diff": [
+        "A2",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H096",
+      "family": "Edge icon-rail + minimal bar",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-08",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-08",
+      "citations": [
+        "obys.agency",
+        "cred.club"
+      ],
+      "diff": [
+        "A2",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "H097",
+      "family": "Editorial typographic",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "mega-panel",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-09",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-09",
+      "citations": [
+        "cuerto.com",
+        "producthunt.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H098",
+      "family": "Editorial typographic",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "fullscreen overlay",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-04",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-04",
+      "citations": [
+        "akqa.com",
+        "upwork.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "H099",
+      "family": "Editorial typographic",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "drawer",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-06",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-06",
+      "citations": [
+        "resn.co.nz",
+        "fiverr.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "H100",
+      "family": "Editorial typographic",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "bottom tab bar",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-11",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-11",
+      "citations": [
+        "14islands.com",
+        "toptal.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    }
+  ],
+  "footers": [
+    {
+      "id": "F001",
+      "family": "Classic 4-column grid + blurb",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-12",
+      "citations": [
+        "upwork.com",
+        "contra.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F002",
+      "family": "Classic 4-column grid + blurb",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-16",
+      "citations": [
+        "fiverr.com",
+        "99designs.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F003",
+      "family": "Classic 4-column grid + blurb",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-19",
+      "citations": [
+        "toptal.com",
+        "dribbble.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F004",
+      "family": "Classic 4-column grid + blurb",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-20",
+      "citations": [
+        "contra.com",
+        "behance.net"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F005",
+      "family": "Classic 4-column grid + blurb",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-21",
+      "citations": [
+        "99designs.com",
+        "freelancer.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F006",
+      "family": "Oversized wordmark",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-21",
+      "citations": [
+        "dribbble.com",
+        "microsoft.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5"
+      ]
+    },
+    {
+      "id": "F007",
+      "family": "Oversized wordmark",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-22",
+      "citations": [
+        "behance.net",
+        "stripe.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F008",
+      "family": "Oversized wordmark",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-23",
+      "citations": [
+        "freelancer.com",
+        "shopify.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F009",
+      "family": "Oversized wordmark",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-24",
+      "citations": [
+        "peopleperhour.com",
+        "github.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F010",
+      "family": "Oversized wordmark",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-16",
+      "citations": [
+        "guru.com",
+        "atlassian.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F011",
+      "family": "Newsletter-lead",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-23",
+      "citations": [
+        "arc.dev",
+        "supabase.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F012",
+      "family": "Newsletter-lead",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-12",
+      "citations": [
+        "weworkremotely.com",
+        "neon.tech"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F013",
+      "family": "Newsletter-lead",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-20",
+      "citations": [
+        "remoteok.com",
+        "resend.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F014",
+      "family": "Newsletter-lead",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-22",
+      "citations": [
+        "wellfound.com",
+        "clerk.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F015",
+      "family": "Newsletter-lead",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-24",
+      "citations": [
+        "microsoft.com",
+        "railway.app"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F016",
+      "family": "CTA banner fused to footer",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-20",
+      "citations": [
+        "stripe.com",
+        "revolut.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F017",
+      "family": "CTA banner fused to footer",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-21",
+      "citations": [
+        "shopify.com",
+        "monzo.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F018",
+      "family": "CTA banner fused to footer",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-23",
+      "citations": [
+        "github.com",
+        "mercury.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F019",
+      "family": "CTA banner fused to footer",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-22",
+      "citations": [
+        "atlassian.com",
+        "brex.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F020",
+      "family": "CTA banner fused to footer",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-25",
+      "citations": [
+        "adobe.com",
+        "ramp.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F021",
+      "family": "Mega sitemap",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-24",
+      "citations": [
+        "ibm.com",
+        "figma.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F022",
+      "family": "Mega sitemap",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-26",
+      "citations": [
+        "nvidia.com",
+        "slack.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F023",
+      "family": "Mega sitemap",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-19",
+      "citations": [
+        "vercel.com",
+        "zoom.us"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F024",
+      "family": "Mega sitemap",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-16",
+      "citations": [
+        "linear.app",
+        "asana.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F025",
+      "family": "Mega sitemap",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-20",
+      "citations": [
+        "raycast.com",
+        "monday.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F026",
+      "family": "Accordion columns",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "accordion",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-16",
+      "citations": [
+        "supabase.com",
+        "intercom.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F027",
+      "family": "Accordion columns",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "accordion",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-20",
+      "citations": [
+        "neon.tech",
+        "zendesk.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F028",
+      "family": "Accordion columns",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "accordion",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-21",
+      "citations": [
+        "resend.com",
+        "theguardian.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F029",
+      "family": "Accordion columns",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "accordion",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-23",
+      "citations": [
+        "clerk.com",
+        "bbc.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F030",
+      "family": "Accordion columns",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "accordion",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-24",
+      "citations": [
+        "railway.app",
+        "washingtonpost.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F031",
+      "family": "Minimal single-row",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-24",
+      "citations": [
+        "fly.io",
+        "thefwa.com"
+      ],
+      "diff": [
+        "A2",
+        "A1",
+        "A3",
+        "A6"
+      ]
+    },
+    {
+      "id": "F032",
+      "family": "Minimal single-row",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-25",
+      "citations": [
+        "postman.com",
+        "godly.website"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F033",
+      "family": "Minimal single-row",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-23",
+      "citations": [
+        "jetbrains.com",
+        "land-book.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F034",
+      "family": "Minimal single-row",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-12",
+      "citations": [
+        "hashicorp.com",
+        "siteinspire.com"
+      ],
+      "diff": [
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F035",
+      "family": "Minimal single-row",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-19",
+      "citations": [
+        "razorpay.com",
+        "minimal.gallery"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F036",
+      "family": "Two-bar (links bar + legal bar)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-16",
+      "citations": [
+        "wise.com",
+        "ramotion.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F037",
+      "family": "Two-bar (links bar + legal bar)",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-22",
+      "citations": [
+        "revolut.com",
+        "basicagency.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F038",
+      "family": "Two-bar (links bar + legal bar)",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-19",
+      "citations": [
+        "monzo.com",
+        "huge.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F039",
+      "family": "Two-bar (links bar + legal bar)",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-20",
+      "citations": [
+        "mercury.com",
+        "lusion.co"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F040",
+      "family": "Two-bar (links bar + legal bar)",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-21",
+      "citations": [
+        "brex.com",
+        "nike.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F041",
+      "family": "Dark inverted + teal accents",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-22",
+      "citations": [
+        "ramp.com",
+        "aesop.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F042",
+      "family": "Dark inverted + teal accents",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-23",
+      "citations": [
+        "plaid.com",
+        "ikea.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F043",
+      "family": "Dark inverted + teal accents",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-26",
+      "citations": [
+        "squareup.com",
+        "wayfair.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F044",
+      "family": "Dark inverted + teal accents",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-24",
+      "citations": [
+        "paypal.com",
+        "etsy.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F045",
+      "family": "Dark inverted + teal accents",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-19",
+      "citations": [
+        "cash.app",
+        "warbyparker.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F046",
+      "family": "Mesh / gradient footer",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-25",
+      "citations": [
+        "stripe.com/payments",
+        "lyft.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F047",
+      "family": "Mesh / gradient footer",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-22",
+      "citations": [
+        "notion.so",
+        "tripadvisor.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F048",
+      "family": "Mesh / gradient footer",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-21",
+      "citations": [
+        "figma.com",
+        "openai.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F049",
+      "family": "Mesh / gradient footer",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-23",
+      "citations": [
+        "slack.com",
+        "anthropic.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F050",
+      "family": "Mesh / gradient footer",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-26",
+      "citations": [
+        "zoom.us",
+        "perplexity.ai"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F051",
+      "family": "Editorial / issue-style",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-21",
+      "citations": [
+        "asana.com",
+        "lovable.dev"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F052",
+      "family": "Editorial / issue-style",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-23",
+      "citations": [
+        "monday.com",
+        "v0.dev"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F053",
+      "family": "Editorial / issue-style",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-25",
+      "citations": [
+        "clickup.com",
+        "character.ai"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F054",
+      "family": "Editorial / issue-style",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-22",
+      "citations": [
+        "airtable.com",
+        "active-theory.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F055",
+      "family": "Editorial / issue-style",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-26",
+      "citations": [
+        "miro.com",
+        "basement.studio"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F056",
+      "family": "Marquee wordmark reveal",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-24",
+      "citations": [
+        "canva.com",
+        "zerodha.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F057",
+      "family": "Marquee wordmark reveal",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-27",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-27",
+      "citations": [
+        "hubspot.com",
+        "cred.club"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F058",
+      "family": "Marquee wordmark reveal",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-16",
+      "citations": [
+        "salesforce.com",
+        "groww.in"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F059",
+      "family": "Marquee wordmark reveal",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-25",
+      "citations": [
+        "intercom.com",
+        "phonepe.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F060",
+      "family": "Marquee wordmark reveal",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-28",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-28",
+      "citations": [
+        "zendesk.com",
+        "paytm.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F061",
+      "family": "Proof / stat rail",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-19",
+      "citations": [
+        "theguardian.com",
+        "fiverr.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F062",
+      "family": "Proof / stat rail",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-24",
+      "citations": [
+        "bbc.com",
+        "toptal.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F063",
+      "family": "Proof / stat rail",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-25",
+      "citations": [
+        "washingtonpost.com",
+        "contra.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F064",
+      "family": "Proof / stat rail",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-26",
+      "citations": [
+        "theverge.com",
+        "99designs.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F065",
+      "family": "Proof / stat rail",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-23",
+      "citations": [
+        "wired.com",
+        "dribbble.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F066",
+      "family": "Locale + currency switcher",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-27",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-27",
+      "citations": [
+        "medium.com",
+        "remoteok.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F067",
+      "family": "Locale + currency switcher",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "teal pill"
+      },
+      "motion": "m-25",
+      "citations": [
+        "substack.com",
+        "wellfound.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F068",
+      "family": "Locale + currency switcher",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-28",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-28",
+      "citations": [
+        "economist.com",
+        "microsoft.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F069",
+      "family": "Locale + currency switcher",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "sticky-shrink",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-21",
+      "citations": [
+        "awwwards.com",
+        "stripe.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F070",
+      "family": "Locale + currency switcher",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-22",
+      "citations": [
+        "thefwa.com",
+        "shopify.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F071",
+      "family": "Social-proof wall",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-20",
+      "citations": [
+        "godly.website",
+        "linear.app"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F072",
+      "family": "Social-proof wall",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-16",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-16",
+      "citations": [
+        "land-book.com",
+        "raycast.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F073",
+      "family": "Social-proof wall",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-19",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-19",
+      "citations": [
+        "siteinspire.com",
+        "supabase.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F074",
+      "family": "Social-proof wall",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-24",
+      "citations": [
+        "minimal.gallery",
+        "neon.tech"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F075",
+      "family": "Social-proof wall",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-22",
+      "citations": [
+        "refero.design",
+        "resend.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F076",
+      "family": "Compact sticky mobile footer",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-22",
+      "citations": [
+        "mobbin.com",
+        "razorpay.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5"
+      ]
+    },
+    {
+      "id": "F077",
+      "family": "Compact sticky mobile footer",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-23",
+      "citations": [
+        "pentagram.com",
+        "wise.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F078",
+      "family": "Compact sticky mobile footer",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-26",
+      "citations": [
+        "instrument.com",
+        "revolut.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F079",
+      "family": "Compact sticky mobile footer",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-25",
+      "citations": [
+        "ustwo.com",
+        "monzo.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F080",
+      "family": "Compact sticky mobile footer",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "split-arrow pill"
+      },
+      "motion": "m-12",
+      "citations": [
+        "fantasy.co",
+        "mercury.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F081",
+      "family": "Curtain reveal on overscroll",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-28",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-28",
+      "citations": [
+        "ramotion.com",
+        "stripe.com/payments"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F082",
+      "family": "Curtain reveal on overscroll",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-21",
+      "citations": [
+        "basicagency.com",
+        "notion.so"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F083",
+      "family": "Curtain reveal on overscroll",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-25",
+      "citations": [
+        "huge.com",
+        "figma.com"
+      ],
+      "diff": [
+        "A1",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F084",
+      "family": "Curtain reveal on overscroll",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-20",
+      "citations": [
+        "lusion.co",
+        "slack.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F085",
+      "family": "Curtain reveal on overscroll",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-26",
+      "citations": [
+        "nike.com",
+        "zoom.us"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F086",
+      "family": "App / QR download",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "dual equal CTA"
+      },
+      "motion": "m-22",
+      "citations": [
+        "adidas.com",
+        "hubspot.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F087",
+      "family": "App / QR download",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-27",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-27",
+      "citations": [
+        "zara.com",
+        "salesforce.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F088",
+      "family": "App / QR download",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-21",
+      "citations": [
+        "uniqlo.com",
+        "intercom.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F089",
+      "family": "App / QR download",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-28",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "ghost text"
+      },
+      "motion": "m-28",
+      "citations": [
+        "allbirds.com",
+        "zendesk.com"
+      ],
+      "diff": [
+        "A1",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F090",
+      "family": "App / QR download",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-31",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-31",
+      "citations": [
+        "gymshark.com",
+        "theguardian.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A4"
+      ]
+    },
+    {
+      "id": "F091",
+      "family": "Compliance-heavy (India)",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-23",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-23",
+      "citations": [
+        "glossier.com",
+        "economist.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F092",
+      "family": "Compliance-heavy (India)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "sticky mobile bar"
+      },
+      "motion": "m-26",
+      "citations": [
+        "aesop.com",
+        "awwwards.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F093",
+      "family": "Compliance-heavy (India)",
+      "axes": {
+        "A1_container_geometry": "full-bleed",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-12",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-12",
+      "citations": [
+        "ikea.com",
+        "thefwa.com"
+      ],
+      "diff": [
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F094",
+      "family": "Compliance-heavy (India)",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-27",
+        "A5_disclosure": "keyboard-first",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-27",
+      "citations": [
+        "wayfair.com",
+        "godly.website"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F095",
+      "family": "Compliance-heavy (India)",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-24",
+        "A5_disclosure": "hover-intent 120ms",
+        "A6_cta_treatment": "gradient edge"
+      },
+      "motion": "m-24",
+      "citations": [
+        "etsy.com",
+        "land-book.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F096",
+      "family": "Community & status",
+      "axes": {
+        "A1_container_geometry": "1200 contained",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "auto-hide",
+        "A4_motion_primitive": "m-21",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-21",
+      "citations": [
+        "warbyparker.com",
+        "ustwo.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F097",
+      "family": "Community & status",
+      "axes": {
+        "A1_container_geometry": "floating pill inset 16",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "transparent→solid",
+        "A4_motion_primitive": "m-25",
+        "A5_disclosure": "accordion",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-25",
+      "citations": [
+        "airbnb.com",
+        "fantasy.co"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "id": "F098",
+      "family": "Community & status",
+      "axes": {
+        "A1_container_geometry": "split 50/50",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "progress-linked",
+        "A4_motion_primitive": "m-20",
+        "A5_disclosure": "click",
+        "A6_cta_treatment": "outline pill"
+      },
+      "motion": "m-20",
+      "citations": [
+        "booking.com",
+        "ramotion.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F099",
+      "family": "Community & status",
+      "axes": {
+        "A1_container_geometry": "asymmetric 8/4",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "pinned-then-release",
+        "A4_motion_primitive": "m-22",
+        "A5_disclosure": "always-visible",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-22",
+      "citations": [
+        "expedia.com",
+        "basicagency.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A6",
+        "A5",
+        "A4"
+      ]
+    },
+    {
+      "id": "F100",
+      "family": "Community & status",
+      "axes": {
+        "A1_container_geometry": "docked edge rail",
+        "A2_nav_paradigm": "inline",
+        "A3_scroll_behaviour": "static",
+        "A4_motion_primitive": "m-26",
+        "A5_disclosure": "hover",
+        "A6_cta_treatment": "icon-only"
+      },
+      "motion": "m-26",
+      "citations": [
+        "marriott.com",
+        "huge.com"
+      ],
+      "diff": [
+        "A1",
+        "A3",
+        "A5",
+        "A4"
+      ]
+    }
+  ]
+}

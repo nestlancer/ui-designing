@@ -1,0 +1,80 @@
+{
+  "id": "F094",
+  "type": "footer",
+  "family": "Compliance-heavy (India)",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "auto-hide",
+    "A4_motion_primitive": "m-27",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "gradient edge"
+  },
+  "signature_motion": {
+    "id": "m-27",
+    "name": "Social icon stagger pop",
+    "trigger": "footer enter (IO)",
+    "duration_ms": 300,
+    "easing": "cubic-bezier(.34,1.56,.64,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "wayfair.com",
+      "godly.website"
+    ],
+    "evidence": [
+      {
+        "site": "wayfair.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "godly.website",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 2045,
+    "css_bytes": 13079,
+    "html_bytes": 4159,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F094\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F094/index.html",
+    "css": "F094/style.css",
+    "js": "F094/script.js"
+  }
+}

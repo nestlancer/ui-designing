@@ -1,0 +1,80 @@
+{
+  "id": "H016",
+  "type": "header",
+  "family": "Mega-menu panel",
+  "axes": {
+    "A1_container_geometry": "docked edge rail",
+    "A2_nav_paradigm": "mega-panel",
+    "A3_scroll_behaviour": "progress-linked",
+    "A4_motion_primitive": "m-07",
+    "A5_disclosure": "hover",
+    "A6_cta_treatment": "gradient edge"
+  },
+  "signature_motion": {
+    "id": "m-07",
+    "name": "Mega-panel reveal + child stagger",
+    "trigger": "hover-intent / click (120ms)",
+    "duration_ms": 260,
+    "easing": "cubic-bezier(.16,1,.3,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "atlassian.com",
+      "brex.com"
+    ],
+    "evidence": [
+      {
+        "site": "atlassian.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "brex.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3952,
+    "css_bytes": 18942,
+    "html_bytes": 4467,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H016\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H016/index.html",
+    "css": "H016/style.css",
+    "js": "H016/script.js"
+  }
+}

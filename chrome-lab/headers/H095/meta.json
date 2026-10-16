@@ -1,0 +1,80 @@
+{
+  "id": "H095",
+  "type": "header",
+  "family": "Edge icon-rail + minimal bar",
+  "axes": {
+    "A1_container_geometry": "docked edge rail",
+    "A2_nav_paradigm": "dropdown",
+    "A3_scroll_behaviour": "sticky",
+    "A4_motion_primitive": "m-03",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "outline pill"
+  },
+  "signature_motion": {
+    "id": "m-03",
+    "name": "Glass engage (blur + alpha)",
+    "trigger": "scroll > 8px",
+    "duration_ms": 240,
+    "easing": "linear"
+  },
+  "citations": {
+    "captured_sites": [
+      "basement.studio",
+      "zerodha.com"
+    ],
+    "evidence": [
+      {
+        "site": "basement.studio",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "zerodha.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3009,
+    "css_bytes": 18487,
+    "html_bytes": 5087,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H095\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H095/index.html",
+    "css": "H095/style.css",
+    "js": "H095/script.js"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "F001",
+  "type": "footer",
+  "family": "Classic 4-column grid + blurb",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "static",
+    "A4_motion_primitive": "m-12",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "teal pill"
+  },
+  "signature_motion": {
+    "id": "m-12",
+    "name": "Theme cross-fade (light to dark)",
+    "trigger": "toggle click",
+    "duration_ms": 300,
+    "easing": "ease"
+  },
+  "citations": {
+    "captured_sites": [
+      "upwork.com",
+      "contra.com"
+    ],
+    "evidence": [
+      {
+        "site": "upwork.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "contra.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A3",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "contentinfo",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 1292,
+    "css_bytes": 12447,
+    "html_bytes": 3795,
+    "cls": 0
+  },
+  "mount": "<footer data-chrome=\"F001\" data-theme=\"light\" data-page=\"pricing\"></footer>",
+  "files": {
+    "html": "F001/index.html",
+    "css": "F001/style.css",
+    "js": "F001/script.js"
+  }
+}

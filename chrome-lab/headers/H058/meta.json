@@ -1,0 +1,79 @@
+{
+  "id": "H058",
+  "type": "header",
+  "family": "Command-palette native (CmdK)",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "command palette",
+    "A3_scroll_behaviour": "sticky",
+    "A4_motion_primitive": "m-02",
+    "A5_disclosure": "always-visible",
+    "A6_cta_treatment": "outline pill"
+  },
+  "signature_motion": {
+    "id": "m-02",
+    "name": "Hide-down / show-up",
+    "trigger": "scroll direction change",
+    "duration_ms": 320,
+    "easing": "ease-out"
+  },
+  "citations": {
+    "captured_sites": [
+      "land-book.com",
+      "raycast.com"
+    ],
+    "evidence": [
+      {
+        "site": "land-book.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "raycast.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3963,
+    "css_bytes": 18845,
+    "html_bytes": 3910,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H058\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H058/index.html",
+    "css": "H058/style.css",
+    "js": "H058/script.js"
+  }
+}

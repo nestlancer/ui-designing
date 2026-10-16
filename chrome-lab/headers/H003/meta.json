@@ -1,0 +1,80 @@
+{
+  "id": "H003",
+  "type": "header",
+  "family": "Classic centred/split nav",
+  "axes": {
+    "A1_container_geometry": "floating pill inset 16",
+    "A2_nav_paradigm": "inline",
+    "A3_scroll_behaviour": "sticky-shrink",
+    "A4_motion_primitive": "m-06",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "split-arrow pill"
+  },
+  "signature_motion": {
+    "id": "m-06",
+    "name": "Magnetic CTA",
+    "trigger": "pointer move inside CTA",
+    "duration_ms": 180,
+    "easing": "spring stiffness 200 damping 18"
+  },
+  "citations": {
+    "captured_sites": [
+      "toptal.com",
+      "dribbble.com"
+    ],
+    "evidence": [
+      {
+        "site": "toptal.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "dribbble.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3362,
+    "css_bytes": 18750,
+    "html_bytes": 3737,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H003\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H003/index.html",
+    "css": "H003/style.css",
+    "js": "H003/script.js"
+  }
+}

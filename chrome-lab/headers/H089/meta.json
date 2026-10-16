@@ -1,0 +1,80 @@
+{
+  "id": "H089",
+  "type": "header",
+  "family": "Dual-CTA split",
+  "axes": {
+    "A1_container_geometry": "split 50/50",
+    "A2_nav_paradigm": "fullscreen overlay",
+    "A3_scroll_behaviour": "transparent→solid",
+    "A4_motion_primitive": "m-04",
+    "A5_disclosure": "accordion",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-04",
+    "name": "Transparent-over-hero to solid",
+    "trigger": "hero exit (IntersectionObserver)",
+    "duration_ms": 300,
+    "easing": "ease"
+  },
+  "citations": {
+    "captured_sites": [
+      "elevenlabs.io",
+      "suno.com"
+    ],
+    "evidence": [
+      {
+        "site": "elevenlabs.io",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "suno.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A6",
+    "A2",
+    "A3",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3303,
+    "css_bytes": 19121,
+    "html_bytes": 3818,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H089\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H089/index.html",
+    "css": "H089/style.css",
+    "js": "H089/script.js"
+  }
+}

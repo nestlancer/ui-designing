@@ -1,0 +1,79 @@
+{
+  "id": "H030",
+  "type": "header",
+  "family": "Transparent-over-hero to solid",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "dropdown",
+    "A3_scroll_behaviour": "transparent→solid",
+    "A4_motion_primitive": "m-02",
+    "A5_disclosure": "keyboard-first",
+    "A6_cta_treatment": "outline pill"
+  },
+  "signature_motion": {
+    "id": "m-02",
+    "name": "Hide-down / show-up",
+    "trigger": "scroll direction change",
+    "duration_ms": 320,
+    "easing": "ease-out"
+  },
+  "citations": {
+    "captured_sites": [
+      "revolut.com",
+      "basicagency.com"
+    ],
+    "evidence": [
+      {
+        "site": "revolut.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "basicagency.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A6",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3134,
+    "css_bytes": 18955,
+    "html_bytes": 4877,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H030\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H030/index.html",
+    "css": "H030/style.css",
+    "js": "H030/script.js"
+  }
+}

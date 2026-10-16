@@ -1,0 +1,80 @@
+{
+  "id": "H086",
+  "type": "header",
+  "family": "Segmented tabs",
+  "axes": {
+    "A1_container_geometry": "1200 contained",
+    "A2_nav_paradigm": "segmented",
+    "A3_scroll_behaviour": "sticky",
+    "A4_motion_primitive": "m-05",
+    "A5_disclosure": "click",
+    "A6_cta_treatment": "split-arrow pill"
+  },
+  "signature_motion": {
+    "id": "m-05",
+    "name": "Sliding nav underline / ink bar",
+    "trigger": "hover focus route",
+    "duration_ms": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "perplexity.ai",
+      "uber.com"
+    ],
+    "evidence": [
+      {
+        "site": "perplexity.ai",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "uber.com",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A1",
+    "A3",
+    "A6",
+    "A5",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3925,
+    "css_bytes": 18595,
+    "html_bytes": 3512,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H086\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H086/index.html",
+    "css": "H086/style.css",
+    "js": "H086/script.js"
+  }
+}

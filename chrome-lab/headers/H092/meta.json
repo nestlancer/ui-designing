@@ -1,0 +1,79 @@
+{
+  "id": "H092",
+  "type": "header",
+  "family": "Dual-CTA split",
+  "axes": {
+    "A1_container_geometry": "full-bleed",
+    "A2_nav_paradigm": "segmented",
+    "A3_scroll_behaviour": "pinned-then-release",
+    "A4_motion_primitive": "m-08",
+    "A5_disclosure": "click",
+    "A6_cta_treatment": "dual equal CTA"
+  },
+  "signature_motion": {
+    "id": "m-08",
+    "name": "Fullscreen overlay wipe",
+    "trigger": "burger click",
+    "duration_ms": 480,
+    "easing": "cubic-bezier(.76,0,.24,1)"
+  },
+  "citations": {
+    "captured_sites": [
+      "lovable.dev",
+      "v0.dev"
+    ],
+    "evidence": [
+      {
+        "site": "lovable.dev",
+        "evidence": "pattern_prior",
+        "verified": false
+      },
+      {
+        "site": "v0.dev",
+        "evidence": "pattern_prior",
+        "verified": false
+      }
+    ],
+    "motion_index": "research/motion-index.json",
+    "pattern_index": "research/pattern-index.json"
+  },
+  "diff_from_prev": [
+    "A2",
+    "A1",
+    "A3",
+    "A4"
+  ],
+  "tokens": "chrome-lab/tokens/tokens.css (§2.2 locked, light + derived dark)",
+  "responsive": [
+    "360",
+    "768",
+    "1024",
+    "1440",
+    "1920"
+  ],
+  "a11y": {
+    "skip_link": true,
+    "landmark_role": "banner",
+    "focus_visible_ring": "2px solid var(--n-teal) + 2px offset",
+    "aria_expanded_wired": true,
+    "escape_closes": true,
+    "current_page_marked": true
+  },
+  "theme": {
+    "light": true,
+    "dark": true
+  },
+  "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
+  "budget": {
+    "js_bytes": 3522,
+    "css_bytes": 18230,
+    "html_bytes": 3536,
+    "cls": 0
+  },
+  "mount": "<header data-chrome=\"H092\" data-theme=\"light\" data-page=\"pricing\"></header>",
+  "files": {
+    "html": "H092/index.html",
+    "css": "H092/style.css",
+    "js": "H092/script.js"
+  }
+}
