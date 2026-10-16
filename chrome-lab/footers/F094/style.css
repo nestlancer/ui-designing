@@ -117,5 +117,5 @@ to{transform:translateX(-50%)}
 @media (max-width:390px){[data-chrome="F094"] .foot__inner{padding:0 16px}
 [data-chrome="F094"] .foot__news{padding:18px}
 }
-[data-chrome="F094"].social,[data-chrome="F094"] .legalLinks a,[data-chrome="F094"] .store{opacity:0;transform:scale(.8)}
+[data-chrome="F094"] .social,[data-chrome="F094"] .legalLinks a,[data-chrome="F094"] .store{opacity:0;transform:scale(.8)}
 [data-chrome="F094"] .social.in,[data-chrome="F094"] .legalLinks a.in,[data-chrome="F094"] .store.in{opacity:1;transform:none;transition:transform 300ms cubic-bezier(.34,1.56,.64,1),opacity 220ms linear;transition-delay:calc(var(--i,0) * 40ms)}

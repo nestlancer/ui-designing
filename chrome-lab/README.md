@@ -8,10 +8,18 @@ chrome-lab/
 ├── tokens/tokens.css · tokens.json      # measured, locked palette + derived dark theme
 ├── runtime/chrome.css                   # shared primitives (pill CTA, hairline, eyebrow, glass, focus ring, skip link)
 ├── runtime/chrome-motion.js             # opt-in data-motion runtime (m-01/m-02/m-03/m-13 helper)
+├── runtime/demo.css                     # demo-page shell — styles the page AROUND each chrome (never mounted)
 ├── headers/H001…H100/{index.html,style.css,script.js,meta.json}
 ├── footers/F001…F100/{index.html,style.css,script.js,meta.json}
-└── gallery/index.html · app.js · manifest.json   # 200 isolated iframes, filterable
+└── gallery/index.html · app.js · manifest.json   # 200 isolated iframes (264px headers / 600px footers), filterable
 ```
+
+**Viewing in a browser:** serve the **repo root** with any static server — `python3 -m http.server 8123`
+→ open `http://localhost:8123/chrome-lab/gallery/`. Variant pages load the locked Fraunces/Inter/IBM
+Plex Mono fonts via one Google Fonts `<link>` (fallback stacks keep them usable offline), carry a
+theme-boot script so `?theme=dark` never flashes light, and link `runtime/demo.css` so the page around
+the chrome looks intentional. Mounting a variant into a real page (below) needs only tokens + chrome.css
++ style.css — demo.css is lab-only.
 
 ## Mount API (one line)
 

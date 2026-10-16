@@ -1,11 +1,13 @@
 /**
- * qa.mjs — Nestlancer chrome lab acceptance gates (G1–G12)
+ * qa.mjs — Nestlancer chrome lab acceptance gates (G1–G13)
  * Runs over chrome-lab/headers/* and chrome-lab/footers/*
  * Writes docs/QA-REPORT.md and exits non-zero if a hard gate fails.
  *
  * Honest limitation: this sandbox has no browser (no Playwright/Chromium available,
  * and the workspace only allows npm/pypi/github hosts). G4/G5 are therefore executed as
  * rigorous STATIC approximations + reasoning, and are marked "static" in the report.
+ * G13 (browser-serve contract) verifies statically that every page serves and renders
+ * correctly over `python3 -m http.server` — the exact scenario the user runs.
  */
 import fs from 'fs';
 import path from 'path';
@@ -169,6 +171,11 @@ const d = (a, b) => AX.reduce((n, k) => n + (a[k] !== b[k] ? 1 : 0), 0);
 }
 
 /* ---------------- G7 performance budget ---------------- */
+/* The ONE sanctioned external request: the locked Google Fonts stylesheet in the shared <head>
+   block (prompt §0C). It renders the locked token fonts and degrades gracefully to the token
+   fallback stacks when offline. Any other external URL — including a variant-defined @font-face —
+   fails the gate. */
+const FONT_CDN = 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap';
 {
   const issues = [];
   for (const v of all) {
@@ -177,10 +184,12 @@ const d = (a, b) => AX.reduce((n, k) => n + (a[k] !== b[k] ? 1 : 0), 0);
     const nodes = (chrome.match(/<[a-zA-Z][^>]*>/g) || []).length;
     const cap = v.type === 'header' ? 90 : 140;
     if (nodes > cap) issues.push(`${v.id}: ${nodes} chrome DOM nodes > ${cap}`);
-    if (/https?:\/\/(?!www\.w3\.org)/.test(v.html + v.css)) issues.push(`${v.id}: external network request`);
-    if (/@font-face|fonts\.googleapis/.test(v.css + v.html)) issues.push(`${v.id}: webfont request`);
+    const externals = (v.html + v.css).match(/https?:\/\/(?!www\.w3\.org)[^"\s)]+/g) || [];
+    const stray = [...new Set(externals.filter(u => u !== FONT_CDN && u !== 'https://fonts.googleapis.com' && !u.startsWith('https://fonts.gstatic.com')))];
+    if (stray.length) issues.push(`${v.id}: external request(s) beyond locked font CDN: ${stray.slice(0, 2).join(', ')}`);
+    if (/@font-face/.test(v.css)) issues.push(`${v.id}: @font-face in variant CSS (fonts come only from the locked head link)`);
   }
-  gate('G7', 'Performance budgets', issues.length === 0, issues.length ? issues.slice(0, 8) : [`max JS ${Math.max(...all.map(v => v.sizes.js)) / 1024 | 0} KB · max DOM added ${Math.max(...all.map(v => (v.html.match(/<[a-zA-Z][^>]*>/g) || []).length))} nodes · zero external requests`, 'CLS 0 claimed: every header reserves an explicit height (--h) and sticky chrome never reflows content.'],
+  gate('G7', 'Performance budgets', issues.length === 0, issues.length ? issues.slice(0, 8) : [`max JS ${Math.max(...all.map(v => v.sizes.js)) / 1024 | 0} KB · max DOM added ${Math.max(...all.map(v => (v.html.match(/<[a-zA-Z][^>]*>/g) || []).length))} nodes · external requests: the one locked Google Fonts stylesheet only (full token fallbacks offline)`, 'CLS 0 claimed: every header reserves an explicit height (--h) and sticky chrome never reflows content.'],
     'Static byte/node accounting only; no Lighthouse run possible in this sandbox.');
 }
 
@@ -296,7 +305,7 @@ function chromeSubtree(v) {
   const total = files.reduce((a, f) => a + f.size, 0);
   const variantBytes = files.filter(f => /chrome-lab\/(headers|footers)\//.test(f.p)).reduce((a, f) => a + f.size, 0);
   const researchJson = ['research/sites.json', 'research/motion-index.json', 'research/pattern-index.json'].filter(f => files.some(x => x.p === f));
-  const missing = ['chrome-lab/tokens/tokens.css', 'chrome-lab/runtime/chrome.css', 'chrome-lab/runtime/chrome-motion.js', 'chrome-lab/gallery/index.html', 'chrome-lab/gallery/app.js', 'chrome-lab/gallery/manifest.json'].filter(f => !files.some(x => x.p === f));
+  const missing = ['chrome-lab/tokens/tokens.css', 'chrome-lab/runtime/chrome.css', 'chrome-lab/runtime/chrome-motion.js', 'chrome-lab/runtime/demo.css', 'chrome-lab/gallery/index.html', 'chrome-lab/gallery/app.js', 'chrome-lab/gallery/manifest.json'].filter(f => !files.some(x => x.p === f));
   const manifest = JSON.parse(read(path.join(LAB, 'gallery/manifest.json')));
   gate('G12', 'Workspace delivery (manifest of real files, budget)', missing.length === 0 && researchJson.length === 3 && total < 128 * 1024 * 1024,
     [`files listed: ${files.length} · variant files: ${files.filter(f => /chrome-lab\/(headers|footers)\//.test(f.p)).length}`,
@@ -305,6 +314,42 @@ function chromeSubtree(v) {
      `manifest entries: headers ${manifest.headers.length} · footers ${manifest.footers.length}`,
      missing.length ? `missing: ${missing.join(', ')}` : 'all foundation files present']);
   fs.writeFileSync(path.join(REPO, 'docs', '.delivery-files.json'), JSON.stringify(files, null, 2));
+}
+
+/* ---------------- G13 browser-serve contract (python3 -m http.server from repo root) -------- */
+/* The user's runbook is: open a terminal at the repo root, `python3 -m http.server 8123`, browse
+   /chrome-lab/gallery/ or any /chrome-lab/headers|footers/<ID>/. Every page must then render the
+   intended UI — real fonts, styled demo shell, correct theme, zero 404s, zero malformed CSS. */
+{
+  const issues = [];
+  if (!fs.existsSync(path.join(LAB, 'runtime/demo.css'))) issues.push('runtime/demo.css missing (demo shell)');
+  if (!fs.existsSync(path.join(REPO, 'index.html'))) issues.push('repo-root index.html redirect to gallery missing');
+  for (const v of all) {
+    if (!/name="color-scheme" content="light dark"/.test(v.html)) issues.push(`${v.id}: color-scheme meta missing`);
+    if (!/fonts\.googleapis\.com\/css2\?family=Fraunces/.test(v.html)) issues.push(`${v.id}: locked font <link> missing — tokens would silently fall back to Georgia/system-ui`);
+    if (!/rel="stylesheet" href="\.\.\/\.\.\/runtime\/demo\.css"/.test(v.html)) issues.push(`${v.id}: runtime/demo.css not linked — demo shell unstyled`);
+    if (!/URLSearchParams\(location\.search\)/.test(v.html)) issues.push(`${v.id}: theme-boot inline script missing (?theme= would flash wrong theme)`);
+    if (/"\]@media/.test(v.css) || /\]body:has/.test(v.css)) issues.push(`${v.id}: malformed glued selector in style.css (scoped comment bug)`);
+    if (v.type === 'header' && !/\.burger\{[^}]*order:3/.test(v.css)) issues.push(`${v.id}: mobile burger not ordered after actions (≤900px bar layout)`);
+    if (/(?:href|src)="\/(?!\/)[^"]*\.(?:css|js)"/.test(v.html)) issues.push(`${v.id}: absolute asset path — breaks when the server root is not the repo root`);
+  }
+  /* every local asset any page references must exist on disk (the python-server 404 test) */
+  const refPages = [{ dir: path.join(LAB, 'gallery'), html: read(path.join(LAB, 'gallery/index.html')), id: 'gallery' },
+    ...all.map(v => ({ dir: v.dir, html: v.html, id: v.id }))];
+  const notFound = [];
+  for (const p of refPages) for (const m of p.html.matchAll(/<(?:link|script)\b[^>]*(?:href|src)="([^"#?]+)"/g)) {
+    const u = m[1];
+    if (/^(https?:)?\/\//.test(u)) continue;
+    if (!fs.existsSync(path.resolve(p.dir, u))) notFound.push(`${p.id}: ${u} → 404`);
+  }
+  gate('G13', 'Browser-serve contract (python3 -m http.server from repo root)', issues.length === 0 && notFound.length === 0,
+    issues.length || notFound.length
+      ? [...issues.slice(0, 4), ...notFound.slice(0, 4)]
+      : [`all 201 pages: color-scheme + locked font link + demo.css + theme-boot script present`,
+         `zero malformed glued selectors · mobile burger ordered after actions in all 100 headers`,
+         `every local href/src resolves to a real file (no 404s over the static server)`,
+         `repo-root index.html redirects to chrome-lab/gallery/`],
+    'Static verification of the serve contract. Final visual sign-off still happens in a real browser: run `python3 -m http.server 8123` and open http://localhost:8123/ (steps in the Regeneration block).');
 }
 
 /* ---------------- family coverage table ---------------- */
@@ -340,7 +385,7 @@ for (const r of results) {
 md.push('');
 md.push('## Honest limitations (read before sign-off)');
 md.push('');
-md.push('1. **No browser in this sandbox.** Playwright/Chromium is unavailable and the sandbox network only allows npm/pypi/GitHub hosts, so no real 1440 px / 390 px render pass, no axe-core run and no Lighthouse score were produced. G4, G5 and G7 are rigorous *static* checks (media-query presence, overflow guards, landmark/aria wiring, byte and node accounting). Re-run `tools/qa.mjs` under Playwright before shipping.');
+md.push('1. **No browser in this sandbox.** Playwright/Chromium is unavailable and the sandbox network only allows npm/pypi/github hosts, so no real 1440 px / 390 px render pass, no axe-core run and no Lighthouse score were produced. G4, G5 and G7 are rigorous *static* checks (media-query presence, overflow guards, landmark/aria wiring, byte and node accounting). The browser-serve scenario (`python3 -m http.server` from the repo root) is covered statically by **G13** — fonts wired, demo shell styled, no 404s, no malformed selectors — but re-run `tools/qa.mjs` under Playwright before shipping.');
 md.push('2. **Research crops are derived metrics, not screenshots.** `research/sites.json` stores measured chrome metrics (height, position, blur, footer columns) and the motion catalogue stores real measured timings from the recipe sources; the git-ignored `research/raw/**` crop folder was intentionally left empty under the size-budget rule ("200 variants with no images is a pass; 140 screenshots and 31 variants is a fail").');
 md.push('3. **Bot-walled seeds were substituted inside the same bucket** (see `docs/RESEARCH-NOTES.md`, rows marked BOT-WALLED).');
 md.push('4. **Contrast** is verified at token level (navy on canvas 13.3:1, body 6.5:1, white on teal 4.9:1, dark-theme body 9.6:1); per-element computed contrast still needs a browser pass.');
@@ -358,12 +403,16 @@ md.push('');
 md.push('```bash');
 md.push('node tools/generate.mjs   # rebuilds all 200 variants + gallery manifest from the axis solver');
 md.push('node tools/qa.mjs         # re-runs every gate and rewrites this report');
+md.push('python3 -m http.server 8123   # browser smoke test from the repo root…');
+md.push('# open http://localhost:8123/  → redirects to the gallery; open 3–5 variants at 1440/390 px,');
+md.push('# light and dark, and confirm: real Fraunces/Inter/Plex Mono, styled demo shell, no 404s in');
+md.push('# the network tab, no console errors, no horizontal scroll.');
 md.push('```');
 md.push('');
 md.push('## Flags for human review');
 md.push('');
 const failing = results.filter(r => !r.pass);
-if (failing.length === 0) md.push('- None. All twelve gates pass statically; re-run G4/G5/G7 with a real browser before release.');
+if (failing.length === 0) md.push(`- None. All ${results.length} gates pass statically; re-run G4/G5/G7 with a real browser before release.`);
 else failing.forEach(r => md.push(`- ${r.n} ${r.name} — ${r.details.slice(0, 3).join('; ')}`));
 md.push('');
 

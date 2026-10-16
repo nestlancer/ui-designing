@@ -1,20 +1,24 @@
-# Nestlancer Header & Footer Lab — Master Agent Prompt (v1)
+# Nestlancer Header & Footer Lab — Master Agent Prompt (v2)
 
 > **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (≥100 real sites captured), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable 6-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
 >
 > **Pipeline:** `header-footer-prompt.md` (this file) → `research/sites.json` (≥100 captured) → `research/pattern-index.json` + `research/motion-index.json` → **100 headers (`H001–H100`) + 100 footers (`F001–F100`)** → gallery + `QA-REPORT.md`.
 >
 > **Where to run:** [Arena Agent Mode](https://arena.ai/agent) (also works in Cursor / Claude Code). Paste everything below the line.
+>
+> **v2 (2026-10-16) — the browser-serve fix.** A v1 run shipped files that were “correct on disk” but **rendered wrong in a real browser** when served with `python3 -m http.server`: the locked fonts never loaded (no `<link>` anywhere → Georgia/system-ui fallbacks), the demo page around each chrome was unstyled text flush to the viewport, gallery iframes cropped footers to 240 px, dark theme flashed light first, 13 bottom-bar/sticky-CTA headers carried a dead `[data-chrome]@media` rule and 5 curtain footers a dead body rule — all from a comment glued onto a selector head in the CSS scoper; and on mobile the burger sat next to the wordmark instead of the far right. **v2 adds §0C (Browser-Serve Contract), gate G13, `runtime/demo.css`, real font loading with offline fallbacks, theme-boot before first paint, and mobile-bar normalisation.** §5.6’s “zero external requests” is amended to *no externals beyond the one locked Google Fonts stylesheet*.
 
 ---
 
 ````
 # ============================================================
-# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v1)
+# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v2)
 # Mission: research ≥100 live sites → build 100 unique headers
 #          + 100 unique footers for the Nestlancer design language
 # Data/design truth: Nestlancer-public-screenshots/public/*.webp
 # Runtime: Arena.ai Agent Mode (user workspace = downloadable)
+# v2 adds §0C browser-serve contract + gate G13: files must RENDER
+# correctly over `python3 -m http.server`, not merely exist on disk
 # ============================================================
 
 ## 0A) ARENA AGENT MODE — USER WORKSPACE DELIVERY (CRITICAL)
@@ -61,7 +65,8 @@ Deliverable files (path — size):
 - ...
 Counts: headers <n>/100 · footers <n>/100 · families covered <n>/45
 Research: sites captured <n>/100 · primitives <n>/30
-QA: gates passed <n>/12 · variants flagged <n>
+QA: gates passed <n>/13 · variants flagged <n>
+Browser-serve (§0C): VERIFIED at localhost:<port> / NO-BROWSER-IN-SANDBOX (G13 static only)
 Scratch-only leftovers cleaned: YES/NO
 Approx workspace use: <estimate> / 128 MB
 Download expectation: chrome-lab/ + research/*.json MUST appear in the Workspace panel / Download ZIP.
@@ -96,6 +101,75 @@ If `Captured < 100` → substitute same-bucket sites from §3.1 and re-run captu
 
 ---
 
+## 0C) BROWSER-SERVE CONTRACT — THE PYTHON-SERVER TEST (RENDER, OR IT DIDN'T HAPPEN)
+
+The user's check is brutally simple and it is **non-negotiable**:
+
+```bash
+python3 -m http.server 8123          # run from the repo root
+# → http://localhost:8123/                          (redirects to chrome-lab/gallery/)
+# → http://localhost:8123/chrome-lab/headers/H001/  (any variant — same rule)
+# → http://localhost:8123/chrome-lab/gallery/       (all 200, filterable)
+```
+
+Everything visible there must be the **intended UI** — real fonts, styled demo page, whole footer
+thumbnails, correct theme, working mobile bar. Files that are “correct” in the repo but broken here
+are a **failed run**, exactly like files that never left the sandbox (§0A).
+
+### Hard rules
+1. **Serve from the repo root over any static server.** Every page and every asset reference uses
+   **relative paths only** (`../../tokens/tokens.css`, never `/chrome-lab/…`), so the lab also works
+   when hosted under a sub-path. A repo-root `index.html` redirects to the gallery.
+2. **The locked fonts must actually load.** `tokens.css` names Fraunces / Inter / IBM Plex Mono — with
+   no `<link>` the browser silently falls back to Georgia/system-ui and the whole design voice is lost.
+   Every `index.html` carries this exact head block (the **only** external request allowed in the lab —
+   see G7; per-variant `@font-face` is banned as CLS + duplication):
+   ```html
+   <meta name="color-scheme" content="light dark"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com"/>
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"/>
+   <script>(()=>{try{const t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(_){}})();</script>
+   ```
+   The inline theme-boot script applies `?theme=` **before first paint** — no light-flash in gallery
+   iframes or mounted pages. The token fallback stacks stay, so pages still render offline (graceful
+   degradation, not the design target).
+3. **The demo page around the chrome is part of the deliverable.** Every variant page links
+   `chrome-lab/runtime/demo.css` *after* `chrome.css`. It styles the shell around the chrome — `main`,
+   the H1, the mount snippet (`pre` wraps/scrolls, never pushes the page sideways at 360 px), the axis
+   chips, the scroll placeholder blocks — and declares `color-scheme`. Mounting a variant into a real
+   page loads only tokens + chrome.css + style.css; **viewing** a variant in the lab must look finished
+   on its own at every §5.4 width.
+4. **The gallery must show the chrome, not crop it.** Header iframe ≈ 264 px, footer iframe ≈ 600 px
+   (`.tall`), `loading="lazy"`. The theme switch sets `data-theme` on the gallery’s own `<html>` too, so
+   the page follows the theme, not just the iframes.
+5. **Mobile chrome is a layout, not a collapse.** At ≤ 900 px the bar stays one flex row
+   (`display:flex;flex-wrap:nowrap` — grid A1 variants normalised), and the burger is ordered **after**
+   the actions (`order:3`) so it sits far right; fixed bottom bars add their height as body padding via
+   `@media (max-width:900px){body:has([data-chrome="<ID>"]){padding-bottom:80px}}`. At ≤ 600 px the bar
+   must fit 360 px: the theme toggle yields to space (`display:none`) — wordmark, CTA and burger stay
+   reachable; the bar never scrolls horizontally.
+6. **Comments never touch selector heads in generated CSS.** A comment preceding an at-rule/selector
+   used to be parsed into the selector head, producing dead rules like
+   `[data-chrome="H041"]@media (max-width:900px){…}` and `[data-chrome="F081"]body:has(…)`. The scoper
+   now strips comments **before** parsing; BASE rules emit as plain comment-free `body:has(…)`
+   statements. When writing CSS scopers/generators by hand, keep selectors, comments and at-rules
+   separable — then grep the output for `"]@media` and `]body:has` before shipping.
+7. **If the run environment has no browser:** say so, run gate **G13** (`node tools/qa.mjs`) as the
+   static stand-in, and hand the user the exact serve-and-look steps below. Never print
+   “browser-verified” on the strength of static checks.
+
+### Verification recipe (run before claiming “done”)
+1. `node tools/generate.mjs && node tools/qa.mjs` → **13/13 gates** (G13 is this contract, static).
+2. `python3 -m http.server 8123` from the repo root → open `/` (gallery), any 3–5 variants, both
+   themes, at 1440 px and 390 px.
+3. Confirm with eyes, not vibes: Fraunces/Inter/Plex Mono actually rendered (not Georgia); demo shell
+   styled; footer pages reveal the footer within the first screenful at 1440; gallery footer
+   thumbnails whole; network tab shows **no 404s**; console shows **no errors**; no horizontal
+   scrollbar; burger at the far right opens the drawer; `Esc` closes it and focus returns.
+
+---
+
 ## 0) FAILURE MODES YOU MUST NOT REPEAT
 
 | # | Failure | Why it happens | Fix in this prompt |
@@ -110,6 +184,7 @@ If `Captured < 100` → substitute same-bucket sites from §3.1 and re-run captu
 | 8 | Accessibility skipped (no focus ring, animations ignore reduced-motion) | a11y treated as polish | §5.3 + gates **G5/G6** |
 | 9 | Header breaks the page it drops into (CLS, overlap, z-index wars) | chrome built as a demo, not an integration | §5.6 budgets + gate **G7** |
 | 10 | Footer is an afterthought: one row, © only, 90 of them identical | effort spent on headers | 20 footer families with equal craft bar (§6.2) |
+| 11 | Files “correct” on disk but raw/broken in the browser: fallback fonts, unstyled demo page, cropped gallery iframes, light-flash on dark theme, dead CSS rules, burger stranded mid-bar | repo never actually **served + looked at**; QA gates static-only; CSS scoper glued a comment onto a selector | §0C browser-serve contract + gate **G13** + `runtime/demo.css` + real font loading + comment-safe scoping |
 
 ### Non-negotiables
 - You MAY NOT write variant CSS before **§0B Research Gate** passes.
@@ -118,6 +193,7 @@ If `Captured < 100` → substitute same-bucket sites from §3.1 and re-run captu
 - Every variant cites ≥2 captured sites + ≥1 measured motion primitive.
 - No copied logos, images, or proprietary copy from any researched site.
 - You MAY NOT mark complete until **§0A Workspace Delivery Check** passes.
+- You MAY NOT claim a variant is finished until it has been **served and looked at** (§0C): `python3 -m http.server` from the repo root, opened at 1440 px and 390 px in both themes — or, in a browser-less sandbox, gate **G13** passes and the limitation is printed.
 
 ---
 
@@ -197,6 +273,8 @@ Repo to work in: `https://github.com/nestlancer/ui-designing.git` (clone it; it 
 }
 ```
 **Dark theme is derived, never invented:** surfaces `#0b1720` / `#0f1e29`, body text `#b9c6d0`, hairlines 8% white, `--n-teal` stays as the accent. Never a second brand hue.
+
+**Fonts are locked AND must load.** The three families above are the design voice. The browser-serve contract (§0C rule 2) wires the one sanctioned Google Fonts `<link>` into every page; the fallback stacks in this token block keep pages usable offline — they are a safety net, not the design. No fourth family, ever, and no per-variant `@font-face` (G7/G13 enforce).
 
 ### 2.3 Baseline structures (H001 / F001 — the repo as it exists)
 
@@ -484,6 +562,7 @@ Every variant’s `meta.json` must record its six axis values, and its `diff_fro
 - Eyebrows (footer column heads, section labels): mono, 11 px, uppercase, `letter-spacing .14em`, `--n-muted`.
 - Numbers (₹ amounts, counts): `font-variant-numeric: tabular-nums`.
 - Nothing below 11 px. Body ≥ 14 px.
+- Serving the fonts is part of typography: Fraunces/Inter/Plex Mono must arrive via the one sanctioned link (§0C rule 2). If the screenshot in the browser shows Georgia, the variant is not done.
 
 ### 5.3 Accessibility contract — WCAG 2.2 AA, per variant, both themes
 - Skip link first in DOM, visible on focus.
@@ -504,6 +583,10 @@ Every variant’s `meta.json` must record its six axis values, and its `diff_fro
 | 1024 | nav reveals, no truncation, chrome ≤ 88 px tall |
 | 1440 | canonical render — must match the repo’s calm, generous rhythm |
 | 1920 | container caps at `--n-container`; no stretched line lengths |
+
+Verification = a **real render served from the repo root** (`python3 -m http.server`, §0C), not
+media-query archaeology: open the variant page or the gallery and *look*. Media-query presence is
+checked statically by G4; the served render is G13 + the critique loop (§8 Phase 2 step 4).
 
 ### 5.5 Motion spec (designed, not accidental)
 
@@ -527,10 +610,13 @@ Animate only `transform, opacity, filter, clip-path, background-color, color, bo
 | DOM added | ≤ 90 nodes header · ≤ 140 footer |
 | CLS | **0** — reserve exact height; sticky chrome must not reflow content |
 | Paint | no full-page repaint on scroll; no per-frame layout reads |
+| Network | zero external requests **except the one locked Google Fonts stylesheet** (§0C rule 2) |
 | Gallery page Lighthouse | Perf ≥ 95 · A11y 100 · Best-practices ≥ 95 |
 
 ### 5.7 Google-able integration requirement
 Each variant ships `index.html` (standalone demo), `style.css` (scoped to `[data-chrome="H034"]`), `script.js` (progressive enhancement, page works with JS off), and `meta.json`. Mounting must work with the one-line API in §2.6, and no variant may leak global CSS into its host page.
+
+The standalone demo page is a **showcase, not a scaffold**: it carries the §0C head block (color-scheme meta, locked font link, theme-boot script), links `runtime/demo.css`, renders finished at every §5.4 width over `python3 -m http.server` from the repo root, and keeps every asset reference relative so the lab works under any server root.
 
 ---
 
@@ -647,19 +733,22 @@ Complete the capture run until **≥100 sites captured**, run the motion probe, 
 
 ### Phase 1 — Foundation (do once, before variants)
 - `chrome-lab/tokens/tokens.css` + `tokens.json` from §2.2 (light + dark + reduced-motion block).
-- `chrome-lab/runtime/chrome.css` — shared primitives: pill CTA, hairline, eyebrow, glass utility, focus ring, skip link, scroll-progress, `.rise` reveal.
+- `chrome-lab/runtime/chrome.css` — shared primitives: pill CTA, hairline, eyebrow, glass utility, focus ring, skip link, scroll-progress, `.rise` reveal, `color-scheme` per theme.
 - `chrome-lab/runtime/chrome-motion.js` — one small runtime implementing m-01…m-34 as opt-in data attributes (`data-motion="m-03"`), with a global reduced-motion short-circuit.
-- `chrome-lab/gallery/index.html` + `app.js` (isolated iframes, lazy mount) **first**, so every variant is visible as you go.
+- `chrome-lab/runtime/demo.css` — the demo-page shell (§0C rule 3): styles `main`/H1/mount snippet/axis chips/placeholder blocks around every variant page; never loaded by mounted chrome.
+- `chrome-lab/gallery/index.html` + `app.js` (isolated iframes, lazy mount) **first**, so every variant is visible as you go — header frames ≈ 264 px, footer frames ≈ 600 px, theme switch themes the page itself.
+- Repo-root `index.html` redirecting to `chrome-lab/gallery/` (§0C rule 1).
 
 ### Phase 2 — Variant batches (strict P0 → P4 order)
 For each batch of 10:
 1. Print the **Reference Contract** (≥5 rows) for that batch.
 2. Build variants one family at a time — never generate two families from the same template mentally. Change the **container first**, then the paradigm, then the motion.
 3. Write `index.html`, `style.css`, `script.js`, `meta.json` straight into the workspace tree.
-4. **Critique loop** — render at **1440 px and 390 px**, light and dark. Ask as a harsh design director:
+4. **Critique loop** — serve the repo (`python3 -m http.server 8123`) and render at **1440 px and 390 px**, light and dark, in a real browser (never from `file://`). Ask as a harsh design director:
    - Does this look like the repo, or like a generic template wearing teal?
    - Is there exactly one signature motion, and is it *seen*?
    - Is the hierarchy confident at a glance, or busy?
+   - In the browser (§0C): real fonts loaded? demo shell styled? no 404s, no console errors, no light-flash with `?theme=dark`? burger far-right and drawer working at 390 px?
    Fix, re-render, max 3 loops, then note leftovers in `QA-REPORT.md`.
 5. Run gates G1, G3, G4, G5, G6, G8 on the batch before starting the next.
 6. Print the **Research Gate** + **Workspace Delivery Check** counters.
@@ -679,12 +768,13 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 | G4 | Responsive | Playwright: no horizontal scroll + chrome height within budget at 360/768/1024/1440/1920 | fix layout |
 | G5 | A11y | axe-core zero critical/serious; keyboard path: skip link → every action reachable · Esc closes · focus returns | fix |
 | G6 | Reduced motion | with `prefers-reduced-motion: reduce` → zero transform/scroll-linked animations remain | fix |
-| G7 | Performance | §5.6 budgets (JS ≤12 KB, DOM caps, CLS 0) | trim |
+| G7 | Performance | §5.6 budgets (JS ≤12 KB, DOM caps, CLS 0, no externals beyond the locked font link) | trim |
 | G8 | Traceability | every `meta.json` cites ≥2 captured sites + ≥1 measured `m-XX`, and states `diff_from_prev` axes | add citations |
 | G9 | Attribution & originality | zero copied logos, images, or proprietary copy; `docs/RESEARCH-NOTES.md` credits every source URL | strip & rewrite |
 | G10 | Integration | one-line mount API works; CSS scoped, zero global leakage; page works with JS disabled | fix scoping |
 | G11 | Content fidelity | all strings from §2.4; ₹ values tabular and correct; no invented features/clients | restore copy |
 | G12 | Workspace delivery | §0A manifest lists real files in the workspace; `research/*.json` present; size ≤128 MB | sync & trim |
+| G13 | **Browser-serve** | §0C contract, run statically by `tools/qa.mjs`: locked font link + `demo.css` + theme-boot + color-scheme meta in every page; all relative assets resolve (no 404s over `python3 -m http.server`); no malformed glued selectors; mobile burger ordered after actions; repo-root redirect present | fix & re-serve |
 
 `docs/QA-REPORT.md` ends with: `gate · passed · failed · regenerated · notes` + a **family × status** table proving every family is complete.
 
@@ -703,8 +793,9 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 
 ### After each batch
 - `ls` proof of the variant paths in the workspace (not the sandbox).
-- Gate results for G1/G3/G4/G5/G6/G8.
+- Gate results for G1/G3/G4/G5/G6/G8/**G13**.
 - Updated counters: `<n>/100` headers, `<n>/100` footers.
+- The §0C serve statement: “served at localhost:8123 and looked at 1440/390, both themes” — or the printed limitation that no browser exists in the sandbox.
 
 ### End of session
 1. Files changed (workspace paths only).
@@ -740,7 +831,8 @@ Begin now:
 9. Write `tokens.css` + `chrome.css` + `chrome-motion.js` + the gallery shell in the workspace.
 10. Run **P0** (H001–H008, H061–H064, F001–F010): Reference Contract → build → critique loop at 1440/390 in both themes → gates → manifest.
 11. Continue **P1 → P2 → P3 → P4**, 10 variants at a time, printing the Reference Contract and Delivery Check per batch. Never stub, never recolour.
-12. Finish with `docs/QA-REPORT.md` (all 12 gates), the final **Workspace Delivery Check**, and the honest count: `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `gates passed`, `flagged for review`.
+12. Run the §0C **browser-serve sign-off**: `python3 -m http.server 8123` from the repo root → open `/`, the gallery, and 3–5 variants at 1440 px and 390 px in both themes; verify fonts, demo shell, footer thumbnails, zero 404s, zero console errors, working mobile drawer. Print the result.
+13. Finish with `docs/QA-REPORT.md` (all **13** gates), the final **Workspace Delivery Check**, and the honest count: `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `gates passed`, `flagged for review`.
 
 If context runs short: finish the current batch + foundation files, sync everything, print the manifest, and hand off with the exact next batch id — never leave a half-written variant behind.
 
@@ -822,7 +914,8 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 2. Paste everything between the ```` ``` ```` fences into **Arena Agent Mode** (or Cursor).
 3. Watch for the **Research Gate** block first. If it prints `Captured: 64`, say: *“Research gate failed — substitute same-bucket sites until ≥100 captured, then continue.”*
 4. Watch the **Workspace** panel: `chrome-lab/` should fill up batch by batch. If files only appear in chat, say: *“Sync chrome-lab to the User Workspace now — sandbox-only does not count.”*
-5. Read `docs/QA-REPORT.md` at the end; if G1 (uniqueness) shows failures, ask for regeneration of exactly those IDs.
+5. **Serve it yourself before believing “done”.** In the repo root: `python3 -m http.server 8123` → open `http://localhost:8123/`. You should land in the gallery with real Fraunces/Inter/Plex Mono, styled demo pages, and whole footer thumbnails (dark toggle included). If it looks raw — Georgia everywhere, text stuck to the screen edges, cropped footers — say: *“Browser-serve contract failed — re-check §0C (font link, demo.css, glued selectors, mobile bar) and re-run `node tools/qa.mjs` until G13 passes.”*
+6. Read `docs/QA-REPORT.md` at the end; if G1 (uniqueness) shows failures, ask for regeneration of exactly those IDs. All 13 gates must pass.
 
 ### Useful mid-run commands
 | Goal | Say |
@@ -851,3 +944,4 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 | Accessibility postponed | G5 (axe + keyboard) and G6 (reduced motion) are **pass/fail**, not polish |
 | “Done!” with nothing in the ZIP | **§0A Workspace Delivery Check** + manifest every batch, gate G12 |
 | Header breaks the host page | one-line mount API, scoped CSS, JS-off support, CLS 0, gate G10/G7 |
+| Files “work” but the browser shows raw, wrong-font, broken chrome over a local server | **§0C browser-serve contract** + gate **G13** + `runtime/demo.css` + the one locked font link + comment-safe CSS scoping |

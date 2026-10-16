@@ -16,6 +16,7 @@ async function load() {
   function render() {
     const q = (search?.value || '').trim().toLowerCase();
     const theme = themeSel?.value || 'light';
+    document.documentElement.dataset.theme = theme;
     const wanted = all.filter(({ id, kind }) => {
       if (filter === 'header' && kind !== 'header') return false;
       if (filter === 'footer' && kind !== 'footer') return false;
@@ -33,7 +34,7 @@ async function load() {
       card.innerHTML = `<header><b>${id}</b><span class="meta">${familyOf.get(id) || kind}</span>
         <a class="open" href="../${kind}s/${id}/index.html?theme=${theme}" target="_blank" rel="noopener">open ↗</a></header>
         <p class="axes">${Object.entries(axes).map(([k, v]) => `${k.replace(/^A\d_/, '')}: ${v}`).join(' · ')}</p>
-        <iframe loading="lazy" title="${id}" src="../${kind}s/${id}/index.html?theme=${theme}"></iframe>`;
+        <iframe loading="lazy" title="${id}" class="${kind === 'footer' ? 'tall' : ''}" src="../${kind}s/${id}/index.html?theme=${theme}"></iframe>`;
       grid.append(card);
     }
     counts.textContent = `${wanted.length} shown · headers ${headerIds.length}/100 · footers ${footerIds.length}/100 · theme ${theme}`;

@@ -1,5 +1,7 @@
 /* chrome-lab/runtime/chrome.css — shared primitives */
 @import "../tokens/tokens.css";
+:root{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
 body{margin:0;background:var(--n-bg);color:var(--n-body);font-family:var(--n-font-sans);line-height:1.5}
 a{color:inherit;text-decoration:none}
