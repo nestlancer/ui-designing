@@ -1,22 +1,24 @@
 # Nestlancer Header & Footer Lab — Master Agent Prompt (v3)
 
-> **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (≥100 real sites captured), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable multi-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
+> **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (**≥200 world-top ranked sites** captured — not random blogs), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable multi-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
 >
-> **Pipeline:** `header-footer-prompt.md` (this file) → `research/sites.json` (≥100 captured) → `research/pattern-index.json` + `research/motion-index.json` → **100 headers (`H001–H100`) + 100 footers (`F001–F100`)** → gallery + `QA-REPORT.md`.
+> **Pipeline:** `header-footer-prompt.md` (this file) → `research/top-200.json` (ranked list) → `research/sites.json` (**≥200 captured**) → `research/pattern-index.json` + `research/motion-index.json` → **100 headers (`H001–H100`) + 100 footers (`F001–F100`)** → gallery + `QA-REPORT.md`.
 >
 > **Where to run:** [Arena Agent Mode](https://arena.ai/agent) (also works in Cursor / Claude Code). Paste everything below the line.
 >
 > **v2 (2026-10-16) — the browser-serve fix.** A v1 run shipped files that were “correct on disk” but **rendered wrong in a real browser** when served with `python3 -m http.server`: the locked fonts never loaded (no `<link>` anywhere → Georgia/system-ui fallbacks), the demo page around each chrome was unstyled text flush to the viewport, gallery iframes cropped footers to 240 px, dark theme flashed light first, 13 bottom-bar/sticky-CTA headers carried a dead `[data-chrome]@media` rule and 5 curtain footers a dead body rule — all from a comment glued onto a selector head in the CSS scoper; and on mobile the burger sat next to the wordmark instead of the far right. **v2 adds §0C (Browser-Serve Contract), gate G13, `runtime/demo.css`, real font loading with offline fallbacks, theme-boot before first paint, and mobile-bar normalisation.** §5.6’s “zero external requests” is amended to *no externals beyond the one locked Google Fonts stylesheet*.
 >
 > **v3 (2026-10-16) — the visual-skin + owned-CSS fix.** A v2 run passed all 13 gates and still looked like **one Nestlancer bar pasted 200 times**: uniqueness was only structural (A1–A6), every `style.css` was a **megatemplate** (≈75 class selectors for ~23 classes in the HTML — drawers, megas, wizards, rails… all dead weight), surface/colour composition never varied inside the locked palette, and agents treated “no Bootstrap / no second hue” as “leave chrome visually blank / shared.” **v3 adds axis A7 (Surface skin), §5.8 CSS Ownership Contract, gate G14, an explicit ban on Bootstrap/Tailwind/framework CDNs with a requirement that each variant ships complete self-owned Nestlancer CSS**, and a gallery “glance test” that fails when two families are indistinguishable at 1440 px.
+>
+> **v3 research floor — world’s top 200 (not random).** Prior runs treated “≥100 sites” as a soft list of remembered SaaS URLs / pattern priors. **Phase R now requires a live ranking fetch** (Similarweb / Semrush / Cloudflare Radar / Wikipedia most-visited) → `research/top-200.json` → **≥200 ranked captures**. Random blogs, obscure pads, and unranked inventing are Research Gate fails.
 
 ---
 
 ````
 # ============================================================
 # NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v3)
-# Mission: research ≥100 live sites → build 100 unique headers
-#          + 100 unique footers for the Nestlancer design language
+# Mission: research the WORLD'S TOP 200 ranked sites (not random) →
+#          build 100 unique headers + 100 unique footers for Nestlancer
 # Data/design truth: Nestlancer-public-screenshots/public/*.webp
 # Runtime: Arena.ai Agent Mode (user workspace = downloadable)
 # v2: §0C browser-serve + G13 (must RENDER over python http.server)
@@ -52,7 +54,7 @@ You are running in Arena Agent Mode. The user recovers files from the **session 
 | All 200 variants (`chrome-lab/headers|footers/**`) | **≤ 4 MB total** — each variant is 4 small text files |
 | Gallery + runtime + docs | ≤ 1 MB |
 | `research/raw/**` (cropped header/footer references) | **≤ 60 MB**, `.webp`, quality ≤ 70, and add to `.gitignore` |
-| `research/*.json` (the real deliverable of Phase 1) | ≤ 4 MB |
+| `research/*.json` (`top-200.json` + sites/motion/pattern — Phase R deliverable) | ≤ 6 MB |
 | **Forbidden** | `node_modules/`, browser caches, full-page screenshots of 140 sites, duplicated repo copies, `.zip` blobs |
 
 If you approach the cap: **keep the JSON research + all 200 variants**, and drop the raw image crops first. A run with 200 variants and no images is a **pass**; a run with 140 full-page screenshots and 31 variants is a **fail**.
@@ -67,41 +69,50 @@ Deliverable files (path — size):
 - ui-designing/chrome-lab/headers/H001/style.css — 2.4 KB
 - ...
 Counts: headers <n>/100 · footers <n>/100 · families covered <n>/45
-Research: sites captured <n>/100 · primitives <n>/30
+Research: top-200 list YES/NO · sites captured <n>/200 · primitives <n>/30 · random/unranked URLs: 0
 QA: gates passed <n>/14 · variants flagged <n>
 Browser-serve (§0C): VERIFIED at localhost:<port> / NO-BROWSER-IN-SANDBOX (G13 static only)
 Visual-skin (§5.0 A7 / G14): FAMILY GLANCE PASS / FAIL · dead-CSS max <n>%
 Scratch-only leftovers cleaned: YES/NO
 Approx workspace use: <estimate> / 128 MB
-Download expectation: chrome-lab/ + research/*.json MUST appear in the Workspace panel / Download ZIP.
+Download expectation: chrome-lab/ + research/top-200.json + research/*.json MUST appear in the Workspace panel / Download ZIP.
 ```
 
 ---
 
-## 0B) RESEARCH GATE — 100 LIVE SITES BEFORE A SINGLE PIXEL (THIS IS THE WHOLE POINT)
+## 0B) RESEARCH GATE — WORLD’S TOP 200 SITES BEFORE A SINGLE PIXEL (THIS IS THE WHOLE POINT)
 
-The user’s requirement is explicit: **search online for a minimum of 100 live top sites, capture their unique headers and footers and their animations, then build 100 new ones based on our screenshots.**
+The user’s requirement is explicit: **search online for the world’s top 200 sites (authoritative traffic / brand rankings — not random URLs), capture their unique headers and footers and their animations, then build 100 new Nestlancer headers + 100 footers.**
+
+### What “world’s top 200” means (hard rule)
+1. **Compile the list first** into `research/top-200.json` **before** capture. Every entry must cite a **rank source** from §3.1.0 (Similarweb / Semrush / Cloudflare Radar / Wikipedia most-visited / category-leader proof).
+2. **≥ 200 unique hostnames** on that list. Prefer global traffic rank #1–#200; when a ranked domain is unsuitable for chrome research (NSFW, pure app-shell with no public marketing chrome, gambling, login-only), replace it with the **next suitable ranked domain** or a **documented category world-leader** — never a random blog.
+3. **Capture floor: ≥ 200** records in `research/sites.json` with `capture_failed: false`. Substitutes must still be ranked / world-famous (§3.1). Invented URLs and obscure personal sites = **gate FAIL**.
+4. **§3.2 recipe libraries** (CodePen, hover.css, Awwwards…) are for *animation how-to* only. They **do not count** toward the 200.
 
 You may **not** open a CSS file until this gate passes in User Workspace:
 
 | Gate artifact | Required content | Pass condition |
 |---|---|---|
-| `research/sites.json` | one record per site (§3.4 schema) | **≥ 100** records with `capture_failed: false` |
-| `research/raw/<slug>/header.webp` + `footer.webp` | cropped real chrome | ≥ 100 each (or the deliberate substitute list) |
+| `research/top-200.json` | 200 ranked hostnames + `rank_source` + `rank_or_tier` each (§3.1.0) | **exactly 200** unique hosts, zero unranked/random |
+| `research/sites.json` | one record per site (§3.4 schema) | **≥ 200** records with `capture_failed: false` |
+| `research/raw/<slug>/header.webp` + `footer.webp` | cropped real chrome | ≥ 200 each (or deliberate ranked-substitute list) |
 | `research/motion-index.json` | named animation primitives with **measured** duration/easing/trigger | **≥ 30** primitives |
 | `research/pattern-index.json` | clustered header + footer archetypes | **≥ 25 header archetypes, ≥ 20 footer archetypes** |
-| `docs/RESEARCH-NOTES.md` | 1-line insight + URL per site | ≥ 100 lines |
+| `docs/RESEARCH-NOTES.md` | 1-line insight + URL + rank cite per site | ≥ 200 lines |
 
 **Printed at the gate (and re-printed after every batch):**
 ```
 ## RESEARCH GATE
-Attempted: <n>   Captured: <n>   Skipped (robots/bot-wall/paywall): <n>
-Substitutes used (same bucket): <list>
+Ranking sources fetched: <Similarweb|Semrush|Cloudflare|Wikipedia|…>
+top-200.json: 200/200 · unranked/random URLs: 0
+Attempted: <n>   Captured: <n>/200   Skipped (robots/bot-wall/paywall/NSFW): <n>
+Substitutes used (same tier / next ranked): <list>
 Bucket coverage: A<n> B<n> C<n> D<n> E<n> F<n> G<n> H<n> I<n> J<n> K<n> L<n>
 Motion primitives discovered: <n>   Header archetypes: <n>   Footer archetypes: <n>
 Gate status: PASS / FAIL
 ```
-If `Captured < 100` → substitute same-bucket sites from §3.1 and re-run capture. Do not proceed on a partial list. Do not invent records.
+If `Captured < 200` → pull the **next suitable world-ranked** substitute (§3.1) and re-run capture. Do not proceed on a partial list. Do not invent records. Do not pad with random sites.
 
 ---
 
@@ -179,7 +190,8 @@ are a **failed run**, exactly like files that never left the sandbox (§0A).
 
 | # | Failure | Why it happens | Fix in this prompt |
 |---|---|---|---|
-| 1 | Agent lists 100 URLs, fetches none | “inspiration” treated as optional reading | §0B hard gate on `sites.json` |
+| 1 | Agent lists 100 random URLs, fetches none — or pads with obscure blogs | “inspiration” treated as optional; no ranking discipline | §0B + §3.1.0: **world’s top 200** via Similarweb/Semrush/etc., hard gate on `top-200.json` + `sites.json` |
+| 1b | Research set is “whatever the model remembered” instead of live world rankings | training recall ≠ current top sites | Must **WebSearch/WebFetch** ranking pages in-session and write `research/top-200.json` before capture |
 | 2 | 100 “variants” that are the same header in 100 hues | agent varies **raw hex** (1 axis) instead of **type** | §5.0 multi-axis uniqueness (A1–A7) + QA gate **G1** — note: composing locked tokens into different *skins* is required (A7), inventing new brand hues is still banned |
 | 3 | 30 variants built, 70 stubbed as “same as above” | context exhaustion unmanaged | §7 batching: 10 at a time, family order, never stub |
 | 4 | Motion = a paragraph of adjectives | no measurement instrument | §3.5 `getAnimations()` probe captures real ms/easing |
@@ -213,7 +225,7 @@ You are simultaneously:
 1. **Principal product designer** — knows that chrome (header/footer) is 80% of a site’s perceived quality.
 2. **Senior frontend engineer** — semantic HTML, modern CSS (`:has()`, container queries, `color-mix`, view timelines), < 12 KB JS per variant.
 3. **Motion designer** — choreography with real numbers: durations, easings, staggers, triggers.
-4. **Research analyst** — reads 100 sites as *data*, extracts patterns, discards styling.
+4. **Research analyst** — compiles the world’s top 200 ranked sites, reads them as *data*, extracts patterns, discards competitor styling.
 5. **Design director who rejects AI-slop** — no ribbon banners, no emoji icons, no gradient soup.
 
 ### Grade scale for THIS job (chrome craft)
@@ -338,26 +350,58 @@ You are **not** redesigning pages. You are building **200 drop-in chrome systems
 
 ## 3) PHASE R — REFERENCE GATE (MANDATORY BEFORE ANY DESIGN EDIT)
 
-### 3.1 The 140 seeds — capture ≥100 live sites
+### 3.1.0 Compile the WORLD’S TOP 200 list first (before any capture)
 
-Twelve buckets exist to guarantee **range**: a fintech footer and a studio footer are different species. Crawl every bucket; the hard floor is **100 successfully captured**.
+**Do this in-session with live tools. Memory is not a ranking.**
 
-| Bucket | Count | Sites |
+1. **WebSearch / WebFetch** at least **two** of these authoritative sources (print the URLs you used):
+   - [Similarweb Top Websites](https://www.similarweb.com/top-websites/) + [Similarweb most-visited blog](https://www.similarweb.com/blog/research/market-research/most-visited-websites/)
+   - [Semrush Top Websites](https://www.semrush.com/website/top/) (or Semrush ranks cited on Wikipedia)
+   - [Cloudflare Radar Domains](https://radar.cloudflare.com/domains) / popular domains
+   - [Wikipedia — List of most-visited websites](https://en.wikipedia.org/wiki/List_of_most-visited_websites)
+2. Build `research/top-200.json` — **exactly 200** objects:
+   ```json
+   {
+     "rank": 1,
+     "host": "google.com",
+     "rank_source": "similarweb-global-2026-08",
+     "tier": "global-top-100",
+     "bucket": "B",
+     "suitable_for_chrome": true,
+     "skip_reason": null
+   }
+   ```
+3. **Eligibility for the 200:**
+   - **Tier `global-top-100` / `global-top-200`:** hostname appears on a fetched global traffic ranking (or Wikipedia composite of Similarweb/Semrush).
+   - **Tier `category-world-leader`:** not in global top-200 traffic, but is a **household / category-defining** brand (e.g. stripe.com, airbnb.com, nike.com) with a public marketing site — allowed only to fill chrome-rich gaps after global ranks are exhausted; must still be famous, never random.
+   - **Banned from the 200:** NSFW, gambling, malware, random personal blogs, obscure startups, inventing domains, CodePen/demo sites, design-gallery pads used only to hit a count (§3.2 stays separate).
+4. **Skip & replace (still ranked):** bot-walls, geo-blocks, `robots.txt` disallow, login-only shells, NSFW/gambling ranks. Log `suitable_for_chrome: false` + `skip_reason`, then take the **next suitable ranked** host (or same-bucket world-leader). The list must still total **200 suitable hosts to attempt**.
+5. Print: `TOP-200 LIST LOCKED — sources: … · global-tier: <n> · category-leader-tier: <n> · banned/skipped-from-rank: <n>`.
+
+**Hard gate:** no `top-200.json` → no capture. No capture → no CSS.
+
+### 3.1 The 200 research targets — capture ≥200 live sites
+
+Twelve buckets guarantee **chrome range** inside the top-200 set (a fintech footer and a retail footer are different species). Use the starter seeds below as the **minimum attempt spine**, then **overwrite / extend from the live ranking fetch** in §3.1.0 until the locked list is exactly 200. Prefer ranked hosts over seeds when they conflict.
+
+| Bucket | ≈ | Starter world-famous hosts (expand from live rankings to fill 200) |
 |---|---|---|
-| **A · Marketplaces & freelance** | 14 | upwork.com · fiverr.com · toptal.com · contra.com · 99designs.com · dribbble.com · behance.net · freelancer.com · peopleperhour.com · guru.com · arc.dev · weworkremotely.com · remoteok.com · wellfound.com |
-| **B · Big tech / platform nav** | 12 | apple.com · store.google.com · microsoft.com · aws.amazon.com · meta.com · stripe.com · shopify.com · github.com · atlassian.com · adobe.com · ibm.com · nvidia.com |
-| **C · Dev tools & infra** | 12 | vercel.com · linear.app · raycast.com · supabase.com · neon.tech · resend.com · clerk.com · railway.app · fly.io · postman.com · jetbrains.com · hashicorp.com |
-| **D · Fintech & payments** | 12 | razorpay.com · wise.com · revolut.com · monzo.com · mercury.com · brex.com · ramp.com · plaid.com · squareup.com · paypal.com · cash.app · stripe.com/payments |
-| **E · SaaS product marketing** | 14 | notion.so · figma.com · slack.com · zoom.us · asana.com · monday.com · clickup.com · airtable.com · miro.com · canva.com · hubspot.com · salesforce.com · intercom.com · zendesk.com |
-| **F · Editorial & media** | 10 | nytimes.com · theguardian.com · bbc.com · washingtonpost.com · theverge.com · wired.com · medium.com · substack.com · bloomberg.com · economist.com |
-| **G · Design galleries & studios** | 16 | awwwards.com · thefwa.com · godly.website · land-book.com · siteinspire.com · minimal.gallery · refero.design · mobbin.com · pentagram.com · instrument.com · ustwo.com · fantasy.co · ramotion.com · basicagency.com · huge.com · lusion.co |
-| **H · E-commerce & retail** | 12 | nike.com · adidas.com · zara.com · uniqlo.com · allbirds.com · gymshark.com · glossier.com · aesop.com · ikea.com · wayfair.com · etsy.com · warbyparker.com |
-| **I · Travel & mobility** | 8 | airbnb.com · booking.com · expedia.com · marriott.com · kayak.com · uber.com · lyft.com · tripadvisor.com |
-| **J · AI labs & products** | 12 | openai.com · anthropic.com · perplexity.ai · huggingface.co · midjourney.com · runwayml.com · elevenlabs.io · suno.com · cursor.com · lovable.dev · v0.dev · character.ai |
-| **K · Motion / WebGL showcases** | 8 | active-theory.com · basement.studio · obys.agency · dennissnellenberg.com · cuberto.com · akqa.com · resn.co.nz · 14islands.com |
-| **L · India-origin products** | 10 | zerodha.com · cred.club · groww.in · phonepe.com · paytm.com · zomato.com · swiggy.com · flipkart.com · myntra.com · practo.com |
+| **A · Marketplaces & freelance** | 16 | amazon.com · ebay.com · etsy.com · aliexpress.com · walmart.com · rakuten.com · upwork.com · fiverr.com · toptal.com · contra.com · 99designs.com · dribbble.com · behance.net · freelancer.com · wellfound.com · craigslist.org |
+| **B · Big tech / platform nav** | 20 | google.com · youtube.com · facebook.com · instagram.com · wikipedia.org · microsoft.com · apple.com · amazon.com · meta.com · linkedin.com · x.com · tiktok.com · reddit.com · github.com · store.google.com · aws.amazon.com · azure.microsoft.com · adobe.com · ibm.com · nvidia.com · oracle.com · samsung.com · intel.com |
+| **C · Dev tools & infra** | 16 | github.com · stackoverflow.com · vercel.com · cloudflare.com · digitalocean.com · docker.com · atlassian.com · bitbucket.org · gitlab.com · jetbrains.com · postman.com · hashicorp.com · supabase.com · linear.app · figma.com · notion.so |
+| **D · Fintech & payments** | 16 | paypal.com · stripe.com · squareup.com · visa.com · mastercard.com · americanexpress.com · chase.com · bankofamerica.com · wellsfargo.com · revolut.com · wise.com · cash.app · razorpay.com · coinbase.com · binance.com · robinhood.com |
+| **E · SaaS product marketing** | 18 | canva.com · slack.com · zoom.us · dropbox.com · salesforce.com · hubspot.com · shopify.com · wix.com · squarespace.com · wordpress.com · asana.com · monday.com · zendesk.com · intercom.com · mailchimp.com · twilio.com · spotify.com · netflix.com |
+| **F · Editorial & media** | 16 | nytimes.com · bbc.com · theguardian.com · cnn.com · washingtonpost.com · reuters.com · bloomberg.com · forbes.com · wsj.com · economist.com · theverge.com · wired.com · medium.com · quora.com · espn.com · imdb.com |
+| **G · Brand / agency chrome leaders** | 14 | nike.com · adidas.com · airbnb.com · uber.com · tesla.com · spotify.com · dribbble.com · awwwards.com · pentagram.com · ibm.com · apple.com · stripe.com · shopify.com · figma.com |
+| **H · E-commerce & retail** | 18 | amazon.com · ebay.com · walmart.com · target.com · bestbuy.com · ikea.com · zara.com · uniqlo.com · nike.com · adidas.com · hm.com · shein.com · wayfair.com · homedepot.com · costco.com · sephora.com · nordstrom.com · macys.com |
+| **I · Travel & mobility** | 14 | booking.com · airbnb.com · expedia.com · tripadvisor.com · kayak.com · marriott.com · hilton.com · uber.com · lyft.com · delta.com · united.com · aa.com · ryanair.com · expedia.com |
+| **J · AI labs & products** | 14 | chatgpt.com · openai.com · gemini.google.com · anthropic.com · perplexity.ai · deepseek.com · huggingface.co · microsoft.com/copilot · midjourney.com · character.ai · nvidia.com · cursor.com · claude.ai · grok.com |
+| **K · Consumer platforms** | 14 | netflix.com · disneyplus.com · primevideo.com · twitch.tv · pinterest.com · tumblr.com · discord.com · telegram.org · whatsapp.com · zoom.us · skype.com · roblox.com · steamcommunity.com · epicgames.com |
+| **L · India + APAC leaders** | 14 | flipkart.com · amazon.in · swiggy.com · zomato.com · paytm.com · phonepe.com · zerodha.com · groww.in · myntra.com · bookmyshow.com · hotstar.com · naver.com · yahoo.co.jp · rakuten.co.jp · mercadolibre.com · tokopedia.com |
 
-**Skip and substitute:** bot-walls (Apple, Amazon, Bloomberg), geo-blocks, `robots.txt` disallow. Log every skip in `sites.json` with `capture_failed: true` + `reason`, and add a same-bucket replacement so `captured ≥ 100`.
+**Counts:** starter rows overlap across buckets on purpose (same host once in `top-200.json`). After dedupe + live ranking fill, you must still have **200 unique hosts**. Bucket coverage in the Research Gate block counts unique captures per assigned bucket.
+
+**Skip and substitute:** bot-walls, geo-blocks, `robots.txt` disallow, NSFW/gambling ranks. Log every skip in `sites.json` with `capture_failed: true` + `reason`, and add a **same-tier ranked** replacement so `captured ≥ 200`. **Never** substitute with a random unranked site.
 
 ### 3.2 Recipe libraries — where the **animation** vocabulary comes from
 
@@ -372,19 +416,23 @@ Live sites show you *what*; these show you *how*. Fetch and study them in Phase 
 | **Header-specific sources** | header.design (when reachable) · tailscan UI blocks · flowbite.com blocks · preline.co · mambaui.com · daisyui.com | nav paradigms, drawer/overlay nav, multi-tier bars, responsive collapse patterns |
 | **Surface & colour** | cssgradient.io · glassmorphism.com · neumorphism.io · oklch.com | glass engage recipes, mesh atmosphere, soft inset inputs (subtle only) |
 
-### 3.3 Required tool actions (do them for real, per batch)
+### 3.3 Required tool actions (do them for real)
 
-1. **Capture-run** the harness (§3.4) over unfinished buckets.
-2. **WebSearch ≥6 targeted queries**, e.g.
-   - `site:uiverse.io glass nav bar hover animation`
+**Once, at the start of Phase R:**
+1. **WebSearch + WebFetch ranking pages** (§3.1.0) → write `research/top-200.json` (200 ranked hosts, zero random).
+2. **Capture-run** the harness (§3.4) over all 200 until `captured ≥ 200`.
+
+**Per variant batch:**
+3. **WebSearch ≥6 targeted queries**, e.g.
+   - `Similarweb most visited websites worldwide 2026` *(if top-200 still incomplete)*
    - `sticky header shrink on scroll CSS 2025`
    - `mega menu animation stagger cubic-bezier example`
    - `footer accordion mobile grid-template-rows animation`
    - `curl footer reveal scroll-linked CSS animation-timeline`
    - `command palette ⌘K header pattern implementation`
-3. **WebFetch ≥5 live pages** from §3.1 and §3.2 (docs/examples, not just homepages). Listing a URL without fetching does **not** count.
-4. **Open ≥2 repo screenshots** for the batch you are about to build, at full size, and note the rhythm: gutters, pill radius, hairline weight, eyebrow spacing.
-5. If a site cannot be fetched: say so, fall back to WebSearch snippets + the known pattern, and **still name the exact pattern borrowed and the source**.
+4. **WebFetch ≥5 live pages** from the **locked top-200 list** and §3.2 (docs/examples). Listing a URL without fetching does **not** count. Fetching a random unranked blog does **not** count toward research.
+5. **Open ≥2 Nestlancer reference screenshots** (when present in the workspace) for the batch you are about to build, at full size, and note the rhythm: gutters, pill radius, hairline weight, eyebrow spacing.
+6. If a ranked site cannot be fetched: say so, take the **next suitable ranked substitute**, and **still name the exact pattern borrowed and the ranked source**. Do not invent a “pattern_prior” for an unranked random URL.
 
 ### 3.4 Capture harness — `tools/capture.mjs`
 
@@ -415,6 +463,8 @@ async function capture(url){
   return { url, header, footer, motion };
 }
 ```
+
+Every `research/sites.json` record **must** include: `url`, `host`, `rank`, `rank_source`, `tier` (`global-top-100` | `global-top-200` | `category-world-leader`), `bucket`, `capture_failed`, `verified` (true only if fetched live this run), plus the chrome/motion metrics. Records with missing rank fields or `tier: "random"` are a Research Gate **FAIL**.
 
 **Legality & politeness:** public chrome only. No logins, no dashboards, no paywalls, no form submissions, no API keys. Store **derived metrics** (numbers, booleans, enum strings) as the primary artifact; the cropped `.webp` references stay in a git-ignored folder and are cited to their source URL in `meta.json`.
 
@@ -800,7 +850,7 @@ P0 must be **pixel-rhythm faithful** to the repo screenshots — it is the contr
 4. Confirm workspace root + free space vs the 128 MB budget.
 
 ### Phase R — Reference Gate (§3)
-Complete the capture run until **≥100 sites captured**, run the motion probe, cluster patterns, print the **Research Gate** block. Then per batch: ≥6 searches, ≥5 fetches, ≥2 screenshot re-opens, and the **Reference Contract**.
+Lock `research/top-200.json` from live rankings, complete capture until **≥200 world-top sites captured**, run the motion probe, cluster patterns, print the **Research Gate** block. Then per batch: ≥6 searches, ≥5 fetches from the locked list, ≥2 screenshot re-opens, and the **Reference Contract**.
 
 ### Phase 1 — Foundation (do once, before variants)
 - `chrome-lab/tokens/tokens.css` + `tokens.json` from §2.2 (light + dark + reduced-motion block).
@@ -857,7 +907,7 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 ## 10) SESSION I/O FORMAT
 
 ### Start of session (print all seven)
-1. Confirmed: research gate status (`captured <n>/100`) and batch to be worked.
+1. Confirmed: research gate status (`top-200 locked` · `captured <n>/200`) and batch to be worked.
 2. User workspace root path.
 3. Families in this batch + variant IDs.
 4. Repo screenshots re-opened for this batch.
@@ -882,7 +932,8 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 7. Any variant flagged for human review with a reason.
 
 ### Refusal rules
-- Do not proceed past Phase R without ≥100 captured sites.
+- Do not proceed past Phase R without `top-200.json` locked and ≥200 ranked sites captured.
+- Do not pad research with random / unranked / obscure URLs.
 - Do not ship recolours as “different types”.
 - Do not ship structure-clones that share one white-bar / one footer surface (fail G14).
 - Do not stub, skip, or `TODO` any variant.
@@ -897,19 +948,20 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 ## 11) START COMMAND
 
 Begin now:
-1. Clone `https://github.com/nestlancer/ui-designing.git`; verify 17 screenshots + this prompt.
+1. Clone `https://github.com/nestlancer/ui-designing.git`; verify this prompt (and Nestlancer screenshots if present).
 2. Create `chrome-lab/` (tokens, runtime, headers, footers, gallery, docs), `research/`, `tools/`, `docs/`; write `.gitignore`; confirm workspace root and size budget.
 3. Open `013-marketing-homepage.webp`; crop and study the real header and footer. Record measured values (you should reproduce `#24877f`, `#0a2543`, `#f9fbfc`, 72 px, 1200 px, pill CTAs).
 4. Write `tools/capture.mjs` (Playwright, §3.4) and `tools/analyse.mjs`.
-5. Run Phase R over §3.1 buckets until **≥100 sites captured**; extract chrome skeletons + computed styles + cropped references.
-6. Run the motion probe (§3.5); build `research/motion-index.json` with **≥30 primitives** and real ms/easing/trigger values.
-7. Build `research/pattern-index.json` (≥25 header archetypes, ≥20 footer archetypes) and `docs/RESEARCH-NOTES.md` (≥100 lines).
-8. **Print the Research Gate block.** If it does not PASS, substitute same-bucket sites and re-run — do not continue.
-9. Write `tokens.css` + `chrome.css` + `chrome-motion.js` + the gallery shell in the workspace.
-10. Run **P0** (H001–H008, H061–H064, F001–F010): Reference Contract → build → critique loop at 1440/390 in both themes → gates → manifest.
-11. Continue **P1 → P2 → P3 → P4**, 10 variants at a time, printing the Reference Contract and Delivery Check per batch. Never stub, never recolour.
-12. Run the §0C **browser-serve sign-off**: `python3 -m http.server 8123` from the repo root → open `/`, the gallery, and 3–5 variants at 1440 px and 390 px in both themes; verify fonts, demo shell, footer thumbnails, zero 404s, zero console errors, working mobile drawer. Print the result.
-13. Finish with `docs/QA-REPORT.md` (all **14** gates), the final **Workspace Delivery Check**, and the honest count: `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `A7 skins used`, `gates passed`, `flagged for review`.
+5. **Fetch live world rankings** (§3.1.0) → write `research/top-200.json` (exactly 200 ranked hosts). Print the TOP-200 LIST LOCKED block.
+6. Run Phase R capture over that list until **≥200 sites captured**; extract chrome skeletons + computed styles + cropped references.
+7. Run the motion probe (§3.5); build `research/motion-index.json` with **≥30 primitives** and real ms/easing/trigger values.
+8. Build `research/pattern-index.json` (≥25 header archetypes, ≥20 footer archetypes) and `docs/RESEARCH-NOTES.md` (≥200 lines, each with rank cite).
+9. **Print the Research Gate block.** If it does not PASS, substitute next suitable **ranked** sites and re-run — do not continue, do not pad with random URLs.
+10. Write `tokens.css` + `chrome.css` + `chrome-motion.js` + the gallery shell in the workspace.
+11. Run **P0** (H001–H008, H061–H064, F001–F010): Reference Contract → build → critique loop at 1440/390 in both themes → gates → manifest.
+12. Continue **P1 → P2 → P3 → P4**, 10 variants at a time, printing the Reference Contract and Delivery Check per batch. Never stub, never recolour.
+13. Run the §0C **browser-serve sign-off**: `python3 -m http.server 8123` from the repo root → open `/`, the gallery, and 3–5 variants at 1440 px and 390 px in both themes; verify fonts, demo shell, footer thumbnails, zero 404s, zero console errors, working mobile drawer. Print the result.
+14. Finish with `docs/QA-REPORT.md` (all **14** gates), the final **Workspace Delivery Check**, and the honest count: `top-200 locked`, `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `A7 skins used`, `gates passed`, `flagged for review`.
 
 If context runs short: finish the current batch + foundation files, sync everything, print the manifest, and hand off with the exact next batch id — never leave a half-written variant behind.
 
@@ -989,9 +1041,9 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 ## How to use (operator notes)
 
 ### The run, end to end
-1. Clone the repo (or let the agent clone it) — `Nestlancer-public-screenshots/` + `header-footer-prompt.md` must be present.
+1. Clone the repo (or let the agent clone it) — `header-footer-prompt.md` must be present (Nestlancer screenshots if available; otherwise measure tokens from §2.2).
 2. Paste everything between the ```` ``` ```` fences into **Arena Agent Mode** (or Cursor).
-3. Watch for the **Research Gate** block first. If it prints `Captured: 64`, say: *“Research gate failed — substitute same-bucket sites until ≥100 captured, then continue.”*
+3. Watch for the **Research Gate** block first. If there is no `top-200.json`, or it prints `Captured: 64`, or URLs look random/unranked, say: *“Research gate failed — fetch Similarweb/Semrush world rankings, lock 200 top sites, capture ≥200, no random pads — then continue.”*
 4. Watch the **Workspace** panel: `chrome-lab/` should fill up batch by batch. If files only appear in chat, say: *“Sync chrome-lab to the User Workspace now — sandbox-only does not count.”*
 5. **Serve it yourself before believing “done”.** In the repo root: `python3 -m http.server 8123` → open `http://localhost:8123/`. You should land in the gallery with real Fraunces/Inter/Plex Mono, styled demo pages, and whole footer thumbnails (dark toggle included). If it looks raw — Georgia everywhere, text stuck to the screen edges, cropped footers — say: *“Browser-serve contract failed — re-check §0C (font link, demo.css, glued selectors, mobile bar) and re-run `node tools/qa.mjs` until G13 passes.”*
 6. **Glance the gallery for skins.** Cover the IDs. If two families look like the same white bar / same footer slab, say: *“G14 failed — assign distinct A7 surface skins and rebuild owned CSS (no megatemplate).”* Do not accept “axes differ in meta.json” as a substitute for a visible skin.
@@ -1002,21 +1054,23 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 |---|---|
 | Different flavour of a batch | `Rebuild H017–H020 with dark-first treatment, a distinct A7 skin, and a different motion primitive each.` |
 | Same skin everywhere | `G14 fail — reassign A7 across families and rebuild owned style.css (no megatemplate).` |
+| Research looks random | `Rebuild research/top-200.json from Similarweb + Semrush live ranks; drop unranked hosts; capture until ≥200.` |
 | More range | `Add 5 footers that use m-20 curtain reveal, no duplicates of existing axes.` |
 | Audit only | `Run §9 gates over the existing set and output only failures with reasons.` |
 | Freeze | `Freeze F001–F010 — they're approved. Never regenerate them.` |
 | Integration | `Generate the one-line mount snippets for all 100 headers against /pricing and /portal.` |
 
 ### Practical notes
-- Expect **Phase R to dominate runtime** — 100+ site captures with scroll-triggering is genuinely slow. Running research and generation as separate turns is normal and keeps quality high.
-- Several seeds will block automation (Apple, Amazon, Bloomberg, some airlines). That is planned for: same-bucket substitutes keep the ≥100 floor.
+- Expect **Phase R to dominate runtime** — **200** world-top site captures with scroll-triggering is genuinely slow. Running ranking → capture → generation as separate turns is normal and keeps quality high.
+- Several top ranks will block automation or be unsuitable (NSFW, gambling, app shells). That is planned for: take the **next suitable ranked** host — never a random blog — until `captured ≥ 200`.
 - The **P0 batch is a control group.** Approve it before P1 — if P0 doesn't match the repo rhythm, every later variant inherits the drift.
 
 ## What this prompt fixes vs a naive “make 100 headers” run
 
 | Naive run | This prompt |
 |---|---|
-| 100 URLs listed as “inspiration”, never opened | **§0B hard gate**: ≥100 sites *captured* with `sites.json` + crops before any CSS |
+| 100 random URLs listed as “inspiration”, never opened | **§0B + §3.1.0**: live world rankings → `top-200.json` → **≥200 ranked sites captured** |
+| Obscure blogs / inventing domains to hit a count | Banned; substitutes must be **next suitable ranked** host only |
 | 100 recolours of one template | **7-axis uniqueness test** (incl. A7 surface skin) + QA gate G1 rejects any pair differing on <3 axes |
 | Structure-unique but one shared white-bar skin | **A7 skins** + gallery glance + gate **G14** |
 | Megatemplate CSS / Bootstrap CDN / “no design” | **§5.8 CSS Ownership** — custom Nestlancer CSS only, dead-class ≤15%, no framework CDN |
