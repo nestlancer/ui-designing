@@ -1,0 +1,47 @@
+/* Nestlancer Chrome Lab — F057 owned stylesheet (§5.8). A7 skin: elevated-soft. */
+[data-chrome="F057"] .f-chrome{background: var(--n-surface);
+  box-shadow: 0 8px 28px rgba(10, 37, 67, .10);
+  border-bottom: var(--n-hairline-w) solid transparent;}
+[data-chrome="F057"] .f-chrome{border-bottom: 0; border-top: 0; box-shadow: 0 -8px 28px rgba(10, 37, 67, .08);}
+[data-chrome="F057"] .wm{display:inline-flex; align-items:center; gap:9px; text-decoration:none;}
+[data-chrome="F057"] .wm__txt{font:700 21px/1 var(--n-font-display); color:var(--n-ink); letter-spacing:-.01em;}
+[data-chrome="F057"] .wm__dot{color:var(--n-teal);}
+[data-chrome="F057"] .fcol{min-width:0;}
+[data-chrome="F057"] .fcol__h{margin:0 0 12px;}
+[data-chrome="F057"] .fcol__list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px;}
+[data-chrome="F057"] .fcol__link{display:inline-block; padding:5px 0;
+  font:400 14px/1.45 var(--n-font-sans); color:var(--n-body); text-decoration:none;
+  transition:color .15s ease-out, transform .26s cubic-bezier(.2,.8,.2,1);}
+[data-chrome="F057"] .fcol__link:hover{color:var(--n-ink); transform:translateX(3px);}
+[data-chrome="F057"] .legal{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center;
+  padding:16px 0; border-top:1px solid var(--n-hairline);}
+[data-chrome="F057"] .legal__line{margin:0; font:400 12px/1.5 var(--n-font-sans); color:var(--n-muted);}
+[data-chrome="F057"] .legal a{color:var(--n-muted); text-decoration:none;}
+[data-chrome="F057"] .legal a:hover{color:var(--n-teal);}
+[data-chrome="F057"] .wm-xl{display:block; overflow:hidden; margin:8px 0 0;}
+[data-chrome="F057"] .wm-xl__t{display:inline-block; white-space:nowrap;
+  font:800 clamp(48px, 11vw, 132px)/0.95 var(--n-font-display);
+  letter-spacing:-.03em; color:var(--n-ink);
+  animation:k-F057-wm 22s linear infinite;}
+[data-chrome="F057"] .wm-xl__t .wm__dot{color:var(--n-teal);}
+@keyframes k-F057-wm{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+[data-chrome="F057"] .ticker{overflow:hidden; margin:18px 0 6px;}
+[data-chrome="F057"] .ticker__row{display:flex; gap:18px; width:max-content; animation:k-F057-marq 28s linear infinite;}
+[data-chrome="F057"] .ticker:hover .ticker__row{animation-play-state:paused;}
+[data-chrome="F057"] .ticker__t{font:500 11px/1 var(--n-font-mono); letter-spacing:.14em; color:var(--n-muted); white-space:nowrap;}
+[data-chrome="F057"] .ticker__sep{color:var(--n-teal);}
+@keyframes k-F057-marq{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+[data-chrome="F057"] .f-chrome{background:var(--n-surface-2);}
+[data-chrome="F057"] .f-inner{max-width:var(--n-container); margin:0 auto; padding:0 24px;}
+[data-chrome="F057"] .f-main{padding:44px 0 8px;}
+[data-chrome="F057"] .f-grid--top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:28px; margin-bottom:18px;}
+[data-chrome="F057"] .f-blurb{margin:14px 0 0; max-width:30ch; font:400 14px/1.6 var(--n-font-sans); color:var(--n-body);}
+@media (max-width: 900px){[data-chrome="F057"] .f-main{padding-top:32px;}
+[data-chrome="F057"] .legal{flex-direction:column; align-items:flex-start; gap:6px;}}
+@media (max-width: 600px){[data-chrome="F057"] .wm__txt{font-size:18px;}}
+@media (prefers-reduced-motion: reduce){
+[data-chrome="F057"] [data-reveal]{ opacity:1 !important; transform:none !important; transition:opacity .15s linear !important; }
+[data-chrome="F057"] *{ animation:none !important; transition-duration:.15s !important; }
+[data-chrome="F057"] .ticker__row{ animation:none !important; transform:none !important; }
+[data-chrome="F057"] .wm-xl__t{ animation:none !important; transform:none !important; }
+}

@@ -1,0 +1,72 @@
+/* Nestlancer Chrome Lab — shared primitives ONLY (§5.8 rule 2).
+   Variant look lives in each variant's own style.css. No kitchen sink here. */
+
+/* Skip link (§5.3) */
+.nl-skip{
+  position:absolute; left:12px; top:-64px; z-index:99;
+  padding:10px 16px; border-radius:var(--n-radius-pill);
+  background:var(--n-teal); color:var(--n-white);
+  font:600 14px/1 var(--n-font-sans); text-decoration:none;
+  transition:top .15s ease-out;
+}
+.nl-skip:focus{ top:12px; }
+
+/* Focus ring (§5.3) — never outline:none without replacement */
+.nl-focusable:focus-visible,
+[data-chrome] a:focus-visible,
+[data-chrome] button:focus-visible,
+[data-chrome] input:focus-visible,
+[data-chrome] summary:focus-visible,
+[data-chrome] [tabindex]:focus-visible{
+  outline:2px solid var(--n-teal);
+  outline-offset:2px;
+  border-radius:4px;
+}
+
+/* Visually hidden but accessible */
+.nl-vh{
+  position:absolute!important; width:1px; height:1px;
+  margin:-1px; padding:0; overflow:hidden;
+  clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; border:0;
+}
+
+/* Eyebrow (§2.2) */
+.nl-eyebrow{
+  font:500 var(--n-eyebrow-size)/1 var(--n-font-mono);
+  letter-spacing:var(--n-eyebrow-ls); text-transform:uppercase;
+  color:var(--n-muted);
+}
+
+/* Base CTA defaults — variants restyle in owned CSS */
+.nl-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:40px; padding:0 18px; border-radius:var(--n-radius-pill);
+  font:600 14px/1 var(--n-font-sans); text-decoration:none; cursor:pointer;
+  border:1px solid transparent; background:var(--n-teal); color:var(--n-white);
+  transition:background-color .15s ease-out, transform .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+}
+.nl-btn:hover{ background:var(--n-teal-hover); }
+.nl-btn:active{ transform:scale(.98); }
+.nl-btn--ghost{ background:transparent; color:var(--n-ink); border-color:var(--n-hairline); }
+.nl-btn--ghost:hover{ background:var(--n-mint); border-color:var(--n-teal); }
+
+/* Numbers (§5.2) */
+.nl-num{ font-variant-numeric:tabular-nums; }
+
+/* Live status dot (m-25 base) */
+.nl-dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--n-live); display:inline-block; flex:none;
+}
+
+/* Reduced-motion contract (§5.5 / G6) — global, non-negotiable */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:150ms !important;
+    transition-property:opacity, color, background-color, border-color !important;
+    scroll-behavior:auto !important;
+  }
+  [data-motion]{ animation:none !important; }
+}

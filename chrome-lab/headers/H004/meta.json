@@ -1,0 +1,47 @@
+{
+ "id": "H004",
+ "type": "header",
+ "family": "F01",
+ "family_name": "Classic centred/split nav",
+ "family_signature": "logo left, 7 inline links, hairline bottom",
+ "A1_container": "asymmetric-8/4",
+ "A2_nav": "inline",
+ "A3_scroll": "progress-linked",
+ "A4_motion": "m-13",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "split-arrow-pill",
+ "A7_surface_skin": "solid-canvas",
+ "skin_notes": "flat --n-surface bar/footer + 1px --n-hairline, repo baseline discipline",
+ "signature_motion": "m-13 scroll progress line",
+ "motion_ids": [
+  "m-13"
+ ],
+ "references": [
+  "nytimes.com",
+  "apple.com",
+  "theguardian.com"
+ ],
+ "pattern_refs": [
+  "h-inline-quiet",
+  "f-sitemap-standard"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "burger-drawer",
+ "budget": {
+  "css_bytes": 5678,
+  "css_exception": null,
+  "dom_nodes": 47,
+  "js_bytes": 2234,
+  "js_gzip_bytes": 876,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H004\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

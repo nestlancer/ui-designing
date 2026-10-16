@@ -1,0 +1,22 @@
+/* Nestlancer Chrome Lab — F032 owned stylesheet (§5.8). A7 skin: solid-canvas. */
+[data-chrome="F032"] .f-chrome{background: var(--n-surface);
+  border-bottom: var(--n-hairline-w) solid var(--n-hairline);}
+[data-chrome="F032"] .f-chrome{border-bottom: 0; border-top: var(--n-hairline-w) solid var(--n-hairline);}
+[data-chrome="F032"] .wm{display:inline-flex; align-items:center; gap:9px; text-decoration:none;}
+[data-chrome="F032"] .wm__txt{font:700 21px/1 var(--n-font-display); color:var(--n-ink); letter-spacing:-.01em;}
+[data-chrome="F032"] .wm__dot{color:var(--n-teal);}
+[data-chrome="F032"] .legal__line{margin:0; font:400 12px/1.5 var(--n-font-sans); color:var(--n-muted);}
+[data-chrome="F032"] .pill{display:inline-flex; align-items:center; gap:7px; padding:6px 12px;
+  border-radius:var(--n-radius-pill); background:var(--n-teal-soft); color:var(--n-ink);
+  font:500 11px/1 var(--n-font-mono); letter-spacing:.1em; text-transform:uppercase;}
+[data-chrome="F032"] .f-chrome{background:var(--n-surface);}
+[data-chrome="F032"] .f-inner{max-width:var(--n-container); margin:0 auto; padding:0 24px;}
+[data-chrome="F032"] .f-main--min{display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  padding:22px 0;}
+[data-chrome="F032"] .f-min__end{margin-left:auto; display:flex; align-items:center; gap:14px;}
+@media (max-width: 900px){[data-chrome="F032"] .f-main{padding-top:32px;}}
+@media (max-width: 600px){[data-chrome="F032"] .wm__txt{font-size:18px;}}
+@media (prefers-reduced-motion: reduce){
+[data-chrome="F032"] [data-reveal]{ opacity:1 !important; transform:none !important; transition:opacity .15s linear !important; }
+[data-chrome="F032"] *{ animation:none !important; transition-duration:.15s !important; }
+}

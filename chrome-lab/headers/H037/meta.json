@@ -1,0 +1,49 @@
+{
+ "id": "H037",
+ "type": "header",
+ "family": "F10",
+ "family_name": "Side drawer nav",
+ "family_signature": "right drawer + scrim, nested accordion groups",
+ "A1_container": "1200-contained",
+ "A2_nav": "drawer",
+ "A3_scroll": "sticky",
+ "A4_motion": "m-09",
+ "A5_disclosure": "click",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "invert-chrome",
+ "skin_notes": "dark-token surfaces even on light pages (rare headers, natural footer close)",
+ "signature_motion": "m-09 drawer + scrim 300ms",
+ "motion_ids": [
+  "m-09"
+ ],
+ "references": [
+  "amazon.com",
+  "booking.com",
+  "ikea.com"
+ ],
+ "pattern_refs": [
+  "h-utility-ecommerce",
+  "f-accordion"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "burger-drawer",
+ "budget": {
+  "css_bytes": 5494,
+  "css_exception": null,
+  "dom_nodes": 42,
+  "js_bytes": 1986,
+  "js_gzip_bytes": 770,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H037\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

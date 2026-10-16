@@ -1,0 +1,89 @@
+/* Nestlancer chrome H071 — progressive enhancement. Page works with JS off. */
+(function(){
+'use strict';
+var ID='H071';
+var root=document.querySelector('[data-chrome="'+ID+'"]');
+if(!root)return;
+var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+function reduced(){return mq.matches;}
+function q(s){return Array.prototype.slice.call(root.querySelectorAll(s));}
+var docTheme=document.documentElement.getAttribute('data-theme');
+if(docTheme)root.setAttribute('data-theme',docTheme);
+
+function q(s){return Array.prototype.slice.call(root.querySelectorAll(s));}
+q('[data-disclosure]').forEach(function(btn){
+  var t=root.querySelector('#'+btn.getAttribute('aria-controls'));
+  if(!t)return;
+  function set(open){
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    t.setAttribute('data-open',open?'true':'false');
+    root.setAttribute('data-nav-open',open?'true':'false');
+    if(open){var f=t.querySelector('a,button,input');if(f)f.focus();}
+    else{btn.focus();}
+  }
+  btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
+  t.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);}
+  });
+});
+
+var ann=root.querySelector('[data-announce]');
+if(ann){
+  var key='nl-announce-'+ID;
+  try{if(localStorage.getItem(key)==='off')ann.setAttribute('data-dismissed','true');}catch(e){}
+  var c=ann.querySelector('[data-announce-close]');
+  if(c)c.addEventListener('click',function(){
+    ann.setAttribute('data-dismissed','true');
+    try{localStorage.setItem(key,'off');}catch(e){}
+  });
+}
+
+q('[data-theme-toggle]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+    function apply(){
+      document.documentElement.setAttribute('data-theme',cur);
+      root.setAttribute('data-theme',cur);
+      btn.setAttribute('aria-pressed',cur==='dark'?'true':'false');
+    }
+    if(document.startViewTransition&&!reduced())document.startViewTransition(apply);
+    else apply();
+  });
+});
+
+q('[data-count-to]').forEach(function(el){
+  if(reduced())return;
+  var done=false;
+  function run(){
+    if(done)return;done=true;
+    var to=parseFloat(el.getAttribute('data-count-to'))||0,t0=performance.now();
+    (function step(t){
+      var p=Math.min(1,(t-t0)/1200),e=1-Math.pow(1-p,4);
+      el.textContent=Math.round(to*e).toLocaleString('en-IN');
+      if(p<1)requestAnimationFrame(step);
+    })(t0);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){run();io.disconnect();}});},{threshold:.4});
+    io.observe(el);
+  }else run();
+});
+
+var lastY=window.scrollY;
+function onScroll(){
+  var y=window.scrollY;
+  if(y>24)root.setAttribute('data-scrolled','true');else root.setAttribute('data-scrolled','false');
+  if(y>120)root.setAttribute('data-solid','true');else root.setAttribute('data-solid','false');
+  if(y>lastY+6&&y>160)root.setAttribute('data-hide','true');
+  else if(y<lastY-6)root.setAttribute('data-hide','false');
+  lastY=y;
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+document.addEventListener('visibilitychange',function(){
+  var h=document.hidden;
+  q('[data-motion]').forEach(function(el){el.style.animationPlayState=h?'paused':'';});
+});
+})();

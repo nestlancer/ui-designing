@@ -1,0 +1,46 @@
+{
+ "id": "F014",
+ "type": "footer",
+ "family": "F03",
+ "family_name": "Newsletter-lead",
+ "family_signature": "email capture is the dominant footer element",
+ "A1_container": "asymmetric-8/4",
+ "A2_nav": "inline",
+ "A3_scroll": "pinned-then-release",
+ "A4_motion": "m-26",
+ "A5_disclosure": "hover",
+ "A6_cta": "ghost-text",
+ "A7_surface_skin": "tint-wash",
+ "skin_notes": "--n-bg-tint-1 / --n-mint wash behind the chrome; teal-soft chip accents",
+ "signature_motion": "m-26 subscriber count-up",
+ "motion_ids": [
+  "m-26"
+ ],
+ "references": [
+  "mailchimp.com",
+  "medium.com",
+  "mailchimp.com"
+ ],
+ "pattern_refs": [
+  "f-newsletter",
+  "f-corporate-cols"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 4254,
+  "css_exception": null,
+  "dom_nodes": 49,
+  "js_bytes": 967,
+  "js_gzip_bytes": 546,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F014\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

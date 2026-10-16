@@ -1,0 +1,45 @@
+{
+ "id": "H098",
+ "type": "header",
+ "family": "F25",
+ "family_name": "Editorial typographic",
+ "family_signature": "oversized serif wordmark, thin rules, no CTA slab",
+ "A1_container": "full-bleed",
+ "A2_nav": "inline",
+ "A3_scroll": "sticky",
+ "A4_motion": "m-33",
+ "A5_disclosure": "hover",
+ "A6_cta": "ghost-text",
+ "A7_surface_skin": "editorial-rules",
+ "skin_notes": "canvas/transparent bg, typographic weight + double hairline rules only",
+ "signature_motion": "m-33 editorial roll-up",
+ "motion_ids": [
+  "m-33"
+ ],
+ "references": [
+  "pentagram.com",
+  "economist.com",
+  "theguardian.com"
+ ],
+ "pattern_refs": [
+  "h-editorial-masthead",
+  "f-wordmark-xl"
+ ],
+ "diff_from_prev": [
+  "A3",
+  "A4",
+  "A5"
+ ],
+ "mobile_strategy": "burger-drawer",
+ "budget": {
+  "css_bytes": 5722,
+  "css_exception": null,
+  "dom_nodes": 43,
+  "js_bytes": 2460,
+  "js_gzip_bytes": 900,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H098\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

@@ -1,0 +1,47 @@
+{
+ "id": "F050",
+ "type": "footer",
+ "family": "F10",
+ "family_name": "Mesh / gradient footer",
+ "family_signature": "repo hero mesh echoed at the base",
+ "A1_container": "docked-edge-rail",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-31",
+ "A5_disclosure": "click",
+ "A6_cta": "split-arrow-pill",
+ "A7_surface_skin": "mesh-zone",
+ "skin_notes": "--n-mesh-1 → --n-mesh-2 gradient panel composition",
+ "signature_motion": "m-31 mesh grain",
+ "motion_ids": [
+  "m-31"
+ ],
+ "references": [
+  "airbnb.com",
+  "canva.com",
+  "stripe.com"
+ ],
+ "pattern_refs": [
+  "f-mesh",
+  "f-sitemap-standard"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3509,
+  "css_exception": null,
+  "dom_nodes": 43,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F050\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

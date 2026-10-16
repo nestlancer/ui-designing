@@ -1,0 +1,46 @@
+{
+ "id": "F085",
+ "type": "footer",
+ "family": "F17",
+ "family_name": "Curtain reveal on overscroll",
+ "family_signature": "content slides up, footer pinned behind",
+ "A1_container": "floating-pill-inset-16",
+ "A2_nav": "inline",
+ "A3_scroll": "pinned-then-release",
+ "A4_motion": "m-01",
+ "A5_disclosure": "hover",
+ "A6_cta": "split-arrow-pill",
+ "A7_surface_skin": "invert-chrome",
+ "skin_notes": "dark-token surfaces even on light pages (rare headers, natural footer close)",
+ "signature_motion": "m-01 magnetic curtain CTA",
+ "motion_ids": [
+  "m-01"
+ ],
+ "references": [
+  "apple.com",
+  "airbnb.com",
+  "framer.com"
+ ],
+ "pattern_refs": [
+  "f-ink-band",
+  "f-wordmark-xl"
+ ],
+ "diff_from_prev": [
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 5011,
+  "css_exception": null,
+  "dom_nodes": 61,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F085\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

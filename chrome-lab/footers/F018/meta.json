@@ -1,0 +1,47 @@
+{
+ "id": "F018",
+ "type": "footer",
+ "family": "F04",
+ "family_name": "CTA banner fused to footer",
+ "family_signature": "“Ready to ship with clarity?” merges into the footer",
+ "A1_container": "asymmetric-8/4",
+ "A2_nav": "inline",
+ "A3_scroll": "pinned-then-release",
+ "A4_motion": "m-20",
+ "A5_disclosure": "click",
+ "A6_cta": "outline-pill",
+ "A7_surface_skin": "mesh-zone",
+ "skin_notes": "--n-mesh-1 → --n-mesh-2 gradient panel composition",
+ "signature_motion": "m-20 curtain behind CTA",
+ "motion_ids": [
+  "m-20"
+ ],
+ "references": [
+  "shopify.com",
+  "wix.com",
+  "squarespace.com"
+ ],
+ "pattern_refs": [
+  "f-cta-fused",
+  "f-mesh"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 5004,
+  "css_exception": null,
+  "dom_nodes": 61,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F018\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

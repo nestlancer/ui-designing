@@ -1,0 +1,46 @@
+{
+ "id": "F093",
+ "type": "footer",
+ "family": "F19",
+ "family_name": "Compliance-heavy (India)",
+ "family_signature": "Razorpay · PCI-DSS · GST · DPDP · grievance officer",
+ "A1_container": "full-bleed",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-32",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "outline-pill",
+ "A7_surface_skin": "dual-surface",
+ "skin_notes": "two stacked surfaces: utility strip different fill from main row / links band vs legal band",
+ "signature_motion": "m-32 status pill pulse",
+ "motion_ids": [
+  "m-32"
+ ],
+ "references": [
+  "zerodha.com",
+  "razorpay.com",
+  "groww.in"
+ ],
+ "pattern_refs": [
+  "f-compliance-india",
+  "f-legal-wall"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 2958,
+  "css_exception": null,
+  "dom_nodes": 53,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F093\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

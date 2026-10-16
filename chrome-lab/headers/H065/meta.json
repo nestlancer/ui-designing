@@ -1,0 +1,49 @@
+{
+ "id": "H065",
+ "type": "header",
+ "family": "F17",
+ "family_name": "Wizard / intake progress",
+ "family_signature": "step dots + progress rail for “Start a project”",
+ "A1_container": "1200-contained",
+ "A2_nav": "breadcrumb-row",
+ "A3_scroll": "progress-linked",
+ "A4_motion": "m-38",
+ "A5_disclosure": "click",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "dual-surface",
+ "skin_notes": "two stacked surfaces: utility strip different fill from main row / links band vs legal band",
+ "signature_motion": "m-38 step dot advance",
+ "motion_ids": [
+  "m-38"
+ ],
+ "references": [
+  "booking.com",
+  "makemytrip.com",
+  "stripe.com"
+ ],
+ "pattern_refs": [
+  "h-utility-travel",
+  "f-proof-stats"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "steps-scroll",
+ "budget": {
+  "css_bytes": 6499,
+  "css_exception": null,
+  "dom_nodes": 52,
+  "js_bytes": 1986,
+  "js_gzip_bytes": 770,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H065\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}
