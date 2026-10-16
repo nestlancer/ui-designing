@@ -1,8 +1,0 @@
-research/raw/
-tmp/
-node_modules/
-.coverage
-.DS_Store
-*.log
-research/raw/**
-tmp/**

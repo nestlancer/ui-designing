@@ -1,24 +1,27 @@
-# Nestlancer Header & Footer Lab — Master Agent Prompt (v2)
+# Nestlancer Header & Footer Lab — Master Agent Prompt (v3)
 
-> **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (≥100 real sites captured), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable 6-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
+> **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (≥100 real sites captured), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable multi-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
 >
 > **Pipeline:** `header-footer-prompt.md` (this file) → `research/sites.json` (≥100 captured) → `research/pattern-index.json` + `research/motion-index.json` → **100 headers (`H001–H100`) + 100 footers (`F001–F100`)** → gallery + `QA-REPORT.md`.
 >
 > **Where to run:** [Arena Agent Mode](https://arena.ai/agent) (also works in Cursor / Claude Code). Paste everything below the line.
 >
 > **v2 (2026-10-16) — the browser-serve fix.** A v1 run shipped files that were “correct on disk” but **rendered wrong in a real browser** when served with `python3 -m http.server`: the locked fonts never loaded (no `<link>` anywhere → Georgia/system-ui fallbacks), the demo page around each chrome was unstyled text flush to the viewport, gallery iframes cropped footers to 240 px, dark theme flashed light first, 13 bottom-bar/sticky-CTA headers carried a dead `[data-chrome]@media` rule and 5 curtain footers a dead body rule — all from a comment glued onto a selector head in the CSS scoper; and on mobile the burger sat next to the wordmark instead of the far right. **v2 adds §0C (Browser-Serve Contract), gate G13, `runtime/demo.css`, real font loading with offline fallbacks, theme-boot before first paint, and mobile-bar normalisation.** §5.6’s “zero external requests” is amended to *no externals beyond the one locked Google Fonts stylesheet*.
+>
+> **v3 (2026-10-16) — the visual-skin + owned-CSS fix.** A v2 run passed all 13 gates and still looked like **one Nestlancer bar pasted 200 times**: uniqueness was only structural (A1–A6), every `style.css` was a **megatemplate** (≈75 class selectors for ~23 classes in the HTML — drawers, megas, wizards, rails… all dead weight), surface/colour composition never varied inside the locked palette, and agents treated “no Bootstrap / no second hue” as “leave chrome visually blank / shared.” **v3 adds axis A7 (Surface skin), §5.8 CSS Ownership Contract, gate G14, an explicit ban on Bootstrap/Tailwind/framework CDNs with a requirement that each variant ships complete self-owned Nestlancer CSS**, and a gallery “glance test” that fails when two families are indistinguishable at 1440 px.
 
 ---
 
 ````
 # ============================================================
-# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v2)
+# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v3)
 # Mission: research ≥100 live sites → build 100 unique headers
 #          + 100 unique footers for the Nestlancer design language
 # Data/design truth: Nestlancer-public-screenshots/public/*.webp
 # Runtime: Arena.ai Agent Mode (user workspace = downloadable)
-# v2 adds §0C browser-serve contract + gate G13: files must RENDER
-# correctly over `python3 -m http.server`, not merely exist on disk
+# v2: §0C browser-serve + G13 (must RENDER over python http.server)
+# v3: A7 surface skin + §5.8 owned CSS + G14 (must LOOK distinct;
+#     no megatemplate CSS; no Bootstrap/Tailwind CDN)
 # ============================================================
 
 ## 0A) ARENA AGENT MODE — USER WORKSPACE DELIVERY (CRITICAL)
@@ -65,8 +68,9 @@ Deliverable files (path — size):
 - ...
 Counts: headers <n>/100 · footers <n>/100 · families covered <n>/45
 Research: sites captured <n>/100 · primitives <n>/30
-QA: gates passed <n>/13 · variants flagged <n>
+QA: gates passed <n>/14 · variants flagged <n>
 Browser-serve (§0C): VERIFIED at localhost:<port> / NO-BROWSER-IN-SANDBOX (G13 static only)
+Visual-skin (§5.0 A7 / G14): FAMILY GLANCE PASS / FAIL · dead-CSS max <n>%
 Scratch-only leftovers cleaned: YES/NO
 Approx workspace use: <estimate> / 128 MB
 Download expectation: chrome-lab/ + research/*.json MUST appear in the Workspace panel / Download ZIP.
@@ -160,13 +164,14 @@ are a **failed run**, exactly like files that never left the sandbox (§0A).
    “browser-verified” on the strength of static checks.
 
 ### Verification recipe (run before claiming “done”)
-1. `node tools/generate.mjs && node tools/qa.mjs` → **13/13 gates** (G13 is this contract, static).
+1. `node tools/generate.mjs && node tools/qa.mjs` → **14/14 gates** (G13 serve + G14 skin / CSS ownership).
 2. `python3 -m http.server 8123` from the repo root → open `/` (gallery), any 3–5 variants, both
    themes, at 1440 px and 390 px.
 3. Confirm with eyes, not vibes: Fraunces/Inter/Plex Mono actually rendered (not Georgia); demo shell
    styled; footer pages reveal the footer within the first screenful at 1440; gallery footer
    thumbnails whole; network tab shows **no 404s**; console shows **no errors**; no horizontal
-   scrollbar; burger at the far right opens the drawer; `Esc` closes it and focus returns.
+   scrollbar; burger at the far right opens the drawer; `Esc` closes it and focus returns;
+   **two different families must be distinguishable in under 2 seconds** in the gallery (G14 glance).
 
 ---
 
@@ -175,7 +180,7 @@ are a **failed run**, exactly like files that never left the sandbox (§0A).
 | # | Failure | Why it happens | Fix in this prompt |
 |---|---|---|---|
 | 1 | Agent lists 100 URLs, fetches none | “inspiration” treated as optional reading | §0B hard gate on `sites.json` |
-| 2 | 100 “variants” that are the same header in 100 hues | agent varies **colour** (1 axis) instead of **type** | §5.0 six-axis uniqueness test + QA gate **G1** |
+| 2 | 100 “variants” that are the same header in 100 hues | agent varies **raw hex** (1 axis) instead of **type** | §5.0 multi-axis uniqueness (A1–A7) + QA gate **G1** — note: composing locked tokens into different *skins* is required (A7), inventing new brand hues is still banned |
 | 3 | 30 variants built, 70 stubbed as “same as above” | context exhaustion unmanaged | §7 batching: 10 at a time, family order, never stub |
 | 4 | Motion = a paragraph of adjectives | no measurement instrument | §3.5 `getAnimations()` probe captures real ms/easing |
 | 5 | Brand drift — purple gradients, second accent, Inter-only voice | reference sites’ identity leaks in | §4 KEEP list + QA gate **G3** |
@@ -185,15 +190,20 @@ are a **failed run**, exactly like files that never left the sandbox (§0A).
 | 9 | Header breaks the page it drops into (CLS, overlap, z-index wars) | chrome built as a demo, not an integration | §5.6 budgets + gate **G7** |
 | 10 | Footer is an afterthought: one row, © only, 90 of them identical | effort spent on headers | 20 footer families with equal craft bar (§6.2) |
 | 11 | Files “correct” on disk but raw/broken in the browser: fallback fonts, unstyled demo page, cropped gallery iframes, light-flash on dark theme, dead CSS rules, burger stranded mid-bar | repo never actually **served + looked at**; QA gates static-only; CSS scoper glued a comment onto a selector | §0C browser-serve contract + gate **G13** + `runtime/demo.css` + real font loading + comment-safe scoping |
+| 12 | **Structure-unique but visually identical** — 200 variants pass the 6-axis test, yet every header is the same white bar + teal pill + hairline; footers share one surface recipe | uniqueness defined only as A1–A6; KEEP list misread as “never compose surfaces”; generators dump one megatemplate `style.css` onto every ID | **axis A7 Surface skin** + §5.8 CSS Ownership + gate **G14** glance test |
+| 13 | **Megatemplate CSS** — each `style.css` ships rules for mega/drawer/wizard/rail/overlay/… even when that HTML is absent (~70% dead selectors); variants look “unstyled / generic framework leftovers” | one shared CSS blob + `scopeCss(id)` instead of per-variant owned stylesheets | §5.8: emit **only** selectors for classes present in that variant’s HTML; dead-selector budget ≤ 15% |
+| 14 | **Missing chrome design mistaken for “no Bootstrap”** — agent ships bare markup + token variables, or reaches for Bootstrap/Tailwind CDN | confusion between “no third-party CSS framework” and “no CSS design” | §5.8 + G7: **custom Nestlancer CSS only**; Bootstrap / Tailwind / Bulma / Foundation / UIKit CDNs and utility-class frameworks are **banned**; each variant must still look finished and designed |
 
 ### Non-negotiables
 - You MAY NOT write variant CSS before **§0B Research Gate** passes.
 - You MAY NOT generate a family before printing a **Reference Contract** (§3.7, ≥5 rows).
-- **100 headers + 100 footers, each a distinct type** — not 100 + 100 recolours.
+- **100 headers + 100 footers, each a distinct type** — not 100 + 100 recolours **and not 100 + 100 structure-clones of one skin**.
 - Every variant cites ≥2 captured sites + ≥1 measured motion primitive.
 - No copied logos, images, or proprietary copy from any researched site.
 - You MAY NOT mark complete until **§0A Workspace Delivery Check** passes.
 - You MAY NOT claim a variant is finished until it has been **served and looked at** (§0C): `python3 -m http.server` from the repo root, opened at 1440 px and 390 px in both themes — or, in a browser-less sandbox, gate **G13** passes and the limitation is printed.
+- You MAY NOT ship a variant whose `style.css` is a scoped copy of a shared megatemplate, or whose family is visually indistinguishable from another family at gallery glance (G14).
+- You MAY NOT add Bootstrap, Tailwind, Bulma, Foundation, or any other CSS-framework CDN / utility runtime. Nestlancer tokens + owned per-variant CSS is the design system.
 
 ---
 
@@ -209,10 +219,12 @@ You are simultaneously:
 ### Grade scale for THIS job (chrome craft)
 | Grade | Meaning |
 |---|---|
-| F–D | Broken, overlapping, unstyled, inaccessible |
+| F–D | Broken, overlapping, unstyled, inaccessible — or Bootstrap/Tailwind CDN dropped in |
 | C | Works, looks like a default template with a teal button — **the state we are escaping** |
+| C+ | Axis-unique on paper, but gallery glance shows the **same white bar / same footer surface** on every card (v2 failure) |
 | B | Clean and consistent, but forgettable; could belong to any SaaS |
-| A | Production-ready Nestlancer chrome — calm, branded, responsive, intentional motion |
+| A | Production-ready Nestlancer chrome — calm, branded, responsive, intentional motion, **own surface skin**, CSS owns only what the HTML needs |
+| A+ | Same, plus a signature motion that a senior designer would screenshot; family is recognisable in the gallery without reading the ID |
 | **A+** | Memorable craft: reference-informed structure, confident hierarchy, signature micro-interaction, still restrained and trustworthy |
 
 **Ship standard = A+ on every one of the 200.** A gallery where 20 variants are A+ and 180 are B is a **failed run**.
@@ -273,6 +285,10 @@ Repo to work in: `https://github.com/nestlancer/ui-designing.git` (clone it; it 
 }
 ```
 **Dark theme is derived, never invented:** surfaces `#0b1720` / `#0f1e29`, body text `#b9c6d0`, hairlines 8% white, `--n-teal` stays as the accent. Never a second brand hue.
+
+**Locked tokens ≠ one visual skin.** The palette above is the *paint box*, not a single composition. Every family must still pick a distinct **surface skin** (axis A7, §5.0) by *composing* these tokens differently — solid canvas, glass, ink invert band, mint/tint wash, mesh zone, elevated soft-shadow, hairline-only editorial, dual-surface (utility ink + main surface), etc. Inventing `#7c3aed` or a Bootstrap primary blue is forbidden; refusing to design with `--n-*` is also forbidden.
+
+**No third-party CSS frameworks.** Do not link or vendor Bootstrap, Tailwind, Bulma, Foundation, UIKit, Materialize, Animate.css as a runtime, or any utility-class CDN. Inspiration from those sites’ *patterns* is fine (already in §3); the implementation is always custom CSS scoped to `[data-chrome="<ID>"]` using §2.2 tokens. “No Bootstrap” never means “no CSS.”
 
 **Fonts are locked AND must load.** The three families above are the design voice. The browser-serve contract (§0C rule 2) wires the one sanctioned Google Fonts `<link>` into every page; the fallback stacks in this token block keep pages usable offline — they are a safety net, not the design. No fourth family, ever, and no per-variant `@font-face` (G7/G13 enforce).
 
@@ -498,37 +514,43 @@ A+ definition for this batch (3 bullets):
 2. ...
 3. ...
 
-Axes claimed (must differ ≥3 from every prior variant): container / paradigm / scroll / motion / disclosure / CTA
+Axes claimed (must differ ≥3 from every prior variant, including A7): container / paradigm / scroll / motion / disclosure / CTA / **surface skin**
+A7 skin for this family: <skin id> — <one-line composition note>
 ```
 
-**Hard gate:** fewer than 5 rows → you may not open a CSS file.
+**Hard gate:** fewer than 5 rows → you may not open a CSS file. Missing A7 skin id → you may not open a CSS file.
 
 ---
 
 ## 4) KEEP vs CHANGE
 
 ### KEEP (sacred)
-- Every token in §2.2 — teal `#24877f`, navy `#0a2543`, canvas `#f9fbfc`, hairlines, pill radius, eyebrow style
+- Every token in §2.2 — teal `#24877f`, navy `#0a2543`, canvas `#f9fbfc`, hairlines, pill radius, eyebrow style *(the paint box — not a single forced composition)*
 - The wordmark treatment (bird glyph + navy `Nestlancer` + teal full-stop) — recreate as inline SVG; never import the real logo file into new variants, never trace a competitor’s mark
 - All copy strings in §2.4; INR formatting; the legal line
 - Routes in §2.5
 - The calm, generous, trustworthy rhythm of the repo at 1440 px
 - Not one file under `Nestlancer-public-screenshots/` may be edited
+- Custom Nestlancer CSS only — no Bootstrap / Tailwind / other framework CDN
 
 ### CHANGE (required — that is the job)
 - Structure: container geometry, nav paradigm, disclosure model, CTA arrangement
+- **Surface skin (A7):** how those tokens are composed — solid / glass / ink band / tint / mesh / elevated / editorial / dual / invert / pill-float
 - Rhythm: vertical density, gutters, type scale, eyebrow placement
 - Motion: real choreography with measured timings, one signature per variant
 - Mobile: a deliberate collapse strategy per variant, not “hamburger by default”
 - Theme: light **and** dark for all 200
 - States: hover · focus-visible · active · open · closed · scrolled · disabled · loading (newsletter) · empty (search) · error
+- **CSS ownership:** each variant’s stylesheet matches its DOM (no megatemplate leftovers)
 
 ### Forbidden (anti-slop)
 - Purple/indigo neon themes · gradient soup · glass over dense text · 3D flourishes
 - Emoji as icons · more than one brand hue · a second typeface family beyond the §2.2 trio
 - Ribbon/triangle announcement banners · autoplaying video in chrome · carousels in the header
 - Copying a real logo, icon set, illustration or marketing sentence from a researched site
-- 100 variants that differ only in colour, font weight, or link order (**uniqueness gate will catch this**)
+- 100 variants that differ only in raw hex, font weight, or link order (**uniqueness gate will catch this**)
+- 100 variants that differ on axes but share one white-bar skin (**G14 will catch this**)
+- Megatemplate `style.css` scoped per ID · Bootstrap/Tailwind/Bulma CDN · “unstyled chrome, tokens will handle it”
 - Declaring done with 40 variants and “the rest follow the same pattern”
 
 ---
@@ -537,7 +559,7 @@ Axes claimed (must differ ≥3 from every prior variant): container / paradigm /
 
 ### 5.0 THE UNIQUENESS MANDATE — how “different type” is measured
 
-Two variants are different types **only if they differ on ≥ 3 of these 6 axes**:
+Two variants are different types **only if they differ on ≥ 3 of these 7 axes**, and **at least one of those three must be A1, A2, A3, or A7** (structure or skin — never “motion + disclosure + CTA” alone while the bar still looks identical):
 
 | Axis | Options |
 |---|---|
@@ -547,14 +569,36 @@ Two variants are different types **only if they differ on ≥ 3 of these 6 axes*
 | **A4 Motion primitive** | any `m-XX` from §3.6 — never the same id twice inside one family |
 | **A5 Disclosure** | hover · click · keyboard-first · hover-intent 120 ms · always-visible · accordion |
 | **A6 CTA treatment** | teal pill · outline pill · split-arrow pill · ghost text · dual equal CTA · gradient edge · icon-only · sticky mobile bar |
+| **A7 Surface skin** *(required — this is the visual design axis)* | see recipe table below |
 
-Every variant’s `meta.json` must record its six axis values, and its `diff_from_prev` field must state the three axes it changes. QA gate **G1** recomputes this pairwise across all 200.
+#### A7 Surface skin recipes (compose §2.2 tokens only — no new hues)
+
+Every **family** locks one primary A7 skin; the 4 (header) / 5 (footer) variants inside a family may shift density or invert for dark, but must stay recognisable as that skin. Neighbouring families **must not** share the same A7 value.
+
+| Skin id | What the chrome looks like (all colours from §2.2) |
+|---|---|
+| `solid-canvas` | `--n-surface` bar/footer, 1px `--n-hairline`, flat — the repo baseline |
+| `glass-hairline` | `color-mix` translucent surface + `backdrop-filter` blur 12–16px + hairline + soft shadow (with `@supports` opaque fallback) |
+| `ink-band` | `--n-ink` (or dark `#0b1720`) utility / announce / footer band with light text; main row may stay surface |
+| `tint-wash` | `--n-bg-tint-1` / `--n-mint` wash behind bar or footer columns; teal soft accents on chips |
+| `mesh-zone` | `--n-mesh-1` → `--n-mesh-2` gradient panel (footer CTA / hero-adjacent header only) |
+| `elevated-soft` | solid surface + `box-shadow: 0 8px 28px rgba(10,37,67,.10)` (or dark equivalent), no heavy border |
+| `editorial-rules` | transparent / canvas bg, typographic weight, hairline rules only — no filled CTA slab behind the bar |
+| `dual-surface` | two stacked surfaces with different fills (e.g. ink utility 30px + surface main 72px, or surface columns + tint legal bar) |
+| `invert-chrome` | whole chrome forced to dark-token surfaces even on light pages (footer “dark inverted” family; rare for headers) |
+| `pill-float` | chrome itself is the floating rounded container (`--n-radius-pill` / card radius), inset from viewport, glass or solid |
+
+**Gallery glance test (human + G14):** open the gallery at 1440 px. Cover the IDs. If you cannot tell family X from family Y in under 2 seconds, one of them must change A7 (or its structural signature), not just A4/A5.
+
+Every variant’s `meta.json` must record all **seven** axis values (including `A7_surface_skin`), and its `diff_from_prev` field must state the three axes it changes. QA gate **G1** recomputes pairwise distance across all 200; gate **G14** enforces A7 coverage + CSS ownership.
 
 ### 5.1 Surfaces (chrome rule)
-- Chrome may use **restrained glass**: `backdrop-filter: blur(12–16px) saturate(150%)` + hairline + soft shadow, always with `-webkit-` prefix and an `@supports` opaque fallback.
+- Every variant **declares and implements** its A7 skin in `style.css` — background, border/hairline, elevation, and any band/wash must be real CSS properties, not comments in `meta.json`.
+- Chrome may use **restrained glass** when A7 is `glass-hairline` or `pill-float`: `backdrop-filter: blur(12–16px) saturate(150%)` + hairline + soft shadow, always with `-webkit-` prefix and an `@supports` opaque fallback.
 - **Never animate `backdrop-filter` on scroll.** Toggle it with a class at a measured threshold (m-03).
-- Footers sit on a surface, not on glass. Footer text must stay crisp at 12px.
-- Page canvas behind chrome: `--n-bg` with the mesh wash only on the hero-adjacent variant family.
+- Footers sit on a designed surface (solid, tint, mesh, invert, dual) — not an unstyled transparent block. Footer text must stay crisp at 12px.
+- Page canvas behind chrome: `--n-bg` with the mesh wash only when A7 is `mesh-zone` or the family is hero-adjacent.
+- **Contrast stays AA** after skin changes: ink-band / invert-chrome must use the dark-theme text tokens (or `#fff` / `#e8eef4`) on ink surfaces; never navy text on ink.
 
 ### 5.2 Typography in chrome
 - Wordmark: display serif (Fraunces / Instrument Serif) or the wordmark SVG — never a third family.
@@ -618,13 +662,38 @@ Each variant ships `index.html` (standalone demo), `style.css` (scoped to `[data
 
 The standalone demo page is a **showcase, not a scaffold**: it carries the §0C head block (color-scheme meta, locked font link, theme-boot script), links `runtime/demo.css`, renders finished at every §5.4 width over `python3 -m http.server` from the repo root, and keeps every asset reference relative so the lab works under any server root.
 
+### 5.8 CSS OWNERSHIP CONTRACT — each variant owns its look (no megatemplate, no Bootstrap)
+
+This is the contract that failed in the v2 generator run. Read it before writing `tools/generate.mjs` or any `style.css`.
+
+#### What “own CSS design” means
+1. **The variant’s `style.css` is the source of truth for that chrome’s appearance.** It must set layout, colour/surface (A7), type scale in chrome, CTA chrome, borders/shadows, states (hover/focus/active/open/scrolled), and the mobile collapse for **that** HTML.
+2. **`runtime/chrome.css` holds only true shared primitives** (skip-link, focus-ring helper, reduced-motion reminders, maybe `.eyebrow` / base `.cta` defaults). It must **not** be a 200-variant kitchen sink. If a rule is specific to a paradigm (mega, drawer, wizard…), it belongs in the variants that use it — or in a tiny optional partial that those variants `@import` — never in every `style.css`.
+3. **No megatemplate.** Forbidden pattern: one giant CSS string containing every family’s selectors, then `scopeCss(css, "[data-chrome=H0xx]")` for all 100 headers. Required pattern: build CSS from the modules the HTML actually emits (bar + nav paradigm + CTA + A7 skin + mobile + signature motion). After emit, **dead-class budget ≤ 15%**:  
+   `dead = class selectors in style.css whose class never appears in that variant’s index.html` (ignore pseudo-elements and state classes like `is-open` / `is-on` that JS toggles on existing nodes).
+4. **No third-party CSS framework runtime.** Banned in any `index.html` / `style.css` / vendor folder: Bootstrap, Tailwind (Play CDN or built utilities as the design system), Bulma, Foundation, UIKit, Materialize, Semantic UI, Animate.css-as-dependency, Font Awesome CSS kits used as the layout system. You may study their docs for *patterns*; you implement Nestlancer CSS.
+5. **Hard-coded hex outside §2.2 is still banned** (G3) — except the documented dark-theme literals already in §2.2 / tokens.css (`#0b1720`, `#0f1e29`, `#e8eef4`, `#b9c6d0`, `#8aa0b3`, `rgba(255,255,255,.08)`, `#fff` on teal CTAs). Prefer `var(--n-*)` everywhere else.
+6. **`meta.json` must list `A7_surface_skin`** and a one-line `skin_notes` describing the composition (e.g. `"ink 30px utility + glass main bar"`).
+7. **Byte sanity:** after dropping dead rules, header `style.css` should typically land **≤ 8 KB** and footer **≤ 7 KB** unless the paradigm truly needs more (mega + overlay). A 19 KB header stylesheet with 59 unused class selectors is an automatic G14 fail.
+
+#### Generator / agent checklist (print per batch)
+```
+CSS OWNERSHIP
+Variant: <ID>
+A7 skin: <skin id>
+Classes in HTML: <n>   Class selectors in CSS: <n>   Dead: <n> (<pct>%)
+Framework CDN links: 0
+Megatemplate reused: NO
+Glance vs previous family: DISTINCT / SAME (if SAME → change A7 or structure before shipping)
+```
+
 ---
 
 ## 6) THE 200 VARIANTS
 
 ### 6.1 Headers — 25 families × 4 variants = **100**
 
-Each family’s 4 variants differ on container geometry, theme inversion, motion primitive and mobile collapse. Default batch priority in brackets.
+Each family’s 4 variants differ on container geometry, theme inversion, motion primitive and mobile collapse. **Each family also locks one A7 surface skin** (neighbouring families must differ). Assign skins across the 25 families so at least 8 of the 10 recipes in §5.0 appear. Default batch priority in brackets.
 
 | # | Family | IDs | Structural signature | Seed inspirations | Batch |
 |---|---|---|---|---|---|
@@ -655,6 +724,8 @@ Each family’s 4 variants differ on container geometry, theme inversion, motion
 | 24 | Edge icon-rail + minimal bar | H093–H096 | 64 px vertical rail + slim bar | dashboards, IDE-like | P3 |
 
 ### 6.2 Footers — 20 families × 5 variants = **100**
+
+Same craft bar as headers. **Each footer family locks one A7 skin**; use ≥6 distinct recipes across the 20 families (mesh, invert, dual-surface, tint-wash, editorial-rules, solid-canvas are natural fits).
 
 | # | Family | IDs | Structural signature | Seed inspirations | Batch |
 |---|---|---|---|---|---|
@@ -742,15 +813,17 @@ Complete the capture run until **≥100 sites captured**, run the motion probe, 
 ### Phase 2 — Variant batches (strict P0 → P4 order)
 For each batch of 10:
 1. Print the **Reference Contract** (≥5 rows) for that batch.
-2. Build variants one family at a time — never generate two families from the same template mentally. Change the **container first**, then the paradigm, then the motion.
+2. Build variants one family at a time — never generate two families from the same template mentally. Lock **A7 surface skin first**, then change the **container**, then the paradigm, then the motion. Emit CSS from modules for that HTML only (§5.8) — never clone a previous family’s stylesheet.
 3. Write `index.html`, `style.css`, `script.js`, `meta.json` straight into the workspace tree.
 4. **Critique loop** — serve the repo (`python3 -m http.server 8123`) and render at **1440 px and 390 px**, light and dark, in a real browser (never from `file://`). Ask as a harsh design director:
    - Does this look like the repo, or like a generic template wearing teal?
    - Is there exactly one signature motion, and is it *seen*?
    - Is the hierarchy confident at a glance, or busy?
+   - **Cover the ID — can you name the family from the surface skin alone?** If it is “the same white bar,” fail and change A7.
+   - Does `style.css` only style classes that exist in this HTML? Print the §5.8 CSS Ownership block.
    - In the browser (§0C): real fonts loaded? demo shell styled? no 404s, no console errors, no light-flash with `?theme=dark`? burger far-right and drawer working at 390 px?
    Fix, re-render, max 3 loops, then note leftovers in `QA-REPORT.md`.
-5. Run gates G1, G3, G4, G5, G6, G8 on the batch before starting the next.
+5. Run gates G1, G3, G4, G5, G6, G8, **G14** on the batch before starting the next.
 6. Print the **Research Gate** + **Workspace Delivery Check** counters.
 
 ### Phase 3 — QA & acceptance (full set)
@@ -762,9 +835,9 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 
 | # | Gate | Test | Fail → |
 |---|---|---|---|
-| G1 | **Uniqueness** | pairwise diff on the 6 axes ⇒ every pair differs ≥3; within a family, no shared motion id | regenerate variant |
+| G1 | **Uniqueness** | pairwise diff on the **7** axes ⇒ every pair differs ≥3 **and** at least one differing axis is A1/A2/A3/A7; within a family, no shared motion id; neighbouring families do not share A7 | regenerate variant |
 | G2 | **Count** | exactly 100 headers + 100 footers; IDs H001–H100 / F001–F100 contiguous, no gaps, no stubs | build the missing ones |
-| G3 | Brand fidelity | only §2.2 tokens; no second accent hue; contrast ≥4.5:1 light **and** dark | fix tokens |
+| G3 | Brand fidelity | only §2.2 tokens (+ documented dark literals); no second accent hue; **no Bootstrap/Tailwind/framework CDN**; contrast ≥4.5:1 light **and** dark | fix tokens / strip CDN |
 | G4 | Responsive | Playwright: no horizontal scroll + chrome height within budget at 360/768/1024/1440/1920 | fix layout |
 | G5 | A11y | axe-core zero critical/serious; keyboard path: skip link → every action reachable · Esc closes · focus returns | fix |
 | G6 | Reduced motion | with `prefers-reduced-motion: reduce` → zero transform/scroll-linked animations remain | fix |
@@ -775,8 +848,9 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 | G11 | Content fidelity | all strings from §2.4; ₹ values tabular and correct; no invented features/clients | restore copy |
 | G12 | Workspace delivery | §0A manifest lists real files in the workspace; `research/*.json` present; size ≤128 MB | sync & trim |
 | G13 | **Browser-serve** | §0C contract, run statically by `tools/qa.mjs`: locked font link + `demo.css` + theme-boot + color-scheme meta in every page; all relative assets resolve (no 404s over `python3 -m http.server`); no malformed glued selectors; mobile burger ordered after actions; repo-root redirect present | fix & re-serve |
+| G14 | **Visual skin + CSS ownership** | every `meta.json` has `A7_surface_skin` from §5.0; ≥8 distinct A7 values used across header families and ≥6 across footer families; dead-class selectors in each `style.css` ≤ 15% of class selectors (state classes on existing nodes allowed); no megatemplate fingerprint (same normalised CSS hash on >4 variants after stripping the chrome id); zero framework CDN / `bootstrap` / `tailwind` / `bulma` string hits in variant HTML/CSS; header `style.css` ≤ 8 KB and footer ≤ 7 KB unless `meta.budget.css_exception` justifies mega/overlay | rebuild CSS from modules; change A7 |
 
-`docs/QA-REPORT.md` ends with: `gate · passed · failed · regenerated · notes` + a **family × status** table proving every family is complete.
+`docs/QA-REPORT.md` ends with: `gate · passed · failed · regenerated · notes` + a **family × status** table proving every family is complete (include A7 skin column).
 
 ---
 
@@ -788,14 +862,15 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 3. Families in this batch + variant IDs.
 4. Repo screenshots re-opened for this batch.
 5. The **Reference Contract** table (≥5 rows).
-6. A+ definition for this batch (3 bullets) + the 6 axes claimed.
+6. A+ definition for this batch (3 bullets) + the 7 axes claimed (incl. A7 skin).
 7. Files that will exist when the batch is done.
 
 ### After each batch
 - `ls` proof of the variant paths in the workspace (not the sandbox).
-- Gate results for G1/G3/G4/G5/G6/G8/**G13**.
-- Updated counters: `<n>/100` headers, `<n>/100` footers.
+- Gate results for G1/G3/G4/G5/G6/G8/**G13**/**G14**.
+- Updated counters: `<n>/100` headers, `<n>/100` footers · A7 skins used this batch: `<list>`.
 - The §0C serve statement: “served at localhost:8123 and looked at 1440/390, both themes” — or the printed limitation that no browser exists in the sandbox.
+- The CSS Ownership block for each variant in the batch.
 
 ### End of session
 1. Files changed (workspace paths only).
@@ -809,8 +884,10 @@ Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attemp
 ### Refusal rules
 - Do not proceed past Phase R without ≥100 captured sites.
 - Do not ship recolours as “different types”.
+- Do not ship structure-clones that share one white-bar / one footer surface (fail G14).
 - Do not stub, skip, or `TODO` any variant.
-- Do not use a colour, font, or asset outside §2.2.
+- Do not use a colour, font, or asset outside §2.2; do not add Bootstrap/Tailwind/other CSS framework CDNs.
+- Do not emit megatemplate CSS (dead-class rate > 15%).
 - Do not leave deliverables outside the workspace tree.
 - Do not claim completion while any gate in §9 is failing.
 - Do not edit anything under `Nestlancer-public-screenshots/`.
@@ -832,7 +909,7 @@ Begin now:
 10. Run **P0** (H001–H008, H061–H064, F001–F010): Reference Contract → build → critique loop at 1440/390 in both themes → gates → manifest.
 11. Continue **P1 → P2 → P3 → P4**, 10 variants at a time, printing the Reference Contract and Delivery Check per batch. Never stub, never recolour.
 12. Run the §0C **browser-serve sign-off**: `python3 -m http.server 8123` from the repo root → open `/`, the gallery, and 3–5 variants at 1440 px and 390 px in both themes; verify fonts, demo shell, footer thumbnails, zero 404s, zero console errors, working mobile drawer. Print the result.
-13. Finish with `docs/QA-REPORT.md` (all **13** gates), the final **Workspace Delivery Check**, and the honest count: `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `gates passed`, `flagged for review`.
+13. Finish with `docs/QA-REPORT.md` (all **14** gates), the final **Workspace Delivery Check**, and the honest count: `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `A7 skins used`, `gates passed`, `flagged for review`.
 
 If context runs short: finish the current batch + foundation files, sync everything, print the manifest, and hand off with the exact next batch id — never leave a half-written variant behind.
 
@@ -850,8 +927,10 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 | Motion | pull a **different** `m-XX`; if the family already used one, exclude it |
 | Disclosure | hover → click → keyboard-first → hover-intent 120 ms → always-visible → accordion |
 | CTA | teal pill → outline pill → split-arrow pill → ghost text → dual equal CTA → gradient edge → icon-only → sticky mobile bar |
+| **Surface skin (A7)** | solid-canvas → glass-hairline → ink-band → tint-wash → mesh-zone → elevated-soft → editorial-rules → dual-surface → invert-chrome → pill-float |
 | Theme | force the variant to be beautiful in **dark first**, then reconcile light |
 | Density | go one step calmer *or* one step denser than the repo — never both in one variant |
+| CSS bloat | delete every selector whose class is not in this HTML; rebuild from modules — never scope a kitchen-sink blob |
 
 ## APPENDIX B — Ready recipes for the six most-used primitives
 
@@ -915,12 +994,14 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 3. Watch for the **Research Gate** block first. If it prints `Captured: 64`, say: *“Research gate failed — substitute same-bucket sites until ≥100 captured, then continue.”*
 4. Watch the **Workspace** panel: `chrome-lab/` should fill up batch by batch. If files only appear in chat, say: *“Sync chrome-lab to the User Workspace now — sandbox-only does not count.”*
 5. **Serve it yourself before believing “done”.** In the repo root: `python3 -m http.server 8123` → open `http://localhost:8123/`. You should land in the gallery with real Fraunces/Inter/Plex Mono, styled demo pages, and whole footer thumbnails (dark toggle included). If it looks raw — Georgia everywhere, text stuck to the screen edges, cropped footers — say: *“Browser-serve contract failed — re-check §0C (font link, demo.css, glued selectors, mobile bar) and re-run `node tools/qa.mjs` until G13 passes.”*
-6. Read `docs/QA-REPORT.md` at the end; if G1 (uniqueness) shows failures, ask for regeneration of exactly those IDs. All 13 gates must pass.
+6. **Glance the gallery for skins.** Cover the IDs. If two families look like the same white bar / same footer slab, say: *“G14 failed — assign distinct A7 surface skins and rebuild owned CSS (no megatemplate).”* Do not accept “axes differ in meta.json” as a substitute for a visible skin.
+7. Read `docs/QA-REPORT.md` at the end; if G1 or G14 shows failures, ask for regeneration of exactly those IDs. All **14** gates must pass.
 
 ### Useful mid-run commands
 | Goal | Say |
 |---|---|
-| Different flavour of a batch | `Rebuild H017–H020 with dark-first treatment and a different motion primitive each.` |
+| Different flavour of a batch | `Rebuild H017–H020 with dark-first treatment, a distinct A7 skin, and a different motion primitive each.` |
+| Same skin everywhere | `G14 fail — reassign A7 across families and rebuild owned style.css (no megatemplate).` |
 | More range | `Add 5 footers that use m-20 curtain reveal, no duplicates of existing axes.` |
 | Audit only | `Run §9 gates over the existing set and output only failures with reasons.` |
 | Freeze | `Freeze F001–F010 — they're approved. Never regenerate them.` |
@@ -936,7 +1017,9 @@ Ask: *what would a different studio do with the same seven links?* Then change *
 | Naive run | This prompt |
 |---|---|
 | 100 URLs listed as “inspiration”, never opened | **§0B hard gate**: ≥100 sites *captured* with `sites.json` + crops before any CSS |
-| 100 recolours of one template | **6-axis uniqueness test** + QA gate G1 rejects any pair differing on <3 axes |
+| 100 recolours of one template | **7-axis uniqueness test** (incl. A7 surface skin) + QA gate G1 rejects any pair differing on <3 axes |
+| Structure-unique but one shared white-bar skin | **A7 skins** + gallery glance + gate **G14** |
+| Megatemplate CSS / Bootstrap CDN / “no design” | **§5.8 CSS Ownership** — custom Nestlancer CSS only, dead-class ≤15%, no framework CDN |
 | Motion described in adjectives | `getAnimations()` + scroll probe capture **real ms/easing/thresholds** into `motion-index.json` |
 | Footers as an afterthought (90 identical bars) | **20 footer families × 5** with the same craft bar as headers, incl. curtain, marquee, compliance, accordion, locale |
 | Design drifts off-brand | **Measured tokens** pixel-sampled from the repo + gate G3 |
