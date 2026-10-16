@@ -1,0 +1,26 @@
+/* chrome-lab/runtime/demo.css — demo-page shell (lab only, NOT part of the mounted chrome)
+   Why this file exists: every variant index.html is served stand-alone (python3 -m http.server).
+   The chrome itself is fully styled by its own style.css; this sheet styles the PAGE AROUND the
+   chrome — eyebrow, H1, mount snippet, axis chips and the scroll-placeholder blocks — so a variant
+   opened in a browser looks intentional instead of raw, unstyled text flush to the viewport edge.
+   It also declares color-scheme so scrollbars/form controls follow the active theme, and guards the
+   mount snippet against horizontal overflow on 360 px screens. Nothing here touches mounted chrome:
+   when a variant is mounted into a real page you load tokens.css + chrome.css + style.css only. */
+:root{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+main#main{display:block;width:100%;max-width:840px;margin:0 auto;padding:clamp(48px,8vh,96px) 24px clamp(120px,18vh,220px)}
+main#main:focus{outline:none}
+main#main .eyebrow{display:block;margin:0 0 14px;color:var(--n-teal)}
+main#main h1{margin:0 0 10px;font-family:var(--n-font-display);font-weight:700;font-size:clamp(28px,4.5vw,42px);line-height:1.08;letter-spacing:-.02em;color:var(--n-ink)}
+main#main .lede{margin:0;max-width:60ch;font-size:15px;color:var(--n-body)}
+main#main pre{margin:20px 0 0;padding:14px 16px;max-width:100%;background:var(--n-surface);border:1px solid var(--n-hairline);border-radius:var(--n-radius-chip);overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+main#main pre code{font-family:var(--n-font-mono);font-size:12.5px;line-height:1.6;color:var(--n-ink)}
+main#main .axisList{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+main#main .axisList li{font-family:var(--n-font-mono);font-size:12px;color:var(--n-body);background:var(--n-surface);border:1px solid var(--n-hairline);border-radius:var(--n-radius-chip);padding:7px 10px}
+main#main .axisList b{margin-right:4px;font-weight:600;color:var(--n-teal)}
+main#main .demoBlock{position:relative;min-height:200px;margin:28px 0 0;border:1px dashed var(--n-hairline);border-radius:var(--n-radius-card);background:linear-gradient(135deg,var(--n-bg-tint-1),var(--n-bg-tint-2))}
+main#main .demoBlock::after{content:'demo content · scroll area';position:absolute;inset:0;display:grid;place-items:center;font-family:var(--n-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--n-muted)}
+@media (max-width:600px){
+  main#main{padding:40px 16px 96px}
+  main#main .demoBlock{min-height:160px}
+}

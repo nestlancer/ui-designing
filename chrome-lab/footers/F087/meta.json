@@ -67,8 +67,8 @@
   "reduced_motion": "opacity-only 150ms; marquee/parallax/curtain/scrub disabled",
   "budget": {
     "js_bytes": 1892,
-    "css_bytes": 13431,
-    "html_bytes": 4125,
+    "css_bytes": 13432,
+    "html_bytes": 4740,
     "cls": 0
   },
   "mount": "<footer data-chrome=\"F087\" data-theme=\"light\" data-page=\"pricing\"></footer>",

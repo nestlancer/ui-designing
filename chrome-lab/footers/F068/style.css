@@ -116,6 +116,6 @@ to{transform:translateX(-50%)}
 @media (max-width:390px){[data-chrome="F068"] .foot__inner{padding:0 16px}
 [data-chrome="F068"] .foot__news{padding:18px}
 }
-[data-chrome="F068"].roll{overflow:hidden;display:inline-block}
+[data-chrome="F068"] .roll{overflow:hidden;display:inline-block}
 [data-chrome="F068"] .roll span{display:block;transition:transform 260ms cubic-bezier(.76,0,.24,1)}
 [data-chrome="F068"] .roll:hover span,[data-chrome="F068"] .roll:focus-visible span{transform:translateY(-100%)}

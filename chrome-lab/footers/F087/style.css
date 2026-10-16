@@ -123,5 +123,5 @@ to{transform:translateX(-50%)}
 @keyframes F087-rise{from{opacity:0;transform:translateY(16px)}
 to{opacity:1;transform:none}
 }
-[data-chrome="F087"].social,[data-chrome="F087"] .legalLinks a,[data-chrome="F087"] .store{opacity:0;transform:scale(.8)}
+[data-chrome="F087"] .social,[data-chrome="F087"] .legalLinks a,[data-chrome="F087"] .store{opacity:0;transform:scale(.8)}
 [data-chrome="F087"] .social.in,[data-chrome="F087"] .legalLinks a.in,[data-chrome="F087"] .store.in{opacity:1;transform:none;transition:transform 300ms cubic-bezier(.34,1.56,.64,1),opacity 220ms linear;transition-delay:calc(var(--i,0) * 40ms)}

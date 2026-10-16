@@ -39,6 +39,17 @@ const ROUTES = {
 };
 const route = label => ROUTES[label] || ('/' + slug(label));
 
+/* Shared <head> extras — browser-serve contract (prompt §0C): the locked fonts must ACTUALLY LOAD
+   (tokens name Fraunces/Inter/IBM Plex Mono; without this <link> every page silently falls back to
+   Georgia/system-ui), colour-scheme is declared for UA chrome, and a tiny theme-boot script applies
+   ?theme= before first paint so gallery iframes never flash the wrong theme. Font fallbacks stay in
+   tokens.css, so the pages still render — unstyled-font only — when offline. */
+const HEAD_EXTRAS = `<meta name="color-scheme" content="light dark"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"/>
+<script>(()=>{try{const t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(_){}})();</script>`;
+
 /* ------------------------------------------------------------------ *
  * 1. FAMILIES  (signature decor + locked semantic axes)
  * ------------------------------------------------------------------ */
@@ -96,8 +107,16 @@ const FOOTER_FAMILIES = [
 /* ------------------------------------------------------------------ *
  * 2. MOTION RECIPES (implemented per variant, keyed to its selector)
  * ------------------------------------------------------------------ */
-/* scopeCss — prefix every selector with the variant selector (skips at-rules and BASE body:has rules) */
+/* scopeCss — prefix every selector with the variant selector (skips at-rules and BASE body:has rules).
+   Inline comments are stripped BEFORE parsing: a comment sitting in front of a selector or at-rule
+   would otherwise be parsed as part of the selector head (this previously glued the variant selector
+   onto @media / body:has() BASE rules and produced dead rules like `[data-chrome]@media …`).
+   The variant identity comment at the very start of the stylesheet is preserved. */
 function scopeCss(css, sel) {
+  let lead = '';
+  const lm = css.match(/^\s*\/\*[\s\S]*?\*\//);
+  if (lm) { lead = lm[0].trim(); css = css.slice(lm[0].length); }
+  css = css.replace(/\/\*[\s\S]*?\*\//g, ' ');
   let out = '', i = 0;
   while (i < css.length) {
     const braceIdx = css.indexOf('{', i);
@@ -119,7 +138,7 @@ function scopeCss(css, sel) {
     }
     i = j;
   }
-  return out;
+  return (lead ? lead + '\n' : '') + out;
 }
 
 function motionRecipe(id, sel, motionId) {
@@ -344,8 +363,10 @@ function buildHeader(spec) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>${id} · ${family} — Nestlancer chrome lab</title>
 <meta name="description" content="${id} header variant (${family}) built from live research on 134 captured sites."/>
+${HEAD_EXTRAS}
 <link rel="stylesheet" href="../../tokens/tokens.css"/>
 <link rel="stylesheet" href="../../runtime/chrome.css"/>
+<link rel="stylesheet" href="../../runtime/demo.css"/>
 <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
@@ -453,12 +474,19 @@ ${stickyCta}
   c.push(`${sel} :focus-visible{outline:2px solid var(--n-teal);outline-offset:2px}`);
   c.push(`${sel} .mAcc{border-bottom:1px solid var(--n-hairline);padding-bottom:8px}${sel} .mAcc__head{display:flex;align-items:center;justify-content:space-between;min-height:52px;cursor:pointer;list-style:none}${sel} .mAcc__head::-webkit-details-marker{display:none}${sel} .mAcc__head::after{content:'▾';color:var(--n-muted);transition:transform 260ms var(--n-ease)}${sel} .mAcc[open] .mAcc__head::after{transform:rotate(180deg)}${sel} .mAcc ul{list-style:none;margin:0;padding:0}${sel} .drawerCta{margin-top:24px}${sel} .overlayClose{position:absolute;top:20px;right:20px}${sel} .bottomBar__more{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:var(--n-muted);background:none;border:0;min-width:44px;min-height:44px;justify-content:center;font-family:inherit}`);
   c.push(`@media (max-width:1023px){${sel} .nav__list{gap:14px}}`);
-  c.push(`@media (max-width:900px){${sel} .nav__list{display:none}${sel} .burger{display:flex}${sel} .chrome__bar{gap:12px}${sel} .linkGhost{display:none}${sel} .searchWrap{display:none}${sel} .cmdk{display:none}${sel} .segmented{display:none}${sel} .editorial{display:none}${sel} .utility{display:none}${sel} .docsRow{display:none}}`);
-  c.push(`@media (max-width:600px){${sel} .chrome__bar{padding:0 14px}${sel} .wordmark{font-size:18px}${sel} .cta{padding:10px 14px;font-size:13px;min-height:44px}${sel} .wizard{gap:8px;padding:8px 14px}${sel} .rail{padding:8px 14px}${sel} .crumb{font-size:10px}}`);
+  /* Mobile bar normalisation (browser-render contract): force a single flex row even for
+     grid A1 variants, keep the burger visible at the far right AFTER the actions (DOM order
+     places it before them), and stop the wordmark/CTA from wrapping. */
+  c.push(`@media (max-width:900px){${sel} .chrome__bar{display:flex;flex-wrap:nowrap}${sel} .nav__list{display:none}${sel} .burger{display:flex;order:3;flex:0 0 auto}${sel} .chrome__bar{gap:12px}${sel} .chrome__actions{flex:0 0 auto}${sel} .wordmark{min-width:0}${sel} .linkGhost{display:none}${sel} .searchWrap{display:none}${sel} .cmdk{display:none}${sel} .segmented{display:none}${sel} .editorial{display:none}${sel} .utility{display:none}${sel} .docsRow{display:none}}`);
+  /* ≤600px: the bar must fit 360px — drop the theme toggle (wordmark + CTA + burger stay reachable),
+     tighten gaps. Without this the bar overflowed and the burger could scroll out of reach. */
+  c.push(`@media (max-width:600px){${sel} .chrome__bar{padding:0 14px;gap:10px}${sel} .themeToggle{display:none}${sel} .wordmark{font-size:18px}${sel} .cta{padding:10px 14px;font-size:13px;min-height:44px}${sel} .wizard{gap:8px;padding:8px 14px}${sel} .rail{padding:8px 14px}${sel} .crumb{font-size:10px}}`);
   if (needBottom) c.push(`@media (max-width:900px){${sel} .bottomBar{display:flex}${sel} .nav--wide .nav__list{display:none}}${isBottomAlways ? `@media (min-width:901px){${sel} .bottomBar{display:none}}` : ''}`);
   if (stickyMobile) c.push(`@media (max-width:900px){${sel} .stickyCta{display:block;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--n-surface);border:1px solid var(--n-hairline);border-radius:var(--n-radius-pill);padding:6px;box-shadow:0 10px 28px rgba(10,37,67,.14);z-index:46}}`);
-  if (needBottom || stickyMobile) c.push(`/* BASE: applies only on pages that mount this chrome */
-@media (max-width:900px){body:has(${sel}){padding-bottom:80px}}`);
+  // BASE rule: body padding for fixed bottom bars — applies only on pages that mount this chrome.
+  // NOTE: never prefix this chunk with a CSS comment inside the template — scopeCss parses selectors,
+  // and a leading comment used to glue the variant selector onto @media and kill the rule.
+  if (needBottom || stickyMobile) c.push(`@media (max-width:900px){body:has(${sel}){padding-bottom:80px}}`);
   if (needOverlay) c.push(`${sel} .overlay .burgerClose{position:absolute;top:20px;right:20px}`);
   // motion recipe
   const rec = motionRecipe(id, sel, axes.A4);
@@ -637,8 +665,10 @@ function buildFooter(spec) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>${id} · ${family} — Nestlancer chrome lab</title>
 <meta name="description" content="${id} footer variant (${family}) built from live research on 134 captured sites."/>
+${HEAD_EXTRAS}
 <link rel="stylesheet" href="../../tokens/tokens.css"/>
 <link rel="stylesheet" href="../../runtime/chrome.css"/>
+<link rel="stylesheet" href="../../runtime/demo.css"/>
 <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
@@ -708,8 +738,8 @@ function buildFooter(spec) {
   c.push(`${sel} :focus-visible{outline:2px solid var(--n-teal);outline-offset:2px}`);
   c.push(`${sel} .rise{opacity:0;transform:translateY(16px);transition:opacity 600ms var(--n-ease),transform 600ms var(--n-ease)}${sel} .rise.in{opacity:1;transform:none}${sel} .newsForm--inline{border-top:1px solid ${dark ? 'rgba(255,255,255,.08)' : 'var(--n-hairline)'};padding-top:16px;margin-bottom:8px}${sel} .newsForm--inline input{max-width:260px}`);
   c.push(`${sel} .roll{overflow:hidden;display:inline-block}${sel} .roll span{display:block;transition:transform 260ms cubic-bezier(.76,0,.24,1)}${sel} .roll:hover span{transform:translateY(-100%)}`);
-  if (decor.includes('curtain')) c.push(`/* BASE (m-20 curtain): scoped to pages that mount this chrome, no global leak when unmounted */
-body:has(${sel}){background:${dark ? '#0b1720' : 'var(--n-bg)'}}
+  // BASE rules (m-20 curtain): body/main underlay — applies only on pages that mount this chrome.
+  if (decor.includes('curtain')) c.push(`body:has(${sel}){background:${dark ? '#0b1720' : 'var(--n-bg)'}}
 body:has(${sel}) main{position:relative;z-index:2;background:${dark ? '#0b1720' : 'var(--n-bg)'}}
 ${sel}{position:sticky;bottom:0;z-index:1;border-radius:var(--n-radius-card) var(--n-radius-card) 0 0;box-shadow:0 -18px 40px rgba(10,37,67,.10)}`);
   if (twoBar) c.push(`${sel}.foot--twoBar{background:${dark ? '#0b1720' : 'var(--n-bg-tint-1)'}}${sel} .foot__legal{background:${dark ? 'rgba(255,255,255,.04)' : 'var(--n-surface)'};border-radius:var(--n-radius-chip);padding:16px;margin-top:28px}`);
