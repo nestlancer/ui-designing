@@ -1,0 +1,12 @@
+{
+ "id": "C02",
+ "name": "Orbit Suite",
+ "header": "P04 Orbit Card",
+ "footer": "P04 Orbit Card",
+ "skin": "elevated header over elevated footer",
+ "signature_motion": "pop-lift (interactive chrome lifts −2 px with a deeper shadow, 180 ms)",
+ "bridge": "none — both halves already share the rails",
+ "rationale": "The client favourite (✓✓): pill bar and footer card are already one object language — floating, 1160 px, one soft shadow.",
+ "tension": "none — both halves share the 24 px radius, shadow and inset",
+ "built_from": "MANUAL-REVIEW-CHART.md selection · no new research"
+}

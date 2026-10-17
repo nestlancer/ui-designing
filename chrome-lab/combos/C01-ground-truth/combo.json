@@ -1,0 +1,12 @@
+{
+ "id": "C01",
+ "name": "Ground Truth",
+ "header": "P01 Ground Floor",
+ "footer": "P01 Ground Floor",
+ "skin": "solid header over solid footer",
+ "signature_motion": "underline-draw (180 ms ease-out, header links and footer links share the draw)",
+ "bridge": "none — both halves already share the rails",
+ "rationale": "The approved pair, shown as chrome alone — the control every other combo is judged against.",
+ "tension": "none — one DNA, hairline to hairline",
+ "built_from": "MANUAL-REVIEW-CHART.md selection · no new research"
+}

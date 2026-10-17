@@ -58,11 +58,13 @@ document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
 </script>`;
 
 // ?frame=1 removes the sample content so the gallery can show chrome only.
+// `.stage` is the combo pages' empty runway — it must disappear in a frame too,
+// otherwise a card shows a gap where the pairing should be visible.
 export const FRAME_JS = `<script>
 if(new URLSearchParams(location.search).has('frame'))
   document.documentElement.classList.add('is-framed');
 </script>`;
-export const FRAME_CSS = `.is-framed .sample,.is-framed .page-note,.is-framed .spacer{display:none}`;
+export const FRAME_CSS = `.is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage{display:none}`;
 
 // ---- inline SVG icon set — 24×24, one stroke weight, aria-hidden ----
 const P = {

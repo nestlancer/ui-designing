@@ -1,5 +1,11 @@
 # Concept Cards — 20 pairs (printed before build, obeyed during build)
 
+> **Reviewed 2026-10-17 — the concept phase is closed.** Kept: **P01** (both halves), **P02** header only,
+> **P04** both halves (the client's ★✓✓), **P05** footer only. Retired and deleted from `chrome-lab/`:
+> **P03, P06–P20**, together with their generator modules. This table stays as the record of what was
+> considered — do not rebuild from it; rebuild from `tools/chrome-approved.mjs` + `tools/lock.mjs`
+> (`node tools/build-lab.mjs`). Rejected concepts are recoverable from git at `f713edf`.
+
 Each card: concept · mood · shape language · header · footer · pair DNA · signature moment · research basis.
 Axis legend — A layout geometry · B nav paradigm · C scroll behaviour · D surface skin · E CTA treatment.
 

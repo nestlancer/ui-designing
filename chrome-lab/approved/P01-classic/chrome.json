@@ -1,0 +1,22 @@
+{
+ "id": "P01",
+ "name": "Ground Floor",
+ "skin": "solid",
+ "status": "approved",
+ "review": "header ✓ · footer ✓ — both halves approved, kept as the baseline",
+ "header": "logo left · 7 inline links · theme toggle, Sign in, teal pill · static",
+ "footer": "brand + blurb + 3 eyebrow columns + hairline legal row",
+ "cut": null,
+ "signature_motion": "underline-draw (180 ms ease-out, header links and footer links share the draw)",
+ "dna": "One calm white bar and one white slab — same hairlines, same underline, same pill — the baseline of the locked system.",
+ "axes": "A contained · B inline · C static · D solid · E teal pill",
+ "references": [
+  "stripe.com",
+  "slack.com"
+ ],
+ "files": [
+  "header.html",
+  "footer.html",
+  "index.html"
+ ]
+}

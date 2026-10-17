@@ -1,0 +1,12 @@
+{
+ "id": "C05",
+ "name": "Orbit over Hearth",
+ "header": "P04 Orbit Card",
+ "footer": "P05 Hearth",
+ "skin": "elevated header over solid footer",
+ "signature_motion": "pop-lift (interactive chrome lifts −2 px with a deeper shadow, 180 ms)",
+ "bridge": ".container{max-width:1160px} /* the centred stack should sit inside the pill bar's rails */",
+ "rationale": "The favourite header on the second approved footer — floating bar, centred close. Watch: the bar floats, the slab spans edge to edge.",
+ "tension": "object vs. slab — if it reads loose, C03 keeps the floating language",
+ "built_from": "MANUAL-REVIEW-CHART.md selection · no new research"
+}
