@@ -1,0 +1,20 @@
+{
+ "id": "P05",
+ "name": "Hearth",
+ "skin": "solid",
+ "status": "approved",
+ "review": "footer ✓ · header not picked (cut 2026-10-17)",
+ "header": null,
+ "footer": "centred mark, 7-link row, blurb, round socials, legal",
+ "cut": "header",
+ "signature_motion": "fade-bloom (links bloom from the centre: opacity + 1 px settle, 160 ms)",
+ "dna": "Everything gathers around the nest — centred mark, hairline symmetry, teal only on the pill. Its own header was not picked — this footer is now worn by approved bars.",
+ "axes": "A centred · B inline split around centre · C static · D solid · E centred pill pair",
+ "references": [
+  "stripe.com",
+  "pentagram.com"
+ ],
+ "files": [
+  "footer.html"
+ ]
+}

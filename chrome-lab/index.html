@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nestlancer Header &amp; Footer Lab — 20 pairs</title>
+<title>Nestlancer Header &amp; Footer Lab — locked chrome + 5 combos</title>
 <script>
 (function(){try{var p=new URLSearchParams(location.search).get('theme');
 if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
@@ -64,26 +64,42 @@ ul{margin:0;padding:0;list-style:none}
 .tswitch{display:inline-flex;border:1px solid var(--line);border-radius:var(--pill);overflow:hidden}
 .tswitch button{border:0;background:transparent;font:600 13px/1 var(--font);color:var(--muted);padding:10px 16px;min-height:40px;cursor:pointer}
 .tswitch button[aria-pressed="true"]{background:var(--btn);color:#fff}
-.grid{display:grid;gap:28px;padding:28px 0 64px;grid-template-columns:1fr}
+.intro{padding:28px 0 0;max-width:70ch}
+.intro p{margin:10px 0 0;font-size:15px}
+.grid{display:grid;gap:28px;padding:20px 0 8px;grid-template-columns:1fr}
 @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+section.block{padding-top:26px}
+.block__head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:4px}
+.block__head h2{font-size:15px;color:var(--ink);margin:0;letter-spacing:-.01em}
+.block__head span{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--card);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.card__head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.card__head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .card__id{font:600 12px/1 var(--mono);color:var(--teal-hover);background:var(--teal-soft);border-radius:var(--chip);padding:6px 8px}
 .card__name{font:600 14px/1 var(--font);color:var(--ink)}
 .card__skin{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:var(--pill);padding:5px 9px}
+.card__tick{font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--teal-hover)}
+.card__pair{font:500 11.5px/1 var(--mono);color:var(--muted)}
+.card__pair b{color:var(--teal-hover)}
 .card__open{margin-left:auto;font:500 13px/1 var(--font);color:var(--teal-hover);text-decoration:none}
 .card__open:hover{text-decoration:underline}
 .card iframe{border:0;width:100%;display:block;background:var(--bg)}
 [data-theme="dark"] .card iframe{background:#0b1720}
 .card__sig{font:500 11.5px/1.5 var(--mono);color:var(--muted);padding:10px 16px 12px;margin:0;border-top:1px solid var(--line)}
+.card--combo{border-color:var(--teal-soft)}
+.ledger{display:grid;gap:14px;padding:16px 0 8px;font-size:13.5px}
+@media(min-width:900px){.ledger{grid-template-columns:1fr 1fr}}
+.ledger div{border:1px solid var(--line);border-radius:var(--card);padding:16px 18px;background:var(--surface)}
+.ledger h3{margin:0 0 8px;font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.ledger code{font-family:var(--mono);font-size:12.5px;color:var(--teal-hover)}
 footer.lab__foot{border-top:1px solid var(--line);padding:20px 0 40px;font-size:13px;color:var(--muted)}
+footer.lab__foot code{font-family:var(--mono)}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="lab__bar"><div class="container lab__row">
-  <h1>Header &amp; Footer Lab</h1>
-  <span class="lab__meta">20 pairs · 2026-10-17</span>
+  <h1>Header &amp; Footer Lab — locked chrome</h1>
+  <span class="lab__meta">3 headers · 3 footers · 5 combos · reviewed 2026-10-17</span>
   <span class="spacer"></span>
   <span class="tswitch" role="group" aria-label="Preview theme">
     <button id="tLight" aria-pressed="true">Light</button>
@@ -91,230 +107,169 @@ footer.lab__foot{border-top:1px solid var(--line);padding:20px 0 40px;font-size:
   </span>
 </div></div>
 <main class="container" id="main">
-  <div class="grid">
-<article class="card" id="P01">
+  <div class="intro">
+    <p class="eyebrow">FIG · LOCKED</p>
+    <p>Twenty researched pairs went into the review; 6 halves came out, ticked in
+      <code>MANUAL-REVIEW-CHART.md</code>. The rejected chrome has been deleted, so every page below is an approved pattern —
+      and every combo below is two approved patterns meeting on one page. No new research, no new concepts.</p>
+  </div>
+
+  <section class="block" aria-labelledby="h-headers">
+    <div class="block__head"><h2 id="h-headers">Approved headers</h2><span>as reviewed</span></div>
+    <div class="grid">
+<article class="card" id="P01-header">
   <header class="card__head">
     <span class="card__id">P01</span>
     <span class="card__name">Ground Floor</span>
     <span class="card__skin">solid</span>
-    <a class="card__open" href="pairs/P01-classic/index.html">open pair ↗</a>
+    <span class="card__tick">✓ header</span>
+    <a class="card__open" href="approved/P01-classic/header.html">open ↗</a>
   </header>
-  <iframe title="P01 Ground Floor header" src="pairs/P01-classic/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P01 Ground Floor footer" src="pairs/P01-classic/footer.html?frame=1" style="height:432px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">underline-draw (180 ms ease-out, header links and footer links share the draw)</p>
+  <iframe title="approved/P01-classic/header.html" src="approved/P01-classic/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">logo left · 7 inline links · theme toggle, Sign in, teal pill · static</p>
 </article>
-<article class="card" id="P02">
+<article class="card" id="P02-header">
   <header class="card__head">
     <span class="card__id">P02</span>
     <span class="card__name">Morning Mist</span>
     <span class="card__skin">glass</span>
-    <a class="card__open" href="pairs/P02-glass/index.html">open pair ↗</a>
+    <span class="card__tick">✓ header</span>
+    <a class="card__open" href="approved/P02-glass/header.html">open ↗</a>
   </header>
-  <iframe title="P02 Morning Mist header" src="pairs/P02-glass/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P02 Morning Mist footer" src="pairs/P02-glass/footer.html?frame=1" style="height:486px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">blur-engage after 8 px (background/opacity only — the blur itself is never animated)</p>
+  <iframe title="approved/P02-glass/header.html" src="approved/P02-glass/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">sticky bar · glass (blur 14px) engages after 8 px · split-arrow CTA · sun toggle</p>
 </article>
-<article class="card" id="P03">
-  <header class="card__head">
-    <span class="card__id">P03</span>
-    <span class="card__name">Night Desk</span>
-    <span class="card__skin">ink</span>
-    <a class="card__open" href="pairs/P03-ink/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P03 Night Desk header" src="pairs/P03-ink/header.html?frame=1" style="height:114px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P03 Night Desk footer" src="pairs/P03-ink/footer.html?frame=1" style="height:540px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">strip slide (utility strips slide in 200 ms; header top-down, footer bottom-up)</p>
-</article>
-<article class="card" id="P04">
+<article class="card" id="P04-header">
   <header class="card__head">
     <span class="card__id">P04</span>
     <span class="card__name">Orbit Card</span>
     <span class="card__skin">elevated</span>
-    <a class="card__open" href="pairs/P04-pill/index.html">open pair ↗</a>
+    <span class="card__tick">✓✓ header</span>
+    <a class="card__open" href="approved/P04-pill/header.html">open ↗</a>
   </header>
-  <iframe title="P04 Orbit Card header" src="pairs/P04-pill/header.html?frame=1" style="height:92px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P04 Orbit Card footer" src="pairs/P04-pill/footer.html?frame=1" style="height:452px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">pop-lift (interactive chrome lifts −2 px with a deeper shadow, 180 ms)</p>
+  <iframe title="approved/P04-pill/header.html" src="approved/P04-pill/header.html?frame=1" style="height:92px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">floating pill bar (sticky, 12px inset) · 7 links · spark-prefix CTA</p>
 </article>
-<article class="card" id="P05">
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-footers">
+    <div class="block__head"><h2 id="h-footers">Approved footers</h2><span>as reviewed</span></div>
+    <div class="grid">
+<article class="card" id="P01-footer">
+  <header class="card__head">
+    <span class="card__id">P01</span>
+    <span class="card__name">Ground Floor</span>
+    <span class="card__skin">solid</span>
+    <span class="card__tick">✓ footer</span>
+    <a class="card__open" href="approved/P01-classic/footer.html">open ↗</a>
+  </header>
+  <iframe title="approved/P01-classic/footer.html" src="approved/P01-classic/footer.html?frame=1" style="height:432px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">brand + blurb + 3 eyebrow columns + hairline legal row</p>
+</article>
+<article class="card" id="P04-footer">
+  <header class="card__head">
+    <span class="card__id">P04</span>
+    <span class="card__name">Orbit Card</span>
+    <span class="card__skin">elevated</span>
+    <span class="card__tick">✓✓ footer</span>
+    <a class="card__open" href="approved/P04-pill/footer.html">open ↗</a>
+  </header>
+  <iframe title="approved/P04-pill/footer.html" src="approved/P04-pill/footer.html?frame=1" style="height:452px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">floating 24px-radius card · brand+blurb+columns · hairline legal</p>
+</article>
+<article class="card" id="P05-footer">
   <header class="card__head">
     <span class="card__id">P05</span>
     <span class="card__name">Hearth</span>
     <span class="card__skin">solid</span>
-    <a class="card__open" href="pairs/P05-centered/index.html">open pair ↗</a>
+    <span class="card__tick">✓ footer</span>
+    <a class="card__open" href="approved/P05-centered/footer.html">open ↗</a>
   </header>
-  <iframe title="P05 Hearth header" src="pairs/P05-centered/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P05 Hearth footer" src="pairs/P05-centered/footer.html?frame=1" style="height:452px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">fade-bloom (links bloom from the centre: opacity + 1 px settle, 160 ms)</p>
+  <iframe title="approved/P05-centered/footer.html" src="approved/P05-centered/footer.html?frame=1" style="height:452px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">centred mark, 7-link row, blurb, round socials, legal</p>
 </article>
-<article class="card" id="P06">
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-combos">
+    <div class="block__head"><h2 id="h-combos">5 new pages — approved header + approved footer</h2><span>chrome only, no page content</span></div>
+    <div class="grid">
+<article class="card card--combo" id="C01">
   <header class="card__head">
-    <span class="card__id">P06</span>
-    <span class="card__name">Newsroom</span>
-    <span class="card__skin">editorial</span>
-    <a class="card__open" href="pairs/P06-editorial/index.html">open pair ↗</a>
+    <span class="card__id">C01</span>
+    <span class="card__name">Ground Truth</span>
+    <span class="card__skin">solid · solid</span>
+    <span class="card__pair">P01 <b>+</b> P01</span>
+    <a class="card__open" href="combos/C01-ground-truth/index.html">open ↗</a>
   </header>
-  <iframe title="P06 Newsroom header" src="pairs/P06-editorial/header.html?frame=1" style="height:118px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P06 Newsroom footer" src="pairs/P06-editorial/footer.html?frame=1" style="height:470px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">rule-draw (rules scaleX from the left on load/in-view, 320 ms)</p>
+  <iframe title="combos/C01-ground-truth/index.html" src="combos/C01-ground-truth/index.html?frame=1" style="height:508px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">The approved pair, shown as chrome alone — the control every other combo is judged against.</p>
 </article>
-<article class="card" id="P07">
+<article class="card card--combo" id="C02">
   <header class="card__head">
-    <span class="card__id">P07</span>
-    <span class="card__name">Quiet Signal</span>
-    <span class="card__skin">tint</span>
-    <a class="card__open" href="pairs/P07-announce/index.html">open pair ↗</a>
+    <span class="card__id">C02</span>
+    <span class="card__name">Orbit Suite</span>
+    <span class="card__skin">elevated · elevated</span>
+    <span class="card__pair">P04 <b>+</b> P04</span>
+    <a class="card__open" href="combos/C02-orbit-suite/index.html">open ↗</a>
   </header>
-  <iframe title="P07 Quiet Signal header" src="pairs/P07-announce/header.html?frame=1" style="height:122px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P07 Quiet Signal footer" src="pairs/P07-announce/footer.html?frame=1" style="height:600px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">announce-collapse (grid-template-rows 220 ms ease-out, stays dismissed)</p>
+  <iframe title="combos/C02-orbit-suite/index.html" src="combos/C02-orbit-suite/index.html?frame=1" style="height:544px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">The client favourite (✓✓): pill bar and footer card are already one object language — floating, 1160 px, one soft shadow.</p>
 </article>
-<article class="card" id="P08">
+<article class="card card--combo" id="C03">
   <header class="card__head">
-    <span class="card__id">P08</span>
-    <span class="card__name">Directory</span>
-    <span class="card__skin">solid</span>
-    <a class="card__open" href="pairs/P08-mega/index.html">open pair ↗</a>
+    <span class="card__id">C03</span>
+    <span class="card__name">Mist over Orbit</span>
+    <span class="card__skin">glass · elevated</span>
+    <span class="card__pair">P02 <b>+</b> P04</span>
+    <a class="card__open" href="combos/C03-mist-over-orbit/index.html">open ↗</a>
   </header>
-  <iframe title="P08 Directory header" src="pairs/P08-mega/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P08 Directory footer" src="pairs/P08-mega/footer.html?frame=1" style="height:500px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">panel-stagger (panel fades/rises 240 ms, tiles follow 40 ms apart)</p>
+  <iframe title="combos/C03-mist-over-orbit/index.html" src="combos/C03-mist-over-orbit/index.html?frame=1" style="height:528px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">Glass bar fogging over the page, closing on the floating card — the most "product" of the five.</p>
 </article>
-<article class="card" id="P09">
+<article class="card card--combo" id="C04">
   <header class="card__head">
-    <span class="card__id">P09</span>
-    <span class="card__name">Front Desk</span>
-    <span class="card__skin">tint</span>
-    <a class="card__open" href="pairs/P09-search/index.html">open pair ↗</a>
+    <span class="card__id">C04</span>
+    <span class="card__name">Ground &amp; Hearth</span>
+    <span class="card__skin">solid · solid</span>
+    <span class="card__pair">P01 <b>+</b> P05</span>
+    <a class="card__open" href="combos/C04-ground-hearth/index.html">open ↗</a>
   </header>
-  <iframe title="P09 Front Desk header" src="pairs/P09-search/header.html?frame=1" style="height:140px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P09 Front Desk footer" src="pairs/P09-search/footer.html?frame=1" style="height:600px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">field-focus (ring grows from 1px hairline to 2px teal with a 150 ms ease, identical in both halves)</p>
+  <iframe title="combos/C04-ground-hearth/index.html" src="combos/C04-ground-hearth/index.html?frame=1" style="height:528px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">Two solid skins, both reviewed: the calm white bar above a centred hearth — quietest option, best for editorial pages.</p>
 </article>
-<article class="card" id="P10">
+<article class="card card--combo" id="C05">
   <header class="card__head">
-    <span class="card__id">P10</span>
-    <span class="card__name">Side Door</span>
-    <span class="card__skin">editorial</span>
-    <a class="card__open" href="pairs/P10-auth/index.html">open pair ↗</a>
+    <span class="card__id">C05</span>
+    <span class="card__name">Orbit over Hearth</span>
+    <span class="card__skin">elevated · solid</span>
+    <span class="card__pair">P04 <b>+</b> P05</span>
+    <a class="card__open" href="combos/C05-orbit-hearth/index.html">open ↗</a>
   </header>
-  <iframe title="P10 Side Door header" src="pairs/P10-auth/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P10 Side Door footer" src="pairs/P10-auth/footer.html?frame=1" style="height:132px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">quiet-press (the round button dips 1px on press; everything else stays still)</p>
+  <iframe title="combos/C05-orbit-hearth/index.html" src="combos/C05-orbit-hearth/index.html?frame=1" style="height:544px" loading="lazy" tabindex="-1"></iframe>
+  <p class="card__sig">The favourite header on the second approved footer — floating bar, centred close. Watch: the bar floats, the slab spans edge to edge.</p>
 </article>
-<article class="card" id="P11">
-  <header class="card__head">
-    <span class="card__id">P11</span>
-    <span class="card__name">Two Lanes</span>
-    <span class="card__skin">tint</span>
-    <a class="card__open" href="pairs/P11-segmented/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P11 Two Lanes header" src="pairs/P11-segmented/header.html?frame=1" style="height:142px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P11 Two Lanes footer" src="pairs/P11-segmented/footer.html?frame=1" style="height:560px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">thumb-slide (240 ms cubic-bezier(.2,.8,.2,1) — the identical thumb in header and footer)</p>
-</article>
-<article class="card" id="P12">
-  <header class="card__head">
-    <span class="card__id">P12</span>
-    <span class="card__name">Night Nest</span>
-    <span class="card__skin">invert</span>
-    <a class="card__open" href="pairs/P12-dark/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P12 Night Nest header" src="pairs/P12-dark/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P12 Night Nest footer" src="pairs/P12-dark/footer.html?frame=1" style="height:500px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">glow-hairline (1px gradient line under the bar and above the legal row, subtle 2.4s pulse, static under reduced motion)</p>
-</article>
-<article class="card" id="P13">
-  <header class="card__head">
-    <span class="card__id">P13</span>
-    <span class="card__name">Riverbed</span>
-    <span class="card__skin">mesh</span>
-    <a class="card__open" href="pairs/P13-mesh/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P13 Riverbed header" src="pairs/P13-mesh/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P13 Riverbed footer" src="pairs/P13-mesh/footer.html?frame=1" style="height:600px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">condense-on-scroll (transparent→tint after 8 px, 200 ms; hero floats, footer grounds)</p>
-</article>
-<article class="card" id="P14">
-  <header class="card__head">
-    <span class="card__id">P14</span>
-    <span class="card__name">Loud Bird</span>
-    <span class="card__skin">invert</span>
-    <a class="card__open" href="pairs/P14-overlay/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P14 Loud Bird header" src="pairs/P14-overlay/header.html?frame=1" style="height:68px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P14 Loud Bird footer" src="pairs/P14-overlay/footer.html?frame=1" style="height:660px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">wordmark-reveal (600 ms rise from a clip mask, 60 ms column stagger; overlay wipes with the same curve)</p>
-</article>
-<article class="card" id="P15">
-  <header class="card__head">
-    <span class="card__id">P15</span>
-    <span class="card__name">Pocket Library</span>
-    <span class="card__skin">solid</span>
-    <a class="card__open" href="pairs/P15-drawer/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P15 Pocket Library header" src="pairs/P15-drawer/header.html?frame=1" style="height:68px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P15 Pocket Library footer" src="pairs/P15-drawer/footer.html?frame=1" style="height:470px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">accordion-rows (grid-template-rows 240 ms, shared by drawer sections and footer columns)</p>
-</article>
-<article class="card" id="P16">
-  <header class="card__head">
-    <span class="card__id">P16</span>
-    <span class="card__name">Crew Deck</span>
-    <span class="card__skin">elevated</span>
-    <a class="card__open" href="pairs/P16-dock/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P16 Crew Deck header" src="pairs/P16-dock/header.html?frame=1" style="height:176px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P16 Crew Deck footer" src="pairs/P16-dock/footer.html?frame=1" style="height:330px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">dock-press (active tab presses down with a teal dot rising 120 ms; footer chips press identically)</p>
-</article>
-<article class="card" id="P17">
-  <header class="card__head">
-    <span class="card__id">P17</span>
-    <span class="card__name">Night Librarian</span>
-    <span class="card__skin">glass</span>
-    <a class="card__open" href="pairs/P17-palette/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P17 Night Librarian header" src="pairs/P17-palette/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P17 Night Librarian footer" src="pairs/P17-palette/footer.html?frame=1" style="height:436px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">palette-scale (dialog scales 0.98→1 + fades 200 ms; scrim fades 150 ms; ⌘K everywhere)</p>
-</article>
-<article class="card" id="P18">
-  <header class="card__head">
-    <span class="card__id">P18</span>
-    <span class="card__name">Meter</span>
-    <span class="card__skin">solid</span>
-    <a class="card__open" href="pairs/P18-progress/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P18 Meter header" src="pairs/P18-progress/header.html?frame=1" style="height:76px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P18 Meter footer" src="pairs/P18-progress/footer.html?frame=1" style="height:560px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">measure (scroll-linked progress line + count-up proof — both quiet, both tabular)</p>
-</article>
-<article class="card" id="P19">
-  <header class="card__head">
-    <span class="card__id">P19</span>
-    <span class="card__name">Gate Desk</span>
-    <span class="card__skin">dual</span>
-    <a class="card__open" href="pairs/P19-locale/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P19 Gate Desk header" src="pairs/P19-locale/header.html?frame=1" style="height:116px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P19 Gate Desk footer" src="pairs/P19-locale/footer.html?frame=1" style="height:560px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">tier-swap (the utility selects expand their 12px menus with a 200ms grid-rows drop, mirrored by the footer utility links)</p>
-</article>
-<article class="card" id="P20">
-  <header class="card__head">
-    <span class="card__id">P20</span>
-    <span class="card__name">Twin Gates</span>
-    <span class="card__skin">dual</span>
-    <a class="card__open" href="pairs/P20-split/index.html">open pair ↗</a>
-  </header>
-  <iframe title="P20 Twin Gates header" src="pairs/P20-split/header.html?frame=1" style="height:132px" loading="lazy" tabindex="-1"></iframe>
-  <iframe title="P20 Twin Gates footer" src="pairs/P20-split/footer.html?frame=1" style="height:600px" loading="lazy" tabindex="-1"></iframe>
-  <p class="card__sig">meet-in-middle (hover fills grow from the shared centre edge outward, 200 ms, both halves)</p>
-</article>
-  </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-notes">
+    <div class="ledger">
+      <div>
+        <h3 id="h-notes">Still unbuilt combos</h3>
+        <p><code>P01+P04</code> · <code>P02+P01</code> · <code>P02+P05</code> · <code>P04+P01</code> — same two commands, when you want them side by side.</p>
+      </div>
+      <div>
+        <h3>Rebuild</h3>
+        <p><code>node tools/build-lab.mjs</code> then <code>node tools/check-lab.mjs</code>. Files are generated from
+        <code>tools/chrome-approved.mjs</code> + <code>tools/lock.mjs</code>; edit those, never the HTML.</p>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="lab__foot container">Research-backed concept lab for nestlancer.com — tokens from §4.3, real logo files, one inline icon set. Built with a generator (<code>tools/</code>); every pair folder stands alone.</footer>
+<footer class="lab__foot container">16 unselected pairs (P03, P06–P20) and two unselected halves
+  (P02 footer, P05 header) were removed from the repo after the review — they live in git at
+  <code>f713edf</code> if the client ever wants to revisit one. Tokens from prompt §4.3, real logo files, one inline icon set.</footer>
 <script>
 (function(){
   var root=document.documentElement,frames=[].slice.call(document.querySelectorAll('iframe'));
@@ -327,8 +282,13 @@ footer.lab__foot{border-top:1px solid var(--line);padding:20px 0 40px;font-size:
   }
   document.getElementById('tLight').addEventListener('click',function(){set('light')});
   document.getElementById('tDark').addEventListener('click',function(){set('dark')});
+  // chrome pages post their real height while framed — fit each card to it
+  addEventListener('message',function(e){
+    var d=e.data; if(!d||!d.nlh) return;
+    for(var i=0;i<frames.length;i++) if(frames[i].contentWindow===e.source)
+      frames[i].style.height=Math.min(1400,Math.max(64,d.nlh))+'px';
+  });
   var q=new URLSearchParams(location.search).get('theme');
-  // wait for the initial frames to finish so the theme swap is a clean navigation
   if(q==='dark')addEventListener('load',function(){set('dark')});
 })();
 </script>

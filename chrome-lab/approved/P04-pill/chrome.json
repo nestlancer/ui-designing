@@ -1,0 +1,22 @@
+{
+ "id": "P04",
+ "name": "Orbit Card",
+ "skin": "elevated",
+ "status": "approved",
+ "review": "header ✓✓ · footer ✓✓ — the client favourite, both halves picked twice over",
+ "header": "floating pill bar (sticky, 12px inset) · 7 links · spark-prefix CTA",
+ "footer": "floating 24px-radius card · brand+blurb+columns · hairline legal",
+ "cut": null,
+ "signature_motion": "pop-lift (interactive chrome lifts −2 px with a deeper shadow, 180 ms)",
+ "dna": "Chrome as objects floating over the page — a pill-shaped bar casting one soft shadow, and a footer card with the same radius, shadow and 16 px inset.",
+ "axes": "A floating inset · B inline · C sticky pill · D elevated · E icon-prefixed pill",
+ "references": [
+  "linear.app",
+  "stripe.com"
+ ],
+ "files": [
+  "header.html",
+  "footer.html",
+  "index.html"
+ ]
+}

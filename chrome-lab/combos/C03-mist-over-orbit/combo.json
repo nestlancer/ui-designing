@@ -1,0 +1,12 @@
+{
+ "id": "C03",
+ "name": "Mist over Orbit",
+ "header": "P02 Morning Mist",
+ "footer": "P04 Orbit Card",
+ "skin": "glass header over elevated footer",
+ "signature_motion": "blur-engage after 8 px (background/opacity only — the blur itself is never animated)",
+ "bridge": ".container{max-width:1160px} /* align the 1200px glass bar with the 1160px floating card */",
+ "rationale": "Glass bar fogging over the page, closing on the floating card — the most \"product\" of the five.",
+ "tension": "resolved by the bridge: both halves now sit on the same 1160 px rails",
+ "built_from": "MANUAL-REVIEW-CHART.md selection · no new research"
+}

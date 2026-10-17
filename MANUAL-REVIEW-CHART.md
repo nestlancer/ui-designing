@@ -1,5 +1,8 @@
 # Header & Footer Manual Review
 
+**Status: reviewed 2026-10-17 — selection applied, chrome locked.** The ticks below are the law; see
+[After the review](#after-the-review--chrome-locked-2026-10-17) for what was kept, deleted and rebuilt.
+
 Serve gallery: `cd ui-designing && python3 -m http.server 8123` → [http://localhost:8123/chrome-lab/](http://localhost:8123/chrome-lab/)
 
 Mark **✓** under Header / Footer for every one you like (you can pick many).
@@ -31,33 +34,47 @@ Mark **✓** under Header / Footer for every one you like (you can pick many).
 
 ## Selected headers (list page nos)
 
-` `
+`1 (P01) · 2 (P02) · 4 (P04 — ticked twice)`
 
 ## Selected footers (list page nos)
 
-` `
+`1 (P01) · 4 (P04 — ticked twice) · 5 (P05)`
 
-## Open pair pages
+---
 
-| Page | Open |
-|:---:|---|
-| 1 | `chrome-lab/pairs/P01-classic/index.html` |
-| 2 | `chrome-lab/pairs/P02-glass/index.html` |
-| 3 | `chrome-lab/pairs/P03-ink/index.html` |
-| 4 | `chrome-lab/pairs/P04-pill/index.html` |
-| 5 | `chrome-lab/pairs/P05-centered/index.html` |
-| 6 | `chrome-lab/pairs/P06-editorial/index.html` |
-| 7 | `chrome-lab/pairs/P07-announce/index.html` |
-| 8 | `chrome-lab/pairs/P08-mega/index.html` |
-| 9 | `chrome-lab/pairs/P09-search/index.html` |
-| 10 | `chrome-lab/pairs/P10-auth/index.html` |
-| 11 | `chrome-lab/pairs/P11-segmented/index.html` |
-| 12 | `chrome-lab/pairs/P12-dark/index.html` |
-| 13 | `chrome-lab/pairs/P13-mesh/index.html` |
-| 14 | `chrome-lab/pairs/P14-overlay/index.html` |
-| 15 | `chrome-lab/pairs/P15-drawer/index.html` |
-| 16 | `chrome-lab/pairs/P16-dock/index.html` |
-| 17 | `chrome-lab/pairs/P17-palette/index.html` |
-| 18 | `chrome-lab/pairs/P18-progress/index.html` |
-| 19 | `chrome-lab/pairs/P19-locale/index.html` |
-| 20 | `chrome-lab/pairs/P20-split/index.html` |
+## After the review — chrome LOCKED (2026-10-17)
+
+The table above is now the closed record. Everything not ticked was deleted from the repo; the lab
+contains only approved patterns, plus five new pages that wear an approved header with an approved footer.
+
+| Outcome | Detail |
+|---|---|
+| Kept | headers **P01 · P02 · P04** (P04 ★) — footers **P01 · P04 (★) · P05** |
+| Deleted | `chrome-lab/pairs/` in full (P03, P06–P20) · `tools/pairs-b/c/d.mjs` · P02's footer · P05's header |
+| Recover a rejected concept | `git show f713edf:chrome-lab/pairs/P12-dark/header.html` |
+| Source of truth | `tools/chrome-approved.mjs` (the 6 approved halves) + `tools/lock.mjs` (the ticks + the combos) |
+| Rebuild + verify | `node tools/build-lab.mjs && node tools/check-lab.mjs` |
+| Gallery | `chrome-lab/index.html` — 3 header cards, 3 footer cards, 5 combo cards, light/dark |
+
+Combo pages are **chrome only**: approved header + approved footer, no hero, no filler sections — the
+gap between them is a 60 vh runway so a sticky or floating bar can be seen behaving (it hides with `?frame=1`).
+
+## Open pages now in the repo
+
+| Combo | Header | Footer | Page |
+|:---:|---|---|---|
+| C01 Ground Truth | P01 solid | P01 solid | `chrome-lab/combos/C01-ground-truth/index.html` |
+| C02 Orbit Suite ★ | P04 elevated | P04 elevated | `chrome-lab/combos/C02-orbit-suite/index.html` |
+| C03 Mist over Orbit | P02 glass | P04 elevated | `chrome-lab/combos/C03-mist-over-orbit/index.html` |
+| C04 Ground & Hearth | P01 solid | P05 solid | `chrome-lab/combos/C04-ground-hearth/index.html` |
+| C05 Orbit over Hearth | P04 elevated | P05 solid | `chrome-lab/combos/C05-orbit-hearth/index.html` |
+
+| Approved chrome | Header page | Footer page | Whole pair |
+|---|---|---|---|
+| P01 Ground Floor | `chrome-lab/approved/P01-classic/header.html` | `…/footer.html` | `…/index.html` |
+| P02 Morning Mist | `chrome-lab/approved/P02-glass/header.html` | cut | cut |
+| P04 Orbit Card ★ | `chrome-lab/approved/P04-pill/header.html` | `…/footer.html` | `…/index.html` |
+| P05 Hearth | cut | `chrome-lab/approved/P05-centered/footer.html` | cut |
+
+Four approved pairings are still unbuilt — `P01+P04 · P02+P01 · P02+P05 · P04+P01` — say the word and
+`tools/lock.mjs` gains four lines and the same two commands produce them.

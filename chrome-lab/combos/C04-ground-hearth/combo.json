@@ -1,0 +1,12 @@
+{
+ "id": "C04",
+ "name": "Ground & Hearth",
+ "header": "P01 Ground Floor",
+ "footer": "P05 Hearth",
+ "skin": "solid header over solid footer",
+ "signature_motion": "underline-draw (180 ms ease-out, header links and footer links share the draw)",
+ "bridge": "none — both halves already share the rails",
+ "rationale": "Two solid skins, both reviewed: the calm white bar above a centred hearth — quietest option, best for editorial pages.",
+ "tension": "asymmetric → centred; the shared hairline keeps it calm",
+ "built_from": "MANUAL-REVIEW-CHART.md selection · no new research"
+}

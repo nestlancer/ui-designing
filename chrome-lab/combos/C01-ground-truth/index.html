@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C01 Ground Truth — Ground Floor header + Ground Floor footer</title>
+<script>
+(function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
+</script><script>
+if(new URLSearchParams(location.search).has('frame'))
+  document.documentElement.classList.add('is-framed');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
+  --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+}
+[data-theme="dark"]{            /* derived, never invented */
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --band:#06111a; --shadow:0 8px 28px rgba(0,0,0,.45);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 16px/1.55 var(--font);color:var(--body);background:var(--bg)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+ul{margin:0;padding:0;list-style:none}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){.container{padding-inline:32px}}
+/* Buttons — the shared CTA vocabulary; pairs restyle shape, never hue */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+.btn--primary{background:var(--btn);color:#fff}
+.btn--primary:hover{background:var(--teal-hover)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn--ghost:hover{border-color:var(--muted)}
+/* Mono eyebrow — the 11px uppercase label from the brand screenshots */
+.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* Theme swap for the logo: two <img> siblings, CSS decides which shows */
+.brand img{height:32px;width:auto}
+.brand__dark{display:none}
+[data-theme="dark"] .brand__light{display:none}
+[data-theme="dark"] .brand__dark{display:inline-block}
+.skip-link{position:absolute;left:16px;top:-64px;z-index:200;background:var(--surface);color:var(--ink);
+  padding:10px 16px;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow);
+  font:600 14px/1 var(--font);text-decoration:none;transition:top .12s ease-out}
+.skip-link:focus-visible{top:12px}
+.is-framed .sample,.is-framed .page-note,.is-framed .spacer,.is-framed .stage{display:none}
+.nav{background:var(--surface);border-bottom:1px solid var(--line)}
+.nav__row{display:flex;align-items:center;gap:20px;height:64px}
+/* mobile-first: the BAR's nav waits for desktop — scoped to .nav__row so the burger panel keeps its
+   links and a footer's <nav> columns on the same page are never touched */
+.nav__row nav,.nav__row .nav__list{display:none}
+.nav__panel .nav__list{display:grid}
+.actions{display:none;align-items:center;gap:6px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:var(--pill);background:transparent;color:var(--ink);cursor:pointer;transition:background-color .18s ease-out}
+.icon-btn:hover{background:var(--surface-2)}
+.signin{font:500 14px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:var(--pill)}
+.signin:hover{color:var(--teal-hover)}
+/* burger + drop panel (mobile-first) */
+.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;margin-left:auto}
+.nav__panel{border-top:1px solid var(--line);background:var(--surface);padding:8px 0 18px}
+.nav__panel a:not(.btn){display:flex;align-items:center;justify-content:space-between;padding:13px 4px;font:500 15px/1 var(--font);color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.nav__panel[hidden]{display:none}
+/* underline-draw: the pair's signature, shared with the footer */
+.nav__link{position:relative;font:500 14.5px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:6px}
+.nav__link::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .18s ease-out}
+.nav__link:hover::after,.nav__link:focus-visible::after{transform:scaleX(1)}
+@media(min-width:1024px){
+  .nav__row{height:72px;gap:4px}
+  .nav__row nav{display:block}
+  .nav__row .nav__list{display:flex;align-items:center}
+  .actions{display:flex;margin-left:auto}
+  .nav__toggle,.nav__panel{display:none}
+}
+.nav__panel .btn{width:100%;margin-top:14px}
+@media(min-width:1024px){.nav__panel .btn{display:none}}
+/* The stage is not page content. It is the gap that lets a sticky or floating bar
+   be seen behaving, plus a caption naming the pairing. Hidden with ?frame=1. */
+.stage{min-height:60vh;display:grid;place-items:center;padding:56px 20px}
+.stage__tag{font:500 11px/1.7 var(--mono);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-align:center;margin:0;max-width:34ch}
+.stage__tag b{color:var(--teal-hover);font-weight:600}
+
+.foot{background:var(--surface);border-top:1px solid var(--line);margin-top:0}
+.foot__grid{display:grid;gap:36px;padding:56px 0 40px}
+.foot__blurb{font-size:14px;max-width:32ch;color:var(--body);margin:14px 0 0}
+.foot__cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.foot__col li{margin-top:12px}
+.foot__col a{position:relative;font-size:14px;color:var(--body);text-decoration:none}
+.foot__col a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--teal);transition:right .18s ease-out}
+.foot__col a:hover,.foot__col a:focus-visible{color:var(--ink)}
+.foot__col a:hover::after,.foot__col a:focus-visible::after{right:0}
+.foot__legal{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0 26px;font-size:13px;color:var(--muted)}
+.soc{display:flex;gap:4px}
+.soc a{display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;color:var(--muted);border-radius:var(--pill);transition:color .18s ease-out,background-color .18s ease-out}
+.soc a:hover{color:var(--ink);background:var(--surface-2)}
+@media(min-width:1024px){.foot__grid{grid-template-columns:1.3fr 2fr;padding:64px 0 44px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__row">
+      <a class="brand" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../assets/logo-full-light.svg" alt="Nestlancer" width="116" height="32">
+<img class="brand__dark" src="../../assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
+      <nav aria-label="Primary"><ul class="nav__list"><li><a class="nav__link" href="/product" aria-current="page">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
+      <div class="actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13.2A8.1 8.1 0 0 1 10.8 4 8.1 8.1 0 1 0 20 13.2Z"/></svg></button>
+        <a class="signin" href="/login">Sign in</a>
+        <a class="btn btn--primary" href="/contact">Start a project</a>
+      </div>
+      <button class="nav__toggle" id="menuBtn" aria-label="Menu" aria-controls="menuPanel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
+    </div>
+  </div>
+  <div class="nav__panel" id="menuPanel" hidden>
+    <div class="container">
+      <nav aria-label="Primary mobile"><ul class="nav__list"><li><a class="nav__link" href="/product" aria-current="page">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></nav>
+      <a class="btn btn--primary" href="/contact">Start a project</a>
+    </div>
+  </div>
+</header>
+<main class="stage" id="main">
+  <p class="stage__tag">C01 · Ground Floor header <b>+</b> Ground Floor footer</p>
+</main>
+<footer class="foot" role="contentinfo">
+  <div class="container">
+    <div class="foot__grid">
+      <div>
+        <a class="brand" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../assets/logo-full-light.svg" alt="Nestlancer" width="116" height="32">
+<img class="brand__dark" src="../../assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
+        <p class="foot__blurb">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
+      </div>
+      <div class="foot__cols">
+        <nav class="foot__col" aria-label="Product"><p class="eyebrow">PRODUCT</p><ul>
+          <li><a href="/product">Project Hub</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li></ul></nav>
+        <nav class="foot__col" aria-label="Company"><p class="eyebrow">COMPANY</p><ul>
+          <li><a href="/about">About</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/contact">Start a project</a></li></ul></nav>
+        <nav class="foot__col" aria-label="Legal"><p class="eyebrow">LEGAL</p><ul>
+          <li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/verify">Verify document</a></li></ul></nav>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <span>© 2026 Nestlancer. Made in India. All rights reserved.</span>
+      <span class="soc"><a href="#" aria-label="Nestlancer on Linkedin"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V17M8 7.6v.1M12 17v-3.8c0-1.3.9-2.2 2.1-2.2 1.3 0 2 .9 2 2.2V17"/></svg></a><a href="#" aria-label="Nestlancer on Github"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 20.2c-4 1.1-4-2-5.7-2.5m12.7 4.1v-3.2c0-.9.3-1.6.8-2.1-2.8-.3-5.7-1.4-5.7-6a4.6 4.6 0 0 1 1.3-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.4 1.3a11.7 11.7 0 0 1 6 0C24.8 4 25.8 4.3 25.8 4.3a4.3 4.3 0 0 1 .1 3.1 4.6 4.6 0 0 1 1.3 3.2c0 4.6-2.9 5.7-5.7 6 .5.5.8 1.3.8 2.4v3.4" transform="translate(-3.5 -1.5)"/></svg></a><a href="#" aria-label="Nestlancer on X"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4.5h3.5L19 19.5h-3.5L5 4.5Z"/><path d="M18.5 4.5 12.7 11M11.5 12.9 5.5 19.5"/></svg></a></span>
+    </div>
+  </div>
+</footer>
+<script>
+function disclosure(btn,panel,{closeOnEsc=true,overlay=null}={}){
+  const set=o=>{btn.setAttribute('aria-expanded',o);panel.hidden=!o;document.documentElement.classList.toggle('is-locked',o&&!!overlay)};
+  set(false);
+  btn.addEventListener('click',()=>set(btn.getAttribute('aria-expanded')!=='true'));
+  if(closeOnEsc)document.addEventListener('keydown',e=>{ // Esc closes from anywhere, focus returns to the trigger
+    if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus()}});
+  if(overlay)overlay.addEventListener('click',()=>set(false));
+  return set;
+}
+</script>
+<script>
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next)});
+</script>
+<script>
+disclosure(document.getElementById('menuBtn'),document.getElementById('menuPanel'));
+</script>
+<script>
+if(document.documentElement.classList.contains('is-framed')){
+  var send=function(){try{parent.postMessage({nlh:document.documentElement.scrollHeight},'*')}catch(e){}};
+  addEventListener('load',send);addEventListener('resize',send);send();setTimeout(send,400);
+}
+</script>
+</body>
+</html>

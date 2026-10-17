@@ -1,0 +1,20 @@
+{
+ "id": "P02",
+ "name": "Morning Mist",
+ "skin": "glass",
+ "status": "approved",
+ "review": "header ✓ · footer not picked (cut 2026-10-17)",
+ "header": "sticky bar · glass (blur 14px) engages after 8 px · split-arrow CTA · sun toggle",
+ "footer": null,
+ "cut": "footer",
+ "signature_motion": "blur-engage after 8 px (background/opacity only — the blur itself is never animated)",
+ "dna": "A bar that admits the page behind it and fogs over only after 8 px. The mesh footer it shipped with was not picked — this header now wears an approved one.",
+ "axes": "A contained · B inline · C sticky+glass · D glass · E split-arrow pill",
+ "references": [
+  "vercel.com",
+  "apple.com"
+ ],
+ "files": [
+  "header.html"
+ ]
+}
