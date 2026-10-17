@@ -1,0 +1,47 @@
+{
+ "id": "H084",
+ "type": "header",
+ "family": "F21",
+ "family_name": "Docs / section nav",
+ "family_signature": "breadcrumb + tab row, second sticky row",
+ "A1_container": "split-50/50",
+ "A2_nav": "breadcrumb-row",
+ "A3_scroll": "static",
+ "A4_motion": "m-38",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "split-arrow-pill",
+ "A7_surface_skin": "dual-surface",
+ "skin_notes": "two stacked surfaces: utility strip different fill from main row / links band vs legal band",
+ "signature_motion": "m-38 version stepper",
+ "motion_ids": [
+  "m-38"
+ ],
+ "references": [
+  "github.com",
+  "stripe.com",
+  "notion.so"
+ ],
+ "pattern_refs": [
+  "h-search-topbar-product",
+  "f-community"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "steps-scroll",
+ "budget": {
+  "css_bytes": 6924,
+  "css_exception": null,
+  "dom_nodes": 60,
+  "js_bytes": 2700,
+  "js_gzip_bytes": 996,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H084\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

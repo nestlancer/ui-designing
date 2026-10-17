@@ -1,0 +1,48 @@
+{
+ "id": "H033",
+ "type": "header",
+ "family": "F09",
+ "family_name": "Fullscreen overlay nav",
+ "family_signature": "burger → full-viewport panel with mega type",
+ "A1_container": "1200-contained",
+ "A2_nav": "fullscreen-overlay",
+ "A3_scroll": "static",
+ "A4_motion": "m-08",
+ "A5_disclosure": "click",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "ink-band",
+ "skin_notes": "--n-ink utility band with light text; main row stays surface",
+ "signature_motion": "m-08 clip-path wipe 480ms",
+ "motion_ids": [
+  "m-08"
+ ],
+ "references": [
+  "apple.com",
+  "pentagram.com",
+  "x.ai"
+ ],
+ "pattern_refs": [
+  "h-inline-quiet",
+  "f-legal-whisper"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "burger-overlay",
+ "budget": {
+  "css_bytes": 5436,
+  "css_exception": null,
+  "dom_nodes": 44,
+  "js_bytes": 1986,
+  "js_gzip_bytes": 768,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H033\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

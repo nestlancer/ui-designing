@@ -1,0 +1,45 @@
+{
+ "id": "F034",
+ "type": "footer",
+ "family": "F07",
+ "family_name": "Minimal single-row",
+ "family_signature": "wordmark left, © right, nothing else",
+ "A1_container": "split-50/50",
+ "A2_nav": "inline",
+ "A3_scroll": "sticky-shrink",
+ "A4_motion": "m-12",
+ "A5_disclosure": "click",
+ "A6_cta": "ghost-text",
+ "A7_surface_skin": "solid-canvas",
+ "skin_notes": "flat --n-surface bar/footer + 1px --n-hairline, repo baseline discipline",
+ "signature_motion": "m-12 footer theme toggle",
+ "motion_ids": [
+  "m-12"
+ ],
+ "references": [
+  "medium.com",
+  "linear.app",
+  "zara.com"
+ ],
+ "pattern_refs": [
+  "f-legal-whisper",
+  "f-none"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 1458,
+  "css_exception": null,
+  "dom_nodes": 10,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F034\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

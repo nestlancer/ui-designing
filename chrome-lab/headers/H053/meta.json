@@ -1,0 +1,49 @@
+{
+ "id": "H053",
+ "type": "header",
+ "family": "F14",
+ "family_name": "Search-forward",
+ "family_signature": "large inline search IS the nav",
+ "A1_container": "1200-contained",
+ "A2_nav": "search-first",
+ "A3_scroll": "sticky",
+ "A4_motion": "m-11",
+ "A5_disclosure": "keyboard-first",
+ "A6_cta": "teal-pill",
+ "A7_surface_skin": "glass-hairline",
+ "skin_notes": "color-mix translucent surface + blur 14px + hairline + soft shadow, @supports opaque fallback",
+ "signature_motion": "m-11 ⌘K search overlay",
+ "motion_ids": [
+  "m-11"
+ ],
+ "references": [
+  "airbnb.com",
+  "booking.com",
+  "swiggy.com"
+ ],
+ "pattern_refs": [
+  "h-search-topbar-marketplace",
+  "f-locale-row"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A6",
+  "A7"
+ ],
+ "mobile_strategy": "search-expand",
+ "budget": {
+  "css_bytes": 5045,
+  "css_exception": null,
+  "dom_nodes": 31,
+  "js_bytes": 1986,
+  "js_gzip_bytes": 769,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H053\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

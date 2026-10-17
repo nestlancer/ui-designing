@@ -1,0 +1,46 @@
+{
+ "id": "F037",
+ "type": "footer",
+ "family": "F08",
+ "family_name": "Two-bar (links bar + legal bar)",
+ "family_signature": "separated bands in different tones",
+ "A1_container": "1200-contained",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-27",
+ "A5_disclosure": "hover",
+ "A6_cta": "ghost-text",
+ "A7_surface_skin": "dual-surface",
+ "skin_notes": "two stacked surfaces: utility strip different fill from main row / links band vs legal band",
+ "signature_motion": "m-27 social pop on legal band",
+ "motion_ids": [
+  "m-27"
+ ],
+ "references": [
+  "paypal.com",
+  "mastercard.com",
+  "ibm.com"
+ ],
+ "pattern_refs": [
+  "f-two-bar",
+  "f-corporate-finance"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 4147,
+  "css_exception": null,
+  "dom_nodes": 63,
+  "js_bytes": 678,
+  "js_gzip_bytes": 428,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F037\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

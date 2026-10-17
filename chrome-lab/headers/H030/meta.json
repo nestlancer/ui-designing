@@ -1,0 +1,46 @@
+{
+ "id": "H030",
+ "type": "header",
+ "family": "F08",
+ "family_name": "Transparent-over-hero → solid",
+ "family_signature": "mesh shows through the bar, then it solidifies",
+ "A1_container": "1200-contained",
+ "A2_nav": "inline",
+ "A3_scroll": "transparent→solid",
+ "A4_motion": "m-21",
+ "A5_disclosure": "always-visible",
+ "A6_cta": "ghost-text",
+ "A7_surface_skin": "mesh-zone",
+ "skin_notes": "--n-mesh-1 → --n-mesh-2 gradient panel composition",
+ "signature_motion": "m-21 wordmark scale-on-scroll",
+ "motion_ids": [
+  "m-21"
+ ],
+ "references": [
+  "airbnb.com",
+  "netflix.com",
+  "nike.com"
+ ],
+ "pattern_refs": [
+  "h-transparent-art",
+  "f-mesh"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "burger-overlay",
+ "budget": {
+  "css_bytes": 6081,
+  "css_exception": null,
+  "dom_nodes": 43,
+  "js_bytes": 2460,
+  "js_gzip_bytes": 900,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<header data-chrome=\"H030\" data-theme=\"dark\" data-page=\"pricing\"></header>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

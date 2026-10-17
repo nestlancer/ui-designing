@@ -1,0 +1,47 @@
+{
+ "id": "F054",
+ "type": "footer",
+ "family": "F11",
+ "family_name": "Editorial / issue-style",
+ "family_signature": "serif, dated, “Journal” framing",
+ "A1_container": "split-50/50",
+ "A2_nav": "inline",
+ "A3_scroll": "pinned-then-release",
+ "A4_motion": "m-05",
+ "A5_disclosure": "click",
+ "A6_cta": "icon-only",
+ "A7_surface_skin": "editorial-rules",
+ "skin_notes": "canvas/transparent bg, typographic weight + double hairline rules only",
+ "signature_motion": "m-05 issue curtain",
+ "motion_ids": [
+  "m-05"
+ ],
+ "references": [
+  "nytimes.com",
+  "economist.com",
+  "bbc.com"
+ ],
+ "pattern_refs": [
+  "f-editorial-index",
+  "f-editorial-studio"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3710,
+  "css_exception": null,
+  "dom_nodes": 47,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F054\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

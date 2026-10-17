@@ -1,0 +1,45 @@
+{
+ "id": "F058",
+ "type": "footer",
+ "family": "F12",
+ "family_name": "Marquee wordmark reveal",
+ "family_signature": "giant wordmark scrolls in on enter",
+ "A1_container": "docked-edge-rail",
+ "A2_nav": "inline",
+ "A3_scroll": "static",
+ "A4_motion": "m-21",
+ "A5_disclosure": "hover",
+ "A6_cta": "outline-pill",
+ "A7_surface_skin": "elevated-soft",
+ "skin_notes": "solid surface + soft elevation shadow 0 8px 28px rgba(10,37,67,.10), no heavy border",
+ "signature_motion": "m-21 wm scrub scale",
+ "motion_ids": [
+  "m-21"
+ ],
+ "references": [
+  "pentagram.com",
+  "framer.com",
+  "webflow.com"
+ ],
+ "pattern_refs": [
+  "f-wordmark-xl",
+  "f-social-row"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A4",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 3030,
+  "css_exception": null,
+  "dom_nodes": 46,
+  "js_bytes": 678,
+  "js_gzip_bytes": 427,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F058\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

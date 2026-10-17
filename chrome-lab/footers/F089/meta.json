@@ -1,0 +1,47 @@
+{
+ "id": "F089",
+ "type": "footer",
+ "family": "F18",
+ "family_name": "App / QR download",
+ "family_signature": "QR block + store buttons for the Project Hub (placeholders)",
+ "A1_container": "split-50/50",
+ "A2_nav": "inline",
+ "A3_scroll": "transparent→solid",
+ "A4_motion": "m-23",
+ "A5_disclosure": "click",
+ "A6_cta": "icon-only",
+ "A7_surface_skin": "tint-wash",
+ "skin_notes": "--n-bg-tint-1 / --n-mint wash behind the chrome; teal-soft chip accents",
+ "signature_motion": "m-23 QR orbit button",
+ "motion_ids": [
+  "m-23"
+ ],
+ "references": [
+  "whatsapp.com",
+  "telegram.org",
+  "flipkart.com"
+ ],
+ "pattern_refs": [
+  "f-app-badges",
+  "f-locale-row"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ],
+ "mobile_strategy": "stack-cols",
+ "budget": {
+  "css_bytes": 4582,
+  "css_exception": null,
+  "dom_nodes": 52,
+  "js_bytes": 991,
+  "js_gzip_bytes": 550,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F089\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}

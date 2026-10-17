@@ -1,0 +1,45 @@
+{
+ "id": "F027",
+ "type": "footer",
+ "family": "F06",
+ "family_name": "Accordion columns",
+ "family_signature": "columns collapse via grid-template-rows on mobile",
+ "A1_container": "full-bleed",
+ "A2_nav": "accordion",
+ "A3_scroll": "static",
+ "A4_motion": "m-37",
+ "A5_disclosure": "accordion",
+ "A6_cta": "outline-pill",
+ "A7_surface_skin": "editorial-rules",
+ "skin_notes": "canvas/transparent bg, typographic weight + double hairline rules only",
+ "signature_motion": "m-37 nested accordion",
+ "motion_ids": [
+  "m-37"
+ ],
+ "references": [
+  "apple.com",
+  "gov.uk",
+  "booking.com"
+ ],
+ "pattern_refs": [
+  "f-accordion",
+  "f-editorial-index"
+ ],
+ "diff_from_prev": [
+  "A1",
+  "A4",
+  "A6"
+ ],
+ "mobile_strategy": "accordion-cols",
+ "budget": {
+  "css_bytes": 4083,
+  "css_exception": null,
+  "dom_nodes": 73,
+  "js_bytes": 1014,
+  "js_gzip_bytes": 532,
+  "dead_class_pct": 0
+ },
+ "reduced_motion": "opacity-only 150ms; signature transform/marquee/scrub disabled (G6)",
+ "mount": "<footer data-chrome=\"F027\" data-theme=\"dark\" data-page=\"pricing\"></footer>",
+ "research_basis": "research/sites.json + research/motion-index.json (Phase R)"
+}
