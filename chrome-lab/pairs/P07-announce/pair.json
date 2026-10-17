@@ -1,0 +1,14 @@
+{
+ "id": "P07",
+ "name": "Quiet Signal",
+ "skin": "tint",
+ "header": "dismissible mint ribbon (Intake open) over tinted sticky bar · pill CTA",
+ "footer": "white CTA card (Ready to ship…) on tint · 3 columns · teal legal strip",
+ "signature_motion": "announce-collapse (grid-template-rows 220 ms ease-out, stays dismissed)",
+ "references": [
+  "figma.com",
+  "stripe.com"
+ ],
+ "dna": "An announcement that never shouts: a mint ribbon opens the page, a mint CTA card closes it, and the same 220 ms grid-rows collapse dismisses both moods.",
+ "axis": "A contained ribbon + bar · B inline · C sticky bar · D tint · E teal pill + ghost pair"
+}

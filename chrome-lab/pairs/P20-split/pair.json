@@ -1,0 +1,14 @@
+{
+ "id": "P20",
+ "name": "Twin Gates",
+ "skin": "dual",
+ "header": "bar + 50/50 CTA gate (Sign in ‖ Start a project) with centre hairline",
+ "footer": "50/50 split: mint CTA half ‖ white sitemap half · legal row",
+ "signature_motion": "meet-in-middle (hover fills grow from the shared centre edge outward, 200 ms, both halves)",
+ "references": [
+  "slack.com",
+  "stripe.com"
+ ],
+ "dna": "Everything splits 50/50: the header carries two equal CTAs across a centre hairline, and the footer mirrors it — CTA half on mint, sitemap half on white, one shared edge.",
+ "axis": "A split 50/50 · B inline · C static · D dual (mint/white) · E dual-equal CTAs"
+}

@@ -1,0 +1,14 @@
+{
+ "id": "P17",
+ "name": "Night Librarian",
+ "skin": "glass",
+ "header": "glass sticky bar · ⌘K search pill · moon · primary pill",
+ "footer": "status pills + ⌘K pill + CTA pill · 3 columns · legal",
+ "signature_motion": "palette-scale (dialog scales 0.98→1 + fades 200 ms; scrim fades 150 ms; ⌘K everywhere)",
+ "references": [
+  "vercel.com",
+  "linear.app"
+ ],
+ "dna": "Answer-first chrome: a ⌘K pill opens a palette of every route, and the footer carries the same pill language as status chips with the same ⌘K hint.",
+ "axis": "A contained glass bar · B command palette · C sticky · D glass · K pill chips"
+}

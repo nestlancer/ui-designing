@@ -1,0 +1,14 @@
+{
+ "id": "P09",
+ "name": "Front Desk",
+ "skin": "tint",
+ "header": "tinted bar + full-width white search pill (56px) + mono category hint",
+ "footer": "newsletter pill field leads 3 columns · legal row",
+ "signature_motion": "field-focus (ring grows from 1px hairline to 2px teal with a 150 ms ease, identical in both halves)",
+ "references": [
+  "airbnb.com",
+  "wise.com"
+ ],
+ "dna": "The search field is the tallest object in both halves — a white pill under the bar, the same white pill leading the footer as a newsletter desk.",
+ "axis": "A contained + hero field · B search-first inline · C sticky bar · D tint · E pill field + pill CTA"
+}

@@ -1,0 +1,14 @@
+{
+ "id": "P11",
+ "name": "Two Lanes",
+ "skin": "tint",
+ "header": "tinted bar + segmented view-switcher (sliding teal thumb)",
+ "footer": "₹4,28,500 count-up + two segmented proof rows · 3 columns",
+ "signature_motion": "thumb-slide (240 ms cubic-bezier(.2,.8,.2,1) — the identical thumb in header and footer)",
+ "references": [
+  "slack.com",
+  "stripe.com"
+ ],
+ "dna": "One control, two places: the sliding segmented thumb picks a view under the nav bar, and the same segmented rows pick proof stats in the footer.",
+ "axis": "A contained · B segmented switcher · C static bar · D tint · E segmented pill + ghost"
+}

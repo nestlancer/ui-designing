@@ -1,0 +1,14 @@
+{
+ "id": "P13",
+ "name": "Riverbed",
+ "skin": "mesh",
+ "header": "fixed transparent bar → surface + shrink after 8px scroll",
+ "footer": "mesh wash · big CTA (Ready to ship…) · columns over hairline",
+ "signature_motion": "condense-on-scroll (transparent→tint after 8 px, 200 ms; hero floats, footer grounds)",
+ "references": [
+  "stripe.com",
+  "linear.app"
+ ],
+ "dna": "The page opens with chrome floating transparent over the mesh and condenses to solid on scroll — the footer is the mesh itself, settling like the riverbed.",
+ "axis": "A full-bleed hero chrome · B inline · C transparent→solid · D mesh · E teal pill + ghost"
+}

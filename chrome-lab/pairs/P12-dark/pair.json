@@ -1,0 +1,14 @@
+{
+ "id": "P12",
+ "name": "Night Nest",
+ "skin": "invert",
+ "header": "navy band bar · glow hairline · glow-outline CTA · white links",
+ "footer": "navy footer · glow status pill (portal live) · columns · legal",
+ "signature_motion": "glow-hairline (1px gradient line under the bar and above the legal row, subtle 2.4s pulse, static under reduced motion)",
+ "references": [
+  "vercel.com",
+  "linear.app"
+ ],
+ "dna": "Dark-native chrome on a light page: the bar floats on --band with a teal glow hairline, and the footer is the same band signed with the same glow.",
+ "axis": "A full-bleed dark band · B inline · C static · D invert · E glow-outline pill"
+}

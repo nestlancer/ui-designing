@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P20 Twin Gates — footer</title>
+<script>
+(function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
+</script><script>
+if(new URLSearchParams(location.search).has('frame'))
+  document.documentElement.classList.add('is-framed');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
+  --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+}
+[data-theme="dark"]{            /* derived, never invented */
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --band:#06111a; --shadow:0 8px 28px rgba(0,0,0,.45);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 16px/1.55 var(--font);color:var(--body);background:var(--bg)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+ul{margin:0;padding:0;list-style:none}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){.container{padding-inline:32px}}
+/* Buttons — the shared CTA vocabulary; pairs restyle shape, never hue */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+.btn--primary{background:var(--btn);color:#fff}
+.btn--primary:hover{background:var(--teal-hover)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn--ghost:hover{border-color:var(--muted)}
+/* Mono eyebrow — the 11px uppercase label from the brand screenshots */
+.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* Theme swap for the logo: two <img> siblings, CSS decides which shows */
+.brand img{height:32px;width:auto}
+.brand__dark{display:none}
+[data-theme="dark"] .brand__light{display:none}
+[data-theme="dark"] .brand__dark{display:inline-block}
+.skip-link{position:absolute;left:16px;top:-64px;z-index:200;background:var(--surface);color:var(--ink);
+  padding:10px 16px;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow);
+  font:600 14px/1 var(--font);text-decoration:none;transition:top .12s ease-out}
+.skip-link:focus-visible{top:12px}
+.spacer{height:38vh}
+
+.foot{background:var(--surface);border-top:1px solid var(--line)}
+.foot__split{display:grid;grid-template-columns:1fr}
+.foot__cta{background:var(--mint);padding:44px 24px;display:grid;gap:16px;justify-items:start;position:relative;overflow:hidden}
+.foot__cta::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,var(--teal-soft),transparent 55%);opacity:.6;pointer-events:none}
+.foot__cta h2{margin:0;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.02em;line-height:1.15;color:var(--ink);position:relative}
+.foot__cta p{margin:0;font-size:14.5px;color:var(--body);max-width:38ch;position:relative}
+.foot__cta .actions{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+.foot__map{padding:44px 24px}
+.foot__map .cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.f-col li{margin-top:10px}
+.f-col a{font-size:14px;color:var(--body);text-decoration:none;position:relative}
+.f-col a::after{content:"";position:absolute;left:0;right:auto;bottom:-2px;width:0;height:1.5px;background:var(--teal);transition:width .2s ease-out}
+.f-col a:hover{color:var(--teal-hover)}
+.f-col a:hover::after{width:100%}
+.foot__legal{border-top:1px solid var(--line);padding:16px 24px 24px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+@media(min-width:1024px){
+  .foot__split{grid-template-columns:1fr 1fr}
+  .foot__cta{padding:56px 48px;border-right:1px solid var(--line)}
+  .foot__map{padding:56px 48px}
+  .foot__map .cols{grid-template-columns:repeat(3,1fr)}
+}
+.page-note{text-align:center;color:var(--muted);font-size:13px;padding:18px 20px 40px}
+.page-note code{font-family:var(--mono)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="spacer" aria-hidden="true"></div>
+<footer class="foot" role="contentinfo">
+  <div class="foot__split">
+    <div class="foot__cta">
+      <p class="eyebrow" style="position:relative">FIG · START</p>
+      <h2>Ready to ship with clarity?</h2>
+      <p>Fixed-price studio work. Live Project Hub. Razorpay milestones. Intake is open.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="/contact">Start a project</a>
+        <a class="btn btn--ghost" href="/login">Preview the portal</a>
+      </div>
+    </div>
+    <div class="foot__map">
+      <div class="cols">
+        <nav class="f-col" aria-label="PRODUCT"><p class="eyebrow">PRODUCT</p><ul>
+<li><a href="/product">Project Hub</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li></ul></nav>
+        <nav class="f-col" aria-label="COMPANY"><p class="eyebrow">COMPANY</p><ul>
+<li><a href="/about">About</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/contact">Start a project</a></li></ul></nav>
+        <nav class="f-col" aria-label="LEGAL"><p class="eyebrow">LEGAL</p><ul>
+<li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/verify">Verify document</a></li></ul></nav>
+      </div>
+    </div>
+  </div>
+  <div class="foot__legal">
+    <img class="brand__light" src="../../assets/logo-mark-light.svg" alt="Nestlancer" width="26" height="26">
+    <img class="brand__dark" src="../../assets/logo-mark-dark.svg" alt="" width="26" height="26" aria-hidden="true">
+    <span>© 2026 Nestlancer. Made in India. All rights reserved. · INR ₹ · USD $</span>
+  </div>
+</footer>
+<p class="page-note">Standalone demo — open <code>index.html</code> in this folder for header and footer together.</p>
+
+</body>
+</html>

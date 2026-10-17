@@ -1,0 +1,14 @@
+{
+ "id": "P02",
+ "name": "Morning Mist",
+ "skin": "glass",
+ "header": "sticky bar · glass (blur 14px) engages after 8 px · split-arrow CTA · sun toggle",
+ "footer": "mesh wash · brand+blurb · 3 columns · frosted legal capsule",
+ "signature_motion": "blur-engage after 8 px (background/opacity only — the blur itself is never animated)",
+ "references": [
+  "vercel.com",
+  "apple.com"
+ ],
+ "dna": "Chrome that admits the page behind it — a sticky bar that fogs over only after 8 px, and a footer on the same mesh wash with a frosted legal capsule.",
+ "axis": "A contained · B inline · C sticky+glass · D glass · E split-arrow pill"
+}

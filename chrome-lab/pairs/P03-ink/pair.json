@@ -1,0 +1,14 @@
+{
+ "id": "P03",
+ "name": "Night Desk",
+ "skin": "ink",
+ "header": "navy utility strip (portal-live + sign-in) above white 72px bar · burger panel",
+ "footer": "navy columns + legal row · mono close-strip (portal live · Razorpay · privacy)",
+ "signature_motion": "strip slide (utility strips slide in 200 ms; header top-down, footer bottom-up)",
+ "references": [
+  "microsoft.com",
+  "razorpay.com"
+ ],
+ "dna": "A navy utility strip opens the page and the same navy closes it — white main bar between, teal spent only on the live dot and the pill.",
+ "axis": "A full-bleed two-tier · B inline + utility links · C static · D ink · E teal pill + text utility links"
+}

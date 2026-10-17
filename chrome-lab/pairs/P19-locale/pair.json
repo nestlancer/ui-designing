@@ -1,0 +1,14 @@
+{
+ "id": "P19",
+ "name": "Gate Desk",
+ "skin": "dual",
+ "header": "utility tier (INR ₹/EN dropdowns) above solid main bar",
+ "footer": "utility tier (locale + Razorpay line) above columns + legal",
+ "signature_motion": "tier-swap (the utility selects expand their 12px menus with a 200ms grid-rows drop, mirrored by the footer utility links)",
+ "references": [
+  "ikea.com",
+  "airbnb.com"
+ ],
+ "dna": "Two surfaces, one idea of welcome: a light utility tier (currency, language) rides above the main bar, and the footer repeats the exact two-tier stack — utility row over legal row.",
+ "axis": "A two-tier full-bleed · B inline + select menus · C static · D dual (two stacked tones) · E pill + text utility"
+}
