@@ -1,0 +1,14 @@
+{
+ "id": "P06",
+ "name": "Newsroom",
+ "skin": "editorial",
+ "header": "3px masthead rule · dated eyebrow · centred logo · ruled nav row · text CTA",
+ "footer": "3px rule + double rule · ruled column links · byline row",
+ "signature_motion": "rule-draw (rules scaleX from the left on load/in-view, 320 ms)",
+ "references": [
+  "zerodha.com",
+  "nytimes.com"
+ ],
+ "dna": "No fills at all — one heavy masthead rule, one hairline under the nav row, and the same double-rule bookending the footer. Teal appears only as link ink on hover.",
+ "axis": "A full-bleed rules · B inline ruled row · C static · D editorial · E text CTA"
+}

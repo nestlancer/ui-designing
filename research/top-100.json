@@ -1,0 +1,1126 @@
+{
+ "meta": {
+  "compiled": "2026-10-17",
+  "rule": "ranked hosts first; category-world-leader fills only for chrome-rich gaps once ranked hosts were exhausted"
+ },
+ "sources": [
+  {
+   "name": "Similarweb Top Websites",
+   "url": "https://www.similarweb.com/top-websites/",
+   "fetched": "2026-10-17",
+   "note": "top 50 worldwide, September 2026 data, updated Oct 1 2026"
+  },
+  {
+   "name": "Wikipedia — List of most-visited websites",
+   "url": "https://en.wikipedia.org/wiki/List_of_most-visited_websites",
+   "fetched": "2026-10-17",
+   "note": "compiles Similarweb (Aug 2026) + Semrush (Sep 2026) ranks"
+  },
+  {
+   "name": "Ahrefs Top Websites (top-1000 by organic traffic)",
+   "url": "https://ahrefstop.com/websites",
+   "fetched": "2026-10-17",
+   "note": "October 2026 crawl; extends beyond Similarweb top-50"
+  }
+ ],
+ "items": [
+  {
+   "rank": 1,
+   "host": "google.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 2,
+   "host": "youtube.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 3,
+   "host": "facebook.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 4,
+   "host": "instagram.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 5,
+   "host": "chatgpt.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "J",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 6,
+   "host": "x.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 7,
+   "host": "reddit.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 8,
+   "host": "tiktok.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 9,
+   "host": "whatsapp.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 10,
+   "host": "bing.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 11,
+   "host": "wikipedia.org",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 12,
+   "host": "yahoo.co.jp",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 14,
+   "host": "yandex.ru",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 15,
+   "host": "amazon.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 16,
+   "host": "yahoo.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 17,
+   "host": "linkedin.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 18,
+   "host": "baidu.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 20,
+   "host": "pinterest.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 21,
+   "host": "naver.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 22,
+   "host": "netflix.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 23,
+   "host": "live.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 24,
+   "host": "bilibili.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 26,
+   "host": "microsoft.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 28,
+   "host": "twitch.tv",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 29,
+   "host": "temu.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 30,
+   "host": "dzen.ru",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 31,
+   "host": "claude.ai",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "J",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 32,
+   "host": "vk.ru",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 33,
+   "host": "canva.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "E",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 34,
+   "host": "weather.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 38,
+   "host": "samsung.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "G",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 40,
+   "host": "fandom.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 41,
+   "host": "globo.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 42,
+   "host": "apple.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 43,
+   "host": "mail.ru",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 44,
+   "host": "espn.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "G",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 45,
+   "host": "duckduckgo.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 46,
+   "host": "brave.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 47,
+   "host": "github.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 48,
+   "host": "t.me",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "B",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 49,
+   "host": "zoom.us",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "E",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 50,
+   "host": "ebay.com",
+   "rank_source": "similarweb-global-2026-09",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 17,
+   "host": "spotify.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 19,
+   "host": "imdb.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 21,
+   "host": "fifa.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "G",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 22,
+   "host": "openai.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "J",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 24,
+   "host": "mashable.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 25,
+   "host": "scribd.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 27,
+   "host": "amazon.in",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 58,
+   "host": "bbc.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 30,
+   "host": "indeed.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 31,
+   "host": "flipkart.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 33,
+   "host": "primevideo.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 34,
+   "host": "yelp.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 35,
+   "host": "roblox.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 37,
+   "host": "nih.gov",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 38,
+   "host": "adobe.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 39,
+   "host": "quora.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 40,
+   "host": "nytimes.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 41,
+   "host": "accuweather.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 43,
+   "host": "rakuten.co.jp",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 44,
+   "host": "clevelandclinic.org",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 45,
+   "host": "investing.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 46,
+   "host": "mayoclinic.org",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 47,
+   "host": "ilovepdf.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 48,
+   "host": "ikea.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "H",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 50,
+   "host": "mohfw.gov.in",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 51,
+   "host": "cricbuzz.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 52,
+   "host": "trendyol.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 54,
+   "host": "mercadolivre.com.br",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 56,
+   "host": "justdial.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 57,
+   "host": "bank.in",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 59,
+   "host": "wise.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 60,
+   "host": "ycombinator.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 63,
+   "host": "tripadvisor.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "I",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 64,
+   "host": "uol.com.br",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "F",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 66,
+   "host": "booking.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "I",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 68,
+   "host": "tradingview.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 69,
+   "host": "poki.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "K",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 71,
+   "host": "walmart.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "H",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 72,
+   "host": "trustpilot.com",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": 74,
+   "host": "allegro.pl",
+   "rank_source": "ahrefs-top1000-2026-10",
+   "tier": "global-top-100",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": null
+  },
+  {
+   "rank": null,
+   "host": "etsy.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "A",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global marketplace for handmade & vintage goods"
+  },
+  {
+   "rank": null,
+   "host": "stripe.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global online-payments infrastructure"
+  },
+  {
+   "rank": null,
+   "host": "paypal.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global digital payments"
+  },
+  {
+   "rank": null,
+   "host": "razorpay.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India full-stack financial services for businesses"
+  },
+  {
+   "rank": null,
+   "host": "zerodha.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India's largest retail stock broker"
+  },
+  {
+   "rank": null,
+   "host": "groww.in",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India investing platform"
+  },
+  {
+   "rank": null,
+   "host": "paytm.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "D",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India payments & financial services"
+  },
+  {
+   "rank": null,
+   "host": "swiggy.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India food delivery leader"
+  },
+  {
+   "rank": null,
+   "host": "zomato.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "L",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "India restaurant discovery & delivery leader"
+  },
+  {
+   "rank": null,
+   "host": "figma.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Collaborative design platform leader"
+  },
+  {
+   "rank": null,
+   "host": "vercel.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Front-end cloud platform leader"
+  },
+  {
+   "rank": null,
+   "host": "notion.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Connected workspace leader"
+  },
+  {
+   "rank": null,
+   "host": "linear.app",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "C",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Product/issue tracking leader"
+  },
+  {
+   "rank": null,
+   "host": "slack.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "E",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Team messaging platform leader"
+  },
+  {
+   "rank": null,
+   "host": "shopify.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "E",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global commerce platform leader"
+  },
+  {
+   "rank": null,
+   "host": "airbnb.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "G",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global stays marketplace leader"
+  },
+  {
+   "rank": null,
+   "host": "nike.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "G",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Global athletic brand leader"
+  },
+  {
+   "rank": null,
+   "host": "hubspot.com",
+   "rank_source": null,
+   "tier": "category-world-leader",
+   "bucket": "E",
+   "suitable": true,
+   "skip_reason": null,
+   "category": "Inbound marketing & CRM platform leader"
+  }
+ ],
+ "replaced": [
+  {
+   "host": "pornhub.com",
+   "reason": "adult content — banned",
+   "source": "similarweb-global-2026-09",
+   "rank": 25
+  },
+  {
+   "host": "xhamster.com",
+   "reason": "adult content — banned",
+   "source": "similarweb-global-2026-09",
+   "rank": 27
+  },
+  {
+   "host": "bet.br",
+   "reason": "gambling — banned",
+   "source": "similarweb-global-2026-09",
+   "rank": 35
+  },
+  {
+   "host": "xvideos.com",
+   "reason": "adult content — banned",
+   "source": "similarweb-global-2026-09",
+   "rank": 36
+  },
+  {
+   "host": "stripchat.com",
+   "reason": "adult content — banned",
+   "source": "similarweb-global-2026-09",
+   "rank": 39
+  },
+  {
+   "host": "xsmn.mobi",
+   "reason": "adult/lottery content — banned",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 32
+  },
+  {
+   "host": "eksisozluk.com",
+   "reason": "flagged explicit content — banned",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 42
+  },
+  {
+   "host": "grupogilleon.com",
+   "reason": "obscure host, low trust signal — replaced",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 65
+  },
+  {
+   "host": "gemini.google.com",
+   "reason": "subdomain of google.com — host-dedup",
+   "source": "similarweb-global-2026-09",
+   "rank": 13
+  },
+  {
+   "host": "cloud.microsoft",
+   "reason": "subdomain of microsoft.com — host-dedup",
+   "source": "similarweb-global-2026-09",
+   "rank": 18
+  },
+  {
+   "host": "news.yahoo.co.jp",
+   "reason": "subdomain of yahoo.co.jp — host-dedup",
+   "source": "similarweb-global-2026-09",
+   "rank": 37
+  },
+  {
+   "host": "bbc.co.uk",
+   "reason": "same brand as bbc.com — host-dedup",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 29
+  },
+  {
+   "host": "wa.me",
+   "reason": "same brand as whatsapp.com — host-dedup",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 70
+  },
+  {
+   "host": "espncricinfo.com",
+   "reason": "same brand as espn.com — host-dedup",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 49
+  },
+  {
+   "host": "amazon.co.uk",
+   "reason": "same brand as amazon.com — host-dedup",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 53
+  },
+  {
+   "host": "amazon.de",
+   "reason": "same brand as amazon.com — host-dedup",
+   "source": "ahrefs-top1000-2026-10",
+   "rank": 61
+  }
+ ]
+}

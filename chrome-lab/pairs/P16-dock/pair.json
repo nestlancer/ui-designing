@@ -1,0 +1,14 @@
+{
+ "id": "P16",
+ "name": "Crew Deck",
+ "skin": "elevated",
+ "header": "56px slim bar · links+compact pill on desktop · 5-tab bottom dock on mobile",
+ "footer": "compact: mark + blurb + chip row with one teal CTA chip",
+ "signature_motion": "dock-press (active tab presses down with a teal dot rising 120 ms; footer chips press identically)",
+ "references": [
+  "microsoft.com",
+  "figma.com"
+ ],
+ "dna": "App-furniture minimal: a slim utility bar up top, a thumb-reachable tab dock at the bottom on mobile — and the footer compresses to the same furniture scale with one pinned CTA.",
+ "axis": "A slim full-bleed bars · B bottom tabs (mobile) · C static · D elevated · E compact pill + dock CTA"
+}

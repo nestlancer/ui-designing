@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P18 Meter — header</title>
+<script>
+(function(){try{var p=new URLSearchParams(location.search).get('theme');
+if(p!=='dark'&&p!=='light')p=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',p);}catch(e){}})();
+</script><script>
+if(new URLSearchParams(location.search).has('frame'))
+  document.documentElement.classList.add('is-framed');
+</script>
+<style>
+:root{
+  --bg:#f9fbfc; --surface:#ffffff; --surface-2:#f4f8f9; --tint:#edf4f6; --mint:#eef7f5;
+  --mesh-1:#d8e8e9; --mesh-2:#daeaeb;
+  --ink:#0a2543; --ink-2:#123a5e; --body:#4a5c6e; --muted:#5f7080; --line:#e3ebe9;
+  --teal:#24877f; --teal-hover:#1c6f68; --teal-soft:#d9ece9; --glow:#3fb8ab; --live:#22a06b;
+  --btn:#1f7a73;                 /* CTA fill: measured teal nudged so white 15px/600 text passes AA */
+  --band:#0a2543; --band-text:#e8eef4; --band-body:#b9c6d0; --band-line:rgba(255,255,255,.12);
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px; --card:14px; --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+}
+[data-theme="dark"]{            /* derived, never invented */
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;
+  --band:#06111a; --shadow:0 8px 28px rgba(0,0,0,.45);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 16px/1.55 var(--font);color:var(--body);background:var(--bg)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+ul{margin:0;padding:0;list-style:none}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media(min-width:1024px){.container{padding-inline:32px}}
+/* Buttons — the shared CTA vocabulary; pairs restyle shape, never hue */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;
+  border:0;border-radius:var(--pill);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out,transform .18s ease-out}
+.btn--primary{background:var(--btn);color:#fff}
+.btn--primary:hover{background:var(--teal-hover)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn--ghost:hover{border-color:var(--muted)}
+/* Mono eyebrow — the 11px uppercase label from the brand screenshots */
+.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* Theme swap for the logo: two <img> siblings, CSS decides which shows */
+.brand img{height:32px;width:auto}
+.brand__dark{display:none}
+[data-theme="dark"] .brand__light{display:none}
+[data-theme="dark"] .brand__dark{display:inline-block}
+.skip-link{position:absolute;left:16px;top:-64px;z-index:200;background:var(--surface);color:var(--ink);
+  padding:10px 16px;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow);
+  font:600 14px/1 var(--font);text-decoration:none;transition:top .12s ease-out}
+.skip-link:focus-visible{top:12px}
+
+.nav{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--line)}
+.nav__row{display:flex;align-items:center;gap:12px;height:64px}
+.brand img{height:30px}
+.nav__list{display:none}
+.nav__link{font:500 14px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 11px;border-radius:var(--chip)}
+.nav__link:hover,.nav__link[aria-current]{color:var(--teal-hover)}
+.actions{display:none;align-items:center;gap:8px;margin-left:auto}
+.icon-btn{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:0;background:transparent;color:var(--ink);cursor:pointer;border-radius:var(--pill)}
+.signin{font:500 14px/1 var(--font);color:var(--ink);text-decoration:none;padding:10px 6px}
+/* the reading line — transform only, no layout cost */
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;overflow:hidden}
+.progress__fill{display:block;height:100%;background:var(--btn);transform:scaleX(0);transform-origin:left}
+.nav{position:sticky}
+@media(min-width:1024px){.nav__row{height:72px}.nav__list{display:flex}.actions{display:flex}}
+.nav__toggle{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;margin-left:auto;border:0;background:transparent;color:var(--ink);cursor:pointer}
+.nav__panel{position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow);padding:6px 20px 14px}
+.nav__panel[hidden]{display:none}
+.nav__panel a{display:block;padding:13px 2px;font:500 15px/1 var(--font);color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+@media(min-width:1024px){.nav__toggle,.nav__panel{display:none!important}}
+.sample__hero{text-align:center;padding:88px 20px 120px}
+.sample__hero .eyebrow{margin-bottom:14px}
+.sample__hero h1{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.02em;color:var(--ink);margin:0 auto;max-width:16ch}
+.sample__blurb{max-width:52ch;margin:18px auto 28px;font-size:16px}
+.sample__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.page-note{text-align:center;color:var(--muted);font-size:13px;padding:18px 20px 40px}
+.page-note code{font-family:var(--mono)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" role="banner"><div class="container nav__row">
+  <a class="brand" href="/" aria-label="Nestlancer — home"><img class="brand__light" src="../../assets/logo-full-light.svg" alt="Nestlancer" width="116" height="32">
+<img class="brand__dark" src="../../assets/logo-full-dark.svg" alt="" width="116" height="32" aria-hidden="true"></a>
+  <nav aria-label="Primary"><ul class="nav__list"><ul class="nav__list"><li><a class="nav__link" href="/product" aria-current="page">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul></ul></nav>
+  <div class="actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13.2A8.1 8.1 0 0 1 10.8 4 8.1 8.1 0 1 0 20 13.2Z"/></svg></button>
+    <a class="signin" href="/login">Sign in</a>
+    <a class="btn btn--primary" href="/contact" style="min-height:40px;padding:10px 18px">Start a project</a>
+  </div>
+  <button class="nav__toggle" id="menuBtn" aria-label="Menu" aria-controls="panel" aria-expanded="false"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h11"/></svg></button>
+</div>
+<div class="nav__panel" id="panel" hidden><ul class="nav__list"><li><a class="nav__link" href="/product" aria-current="page">Product</a></li><li><a class="nav__link" href="/portfolio">Portfolio</a></li><li><a class="nav__link" href="/blog">Blog</a></li><li><a class="nav__link" href="/about">About</a></li><li><a class="nav__link" href="/pricing">Pricing</a></li><li><a class="nav__link" href="/services">Services</a></li><li><a class="nav__link" href="/contact">Contact</a></li></ul><a href="/login">Sign in</a></div>
+<div class="progress" aria-hidden="true"><span class="progress__fill" id="pf"></span></div>
+</header>
+<main class="sample" id="main">
+  <section class="sample__hero">
+    <p class="eyebrow">FIG · WORK</p>
+    <h1>Ready to ship with clarity?</h1>
+    <p class="sample__blurb">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
+    <div class="sample__actions">
+      <a class="btn btn--primary" href="/contact">Start a project</a>
+      <a class="btn btn--ghost" href="/login">Preview the portal</a>
+    </div>
+  </section>
+</main>
+<p class="page-note">Standalone demo — open <code>index.html</code> in this folder for header and footer together.</p>
+<script>
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next)});
+</script>
+<script>
+function disclosure(btn,panel,{closeOnEsc=true,overlay=null}={}){
+  const set=o=>{btn.setAttribute('aria-expanded',o);panel.hidden=!o;document.documentElement.classList.toggle('is-locked',o&&!!overlay)};
+  set(false);
+  btn.addEventListener('click',()=>set(btn.getAttribute('aria-expanded')!=='true'));
+  if(closeOnEsc)document.addEventListener('keydown',e=>{ // Esc closes from anywhere, focus returns to the trigger
+    if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus()}});
+  if(overlay)overlay.addEventListener('click',()=>set(false));
+  return set;
+}
+</script>
+<script>
+(function(){const bar=document.querySelector('.progress__fill');
+addEventListener('scroll',()=>{const d=document.documentElement,p=d.scrollTop/(d.scrollHeight-d.clientHeight);
+  bar.style.transform='scaleX('+p+')'},{passive:true})})();
+</script>
+<script>
+disclosure(document.getElementById('menuBtn'),document.getElementById('panel'));
+</script>
+</body>
+</html>

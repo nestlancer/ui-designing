@@ -1,0 +1,14 @@
+{
+ "id": "P05",
+ "name": "Hearth",
+ "skin": "solid",
+ "header": "logo dead-centre · 4 links left · 3 links + toggle/sign-in/pill right",
+ "footer": "centred mark, 7-link row, blurb, round socials, legal",
+ "signature_motion": "fade-bloom (links bloom from the centre: opacity + 1 px settle, 160 ms)",
+ "references": [
+  "stripe.com",
+  "pentagram.com"
+ ],
+ "dna": "Everything gathers around the nest — logo centred in the bar and in the footer, hairline symmetry, teal only on the pill.",
+ "axis": "A centred · B inline split around centre · C static · D solid · E centred pill pair"
+}
