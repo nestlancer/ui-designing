@@ -1,0 +1,13 @@
+{
+  "id": "P06",
+  "name": "Editorial",
+  "skin": "editorial",
+  "header": "Heavy ink top rule, big logo, small mono dateline, nav row ruled above and below with hairline dividers; text-only CTA.",
+  "footer": "Same heavy ink rule on top, columns divided by hairlines, ruled legal row.",
+  "signature_motion": "Links thicken a 2 px underline from the baseline (140 ms); CTA is plain text with an arrow that slides 4 px",
+  "references": [
+    "economist.com",
+    "pentagram.com"
+  ],
+  "dna": "No filled shapes anywhere — only a 4 px ink rule, 1 px hairlines and typography; the CTA is a text link with an arrow in both halves."
+}

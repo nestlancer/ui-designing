@@ -1,0 +1,13 @@
+{
+  "id": "P18",
+  "name": "Scroll progress",
+  "skin": "solid",
+  "header": "Sticky solid bar with a 2 px teal reading-progress line along its bottom edge and a FIG · PORTAL label.",
+  "footer": "A proof rail (₹4,28,500 · ₹4.2L · Payouts cleared 1/3) with a teal rule that draws in, above compact columns.",
+  "signature_motion": "A 2 px teal line scrubs left→right with scroll (linear, no easing); footer figures count up once in 700 ms",
+  "references": [
+    "medium.com",
+    "theverge.com"
+  ],
+  "dna": "Teal is spent as a single 2 px line that measures something — reading progress at the top, the proof rule at the bottom — on flat solid surfaces with mono labels."
+}

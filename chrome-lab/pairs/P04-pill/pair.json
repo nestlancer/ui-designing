@@ -1,0 +1,13 @@
+{
+  "id": "P04",
+  "name": "Floating pill",
+  "skin": "elevated",
+  "header": "Detached floating pill, inset 16 px, soft shadow, no hairlines; sticks as you scroll.",
+  "footer": "Detached floating card with the same inset, radius and shadow.",
+  "signature_motion": "Pill lifts 1 px with a deeper shadow on hover; footer links nudge 3 px right (200 ms)",
+  "references": [
+    "raycast.com",
+    "stripe.com"
+  ],
+  "dna": "Both halves are floating white shapes inset 16 px from the viewport on a mint wash — pill on top, rounded card on the bottom, same shadow."
+}

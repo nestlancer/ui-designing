@@ -1,0 +1,13 @@
+{
+  "id": "P15",
+  "name": "Side drawer",
+  "skin": "solid",
+  "header": "Logo, Sign in, CTA and a burger; the burger opens a right drawer with accordion sections, scrim, focus trap and Esc.",
+  "footer": "Accordion columns built from the drawer’s own <details> pattern; always open on desktop, collapsible on mobile.",
+  "signature_motion": "Drawer slides in from the right in 280 ms with a fading scrim; accordion chevrons rotate 180° (200 ms)",
+  "references": [
+    "gov.uk",
+    "ikea.com"
+  ],
+  "dna": "Accordions are the structure of both halves — the drawer’s Product / Company / Legal sections reappear as the footer’s columns with the same summary row and chevron."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "P11",
+  "name": "Segmented",
+  "skin": "tint",
+  "header": "Nav is one segmented track with a sliding pill thumb that follows hover and focus.",
+  "footer": "Domain ticker (marquee) in the same track language, then a legal bar whose links are a mini segmented track.",
+  "signature_motion": "A pill thumb glides between links (220 ms, cubic-bezier .2,.8,.2,1); the footer ticker scrolls 40 s linear and pauses on hover",
+  "references": [
+    "vercel.com",
+    "linear.app"
+  ],
+  "dna": "The rounded “track” (surface-2 pill, 1 px hairline, white thumb) is the one component of both halves: nav in the header, legal links and ticker in the footer."
+}

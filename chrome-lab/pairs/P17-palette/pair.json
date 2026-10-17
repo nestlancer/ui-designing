@@ -1,0 +1,13 @@
+{
+  "id": "P17",
+  "name": "Command palette",
+  "skin": "glass",
+  "header": "Glass bar with a “Search… ⌘K” pill; ⌘K / Ctrl K opens a keyboard-driven palette that is also the mobile navigation.",
+  "footer": "Glass card on a mint wash with live status pills (Intake open, Client portal · live) and a ⌘K hint that opens the same palette.",
+  "signature_motion": "Palette scales in from 97 % with a 180 ms fade; the status dot pulses every 2.4 s",
+  "references": [
+    "linear.app",
+    "clerk.com"
+  ],
+  "dna": "Glass surfaces and the ⌘K keycap are shared: the header search pill and the footer hint are the same control, and status pills use the same dot."
+}

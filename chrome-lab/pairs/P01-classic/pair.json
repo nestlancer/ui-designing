@@ -1,0 +1,13 @@
+{
+  "id": "P01",
+  "name": "Classic",
+  "skin": "solid",
+  "header": "Logo left, 7 inline links, theme toggle, Sign in, teal pill; hairline underneath (the repo baseline).",
+  "footer": "Brand + blurb and three link columns on the same 1200 px grid, hairline, legal row.",
+  "signature_motion": "Teal underline draws left→right in 180 ms on every link (header and footer)",
+  "references": [
+    "nytimes.com",
+    "stripe.com"
+  ],
+  "dna": "Same 1200 px container, 1 px hairlines and the same sliding teal underline on links — the footer is the header’s row stretched into columns."
+}

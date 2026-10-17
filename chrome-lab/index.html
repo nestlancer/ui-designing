@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Nestlancer — 20 header + footer pairs</title>
+<script>(()=>{try{const t=new URLSearchParams(location.search).get('theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}catch(e){}})();</script>
+<style>
+:root{--bg:#f9fbfc;--surface:#fff;--ink:#0a2543;--body:#4a5c6e;--muted:#5f7080;--line:#e3ebe9;--teal:#24877f;--btn:#1f7a73;--mint:#eef7f5;--font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"IBM Plex Mono",Menlo,Consolas,monospace;color-scheme:light}
+[data-theme="dark"]{--bg:#0b1720;--surface:#0f1e29;--ink:#e8eef4;--body:#b9c6d0;--muted:#8aa0b3;--line:rgba(255,255,255,.1);--mint:#10272a;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 15px/1.5 var(--font);color:var(--body);background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.top{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:16px 24px;background:var(--surface);border-bottom:1px solid var(--line)}
+.top h1{margin:0;font-size:18px;color:var(--ink);letter-spacing:-.01em}
+.top p{margin:0;font-size:13px;color:var(--muted)}
+.top__sw{margin-left:auto;display:inline-flex;padding:3px;border:1px solid var(--line);border-radius:999px}
+.top__sw button{min-height:32px;padding:0 14px;border:0;border-radius:999px;background:none;color:var(--body);font:600 13px/1 var(--font);cursor:pointer}
+.top__sw button[aria-pressed="true"]{background:var(--btn);color:#fff}
+.grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fill,minmax(min(100%,560px),1fr));max-width:1560px;margin:0 auto;padding:28px 24px 64px}
+.card{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.card__top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 18px}
+.card h2{margin:0;font-size:16px;color:var(--ink)}
+.card h2 span{margin-right:6px;font:500 12px/1 var(--mono);letter-spacing:.1em;color:var(--muted)}
+.card__skin{margin:0;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.frame{position:relative;overflow:hidden;border-top:1px solid var(--line);height:calc(var(--fh,200px) * var(--s,.4))}
+.frame iframe{position:absolute;left:0;top:0;width:1440px;height:var(--fh,200px);border:0;transform:scale(var(--s,.4));transform-origin:0 0;background:var(--bg)}
+.card__dna{margin:0;padding:12px 18px 4px;font-size:13px}
+.card__links{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;padding:6px 18px 16px;font:500 13px/1.4 var(--font)}
+.card__links a{color:var(--ink);text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>Nestlancer · 20 header + footer pairs</h1>
+  <p>Each card is one pair — header on top, its matching footer below. Open a pair to scroll, resize and use the menus.</p>
+  <div class="top__sw" role="group" aria-label="Theme"><button type="button" data-t="light" aria-pressed="true">Light</button><button type="button" data-t="dark" aria-pressed="false">Dark</button></div>
+</div>
+<main class="grid">
+    <article class="card" id="P01">
+      <header class="card__top">
+        <h2><span>P01</span> Classic</h2>
+        <p class="card__skin">solid</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P01 header" loading="lazy" data-src="pairs/P01-classic/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P01 footer" loading="lazy" data-src="pairs/P01-classic/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Same 1200 px container, 1 px hairlines and the same sliding teal underline on links — the footer is the header’s row stretched into columns.</p>
+      <p class="card__links"><a href="pairs/P01-classic/index.html">Open pair</a><a href="pairs/P01-classic/header.html">header.html</a><a href="pairs/P01-classic/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P02">
+      <header class="card__top">
+        <h2><span>P02</span> Glass</h2>
+        <p class="card__skin">glass</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P02 header" loading="lazy" data-src="pairs/P02-glass/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P02 footer" loading="lazy" data-src="pairs/P02-glass/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Translucent surface + 14 px blur + hairline on top of the mesh wash, pill-shaped hovers in both halves.</p>
+      <p class="card__links"><a href="pairs/P02-glass/index.html">Open pair</a><a href="pairs/P02-glass/header.html">header.html</a><a href="pairs/P02-glass/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P03">
+      <header class="card__top">
+        <h2><span>P03</span> Ink band</h2>
+        <p class="card__skin">ink</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P03 header" loading="lazy" data-src="pairs/P03-ink/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P03 footer" loading="lazy" data-src="pairs/P03-ink/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">The navy strip with teal underline, status dot and INR/USD segment appears in both halves — header opens the page with it, footer closes with it.</p>
+      <p class="card__links"><a href="pairs/P03-ink/index.html">Open pair</a><a href="pairs/P03-ink/header.html">header.html</a><a href="pairs/P03-ink/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P04">
+      <header class="card__top">
+        <h2><span>P04</span> Floating pill</h2>
+        <p class="card__skin">elevated</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P04 header" loading="lazy" data-src="pairs/P04-pill/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P04 footer" loading="lazy" data-src="pairs/P04-pill/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Both halves are floating white shapes inset 16 px from the viewport on a mint wash — pill on top, rounded card on the bottom, same shadow.</p>
+      <p class="card__links"><a href="pairs/P04-pill/index.html">Open pair</a><a href="pairs/P04-pill/header.html">header.html</a><a href="pairs/P04-pill/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P05">
+      <header class="card__top">
+        <h2><span>P05</span> Centered</h2>
+        <p class="card__skin">solid</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P05 header" loading="lazy" data-src="pairs/P05-centered/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P05 footer" loading="lazy" data-src="pairs/P05-centered/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Everything sits on the centre axis; links are 12 px uppercase with .1em tracking and a dot hover in both halves.</p>
+      <p class="card__links"><a href="pairs/P05-centered/index.html">Open pair</a><a href="pairs/P05-centered/header.html">header.html</a><a href="pairs/P05-centered/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P06">
+      <header class="card__top">
+        <h2><span>P06</span> Editorial</h2>
+        <p class="card__skin">editorial</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P06 header" loading="lazy" data-src="pairs/P06-editorial/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P06 footer" loading="lazy" data-src="pairs/P06-editorial/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">No filled shapes anywhere — only a 4 px ink rule, 1 px hairlines and typography; the CTA is a text link with an arrow in both halves.</p>
+      <p class="card__links"><a href="pairs/P06-editorial/index.html">Open pair</a><a href="pairs/P06-editorial/header.html">header.html</a><a href="pairs/P06-editorial/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P07">
+      <header class="card__top">
+        <h2><span>P07</span> Announcement</h2>
+        <p class="card__skin">tint</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P07 header" loading="lazy" data-src="pairs/P07-announce/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P07 footer" loading="lazy" data-src="pairs/P07-announce/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Teal strip + mint tint bracket the page: the announcement bar opens it and the teal legal strip closes it; both carry “Intake open”.</p>
+      <p class="card__links"><a href="pairs/P07-announce/index.html">Open pair</a><a href="pairs/P07-announce/header.html">header.html</a><a href="pairs/P07-announce/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P08">
+      <header class="card__top">
+        <h2><span>P08</span> Mega menu</h2>
+        <p class="card__skin">solid</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P08 header" loading="lazy" data-src="pairs/P08-mega/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P08 footer" loading="lazy" data-src="pairs/P08-mega/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">The same three icon-chip tiles — Fixed-price quotes, Razorpay milestones, Live Project Hub — are the mega panel in the header and the lead row in the footer.</p>
+      <p class="card__links"><a href="pairs/P08-mega/index.html">Open pair</a><a href="pairs/P08-mega/header.html">header.html</a><a href="pairs/P08-mega/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P09">
+      <header class="card__top">
+        <h2><span>P09</span> Search-forward</h2>
+        <p class="card__skin">tint</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P09 header" loading="lazy" data-src="pairs/P09-search/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P09 footer" loading="lazy" data-src="pairs/P09-search/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">One 52 px pill field with a teal button is the hero element of both halves — search at the top, email capture at the bottom — on the same mint tint.</p>
+      <p class="card__links"><a href="pairs/P09-search/index.html">Open pair</a><a href="pairs/P09-search/header.html">header.html</a><a href="pairs/P09-search/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P10">
+      <header class="card__top">
+        <h2><span>P10</span> Auth minimal</h2>
+        <p class="card__skin">editorial</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P10 header" loading="lazy" data-src="pairs/P10-auth/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P10 footer" loading="lazy" data-src="pairs/P10-auth/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Both halves are a single transparent row on the canvas with nothing but the logo and quiet text — chrome that disappears behind a form.</p>
+      <p class="card__links"><a href="pairs/P10-auth/index.html">Open pair</a><a href="pairs/P10-auth/header.html">header.html</a><a href="pairs/P10-auth/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P11">
+      <header class="card__top">
+        <h2><span>P11</span> Segmented</h2>
+        <p class="card__skin">tint</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P11 header" loading="lazy" data-src="pairs/P11-segmented/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P11 footer" loading="lazy" data-src="pairs/P11-segmented/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">The rounded “track” (surface-2 pill, 1 px hairline, white thumb) is the one component of both halves: nav in the header, legal links and ticker in the footer.</p>
+      <p class="card__links"><a href="pairs/P11-segmented/index.html">Open pair</a><a href="pairs/P11-segmented/header.html">header.html</a><a href="pairs/P11-segmented/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P12">
+      <header class="card__top">
+        <h2><span>P12</span> Dark native</h2>
+        <p class="card__skin">invert</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P12 header" loading="lazy" data-src="pairs/P12-dark/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P12 footer" loading="lazy" data-src="pairs/P12-dark/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">The page is inverted to the band navy in both halves, framed by the same teal-glow gradient hairline and the same centre-growing glow hover.</p>
+      <p class="card__links"><a href="pairs/P12-dark/index.html">Open pair</a><a href="pairs/P12-dark/header.html">header.html</a><a href="pairs/P12-dark/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P13">
+      <header class="card__top">
+        <h2><span>P13</span> Mesh over hero</h2>
+        <p class="card__skin">mesh</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P13 header" loading="lazy" data-src="pairs/P13-mesh/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P13 footer" loading="lazy" data-src="pairs/P13-mesh/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">One mesh gradient (mesh-1 → mesh-2) is the hero behind the header and the ground of the footer — the page starts and ends in the same wash.</p>
+      <p class="card__links"><a href="pairs/P13-mesh/index.html">Open pair</a><a href="pairs/P13-mesh/header.html">header.html</a><a href="pairs/P13-mesh/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P14">
+      <header class="card__top">
+        <h2><span>P14</span> Fullscreen overlay</h2>
+        <p class="card__skin">editorial</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P14 header" loading="lazy" data-src="pairs/P14-overlay/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P14 footer" loading="lazy" data-src="pairs/P14-overlay/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Scale is the system: giant type in the overlay, a giant logo in the footer, with nothing but hairlines around it.</p>
+      <p class="card__links"><a href="pairs/P14-overlay/index.html">Open pair</a><a href="pairs/P14-overlay/header.html">header.html</a><a href="pairs/P14-overlay/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P15">
+      <header class="card__top">
+        <h2><span>P15</span> Side drawer</h2>
+        <p class="card__skin">solid</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P15 header" loading="lazy" data-src="pairs/P15-drawer/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P15 footer" loading="lazy" data-src="pairs/P15-drawer/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Accordions are the structure of both halves — the drawer’s Product / Company / Legal sections reappear as the footer’s columns with the same summary row and chevron.</p>
+      <p class="card__links"><a href="pairs/P15-drawer/index.html">Open pair</a><a href="pairs/P15-drawer/header.html">header.html</a><a href="pairs/P15-drawer/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P16">
+      <header class="card__top">
+        <h2><span>P16</span> Bottom dock</h2>
+        <p class="card__skin">elevated</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P16 header" loading="lazy" data-src="pairs/P16-dock/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P16 footer" loading="lazy" data-src="pairs/P16-dock/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Both halves are thumb-zone chrome: raised white bars with an upward shadow, 56 px targets and the same teal indicator — the footer strip sits on top of the dock.</p>
+      <p class="card__links"><a href="pairs/P16-dock/index.html">Open pair</a><a href="pairs/P16-dock/header.html">header.html</a><a href="pairs/P16-dock/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P17">
+      <header class="card__top">
+        <h2><span>P17</span> Command palette</h2>
+        <p class="card__skin">glass</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P17 header" loading="lazy" data-src="pairs/P17-palette/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P17 footer" loading="lazy" data-src="pairs/P17-palette/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Glass surfaces and the ⌘K keycap are shared: the header search pill and the footer hint are the same control, and status pills use the same dot.</p>
+      <p class="card__links"><a href="pairs/P17-palette/index.html">Open pair</a><a href="pairs/P17-palette/header.html">header.html</a><a href="pairs/P17-palette/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P18">
+      <header class="card__top">
+        <h2><span>P18</span> Scroll progress</h2>
+        <p class="card__skin">solid</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P18 header" loading="lazy" data-src="pairs/P18-progress/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P18 footer" loading="lazy" data-src="pairs/P18-progress/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Teal is spent as a single 2 px line that measures something — reading progress at the top, the proof rule at the bottom — on flat solid surfaces with mono labels.</p>
+      <p class="card__links"><a href="pairs/P18-progress/index.html">Open pair</a><a href="pairs/P18-progress/header.html">header.html</a><a href="pairs/P18-progress/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P19">
+      <header class="card__top">
+        <h2><span>P19</span> Two-tier locale</h2>
+        <p class="card__skin">dual</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P19 header" loading="lazy" data-src="pairs/P19-locale/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P19 footer" loading="lazy" data-src="pairs/P19-locale/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">Dual surface: the grey utility tier with the language select and the INR / USD segment sits above the main bar in the header and below the columns in the footer.</p>
+      <p class="card__links"><a href="pairs/P19-locale/index.html">Open pair</a><a href="pairs/P19-locale/header.html">header.html</a><a href="pairs/P19-locale/footer.html">footer.html</a></p>
+    </article>
+
+    <article class="card" id="P20">
+      <header class="card__top">
+        <h2><span>P20</span> Split 50/50</h2>
+        <p class="card__skin">tint</p>
+      </header>
+      <div class="frame frame--h"><iframe title="P20 header" loading="lazy" data-src="pairs/P20-split/header.html" tabindex="-1"></iframe></div>
+      <div class="frame frame--f"><iframe title="P20 footer" loading="lazy" data-src="pairs/P20-split/footer.html" tabindex="-1"></iframe></div>
+      <p class="card__dna">The page is cut down the middle in both halves — surface | tint — and the same pair of equal-width buttons lives on the tint side of each.</p>
+      <p class="card__links"><a href="pairs/P20-split/index.html">Open pair</a><a href="pairs/P20-split/header.html">header.html</a><a href="pairs/P20-split/footer.html">footer.html</a></p>
+    </article>
+</main>
+<script>
+(function(){
+  var theme=document.documentElement.dataset.theme,frames=[].slice.call(document.querySelectorAll('iframe'));
+  function scale(){frames.forEach(function(f){var w=f.parentNode.clientWidth;f.parentNode.style.setProperty('--s',w/1440);});}
+  function src(f){return f.dataset.src+'?frame&theme='+theme;}
+  function size(f){try{var h=f.contentDocument.documentElement.scrollHeight;f.parentNode.style.setProperty('--fh',Math.max(h,90)+'px');}catch(e){}}
+  frames.forEach(function(f){f.addEventListener('load',function(){size(f);});});
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var f=e.target;if(!f.src||f.dataset.t!==theme){f.dataset.t=theme;f.src=src(f);}io.unobserve(f);}});},{rootMargin:'600px'}):null;
+  function load(){frames.forEach(function(f){f.removeAttribute('src');f.dataset.t='';if(io)io.observe(f);else f.src=src(f);});}
+  function set(t){theme=t;document.documentElement.dataset.theme=t;document.querySelectorAll('[data-t]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===t);});load();}
+  document.querySelectorAll('[data-t]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===theme);b.addEventListener('click',function(){set(b.dataset.t);});});
+  addEventListener('resize',scale);scale();load();
+})();
+</script>
+</body>
+</html>

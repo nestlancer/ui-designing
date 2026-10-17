@@ -1,1084 +1,225 @@
-# Nestlancer Header & Footer Lab — Master Agent Prompt (v3)
+# Nestlancer Header & Footer Lab — Master Agent Prompt (v4 · "20 matched pairs")
 
-> **Why this file exists:** asking an agent for “100 different headers and 100 different footers” produces **100 recolours of one template**. The failure is always the same — URLs get listed as inspiration but never fetched, motion gets described in adjectives instead of numbers, and variants differ only in colour. This prompt makes **live research mandatory and countable** (**≥200 world-top ranked sites** captured — not random blogs), forces a **written Reference Contract before any CSS**, defines “different type” as a **measurable multi-axis test**, and ends with **programmatic QA gates** that fail recolours automatically.
+> **What changed in v4 (2026-10-17) and why.** v1–v3 asked for **100 headers + 100 footers** backed by **200 captured sites**, 34 motion primitives, a Playwright harness, 14 QA gates and a generator with megatemplates. The result was *too many things*: 200 files nobody could review, headers and footers designed in two separate passes (so a header and its footer looked like strangers), an invented bird glyph + serif wordmark instead of the real Nestlancer logo, and no hand-written feel compared to `example-header.html` / `example-footer.html`.
 >
-> **Pipeline:** `header-footer-prompt.md` (this file) → `research/top-200.json` (ranked list) → `research/sites.json` (**≥200 captured**) → `research/pattern-index.json` + `research/motion-index.json` → **100 headers (`H001–H100`) + 100 footers (`F001–F100`)** → gallery + `QA-REPORT.md`.
+> v4 fixes that with five rules:
+> 1. **20 headers + 20 footers = 20 PAIRS.** Header `P07` and footer `P07` are designed together as one system and must be unmistakably the same family.
+> 2. **The real logo, always.** Use `logo-full-light.svg` / `logo-full-dark.svg` from the repo root. Never redraw, trace or "recreate" it.
+> 3. **Follow `example-header.html` and `example-footer.html` for craft style** — small, readable, self-contained, accessible HTML + CSS, ~1 screen of CSS per file. Not megatemplates.
+> 4. **Real icons only** — one consistent inline-SVG icon set (stroke, `currentColor`), no emoji, no icon-font CDN.
+> 5. **Light research, heavy design.** Look at ~20 real sites (one reference per pair), write one line each, then spend the effort on craft.
 >
-> **Where to run:** [Arena Agent Mode](https://arena.ai/agent) (also works in Cursor / Claude Code). Paste everything below the line.
->
-> **v2 (2026-10-16) — the browser-serve fix.** A v1 run shipped files that were “correct on disk” but **rendered wrong in a real browser** when served with `python3 -m http.server`: the locked fonts never loaded (no `<link>` anywhere → Georgia/system-ui fallbacks), the demo page around each chrome was unstyled text flush to the viewport, gallery iframes cropped footers to 240 px, dark theme flashed light first, 13 bottom-bar/sticky-CTA headers carried a dead `[data-chrome]@media` rule and 5 curtain footers a dead body rule — all from a comment glued onto a selector head in the CSS scoper; and on mobile the burger sat next to the wordmark instead of the far right. **v2 adds §0C (Browser-Serve Contract), gate G13, `runtime/demo.css`, real font loading with offline fallbacks, theme-boot before first paint, and mobile-bar normalisation.** §5.6’s “zero external requests” is amended to *no externals beyond the one locked Google Fonts stylesheet*.
->
-> **v3 (2026-10-16) — the visual-skin + owned-CSS fix.** A v2 run passed all 13 gates and still looked like **one Nestlancer bar pasted 200 times**: uniqueness was only structural (A1–A6), every `style.css` was a **megatemplate** (≈75 class selectors for ~23 classes in the HTML — drawers, megas, wizards, rails… all dead weight), surface/colour composition never varied inside the locked palette, and agents treated “no Bootstrap / no second hue” as “leave chrome visually blank / shared.” **v3 adds axis A7 (Surface skin), §5.8 CSS Ownership Contract, gate G14, an explicit ban on Bootstrap/Tailwind/framework CDNs with a requirement that each variant ships complete self-owned Nestlancer CSS**, and a gallery “glance test” that fails when two families are indistinguishable at 1440 px.
->
-> **v3 research floor — world’s top 200 (not random).** Prior runs treated “≥100 sites” as a soft list of remembered SaaS URLs / pattern priors. **Phase R now requires a live ranking fetch** (Similarweb / Semrush / Cloudflare Radar / Wikipedia most-visited) → `research/top-200.json` → **≥200 ranked captures**. Random blogs, obscure pads, and unranked inventing are Research Gate fails.
-
----
+> **Where to run:** [Arena Agent Mode](https://arena.ai/agent) (also Cursor / Claude Code). Paste everything inside the fence below.
 
 ````
 # ============================================================
-# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v3)
-# Mission: research the WORLD'S TOP 200 ranked sites (not random) →
-#          build 100 unique headers + 100 unique footers for Nestlancer
-# Data/design truth: Nestlancer-public-screenshots/public/*.webp
-# Runtime: Arena.ai Agent Mode (user workspace = downloadable)
-# v2: §0C browser-serve + G13 (must RENDER over python http.server)
-# v3: A7 surface skin + §5.8 owned CSS + G14 (must LOOK distinct;
-#     no megatemplate CSS; no Bootstrap/Tailwind CDN)
+# NESTLANCER HEADER & FOOTER LAB — MASTER AGENT PROMPT (v4)
+# Mission: build 20 MATCHED PAIRS (20 headers + 20 footers).
+#          Pair Pnn = header + footer of the SAME design family.
+# Brand truth : Nestlancer-public-screenshots/public/*.webp
+#               logo-full-light.svg, logo-full-dark.svg (real logo)
+# Craft truth : example-header.html, example-footer.html
 # ============================================================
 
-## 0A) ARENA AGENT MODE — USER WORKSPACE DELIVERY (CRITICAL)
+## 0) READ FIRST — in this order, before writing anything
+1. `example-header.html` and `example-footer.html` (repo root). Note what makes them good:
+   - ONE file each: `<style>` + markup (+ ~15 lines of `<script>` only where needed).
+   - CSS custom properties at the top; mobile-first; one `@media (min-width…)` block.
+   - BEM-ish class names (`navbar__link`, `footer-wave__heading`), short comments that explain *why*.
+   - Accessibility is built in: `aria-label`, `aria-controls`, `aria-expanded`, `:focus-visible`, real `<ul>/<li>`, `role="banner"` / `role="contentinfo"`.
+   - Nothing decorative that is not used. No dead CSS, no frameworks, no CDN.
+   Your output must **feel hand-written in that same spirit** — but styled with the Nestlancer brand (§2) instead of the examples' generic blue.
+2. `Nestlancer-public-screenshots/public/013-marketing-homepage.webp` (header + footer), `015-marketing-contact.webp` (short footer), `006-login.webp` (auth header). Crop and look at the header and footer regions at full size.
+3. `logo-full-light.svg`, `logo-full-dark.svg`, and (if present) `chrome-lab/assets/*` — the real logo + the extracted mark-only files.
 
-You are running in Arena Agent Mode. The user recovers files from the **session Workspace** (right panel → Download ZIP, or append `/download-workspace` to the chat URL). You also have a bash sandbox — that sandbox is often **isolated**. Work left only there is **GONE** when the turn ends.
-
-### The failure you must not cause
-1. Build all 200 variants under `/tmp`, scratch dirs, or a throwaway clone.
-2. Print “done — 100 headers + 100 footers shipped ✨” in chat.
-3. End the turn with the workspace panel empty or stale.
-4. User downloads ZIP → **no variants** → the entire run is wasted.
-
-### Hard rules (non-negotiable)
-1. **User Workspace is the source of truth.** Every deliverable must exist in the downloadable workspace tree before you claim completion.
-2. **Repo layout.** Work inside the cloned repo at the workspace root:
-   - `ui-designing/header-footer-prompt.md` ← this prompt (already present)
-   - `ui-designing/Nestlancer-public-screenshots/public/*.webp` ← design truth (17 files, read-only)
-   - `ui-designing/chrome-lab/**` ← **everything you create lands here**
-   - `ui-designing/research/**` ← capture artifacts
-3. **Sync after every batch of 10 variants.** Sandbox scratch is allowed for the capture harness only; every finished variant file must be written straight into the workspace tree.
-4. **After every batch and before “done” — print the Workspace Delivery Check** (template at the end of §0A).
-5. **Chat-only code dumps do NOT count as delivery.**
-6. Never delete or modify files under `Nestlancer-public-screenshots/`.
-
-### Workspace size budget (~128 MB) — chrome files are tiny, research is not
-| Item | Budget |
+## 1) SCOPE — deliberately small
+| Deliverable | Count |
 |---|---|
-| All 200 variants (`chrome-lab/headers|footers/**`) | **≤ 4 MB total** — each variant is 4 small text files |
-| Gallery + runtime + docs | ≤ 1 MB |
-| `research/raw/**` (cropped header/footer references) | **≤ 60 MB**, `.webp`, quality ≤ 70, and add to `.gitignore` |
-| `research/*.json` (`top-200.json` + sites/motion/pattern — Phase R deliverable) | ≤ 6 MB |
-| **Forbidden** | `node_modules/`, browser caches, full-page screenshots of 140 sites, duplicated repo copies, `.zip` blobs |
+| Headers | **exactly 20** (`P01`…`P20`) |
+| Footers | **exactly 20** (`P01`…`P20`) — one per header, same ID |
+| Gallery | **1** `chrome-lab/index.html` showing all 20 pairs (header over footer) |
+| Build script (optional) | `tools/build-pairs.mjs` + a few small modules in `tools/pairs/` (kit, pair definitions, gallery) that write the files below — `node tools/build-pairs.mjs` regenerates everything |
+| Research | **~20 sites** (one per pair) → `docs/RESEARCH-NOTES.md`, one line each |
 
-If you approach the cap: **keep the JSON research + all 200 variants**, and drop the raw image crops first. A run with 200 variants and no images is a **pass**; a run with 140 full-page screenshots and 31 variants is a **fail**.
+**Not wanted (v1–v3 bloat — do NOT recreate):** 100/100 variant sets, 200-site capture harness, `top-200.json`, motion-index / pattern-index JSON, 14-gate QA report, family × axis matrices, per-variant `meta.json` with 25 fields, shared megatemplate stylesheet scoped 100 times, Playwright capture tooling, font CDN `<link>`s.
 
-### Required end-of-turn block (print every time you stop)
+### File layout
 ```
-## WORKSPACE DELIVERY CHECK
-User workspace root: <path>
-Synced this turn: YES/NO
-Deliverable files (path — size):
-- ui-designing/chrome-lab/headers/H001/index.html — 3.1 KB
-- ui-designing/chrome-lab/headers/H001/style.css — 2.4 KB
-- ...
-Counts: headers <n>/100 · footers <n>/100 · families covered <n>/45
-Research: top-200 list YES/NO · sites captured <n>/200 · primitives <n>/30 · random/unranked URLs: 0
-QA: gates passed <n>/14 · variants flagged <n>
-Browser-serve (§0C): VERIFIED at localhost:<port> / NO-BROWSER-IN-SANDBOX (G13 static only)
-Visual-skin (§5.0 A7 / G14): FAMILY GLANCE PASS / FAIL · dead-CSS max <n>%
-Scratch-only leftovers cleaned: YES/NO
-Approx workspace use: <estimate> / 128 MB
-Download expectation: chrome-lab/ + research/top-200.json + research/*.json MUST appear in the Workspace panel / Download ZIP.
+chrome-lab/
+  index.html                      ← gallery: 20 pairs, light/dark switch
+  assets/
+    logo-full-light.svg  logo-full-dark.svg      ← copied byte-for-byte from repo root
+    logo-mark-light.svg  logo-mark-dark.svg      ← bird-in-nest only, cut from the real paths (never redrawn)
+  pairs/
+    P01-classic/
+      header.html      ← standalone page: header only  (like example-header.html)
+      footer.html      ← standalone page: footer only  (like example-footer.html)
+      index.html       ← header + sample content + footer together (the pair, as it ships)
+      pair.json        ← 8 fields max (§6)
+    P02-glass/ … P20-split/
 ```
+Every page uses **relative paths only** (`../../assets/logo-full-light.svg`) so it works from `python3 -m http.server`, from `file://`, and under any sub-path.
 
----
+## 2) BRAND — locked
+### 2.1 Logo & icons (the part earlier runs got wrong)
+- **Logo = the real files.** `logo-full-light.svg` (indigo `#272A7A` + teal `#16B6A5`) on light surfaces, `logo-full-dark.svg` (white + teal) on dark surfaces. Use `<img src="…" alt="Nestlancer">` with explicit `height` (24–40 px header, up to 120+ px for oversized-wordmark footers). Swap light/dark with `<picture>` + `prefers-color-scheme` or a `data-theme` rule.
+- **Mark-only** (bird-in-nest, no letters) for compact spots — mobile bars, auth headers, bottom docks: use `logo-mark-light.svg` / `logo-mark-dark.svg`. These are produced by *selecting* the bird/nest/teal-dot paths from the real SVG, never by redrawing.
+- **Forbidden:** inventing a leaf/bird glyph, typesetting "Nestlancer." in a serif as a fake logo, recolouring the logo to a new hue, stretching it, adding effects/outlines, placing it on a surface where it fails contrast (indigo on navy).
+- **Icons = one inline-SVG set** used in *both* header and footer of every pair: 24×24 viewBox, `fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"`, `aria-hidden="true" focusable="false"`; icon-only buttons carry `aria-label`. Glyphs in the set: `sun`, `moon`, `menu`, `close`, `search`, `arrow-right`, `chevron-down`, `mail`, `globe`, `check`, `external`, `linkedin`, `github`, `x`, plus `home`, `layers`, `pen`, `tag`, `send` (dock tabs), `user`, `shield`, `rupee`, `hub` (tiles / compliance line) (social marks as simple monochrome strokes — never a real brand-logo sprite). Targets ≥ 40 px (≥ 44 px on mobile). No emoji. No Font Awesome / icon-font CDN.
 
-## 0B) RESEARCH GATE — WORLD’S TOP 200 SITES BEFORE A SINGLE PIXEL (THIS IS THE WHOLE POINT)
-
-The user’s requirement is explicit: **search online for the world’s top 200 sites (authoritative traffic / brand rankings — not random URLs), capture their unique headers and footers and their animations, then build 100 new Nestlancer headers + 100 footers.**
-
-### What “world’s top 200” means (hard rule)
-1. **Compile the list first** into `research/top-200.json` **before** capture. Every entry must cite a **rank source** from §3.1.0 (Similarweb / Semrush / Cloudflare Radar / Wikipedia most-visited / category-leader proof).
-2. **≥ 200 unique hostnames** on that list. Prefer global traffic rank #1–#200; when a ranked domain is unsuitable for chrome research (NSFW, pure app-shell with no public marketing chrome, gambling, login-only), replace it with the **next suitable ranked domain** or a **documented category world-leader** — never a random blog.
-3. **Capture floor: ≥ 200** records in `research/sites.json` with `capture_failed: false`. Substitutes must still be ranked / world-famous (§3.1). Invented URLs and obscure personal sites = **gate FAIL**.
-4. **§3.2 recipe libraries** (CodePen, hover.css, Awwwards…) are for *animation how-to* only. They **do not count** toward the 200.
-
-You may **not** open a CSS file until this gate passes in User Workspace:
-
-| Gate artifact | Required content | Pass condition |
-|---|---|---|
-| `research/top-200.json` | 200 ranked hostnames + `rank_source` + `rank_or_tier` each (§3.1.0) | **exactly 200** unique hosts, zero unranked/random |
-| `research/sites.json` | one record per site (§3.4 schema) | **≥ 200** records with `capture_failed: false` |
-| `research/raw/<slug>/header.webp` + `footer.webp` | cropped real chrome | ≥ 200 each (or deliberate ranked-substitute list) |
-| `research/motion-index.json` | named animation primitives with **measured** duration/easing/trigger | **≥ 30** primitives |
-| `research/pattern-index.json` | clustered header + footer archetypes | **≥ 25 header archetypes, ≥ 20 footer archetypes** |
-| `docs/RESEARCH-NOTES.md` | 1-line insight + URL + rank cite per site | ≥ 200 lines |
-
-**Printed at the gate (and re-printed after every batch):**
-```
-## RESEARCH GATE
-Ranking sources fetched: <Similarweb|Semrush|Cloudflare|Wikipedia|…>
-top-200.json: 200/200 · unranked/random URLs: 0
-Attempted: <n>   Captured: <n>/200   Skipped (robots/bot-wall/paywall/NSFW): <n>
-Substitutes used (same tier / next ranked): <list>
-Bucket coverage: A<n> B<n> C<n> D<n> E<n> F<n> G<n> H<n> I<n> J<n> K<n> L<n>
-Motion primitives discovered: <n>   Header archetypes: <n>   Footer archetypes: <n>
-Gate status: PASS / FAIL
-```
-If `Captured < 200` → pull the **next suitable world-ranked** substitute (§3.1) and re-run capture. Do not proceed on a partial list. Do not invent records. Do not pad with random sites.
-
----
-
-## 0C) BROWSER-SERVE CONTRACT — THE PYTHON-SERVER TEST (RENDER, OR IT DIDN'T HAPPEN)
-
-The user's check is brutally simple and it is **non-negotiable**:
-
-```bash
-python3 -m http.server 8123          # run from the repo root
-# → http://localhost:8123/                          (redirects to chrome-lab/gallery/)
-# → http://localhost:8123/chrome-lab/headers/H001/  (any variant — same rule)
-# → http://localhost:8123/chrome-lab/gallery/       (all 200, filterable)
-```
-
-Everything visible there must be the **intended UI** — real fonts, styled demo page, whole footer
-thumbnails, correct theme, working mobile bar. Files that are “correct” in the repo but broken here
-are a **failed run**, exactly like files that never left the sandbox (§0A).
-
-### Hard rules
-1. **Serve from the repo root over any static server.** Every page and every asset reference uses
-   **relative paths only** (`../../tokens/tokens.css`, never `/chrome-lab/…`), so the lab also works
-   when hosted under a sub-path. A repo-root `index.html` redirects to the gallery.
-2. **The locked fonts must actually load.** `tokens.css` names Fraunces / Inter / IBM Plex Mono — with
-   no `<link>` the browser silently falls back to Georgia/system-ui and the whole design voice is lost.
-   Every `index.html` carries this exact head block (the **only** external request allowed in the lab —
-   see G7; per-variant `@font-face` is banned as CLS + duplication):
-   ```html
-   <meta name="color-scheme" content="light dark"/>
-   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"/>
-   <script>(()=>{try{const t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(_){}})();</script>
-   ```
-   The inline theme-boot script applies `?theme=` **before first paint** — no light-flash in gallery
-   iframes or mounted pages. The token fallback stacks stay, so pages still render offline (graceful
-   degradation, not the design target).
-3. **The demo page around the chrome is part of the deliverable.** Every variant page links
-   `chrome-lab/runtime/demo.css` *after* `chrome.css`. It styles the shell around the chrome — `main`,
-   the H1, the mount snippet (`pre` wraps/scrolls, never pushes the page sideways at 360 px), the axis
-   chips, the scroll placeholder blocks — and declares `color-scheme`. Mounting a variant into a real
-   page loads only tokens + chrome.css + style.css; **viewing** a variant in the lab must look finished
-   on its own at every §5.4 width.
-4. **The gallery must show the chrome, not crop it.** Header iframe ≈ 264 px, footer iframe ≈ 600 px
-   (`.tall`), `loading="lazy"`. The theme switch sets `data-theme` on the gallery’s own `<html>` too, so
-   the page follows the theme, not just the iframes.
-5. **Mobile chrome is a layout, not a collapse.** At ≤ 900 px the bar stays one flex row
-   (`display:flex;flex-wrap:nowrap` — grid A1 variants normalised), and the burger is ordered **after**
-   the actions (`order:3`) so it sits far right; fixed bottom bars add their height as body padding via
-   `@media (max-width:900px){body:has([data-chrome="<ID>"]){padding-bottom:80px}}`. At ≤ 600 px the bar
-   must fit 360 px: the theme toggle yields to space (`display:none`) — wordmark, CTA and burger stay
-   reachable; the bar never scrolls horizontally.
-6. **Comments never touch selector heads in generated CSS.** A comment preceding an at-rule/selector
-   used to be parsed into the selector head, producing dead rules like
-   `[data-chrome="H041"]@media (max-width:900px){…}` and `[data-chrome="F081"]body:has(…)`. The scoper
-   now strips comments **before** parsing; BASE rules emit as plain comment-free `body:has(…)`
-   statements. When writing CSS scopers/generators by hand, keep selectors, comments and at-rules
-   separable — then grep the output for `"]@media` and `]body:has` before shipping.
-7. **If the run environment has no browser:** say so, run gate **G13** (`node tools/qa.mjs`) as the
-   static stand-in, and hand the user the exact serve-and-look steps below. Never print
-   “browser-verified” on the strength of static checks.
-
-### Verification recipe (run before claiming “done”)
-1. `node tools/generate.mjs && node tools/qa.mjs` → **14/14 gates** (G13 serve + G14 skin / CSS ownership).
-2. `python3 -m http.server 8123` from the repo root → open `/` (gallery), any 3–5 variants, both
-   themes, at 1440 px and 390 px.
-3. Confirm with eyes, not vibes: Fraunces/Inter/Plex Mono actually rendered (not Georgia); demo shell
-   styled; footer pages reveal the footer within the first screenful at 1440; gallery footer
-   thumbnails whole; network tab shows **no 404s**; console shows **no errors**; no horizontal
-   scrollbar; burger at the far right opens the drawer; `Esc` closes it and focus returns;
-   **two different families must be distinguishable in under 2 seconds** in the gallery (G14 glance).
-
----
-
-## 0) FAILURE MODES YOU MUST NOT REPEAT
-
-| # | Failure | Why it happens | Fix in this prompt |
-|---|---|---|---|
-| 1 | Agent lists 100 random URLs, fetches none — or pads with obscure blogs | “inspiration” treated as optional; no ranking discipline | §0B + §3.1.0: **world’s top 200** via Similarweb/Semrush/etc., hard gate on `top-200.json` + `sites.json` |
-| 1b | Research set is “whatever the model remembered” instead of live world rankings | training recall ≠ current top sites | Must **WebSearch/WebFetch** ranking pages in-session and write `research/top-200.json` before capture |
-| 2 | 100 “variants” that are the same header in 100 hues | agent varies **raw hex** (1 axis) instead of **type** | §5.0 multi-axis uniqueness (A1–A7) + QA gate **G1** — note: composing locked tokens into different *skins* is required (A7), inventing new brand hues is still banned |
-| 3 | 30 variants built, 70 stubbed as “same as above” | context exhaustion unmanaged | §7 batching: 10 at a time, family order, never stub |
-| 4 | Motion = a paragraph of adjectives | no measurement instrument | §3.5 `getAnimations()` probe captures real ms/easing |
-| 5 | Brand drift — purple gradients, second accent, Inter-only voice | reference sites’ identity leaks in | §4 KEEP list + QA gate **G3** |
-| 6 | Deliverables exist only in the sandbox | isolated scratch tree | §0A sync gate + manifest |
-| 7 | Invented copy — fake clients, fake ₹ amounts, fake features | model fills gaps | §2.4 locked copy bank + gate **G8** |
-| 8 | Accessibility skipped (no focus ring, animations ignore reduced-motion) | a11y treated as polish | §5.3 + gates **G5/G6** |
-| 9 | Header breaks the page it drops into (CLS, overlap, z-index wars) | chrome built as a demo, not an integration | §5.6 budgets + gate **G7** |
-| 10 | Footer is an afterthought: one row, © only, 90 of them identical | effort spent on headers | 20 footer families with equal craft bar (§6.2) |
-| 11 | Files “correct” on disk but raw/broken in the browser: fallback fonts, unstyled demo page, cropped gallery iframes, light-flash on dark theme, dead CSS rules, burger stranded mid-bar | repo never actually **served + looked at**; QA gates static-only; CSS scoper glued a comment onto a selector | §0C browser-serve contract + gate **G13** + `runtime/demo.css` + real font loading + comment-safe scoping |
-| 12 | **Structure-unique but visually identical** — 200 variants pass the 6-axis test, yet every header is the same white bar + teal pill + hairline; footers share one surface recipe | uniqueness defined only as A1–A6; KEEP list misread as “never compose surfaces”; generators dump one megatemplate `style.css` onto every ID | **axis A7 Surface skin** + §5.8 CSS Ownership + gate **G14** glance test |
-| 13 | **Megatemplate CSS** — each `style.css` ships rules for mega/drawer/wizard/rail/overlay/… even when that HTML is absent (~70% dead selectors); variants look “unstyled / generic framework leftovers” | one shared CSS blob + `scopeCss(id)` instead of per-variant owned stylesheets | §5.8: emit **only** selectors for classes present in that variant’s HTML; dead-selector budget ≤ 15% |
-| 14 | **Missing chrome design mistaken for “no Bootstrap”** — agent ships bare markup + token variables, or reaches for Bootstrap/Tailwind CDN | confusion between “no third-party CSS framework” and “no CSS design” | §5.8 + G7: **custom Nestlancer CSS only**; Bootstrap / Tailwind / Bulma / Foundation / UIKit CDNs and utility-class frameworks are **banned**; each variant must still look finished and designed |
-
-### Non-negotiables
-- You MAY NOT write variant CSS before **§0B Research Gate** passes.
-- You MAY NOT generate a family before printing a **Reference Contract** (§3.7, ≥5 rows).
-- **100 headers + 100 footers, each a distinct type** — not 100 + 100 recolours **and not 100 + 100 structure-clones of one skin**.
-- Every variant cites ≥2 captured sites + ≥1 measured motion primitive.
-- No copied logos, images, or proprietary copy from any researched site.
-- You MAY NOT mark complete until **§0A Workspace Delivery Check** passes.
-- You MAY NOT claim a variant is finished until it has been **served and looked at** (§0C): `python3 -m http.server` from the repo root, opened at 1440 px and 390 px in both themes — or, in a browser-less sandbox, gate **G13** passes and the limitation is printed.
-- You MAY NOT ship a variant whose `style.css` is a scoped copy of a shared megatemplate, or whose family is visually indistinguishable from another family at gallery glance (G14).
-- You MAY NOT add Bootstrap, Tailwind, Bulma, Foundation, or any other CSS-framework CDN / utility runtime. Nestlancer tokens + owned per-variant CSS is the design system.
-
----
-
-## 1) ROLE & QUALITY BAR
-
-You are simultaneously:
-1. **Principal product designer** — knows that chrome (header/footer) is 80% of a site’s perceived quality.
-2. **Senior frontend engineer** — semantic HTML, modern CSS (`:has()`, container queries, `color-mix`, view timelines), < 12 KB JS per variant.
-3. **Motion designer** — choreography with real numbers: durations, easings, staggers, triggers.
-4. **Research analyst** — compiles the world’s top 200 ranked sites, reads them as *data*, extracts patterns, discards competitor styling.
-5. **Design director who rejects AI-slop** — no ribbon banners, no emoji icons, no gradient soup.
-
-### Grade scale for THIS job (chrome craft)
-| Grade | Meaning |
-|---|---|
-| F–D | Broken, overlapping, unstyled, inaccessible — or Bootstrap/Tailwind CDN dropped in |
-| C | Works, looks like a default template with a teal button — **the state we are escaping** |
-| C+ | Axis-unique on paper, but gallery glance shows the **same white bar / same footer surface** on every card (v2 failure) |
-| B | Clean and consistent, but forgettable; could belong to any SaaS |
-| A | Production-ready Nestlancer chrome — calm, branded, responsive, intentional motion, **own surface skin**, CSS owns only what the HTML needs |
-| A+ | Same, plus a signature motion that a senior designer would screenshot; family is recognisable in the gallery without reading the ID |
-| **A+** | Memorable craft: reference-informed structure, confident hierarchy, signature micro-interaction, still restrained and trustworthy |
-
-**Ship standard = A+ on every one of the 200.** A gallery where 20 variants are A+ and 180 are B is a **failed run**.
-
----
-
-## 2) REPO FACTS (DO NOT INVENT STRUCTURE)
-
-Repo to work in: `https://github.com/nestlancer/ui-designing.git` (clone it; it contains only screenshots + this prompt).
-
-### 2.1 Design truth — 17 screenshots, 2880 px wide (= 1440 CSS px @2×)
-
-| File | Screen | Chrome relevance |
-|---|---|---|
-| `013-marketing-homepage.webp` | Marketing home | **canonical header + canonical footer** + domain ticker row + pre-footer CTA |
-| `014-marketing-about.webp` | About | header + footer repeat |
-| `015-marketing-contact.webp` | Contact | header + **short footer** variant |
-| `016-marketing-pricing.webp` | Pricing | header + footer + plan-comparison density |
-| `017-marketing-services.webp` | Services | header + footer |
-| `002-blog-listing.webp` | Blog listing | header + **sidebar rail** (not chrome, but informs layout) + footer |
-| `003-blog-article.webp` | Blog article | header + long-read (progress bar opportunity) + footer |
-| `007-portfolio-listing.webp` | Portfolio | header + footer |
-| `008-portfolio-case-study.webp` | Case study | header + footer |
-| `004-contact.webp` | Contact (form) | header + footer |
-| `009-privacy.webp` | Privacy | header + **legal-dense footer** |
-| `011-terms.webp` | Terms | header + legal footer |
-| `006-login.webp` | Login | **auth chrome**: logo-only header, one icon button |
-| `010-register.webp` | Register | auth chrome |
-| `005-forgot-password.webp` | Forgot password | auth chrome |
-| `012-verify-document.webp` | Verify document | auth chrome |
-| `001-admin-login.webp` | Admin login | **admin chrome** (separate identity from public) |
-
-### 2.2 Measured tokens — pixel-sampled from the screenshots. LOCKED. Every one of the 200 uses these.
-
+### 2.2 Tokens (measured from the screenshots — use `var(--…)`, no new hues)
 ```css
 :root{
-  --n-bg:#f9fbfc;            /* page canvas (dominant) */
-  --n-bg-tint-1:#edf4f6; --n-bg-tint-2:#ebf3f5;
-  --n-mesh-1:#d8e8e9; --n-mesh-2:#daeaeb;   /* hero wash */
-  --n-surface:#ffffff; --n-surface-2:#f4f8f9;
-
-  --n-ink:#0a2543;           /* navy: logo, H1/H2, wordmark */
-  --n-ink-2:#123a5e; --n-body:#4a5c6e; --n-muted:#7b8b99;
-  --n-hairline:#e3ebe9;
-
-  --n-teal:#24877f;          /* measured from the "Start a project" pill */
-  --n-teal-hover:#1c6f68; --n-teal-soft:#d9ece9;
-  --n-teal-glow:#3fb8ab; --n-mint:#eef7f5;
-  --n-live:#22a06b;          /* "Intake open" / "Client portal · live" dot */
-
-  --n-font-display:"Fraunces","Instrument Serif",Georgia,serif;
-  --n-font-sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --n-font-mono:"IBM Plex Mono","JetBrains Mono",ui-monospace,monospace;
-
-  --n-eyebrow: 11px/1 uppercase; letter-spacing:.14em;  /* FIG · WORK, PRODUCT, COMPANY, LEGAL */
-  --n-radius-pill:999px; --n-radius-card:14px; --n-radius-chip:8px;
-  --n-container:1200px; --n-header-h:72px; --n-hairline-w:1px;
+  --bg:#f9fbfc;  --surface:#ffffff;  --surface-2:#f4f8f9;  --tint:#edf4f6;  --mint:#eef7f5;
+  --mesh-1:#d8e8e9;  --mesh-2:#daeaeb;
+  --ink:#0a2543;  --ink-2:#123a5e;  --body:#4a5c6e;  --muted:#5f7080;  --line:#e3ebe9;
+  --teal:#24877f;  --teal-hover:#1c6f68;  --teal-soft:#d9ece9;  --glow:#3fb8ab;  --live:#22a06b;
+  --btn:#1f7a73;                      /* CTA fill: teal nudged so white 15 px/600 text passes AA (4.3 → 5.1:1) */
+  --band:#0a2543;  --band-text:#e8eef4;  --band-body:#b9c6d0;  --band-line:rgba(255,255,255,.12);  /* ink bands */
+  --shadow:0 8px 28px rgba(10,37,67,.10);
+  --pill:999px;  --card:14px;  --chip:8px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
+}
+/* dark = derived, never invented */
+[data-theme="dark"]{
+  --bg:#0b1720; --surface:#0f1e29; --surface-2:#12242f; --tint:#102530; --mint:#10272a;
+  --mesh-1:#12303a; --mesh-2:#0f2a33;
+  --ink:#e8eef4; --ink-2:#d3dde6; --body:#b9c6d0; --muted:#8aa0b3; --line:rgba(255,255,255,.08);
+  --teal:#2fa59b; --teal-hover:#3fb8ab; --teal-soft:#14343a;   /* same hue, lifted for contrast */
+  --band:#06111a; --shadow:0 8px 28px rgba(0,0,0,.45);
 }
 ```
-**Dark theme is derived, never invented:** surfaces `#0b1720` / `#0f1e29`, body text `#b9c6d0`, hairlines 8% white, `--n-teal` stays as the accent. Never a second brand hue.
+- **Type is sans** (the screenshots are a clean geometric sans). No serif display face, **no web-font download** — `var(--font)` with the system fallbacks keeps files offline-safe like the examples. Footer column heads: 11 px / uppercase / `letter-spacing:.14em` / `var(--muted)` (`PRODUCT`, `COMPANY`, `LEGAL`). Nothing under 11 px; body ≥ 14 px; ₹ numbers `font-variant-numeric:tabular-nums`.
+- `--muted` is `#5f7080`, not the screenshot's `#7b8b99`: the measured grey fails AA at 11–13 px, so it was darkened (same hue). Use `--teal-hover`/`--btn` — never `--teal` — for small teal *text* on light surfaces.
+- **Every file must define its own tokens** (copy the block above into each file's `<style>`), exactly like the examples define `:root` — so each `header.html` / `footer.html` opens alone and renders correctly.
+- Dark must be good, not an afterthought: set via `?theme=dark` (tiny inline script) **and** `data-theme` on `<html>`; light is the default.
 
-**Locked tokens ≠ one visual skin.** The palette above is the *paint box*, not a single composition. Every family must still pick a distinct **surface skin** (axis A7, §5.0) by *composing* these tokens differently — solid canvas, glass, ink invert band, mint/tint wash, mesh zone, elevated soft-shadow, hairline-only editorial, dual-surface (utility ink + main surface), etc. Inventing `#7c3aed` or a Bootstrap primary blue is forbidden; refusing to design with `--n-*` is also forbidden.
+### 2.3 Locked copy (reuse; never invent product features, clients or prices)
+- Nav: **Product · Portfolio · Blog · About · Pricing · Services · Contact**
+- Actions: `Sign in` · `Start a project` · theme toggle · search · status pill `Intake open`
+- Blurb: `Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.`
+- Footer columns — **PRODUCT**: Project Hub, Pricing, Services, Portfolio · **COMPANY**: About, Blog, Contact, Start a project · **LEGAL**: Terms, Privacy, Verify document
+- Legal line: `© 2026 Nestlancer. Made in India. All rights reserved.`
+- Proof numbers (the only ones allowed): `₹4,28,500` payments · `₹4.2L` milestone · `Payouts cleared 1/3`
+- Ticker: FINTECH · E-COMMERCE · SaaS · B2B PORTALS · MOBILE APPS · DESIGN SYSTEMS · MARKETPLACES · HEALTHCARE
+- CTA line: `Ready to ship with clarity?`
+- Routes: `/` `/product` `/portfolio` `/blog` `/about` `/pricing` `/services` `/contact` `/login` `/register` `/terms` `/privacy` `/verify`
 
-**No third-party CSS frameworks.** Do not link or vendor Bootstrap, Tailwind, Bulma, Foundation, UIKit, Materialize, Animate.css as a runtime, or any utility-class CDN. Inspiration from those sites’ *patterns* is fine (already in §3); the implementation is always custom CSS scoped to `[data-chrome="<ID>"]` using §2.2 tokens. “No Bootstrap” never means “no CSS.”
+## 3) THE PAIR CONTRACT — header and footer are ONE design
+Each pair has a **Pair DNA**: six decisions made **once** and obeyed by both halves.
 
-**Fonts are locked AND must load.** The three families above are the design voice. The browser-serve contract (§0C rule 2) wires the one sanctioned Google Fonts `<link>` into every page; the fallback stacks in this token block keep pages usable offline — they are a safety net, not the design. No fourth family, ever, and no per-variant `@font-face` (G7/G13 enforce).
-
-### 2.3 Baseline structures (H001 / F001 — the repo as it exists)
-
-```
-HEADER (public, 72px, container 1200px, 1px bottom hairline)
-[ bird glyph + "Nestlancer" wordmark + teal full-stop ]  [ Product · Portfolio · Blog · About ·
-  Pricing · Services · Contact ]  [ ☀ theme toggle ] [ Sign in ] [ (Start a project) teal pill ]
-
-FOOTER (public)
-[ glyph+wordmark            ] [ PRODUCT      ] [ COMPANY   ] [ LEGAL            ]
-[ 2-line blurb, --n-body    ] [ Project Hub  ] [ About     ] [ Terms            ]
-[                           ] [ Pricing      ] [ Blog      ] [ Privacy          ]
-[                           ] [ Services     ] [ Contact   ] [ Verify document  ]
-[                           ] [ Portfolio    ] [ Start a…  ] [                  ]
-──────────────────────── 1px hairline ────────────────────────
-© 2026 Nestlancer. Made in India. All rights reserved.
-```
-Auth screens use a **logo-only** header (top-left) + one circular outline icon button (top-right). Admin login has its own identity — treat it as a separate chrome theme.
-
-### 2.4 Locked copy bank — reuse these strings; do not invent product features
-
-- **Wordmark:** `Nestlancer` (navy) + teal full-stop
-- **Blurb:** `Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.`
-- **Nav:** Product · Portfolio · Blog · About · Pricing · Services · Contact
-- **Actions:** `Sign in` · `Start a project` · theme toggle · search · `Intake open`
-- **Footer links:** Product — Project Hub, Pricing, Services, Portfolio · Company — About, Blog, Contact, Start a project · Legal — Terms, Privacy, Verify document
-- **Eyebrows in-repo:** `FIG · WORK`, `FIG · PORTAL`, `FIG · START`, `PRODUCT`, `COMPANY`, `LEGAL`
-- **Status pills:** `Intake open` · `Client portal · live` · `FIG · PORTAL`
-- **Proof numbers (real):** `₹4,28,500` payments · `₹4.2L` milestone · `Payouts cleared 1/3`
-- **Ticker domains:** FINTECH · E-COMMERCE · SaaS · B2B PORTALS · MOBILE APPS · DESIGN SYSTEMS · MARKETPLACES · HEALTHCARE
-- **Portfolio titles:** FintelPayments Hub · SaaS Analytics Platform · E-Commerce Mobile App · HealthTech
-- **Legal line:** `© 2026 Nestlancer. Made in India. All rights reserved.`
-- **Locale:** INR primary (`₹`, en-IN grouping `4,28,500`), USD secondary
-
-### 2.5 Discoverable routes
-`/` `/product` `/portfolio` `/blog` `/about` `/pricing` `/services` `/contact` `/login` `/register` `/terms` `/privacy` `/verify` `/portal` `/admin`
-
-### 2.6 Scope boundary
-You are **not** redesigning pages. You are building **200 drop-in chrome systems** that mount into any of them. Ship them with a mount API so integration is one line:
-```html
-<header data-chrome="H034" data-theme="dark" data-page="pricing"></header>
-```
-
----
-
-## 3) PHASE R — REFERENCE GATE (MANDATORY BEFORE ANY DESIGN EDIT)
-
-### 3.1.0 Compile the WORLD’S TOP 200 list first (before any capture)
-
-**Do this in-session with live tools. Memory is not a ranking.**
-
-1. **WebSearch / WebFetch** at least **two** of these authoritative sources (print the URLs you used):
-   - [Similarweb Top Websites](https://www.similarweb.com/top-websites/) + [Similarweb most-visited blog](https://www.similarweb.com/blog/research/market-research/most-visited-websites/)
-   - [Semrush Top Websites](https://www.semrush.com/website/top/) (or Semrush ranks cited on Wikipedia)
-   - [Cloudflare Radar Domains](https://radar.cloudflare.com/domains) / popular domains
-   - [Wikipedia — List of most-visited websites](https://en.wikipedia.org/wiki/List_of_most-visited_websites)
-2. Build `research/top-200.json` — **exactly 200** objects:
-   ```json
-   {
-     "rank": 1,
-     "host": "google.com",
-     "rank_source": "similarweb-global-2026-08",
-     "tier": "global-top-100",
-     "bucket": "B",
-     "suitable_for_chrome": true,
-     "skip_reason": null
-   }
-   ```
-3. **Eligibility for the 200:**
-   - **Tier `global-top-100` / `global-top-200`:** hostname appears on a fetched global traffic ranking (or Wikipedia composite of Similarweb/Semrush).
-   - **Tier `category-world-leader`:** not in global top-200 traffic, but is a **household / category-defining** brand (e.g. stripe.com, airbnb.com, nike.com) with a public marketing site — allowed only to fill chrome-rich gaps after global ranks are exhausted; must still be famous, never random.
-   - **Banned from the 200:** NSFW, gambling, malware, random personal blogs, obscure startups, inventing domains, CodePen/demo sites, design-gallery pads used only to hit a count (§3.2 stays separate).
-4. **Skip & replace (still ranked):** bot-walls, geo-blocks, `robots.txt` disallow, login-only shells, NSFW/gambling ranks. Log `suitable_for_chrome: false` + `skip_reason`, then take the **next suitable ranked** host (or same-bucket world-leader). The list must still total **200 suitable hosts to attempt**.
-5. Print: `TOP-200 LIST LOCKED — sources: … · global-tier: <n> · category-leader-tier: <n> · banned/skipped-from-rank: <n>`.
-
-**Hard gate:** no `top-200.json` → no capture. No capture → no CSS.
-
-### 3.1 The 200 research targets — capture ≥200 live sites
-
-Twelve buckets guarantee **chrome range** inside the top-200 set (a fintech footer and a retail footer are different species). Use the starter seeds below as the **minimum attempt spine**, then **overwrite / extend from the live ranking fetch** in §3.1.0 until the locked list is exactly 200. Prefer ranked hosts over seeds when they conflict.
-
-| Bucket | ≈ | Starter world-famous hosts (expand from live rankings to fill 200) |
+| DNA item | Meaning | Example (P04 floating pill) |
 |---|---|---|
-| **A · Marketplaces & freelance** | 16 | amazon.com · ebay.com · etsy.com · aliexpress.com · walmart.com · rakuten.com · upwork.com · fiverr.com · toptal.com · contra.com · 99designs.com · dribbble.com · behance.net · freelancer.com · wellfound.com · craigslist.org |
-| **B · Big tech / platform nav** | 20 | google.com · youtube.com · facebook.com · instagram.com · wikipedia.org · microsoft.com · apple.com · amazon.com · meta.com · linkedin.com · x.com · tiktok.com · reddit.com · github.com · store.google.com · aws.amazon.com · azure.microsoft.com · adobe.com · ibm.com · nvidia.com · oracle.com · samsung.com · intel.com |
-| **C · Dev tools & infra** | 16 | github.com · stackoverflow.com · vercel.com · cloudflare.com · digitalocean.com · docker.com · atlassian.com · bitbucket.org · gitlab.com · jetbrains.com · postman.com · hashicorp.com · supabase.com · linear.app · figma.com · notion.so |
-| **D · Fintech & payments** | 16 | paypal.com · stripe.com · squareup.com · visa.com · mastercard.com · americanexpress.com · chase.com · bankofamerica.com · wellsfargo.com · revolut.com · wise.com · cash.app · razorpay.com · coinbase.com · binance.com · robinhood.com |
-| **E · SaaS product marketing** | 18 | canva.com · slack.com · zoom.us · dropbox.com · salesforce.com · hubspot.com · shopify.com · wix.com · squarespace.com · wordpress.com · asana.com · monday.com · zendesk.com · intercom.com · mailchimp.com · twilio.com · spotify.com · netflix.com |
-| **F · Editorial & media** | 16 | nytimes.com · bbc.com · theguardian.com · cnn.com · washingtonpost.com · reuters.com · bloomberg.com · forbes.com · wsj.com · economist.com · theverge.com · wired.com · medium.com · quora.com · espn.com · imdb.com |
-| **G · Brand / agency chrome leaders** | 14 | nike.com · adidas.com · airbnb.com · uber.com · tesla.com · spotify.com · dribbble.com · awwwards.com · pentagram.com · ibm.com · apple.com · stripe.com · shopify.com · figma.com |
-| **H · E-commerce & retail** | 18 | amazon.com · ebay.com · walmart.com · target.com · bestbuy.com · ikea.com · zara.com · uniqlo.com · nike.com · adidas.com · hm.com · shein.com · wayfair.com · homedepot.com · costco.com · sephora.com · nordstrom.com · macys.com |
-| **I · Travel & mobility** | 14 | booking.com · airbnb.com · expedia.com · tripadvisor.com · kayak.com · marriott.com · hilton.com · uber.com · lyft.com · delta.com · united.com · aa.com · ryanair.com · expedia.com |
-| **J · AI labs & products** | 14 | chatgpt.com · openai.com · gemini.google.com · anthropic.com · perplexity.ai · deepseek.com · huggingface.co · microsoft.com/copilot · midjourney.com · character.ai · nvidia.com · cursor.com · claude.ai · grok.com |
-| **K · Consumer platforms** | 14 | netflix.com · disneyplus.com · primevideo.com · twitch.tv · pinterest.com · tumblr.com · discord.com · telegram.org · whatsapp.com · zoom.us · skype.com · roblox.com · steamcommunity.com · epicgames.com |
-| **L · India + APAC leaders** | 14 | flipkart.com · amazon.in · swiggy.com · zomato.com · paytm.com · phonepe.com · zerodha.com · groww.in · myntra.com · bookmyshow.com · hotstar.com · naver.com · yahoo.co.jp · rakuten.co.jp · mercadolibre.com · tokopedia.com |
+| **Skin** | surface recipe (§4) | glass-white pill on mint wash |
+| **Geometry** | container width, inset, radius family | 1120 px, 16 px inset, `--radius-pill` ↔ `--radius-card` |
+| **Rule/border language** | hairline / none / shadow / thick rule | soft shadow, no hairlines |
+| **Type voice** | weight + case + spacing of links and heads | 500 links, mono caps heads |
+| **CTA & accent usage** | how teal is spent | one teal pill; footer uses a teal-soft chip |
+| **Signature motion** | exactly one, same *family* of movement in both halves | 220 ms ease-out lift on hover; footer links lift 2 px |
 
-**Counts:** starter rows overlap across buckets on purpose (same host once in `top-200.json`). After dedupe + live ranking fill, you must still have **200 unique hosts**. Bucket coverage in the Research Gate block counts unique captures per assigned bucket.
+**The pair test (do it for every pair):** screenshot the header and footer, hide the logo → a stranger must say "same site, same designer". If the footer could be bolted under a different pair's header without anyone noticing, the pair **fails** — redo the footer from the DNA, don't tweak.
 
-**Skip and substitute:** bot-walls, geo-blocks, `robots.txt` disallow, NSFW/gambling ranks. Log every skip in `sites.json` with `capture_failed: true` + `reason`, and add a **same-tier ranked** replacement so `captured ≥ 200`. **Never** substitute with a random unranked site.
+Concretely both halves must share: identical `:root` token overrides for the pair, the same surface family, the same corner radius family, the same link hover behaviour, the same icon set/size, the same CTA button shape, and the same container width.
 
-### 3.2 Recipe libraries — where the **animation** vocabulary comes from
+## 4) SURFACE SKINS (compose §2.2 tokens only)
+`solid` (surface + hairline) · `glass` (translucent surface + `backdrop-filter:blur(14px) saturate(1.4)` + opaque `@supports` fallback) · `ink` (navy `#0a2543`/dark surface band, light text) · `tint` (`--tint`/`--mint` wash) · `mesh` (`--mesh-1→--mesh-2` gradient) · `elevated` (soft shadow, no border) · `editorial` (transparent, hairline rules only) · `dual` (two stacked surfaces of different tone) · `invert` (whole chrome dark even on light page).
+Rules: AA contrast in both themes; no purple/neon/gradient soup; never animate `backdrop-filter`; neighbouring pairs must not share a skin.
 
-Live sites show you *what*; these show you *how*. Fetch and study them in Phase R exactly like the product sites.
+## 5) THE 20 PAIRS (roster — build in this order, 5 per batch)
+Each row = one header **and** its matching footer. Axes below are what must differ between pairs.
 
-| Category | Sites | Steal for (chrome-specific) |
-|---|---|---|
-| **Code & snippets** | codepen.io · codemyui.com · uiverse.io · bootsnipp.com | nav underline glides, button shine/press, burger morphs, accordion footers, newsletter forms |
-| **CSS animation libs** | animate.style · animista.net · hover.css · michalsnik.github.io/aos · minimamente.com/project/magic · keyframes.app | entrance vocab (adapt, never dump whole libs), hover recipes, custom keyframe curves |
-| **JS motion engines** | gsap.com (ScrollTrigger) · motion.dev (motion one) · framer.com/motion · lenis.darkroom.engineering (smooth scroll) · scrollrevealjs.org | sticky shrink timelines, scroll-linked progress, curtain footers, magnetic CTA |
-| **Modern UI blocks** | magicui.design · ui.aceternity.com · ui.shadcn.com · ui-layout.com · tailwindui.com | marquee, shimmer CTA, spotlight, mega-menu panels, command palette, announcement bars |
-| **Header-specific sources** | header.design (when reachable) · tailscan UI blocks · flowbite.com blocks · preline.co · mambaui.com · daisyui.com | nav paradigms, drawer/overlay nav, multi-tier bars, responsive collapse patterns |
-| **Surface & colour** | cssgradient.io · glassmorphism.com · neumorphism.io · oklch.com | glass engage recipes, mesh atmosphere, soft inset inputs (subtle only) |
-
-### 3.3 Required tool actions (do them for real)
-
-**Once, at the start of Phase R:**
-1. **WebSearch + WebFetch ranking pages** (§3.1.0) → write `research/top-200.json` (200 ranked hosts, zero random).
-2. **Capture-run** the harness (§3.4) over all 200 until `captured ≥ 200`.
-
-**Per variant batch:**
-3. **WebSearch ≥6 targeted queries**, e.g.
-   - `Similarweb most visited websites worldwide 2026` *(if top-200 still incomplete)*
-   - `sticky header shrink on scroll CSS 2025`
-   - `mega menu animation stagger cubic-bezier example`
-   - `footer accordion mobile grid-template-rows animation`
-   - `curl footer reveal scroll-linked CSS animation-timeline`
-   - `command palette ⌘K header pattern implementation`
-4. **WebFetch ≥5 live pages** from the **locked top-200 list** and §3.2 (docs/examples). Listing a URL without fetching does **not** count. Fetching a random unranked blog does **not** count toward research.
-5. **Open ≥2 Nestlancer reference screenshots** (when present in the workspace) for the batch you are about to build, at full size, and note the rhythm: gutters, pill radius, hairline weight, eyebrow spacing.
-6. If a ranked site cannot be fetched: say so, take the **next suitable ranked substitute**, and **still name the exact pattern borrowed and the ranked source**. Do not invent a “pattern_prior” for an unranked random URL.
-
-### 3.4 Capture harness — `tools/capture.mjs`
-
-For each URL: viewport `1440×900`, `deviceScaleFactor 1`, `locale en-IN`, realistic UA, max 2 concurrent pages, ≥1.5 s between same-host requests, honour `Retry-After`.
-
-1. `goto(url, { waitUntil:'networkidle', timeout:45000 })`
-2. **Scroll to trigger reveals** — `document.body.scrollHeight` in 8 steps of ~900 px with 450 ms pauses, back to `0` in 4 steps, wait 600 ms.
-3. **Grab the chrome subtrees** — header: first match of `header`, `[role=banner]`, `nav`, else topmost `position:fixed|sticky` node ≤ 25 vh. Footer: `footer`, `[role=contentinfo]`, else bottom-most node > 15 vh with ≥2 `<a>` clusters.
-4. **Computed styles** on the root + descendants (depth ≤ 6, nodes ≤ 400): `display, position, height, width, gap, padding, background*, color, border*, border-radius, box-shadow, font-family/size/weight/letter-spacing/text-transform, backdrop-filter, z-index, transition, transform`.
-5. **Crop** `research/raw/<slug>/header.webp` (0 → headerBottom + 60 px) and `footer.webp` (footerTop − 60 → end) from a full-page shot; delete the full-page shot.
-6. **Motion pass** (§3.5).
-7. **Write** `research/raw/<slug>/meta.json`.
-
-```js
-import { chromium } from 'playwright';
-const ctx = await chromium.launch().then(b => b.newContext({
-  viewport:{width:1440,height:900}, locale:'en-IN', deviceScaleFactor:1 }));
-async function capture(url){
-  const page = await ctx.newPage();
-  await page.goto(url, { waitUntil:'networkidle', timeout:45000 });
-  await autoScroll(page);                                    // step 2
-  const header = await page.evaluate(describeChrome, 'header');
-  const footer = await page.evaluate(describeChrome, 'footer');
-  const motion = await page.evaluate(collectMotion);         // §3.5
-  await page.screenshot({ path:`tmp/${slug(url)}.webp`, fullPage:true });
-  await cropChrome(slug(url), header?.box, footer?.box);      // step 5
-  await page.close();
-  return { url, header, footer, motion };
-}
-```
-
-Every `research/sites.json` record **must** include: `url`, `host`, `rank`, `rank_source`, `tier` (`global-top-100` | `global-top-200` | `category-world-leader`), `bucket`, `capture_failed`, `verified` (true only if fetched live this run), plus the chrome/motion metrics. Records with missing rank fields or `tier: "random"` are a Research Gate **FAIL**.
-
-**Legality & politeness:** public chrome only. No logins, no dashboards, no paywalls, no form submissions, no API keys. Store **derived metrics** (numbers, booleans, enum strings) as the primary artifact; the cropped `.webp` references stay in a git-ignored folder and are cited to their source URL in `meta.json`.
-
-### 3.5 Motion extraction — capture physics, not vibes
-
-```js
-function collectMotion(){
-  const anims = document.getAnimations().map(a => ({
-    target: (a.effect?.target?.tagName||'') + '.' + String(a.effect?.target?.className||'').slice(0,60),
-    name: a.animationName || a.constructor.name,
-    duration: a.effect?.getTiming?.().duration,
-    delay: a.effect?.getTiming?.().delay,
-    easing: a.effect?.getTiming?.().easing,
-    iterations: a.effect?.getTiming?.().iterations,
-    fill: a.effect?.getTiming?.().fill,
-    keyframes: (a.effect?.getKeyframes?.() || []).slice(0,3).map(f =>
-      ({ offset:f.offset, transform:f.transform, opacity:f.opacity, filter:f.filter })),
-    playState: a.playState
-  }));
-  const h = document.querySelector('header,[role=banner]');
-  const f = document.querySelector('footer,[role=contentinfo]');
-  return {
-    animations: anims,
-    headerTransition: h ? getComputedStyle(h).transition : null,
-    headerWillChange: h ? getComputedStyle(h).willChange : null,
-    footerTransition: f ? getComputedStyle(f).transition : null
-  };
-}
-```
-**Plus a scroll-timeline probe:** sample `getBoundingClientRect()` + class/inline-style of header and footer every 100 ms across a scripted 0 → 100% → 0 scroll and diff it. This is how you detect **hide-on-scroll-down / show-on-scroll-up**, **glass engage thresholds** (`blur kicks in at scrollY > 24`), **sticky-shrink triggers**, and **footer curtain reveals**. Record the trigger as a px threshold, not a guess.
-
-Normalise everything into `research/motion-index.json` — one entry per primitive: `id, name, trigger, duration_ms, delay_ms, easing, properties_animated, seen_on_sites[…], recipe_css|recipe_js`.
-
-### 3.6 Primitive catalogue — discover ≥30 (these 34 are the floor, add what you find)
-
-| id | Primitive | Trigger | Physics to look for |
-|---|---|---|---|
-| m-01 | Sticky shrink (height + logo scale) | scroll > 24px | 200 ms `cubic-bezier(.2,.8,.2,1)` |
-| m-02 | Hide-down / show-up | scroll direction | 320 ms ease-out, `translateY(-100%)` |
-| m-03 | Glass engage (blur + alpha) | scroll > 8px | 240 ms linear, blur 0→14px |
-| m-04 | Transparent-over-hero → solid | hero exit | 300 ms + colour crossfade |
-| m-05 | Sliding nav underline / ink bar | hover · focus · route | 220 ms shared-element transform |
-| m-06 | Magnetic CTA (±6 px pointer follow) | pointer move | spring, stiffness 200 / damping 18 |
-| m-07 | Mega-panel reveal + child stagger | hover-intent / click | 260 ms, 35 ms stagger |
-| m-08 | Fullscreen overlay wipe | burger click | 480 ms `cubic-bezier(.76,0,.24,1)`, clip-path |
-| m-09 | Side drawer + scrim | burger click | 300 ms ease-out, scrim 200 ms |
-| m-10 | Burger → X morph | toggle | 240 ms, two bars rotate 45° |
-| m-11 | Command palette (⌘K) | keypress/click | 180 ms scale .98→1 + blur-in |
-| m-12 | Theme cross-fade (light↔dark) | toggle | 300 ms, `color-scheme` + View Transitions |
-| m-13 | Scroll progress bar | scroll | scroll-linked, no easing |
-| m-14 | Reading-progress ring / % in header | scroll | scroll-linked |
-| m-15 | Category rail, active pill morphs | intersection | 240 ms spring |
-| m-16 | Ticker / marquee nav | infinite | linear 28 s, `translateX(-50%)`, pause on hover |
-| m-17 | Announcement bar dismiss (+ `localStorage`) | click | 220 ms collapse |
-| m-18 | Rotating CTA / status word | interval 4 s | 400 ms fade-slide |
-| m-19 | Footer reveal with column stagger | IO @15% | 600 ms, 60 ms stagger |
-| m-20 | Footer curtain (content reveals it) | scroll to end | `position:sticky` / clip-path |
-| m-21 | Oversized wordmark scale-on-scroll | scroll-linked | `scale .9→1.15` scrub |
-| m-22 | Accordion footer columns | mobile toggle | 260 ms `grid-template-rows` |
-| m-23 | Back-to-top orbit button | appear after 60 vh | 200 ms spring + icon rotate |
-| m-24 | Locale / currency switcher slide | click | 180 ms listbox |
-| m-25 | Live status dot pulse | infinite | 2 s ease-in-out opacity+scale |
-| m-26 | Proof-stat count-up | in view | 1200 ms easeOutExpo |
-| m-27 | Social icon stagger pop | footer enter | 40 ms stagger, scale .8→1 |
-| m-28 | Link hover text roll-up (dual layer) | hover | 260 ms translateY swap |
-| m-29 | Cursor spotlight in header | pointer move | rAF radial-gradient mask |
-| m-30 | View-Transition page wipe on nav | route change | 420 ms clip-path diagonal |
-| m-31 | Grain / noise drift | infinite | 8 s steps, background-position |
-| m-32 | Scroll-linked nav parallax | scroll | scrub ±12 px |
-| m-33 | Notification badge pop | data / interval | 300 ms elastic |
-| m-34 | Email capture → success morph (button→tick) | submit | 380 ms micro-pop |
-
-### 3.7 Reference Contract — print BEFORE writing CSS for a family batch (hard gate: ≥5 rows)
-
-```
-## Chrome Reference Contract — [batch id] [families in this batch]
-Date/context: ...
-Live sites captured for this batch: ... (from research/sites.json)
-Repo screenshots re-opened: ... (paths)
-
-| Variant slot | Source site (captured) | Exact chrome pattern | Traits to copy | Traits to NOT copy | How adapted to Nestlancer tokens |
+| # | ID | Header | Footer (matched) | Skin | Reference idea (look at it live) |
 |---|---|---|---|---|---|
-| H017 container | linear.app | detached glass pill, inset 16px, 60px tall | blur 14px, hairline, tight type | dark-first palette, purple accent | light default, --n-teal CTA, --n-ink logo |
-| H018 scroll | cuberto.com | hide-down / show-up w/ shadow bloom | direction detection, 320ms | 3D distortion | hairline + soft shadow only |
-| H019 CTA | magicui.design | shimmer sweep on primary once | 1.4s sweep, pause 3s | neon border | teal pill, --n-teal-glow sweep |
-| H020 mobile | upwork.com | category chips collapse into drawer | chip scroll-snap | logo redesign | repo wordmark untouched |
-| F041 columns | stripe.com | 5-column sitemap + status dot | eyebrow mono, dot pulse | dense legal wall | Nestlancer sitemap only |
+| 1 | P01-classic | logo left · 7 inline links · theme toggle · Sign in · teal pill — repo baseline | 4-col: brand+blurb · Product · Company · Legal, hairline, legal row | solid | the repo screenshots |
+| 2 | P02-glass | sticky, translucent, blur engages after 8 px scroll | same columns on a soft mesh wash, glass legal bar | glass | linear.app, vercel.com |
+| 3 | P03-ink | navy utility strip (`Intake open` · INR/USD) + white main bar | navy footer, light text; the same strip closes the page as its legal bar | ink | apple.com, microsoft.com |
+| 4 | P04-pill | detached floating pill, inset 16, centred | floating rounded card footer, inset 16 | elevated | raycast.com, stripe.com |
+| 5 | P05-centered | logo centred, 3 links each side, hairline under | centred stack: logo, one link row, legal | solid | nytimes.com, aesop.com |
+| 6 | P06-editorial | thick top rule, small-caps nav, thin rules | rule-separated columns, ruled legal row | editorial | economist.com, pentagram.com |
+| 7 | P07-announce | dismissible teal `Intake open` bar + classic nav | `Ready to ship with clarity?` CTA band fused to columns | tint | stripe.com, webflow.com |
+| 8 | P08-mega | `Product` opens a 3-column panel with icons | mega sitemap: 5–6 dense columns | solid | shopify.com, adobe.com |
+| 9 | P09-search | wide inline search field is the centre of the bar | newsletter-lead: email field dominant (`Get new posts from the Blog`) | tint | airbnb.com, medium.com |
+| 10 | P10-auth | logo mark + one circular icon button (login/register chrome) | single-row minimal: mark left, legal line right | editorial | repo `006-login` |
+| 11 | P11-segmented | sliding segmented-pill nav | domain ticker (marquee) + legal bar | tint | vercel.com, repo ticker row |
+| 12 | P12-dark | dark-native bar, teal accents | dark-inverted footer, mint links | invert | github.com, supabase.com |
+| 13 | P13-mesh | transparent over mesh hero → solid on scroll | mesh footer with big CTA | mesh | airbnb.com, lusion.co |
+| 14 | P14-overlay | burger only → full-screen overlay with large links | oversized full logo, links above it | editorial | studio sites, cuberto.com |
+| 15 | P15-drawer | right-hand drawer + scrim | accordion columns (`details`/`summary`) | solid | e-commerce, gov.uk |
+| 16 | P16-dock | slim top bar + bottom tab bar on mobile | compact footer + pinned mobile CTA strip | elevated | native-feel web apps |
+| 17 | P17-palette | `Search… ⌘K` pill → palette overlay | status footer: `Intake open`, `Client portal · live` pills | glass | linear.app, clerk.com |
+| 18 | P18-progress | 2 px scroll-progress line on top of the bar | proof rail: ₹4,28,500 · ₹4.2L · Payouts cleared 1/3 above columns | solid | medium.com, theverge.com |
+| 19 | P19-locale | two-tier: utility row with INR/USD + language, main row below | locale/currency switcher + Razorpay line | dual | wise.com, booking.com |
+| 20 | P20-split | 50/50 split: logo+nav left, equal `Sign in` / `Start a project` right | 50/50 split: CTA left, links right | tint | upwork.com, fiverr.com |
 
-Motion palette for this batch:
-- Enter: ... ms · easing · stagger
-- Hover: ... ms
-- Signature (ONE per family): m-XX
-- Reduced motion: opacity-only 150ms, all transforms off
+Pairs differ from each other on **≥ 3 of 5 axes: layout geometry · nav paradigm · scroll behaviour · surface skin · CTA treatment** — and at least one must be geometry or skin. Recolouring is not a difference.
 
-A+ definition for this batch (3 bullets):
-1. ...
-2. ...
-3. ...
+## 6) EACH PAIR'S FILES
+- `header.html` — standalone, like `example-header.html`: `<!DOCTYPE html>`, `<style>` with tokens + header CSS, `<header role="banner">`, tiny `<script>` only for disclosure/scroll. Shows the header with a short tall spacer so scroll behaviour can be seen.
+- `footer.html` — standalone, like `example-footer.html`: tokens + footer CSS, `<footer role="contentinfo">`, a short spacer above.
+- `index.html` — both together between a short sample `<main>` (H1 + 2 paragraphs from the copy bank). **This is what a pair looks like in use.**
+- `pair.json` — **only**: `id`, `name`, `skin`, `header` (one line), `footer` (one line), `signature_motion`, `references` (2 hostnames), `dna` (one sentence: what makes the two halves a pair).
+- Budgets: each standalone file ≤ 16 KB **including** the shared token/primitive block (~4.5 KB) — i.e. a pair's own header or footer CSS stays around 3–7 KB; JS ≤ 40 lines per half (command palette / overlay may reach ~45); DOM ≤ 90 / 120 nodes. Zero external requests. Zero frameworks.
+- Standalone pages accept `?theme=dark|light` (applied before first paint, defaults to the OS setting) and `?frame` (hides the sample content so the gallery can show only the chrome).
 
-Axes claimed (must differ ≥3 from every prior variant, including A7): container / paradigm / scroll / motion / disclosure / CTA / **surface skin**
-A7 skin for this family: <skin id> — <one-line composition note>
+## 7) QUALITY RULES (compact — replaces the 14 gates)
+1. **Pair** — passes the pair test (§3) for every one of the 20.
+2. **Brand** — real logo files, only §2.2 tokens, icons from the one set, copy only from §2.3.
+3. **Craft** — reads like the examples: no dead CSS (every class used), comments say why, mobile-first, ≤ 1 media block per breakpoint concern.
+4. **A11y** — skip link, exactly one `banner` and one `contentinfo`, `aria-expanded`/`aria-controls` on every disclosure, `Esc` closes + returns focus, `:focus-visible` ring `2px solid var(--teal)` + 2 px offset (`outline:none` banned), `aria-current="page"` on the current link, AA contrast in light **and** dark.
+5. **Responsive** — no horizontal scroll at 360 / 768 / 1024 / 1440; 44 px targets on mobile; footer columns stack calmly; chrome ≤ 88 px tall at 1024+.
+6. **Motion** — one signature per pair, 120–320 ms, transform/opacity only; `@media (prefers-reduced-motion: reduce)` removes marquees, slides and scroll effects (opacity ≤ 150 ms only). No layout-shift on scroll (CLS 0).
+
+## 8) WORKFLOW
+1. **Orient** (§0). Print: tokens you measured, the logo files you will use, the 3 things you will copy from the examples' craft.
+2. **Quick research (≤ 30 min of effort, not the main job).** For each pair, open its reference sites (§5), note *one* header idea and *one* footer idea in `docs/RESEARCH-NOTES.md` (`P07 · stripe.com · announce bar collapses in 220 ms · CTA band merges into columns`). No capture harness, no screenshots archive. Never copy logos, icons, illustrations or sentences.
+3. **Foundation.** Copy the two real logos into `chrome-lab/assets/`; cut the two mark-only files from the real paths; write the icon set once (reuse it, don't redraw per file).
+4. **Build in batches of 5 pairs** (P01–P05, P06–P10, P11–P15, P16–P20). For each pair: write the *Pair DNA* line first → header → **footer from the same DNA** → `index.html` → `pair.json`.
+5. **Look at it.** `python3 -m http.server 8123` from the repo root, open each `pairs/Pnn-*/index.html` at 1440 px and 390 px, light and dark. Fix what looks like "a generic template wearing teal". If the sandbox has no browser, say so plainly — never write "browser-verified" without a browser.
+6. **Gallery** `chrome-lab/index.html`: one card per pair (header strip over footer strip, `loading="lazy"` iframes of the pair's `index.html`), a light/dark switch that passes `?theme=`, link to each standalone `header.html` / `footer.html`. Repo-root `index.html` redirects to it.
+7. **Finish** with the short report (§9).
+
+## 9) END-OF-TURN REPORT (short)
+```
+Pairs built: <n>/20 (headers <n>/20 · footers <n>/20 — same IDs)
+Logo: real files used YES/NO · invented glyph: NONE
+Icons: one inline set YES/NO
+Pair test: <n>/20 pass   Browser look: DONE at localhost:8123 / NO-BROWSER
+Files: chrome-lab/pairs/P01-…/{header,footer,index}.html … + chrome-lab/index.html
+Flagged: <IDs + reason or none>
 ```
 
-**Hard gate:** fewer than 5 rows → you may not open a CSS file. Missing A7 skin id → you may not open a CSS file.
-
----
-
-## 4) KEEP vs CHANGE
-
-### KEEP (sacred)
-- Every token in §2.2 — teal `#24877f`, navy `#0a2543`, canvas `#f9fbfc`, hairlines, pill radius, eyebrow style *(the paint box — not a single forced composition)*
-- The wordmark treatment (bird glyph + navy `Nestlancer` + teal full-stop) — recreate as inline SVG; never import the real logo file into new variants, never trace a competitor’s mark
-- All copy strings in §2.4; INR formatting; the legal line
-- Routes in §2.5
-- The calm, generous, trustworthy rhythm of the repo at 1440 px
-- Not one file under `Nestlancer-public-screenshots/` may be edited
-- Custom Nestlancer CSS only — no Bootstrap / Tailwind / other framework CDN
-
-### CHANGE (required — that is the job)
-- Structure: container geometry, nav paradigm, disclosure model, CTA arrangement
-- **Surface skin (A7):** how those tokens are composed — solid / glass / ink band / tint / mesh / elevated / editorial / dual / invert / pill-float
-- Rhythm: vertical density, gutters, type scale, eyebrow placement
-- Motion: real choreography with measured timings, one signature per variant
-- Mobile: a deliberate collapse strategy per variant, not “hamburger by default”
-- Theme: light **and** dark for all 200
-- States: hover · focus-visible · active · open · closed · scrolled · disabled · loading (newsletter) · empty (search) · error
-- **CSS ownership:** each variant’s stylesheet matches its DOM (no megatemplate leftovers)
-
-### Forbidden (anti-slop)
-- Purple/indigo neon themes · gradient soup · glass over dense text · 3D flourishes
-- Emoji as icons · more than one brand hue · a second typeface family beyond the §2.2 trio
-- Ribbon/triangle announcement banners · autoplaying video in chrome · carousels in the header
-- Copying a real logo, icon set, illustration or marketing sentence from a researched site
-- 100 variants that differ only in raw hex, font weight, or link order (**uniqueness gate will catch this**)
-- 100 variants that differ on axes but share one white-bar skin (**G14 will catch this**)
-- Megatemplate `style.css` scoped per ID · Bootstrap/Tailwind/Bulma CDN · “unstyled chrome, tokens will handle it”
-- Declaring done with 40 variants and “the rest follow the same pattern”
-
----
-
-## 5) CHROME DESIGN SYSTEM CONTRACT
-
-### 5.0 THE UNIQUENESS MANDATE — how “different type” is measured
-
-Two variants are different types **only if they differ on ≥ 3 of these 7 axes**, and **at least one of those three must be A1, A2, A3, or A7** (structure or skin — never “motion + disclosure + CTA” alone while the bar still looks identical):
-
-| Axis | Options |
-|---|---|
-| **A1 Container geometry** | full-bleed · 1200 contained · floating pill inset 16 · split 50/50 · asymmetric 8/4 · docked edge rail |
-| **A2 Nav paradigm** | inline · dropdown · mega-panel · fullscreen overlay · drawer · bottom tab bar · segmented · breadcrumb row · search-first · command palette |
-| **A3 Scroll behaviour** | static · sticky · sticky-shrink · auto-hide · transparent→solid · progress-linked · pinned-then-release |
-| **A4 Motion primitive** | any `m-XX` from §3.6 — never the same id twice inside one family |
-| **A5 Disclosure** | hover · click · keyboard-first · hover-intent 120 ms · always-visible · accordion |
-| **A6 CTA treatment** | teal pill · outline pill · split-arrow pill · ghost text · dual equal CTA · gradient edge · icon-only · sticky mobile bar |
-| **A7 Surface skin** *(required — this is the visual design axis)* | see recipe table below |
-
-#### A7 Surface skin recipes (compose §2.2 tokens only — no new hues)
-
-Every **family** locks one primary A7 skin; the 4 (header) / 5 (footer) variants inside a family may shift density or invert for dark, but must stay recognisable as that skin. Neighbouring families **must not** share the same A7 value.
-
-| Skin id | What the chrome looks like (all colours from §2.2) |
-|---|---|
-| `solid-canvas` | `--n-surface` bar/footer, 1px `--n-hairline`, flat — the repo baseline |
-| `glass-hairline` | `color-mix` translucent surface + `backdrop-filter` blur 12–16px + hairline + soft shadow (with `@supports` opaque fallback) |
-| `ink-band` | `--n-ink` (or dark `#0b1720`) utility / announce / footer band with light text; main row may stay surface |
-| `tint-wash` | `--n-bg-tint-1` / `--n-mint` wash behind bar or footer columns; teal soft accents on chips |
-| `mesh-zone` | `--n-mesh-1` → `--n-mesh-2` gradient panel (footer CTA / hero-adjacent header only) |
-| `elevated-soft` | solid surface + `box-shadow: 0 8px 28px rgba(10,37,67,.10)` (or dark equivalent), no heavy border |
-| `editorial-rules` | transparent / canvas bg, typographic weight, hairline rules only — no filled CTA slab behind the bar |
-| `dual-surface` | two stacked surfaces with different fills (e.g. ink utility 30px + surface main 72px, or surface columns + tint legal bar) |
-| `invert-chrome` | whole chrome forced to dark-token surfaces even on light pages (footer “dark inverted” family; rare for headers) |
-| `pill-float` | chrome itself is the floating rounded container (`--n-radius-pill` / card radius), inset from viewport, glass or solid |
-
-**Gallery glance test (human + G14):** open the gallery at 1440 px. Cover the IDs. If you cannot tell family X from family Y in under 2 seconds, one of them must change A7 (or its structural signature), not just A4/A5.
-
-Every variant’s `meta.json` must record all **seven** axis values (including `A7_surface_skin`), and its `diff_from_prev` field must state the three axes it changes. QA gate **G1** recomputes pairwise distance across all 200; gate **G14** enforces A7 coverage + CSS ownership.
-
-### 5.1 Surfaces (chrome rule)
-- Every variant **declares and implements** its A7 skin in `style.css` — background, border/hairline, elevation, and any band/wash must be real CSS properties, not comments in `meta.json`.
-- Chrome may use **restrained glass** when A7 is `glass-hairline` or `pill-float`: `backdrop-filter: blur(12–16px) saturate(150%)` + hairline + soft shadow, always with `-webkit-` prefix and an `@supports` opaque fallback.
-- **Never animate `backdrop-filter` on scroll.** Toggle it with a class at a measured threshold (m-03).
-- Footers sit on a designed surface (solid, tint, mesh, invert, dual) — not an unstyled transparent block. Footer text must stay crisp at 12px.
-- Page canvas behind chrome: `--n-bg` with the mesh wash only when A7 is `mesh-zone` or the family is hero-adjacent.
-- **Contrast stays AA** after skin changes: ink-band / invert-chrome must use the dark-theme text tokens (or `#fff` / `#e8eef4`) on ink surfaces; never navy text on ink.
-
-### 5.2 Typography in chrome
-- Wordmark: display serif (Fraunces / Instrument Serif) or the wordmark SVG — never a third family.
-- Nav links: sans, ≥14 px, weight 500, `--n-body` → `--n-ink` on hover/active.
-- Eyebrows (footer column heads, section labels): mono, 11 px, uppercase, `letter-spacing .14em`, `--n-muted`.
-- Numbers (₹ amounts, counts): `font-variant-numeric: tabular-nums`.
-- Nothing below 11 px. Body ≥ 14 px.
-- Serving the fonts is part of typography: Fraunces/Inter/Plex Mono must arrive via the one sanctioned link (§0C rule 2). If the screenshot in the browser shows Georgia, the variant is not done.
-
-### 5.3 Accessibility contract — WCAG 2.2 AA, per variant, both themes
-- Skip link first in DOM, visible on focus.
-- Exactly one `<header role="banner">` and one `<footer role="contentinfo">`.
-- Every disclosure: `aria-expanded` + `aria-controls`; `Escape` closes and returns focus to the trigger; focus trap inside fullscreen nav/drawer/palette.
-- `:focus-visible` ring = `2px solid var(--n-teal)` + 2px offset. `outline:none` is banned.
-- Contrast ≥ 4.5:1 body / 3:1 large — verified in light **and** dark.
-- Targets ≥ 24×24 px (2.2 AA); 44 px preferred, mandatory on mobile chrome.
-- Landmarks labelled; nav lists are real `<ul>`/`<li>`; current page marked `aria-current="page"`.
-- Animations pause when the tab is hidden (`visibilitychange`).
-
-### 5.4 Responsive contract — all 200 variants, five widths
-
-| Width | Required behaviour |
-|---|---|
-| 360 | no horizontal scroll · 44 px targets · text ≥ 13 px · safe-area insets honoured |
-| 768 | collapse per the variant’s declared `mobile_strategy` |
-| 1024 | nav reveals, no truncation, chrome ≤ 88 px tall |
-| 1440 | canonical render — must match the repo’s calm, generous rhythm |
-| 1920 | container caps at `--n-container`; no stretched line lengths |
-
-Verification = a **real render served from the repo root** (`python3 -m http.server`, §0C), not
-media-query archaeology: open the variant page or the gallery and *look*. Media-query presence is
-checked statically by G4; the served render is G13 + the critique loop (§8 Phase 2 step 4).
-
-### 5.5 Motion spec (designed, not accidental)
-
-| Layer | Spec |
-|---|---|
-| Micro (hover, press, toggle) | 120–200 ms, ease-out, transform/opacity only |
-| Standard (open/close, scrolled state) | 200–320 ms, `cubic-bezier(.2,.8,.2,1)` |
-| Entrance (footer reveal, overlay) | 300–600 ms, stagger 40–60 ms/child, max total ~700 ms |
-| Scrub (progress, parallax, wordmark scale) | scroll-linked, linear, no JS rAF if `animation-timeline` is supported |
-| Exits | 25% faster than entrances |
-| Signature | **exactly one** per variant, named in `meta.json` |
-| Reduced motion | `prefers-reduced-motion: reduce` → opacity-only 150 ms; marquees, parallax, curtains, magnetic and scrub effects **disabled entirely** (hard gate G6) |
-
-Animate only `transform, opacity, filter, clip-path, background-color, color, border-color` — plus `grid-template-rows` for accordion footers (the single sanctioned exception). Never animate `height/width/top/left/margin`. One rAF loop maximum per page; throttle pointer effects to rAF; max 2 `will-change` targets, removed after the animation.
-
-### 5.6 Per-variant performance budget
-
-| Metric | Budget |
-|---|---|
-| JS | ≤ 12 KB gzipped (a dependency-free CSS-only build must also exist per variant) |
-| DOM added | ≤ 90 nodes header · ≤ 140 footer |
-| CLS | **0** — reserve exact height; sticky chrome must not reflow content |
-| Paint | no full-page repaint on scroll; no per-frame layout reads |
-| Network | zero external requests **except the one locked Google Fonts stylesheet** (§0C rule 2) |
-| Gallery page Lighthouse | Perf ≥ 95 · A11y 100 · Best-practices ≥ 95 |
-
-### 5.7 Google-able integration requirement
-Each variant ships `index.html` (standalone demo), `style.css` (scoped to `[data-chrome="H034"]`), `script.js` (progressive enhancement, page works with JS off), and `meta.json`. Mounting must work with the one-line API in §2.6, and no variant may leak global CSS into its host page.
-
-The standalone demo page is a **showcase, not a scaffold**: it carries the §0C head block (color-scheme meta, locked font link, theme-boot script), links `runtime/demo.css`, renders finished at every §5.4 width over `python3 -m http.server` from the repo root, and keeps every asset reference relative so the lab works under any server root.
-
-### 5.8 CSS OWNERSHIP CONTRACT — each variant owns its look (no megatemplate, no Bootstrap)
-
-This is the contract that failed in the v2 generator run. Read it before writing `tools/generate.mjs` or any `style.css`.
-
-#### What “own CSS design” means
-1. **The variant’s `style.css` is the source of truth for that chrome’s appearance.** It must set layout, colour/surface (A7), type scale in chrome, CTA chrome, borders/shadows, states (hover/focus/active/open/scrolled), and the mobile collapse for **that** HTML.
-2. **`runtime/chrome.css` holds only true shared primitives** (skip-link, focus-ring helper, reduced-motion reminders, maybe `.eyebrow` / base `.cta` defaults). It must **not** be a 200-variant kitchen sink. If a rule is specific to a paradigm (mega, drawer, wizard…), it belongs in the variants that use it — or in a tiny optional partial that those variants `@import` — never in every `style.css`.
-3. **No megatemplate.** Forbidden pattern: one giant CSS string containing every family’s selectors, then `scopeCss(css, "[data-chrome=H0xx]")` for all 100 headers. Required pattern: build CSS from the modules the HTML actually emits (bar + nav paradigm + CTA + A7 skin + mobile + signature motion). After emit, **dead-class budget ≤ 15%**:  
-   `dead = class selectors in style.css whose class never appears in that variant’s index.html` (ignore pseudo-elements and state classes like `is-open` / `is-on` that JS toggles on existing nodes).
-4. **No third-party CSS framework runtime.** Banned in any `index.html` / `style.css` / vendor folder: Bootstrap, Tailwind (Play CDN or built utilities as the design system), Bulma, Foundation, UIKit, Materialize, Semantic UI, Animate.css-as-dependency, Font Awesome CSS kits used as the layout system. You may study their docs for *patterns*; you implement Nestlancer CSS.
-5. **Hard-coded hex outside §2.2 is still banned** (G3) — except the documented dark-theme literals already in §2.2 / tokens.css (`#0b1720`, `#0f1e29`, `#e8eef4`, `#b9c6d0`, `#8aa0b3`, `rgba(255,255,255,.08)`, `#fff` on teal CTAs). Prefer `var(--n-*)` everywhere else.
-6. **`meta.json` must list `A7_surface_skin`** and a one-line `skin_notes` describing the composition (e.g. `"ink 30px utility + glass main bar"`).
-7. **Byte sanity:** after dropping dead rules, header `style.css` should typically land **≤ 8 KB** and footer **≤ 7 KB** unless the paradigm truly needs more (mega + overlay). A 19 KB header stylesheet with 59 unused class selectors is an automatic G14 fail.
-
-#### Generator / agent checklist (print per batch)
-```
-CSS OWNERSHIP
-Variant: <ID>
-A7 skin: <skin id>
-Classes in HTML: <n>   Class selectors in CSS: <n>   Dead: <n> (<pct>%)
-Framework CDN links: 0
-Megatemplate reused: NO
-Glance vs previous family: DISTINCT / SAME (if SAME → change A7 or structure before shipping)
-```
-
----
-
-## 6) THE 200 VARIANTS
-
-### 6.1 Headers — 25 families × 4 variants = **100**
-
-Each family’s 4 variants differ on container geometry, theme inversion, motion primitive and mobile collapse. **Each family also locks one A7 surface skin** (neighbouring families must differ). Assign skins across the 25 families so at least 8 of the 10 recipes in §5.0 appear. Default batch priority in brackets.
-
-| # | Family | IDs | Structural signature | Seed inspirations | Batch |
-|---|---|---|---|---|---|
-| 1 | Classic centred/split nav | H001–H004 | logo left, 7 inline links, hairline | repo baseline, nytimes | **P0** |
-| 2 | Logo-left inline (+ hairline) | H005–H008 | single row, calm density | repo, stripe | **P0** |
-| 16 | Auth / app minimal | H061–H064 | logo + one icon button only | repo auth screens | **P0** |
-| 3 | Two-tier utility + main | H009–H012 | thin utility strip (locale/currency/status) | apple, msft, aws | P1 |
-| 4 | Mega-menu panel | H013–H016 | multi-column panel, feature tiles | shopify, amazon, adobe | P1 |
-| 14 | Search-forward | H053–H056 | large inline search IS the nav | airbnb, booking, etsy | P1 |
-| 18 | Announcement bar + nav | H069–H072 | dismissible bar (`Intake open`) | stripe, webflow | P1 |
-| 19 | Marquee / ticker nav | H073–H076 | infinite domain ticker under logo | repo ticker row | P1 |
-| 22 | Segmented tabs | H085–H088 | sliding segmented control as nav | repo "Product" section | P1 |
-| 23 | Dual-CTA split | H089–H092 | equal-weight `Sign in` + `Start a project` | conversion SaaS | P1 |
-| 25 | Editorial typographic | H097–H100 | oversized serif wordmark, thin rules | pentagram, editorial | P1 |
-| 5 | Floating glass pill | H017–H020 | detached rounded container, blur, inset | linear, vercel, raycast | P2 |
-| 6 | Sticky shrink | H021–H024 | 72 → 56 px, logo scales down | most SaaS | P2 |
-| 11 | Bottom-docked mobile bar | H041–H044 | 4–5 icon tabs, safe-area padding | native-feel apps | P2 |
-| 12 | Split-identity (client ⇄ freelancer) | H045–H048 | dual-audience switcher as the hero | upwork, fiverr, contra | P2 |
-| 13 | Marketplace category rail | H049–H052 | divider + category chips/list | etsy, flipkart, myntra | P2 |
-| 17 | Wizard / intake progress | H065–H068 | step dots + progress (`Start a project`) | checkout flows | P2 |
-| 21 | Docs / section nav | H081–H084 | breadcrumb + tab row, second sticky row | github, stripe docs | P2 |
-| 7 | Auto-hide on scroll-down | H025–H028 | `translateY(-100%)` down, returns up | medium, mobile web | P3 |
-| 8 | Transparent-over-hero → solid | H029–H032 | mesh shows through, then solidifies | airbnb, lusion | P3 |
-| 9 | Fullscreen overlay nav | H033–H036 | burger → full-viewport panel, mega type | studios, bucket K | P3 |
-| 10 | Side drawer nav | H037–H040 | right drawer + scrim, nested accordions | e-com, dashboards | P3 |
-| 15 | Command-palette native (⌘K) | H057–H060 | “Search… ⌘K” pill + palette overlay | linear, supabase, clerk | P3 |
-| 20 | Scroll-progress header | H077–H080 | 2 px progress line + section label | editorial | P3 |
-| 24 | Edge icon-rail + minimal bar | H093–H096 | 64 px vertical rail + slim bar | dashboards, IDE-like | P3 |
-
-### 6.2 Footers — 20 families × 5 variants = **100**
-
-Same craft bar as headers. **Each footer family locks one A7 skin**; use ≥6 distinct recipes across the 20 families (mesh, invert, dual-surface, tint-wash, editorial-rules, solid-canvas are natural fits).
-
-| # | Family | IDs | Structural signature | Seed inspirations | Batch |
-|---|---|---|---|---|---|
-| 1 | Classic 4-column grid + blurb | F001–F005 | brand col + 3 link cols + legal row | repo baseline | **P0** |
-| 3 | Newsletter-lead | F011–F015 | email capture as the dominant element | substack, medium | P1 |
-| 4 | CTA banner fused to footer | F016–F020 | `Ready to ship with clarity?` merges in | SaaS, repo pre-footer | P1 |
-| 5 | Mega sitemap | F021–F025 | 5–6 dense columns covering all 17 pages | amazon, apple | P1 |
-| 10 | Mesh / gradient footer | F046–F050 | repo hero mesh echoed at the base | repo language | P1 |
-| 11 | Editorial / issue-style | F051–F055 | serif, dated, “Journal” framing | NYT, economist | P1 |
-| 12 | Marquee wordmark reveal | F056–F060 | giant wordmark scrolls on enter | bucket K | P1 |
-| 13 | Proof / stat rail | F061–F065 | count-up ₹4.2L, payouts cleared | fintech | P1 |
-| 17 | Curtain reveal on overscroll | F081–F085 | content slides up, footer pinned behind | bucket K | P1 |
-| 7 | Minimal single-row | F031–F035 | wordmark left, © right, nothing else | minimal.gallery | P2 |
-| 8 | Two-bar (links bar + legal bar) | F036–F040 | separated bands, different tones | corporate | P2 |
-| 14 | Locale + currency switcher | F066–F070 | INR/USD, en-IN listbox | India products | P2 |
-| 15 | Social-proof wall | F071–F075 | client logo grid + awards row | agencies | P2 |
-| 16 | Compact sticky mobile footer | F076–F080 | pinned CTA strip / tab bar | mobile web | P2 |
-| 19 | Compliance-heavy (India) | F091–F095 | Razorpay · PCI-DSS · GST · DPDP · grievance officer | Indian fintech | P2 |
-| 20 | Community & status | F096–F100 | status pill, changelog RSS, system status | dev tools | P2 |
-| 2 | Oversized wordmark | F006–F010 | giant `Nestlancer`, links above it | studios, bucket J | P3 |
-| 6 | Accordion columns | F026–F030 | collapse via `grid-template-rows` | gov/edu patterns | P3 |
-| 9 | Dark inverted + teal accents | F041–F045 | deep-surface bg, mint links | dev tools | P3 |
-| 18 | App / QR download | F086–F090 | QR block + store buttons for Project Hub | consumer apps | P3 |
-
-### 6.3 Batch plan
-
-| Batch | Contents | Variants |
-|---|---|---|
-| **P0 — Repo-faithful** | H001–H008, H061–H064, F001–F010 | 22 |
-| **P1 — Public & marketing** | header families 3,4,14,18,19,22,23,25 · footer families 3,4,5,10,11,12,13,17 | 72 |
-| **P2 — Portal, commerce & trust** | header families 5,6,11,12,13,17,21 · footer families 7,8,14,15,16,19,20 | 63 |
-| **P3 — Product, app & experimental** | header families 7,8,9,10,15,20,24 · footer families 2,6,9,18 | 48 |
-| **P4 — Showcase polish** | elevate the best 10 headers + 10 footers to hero quality; regenerate every QA failure | — |
-
-P0 must be **pixel-rhythm faithful** to the repo screenshots — it is the control group that proves the other 95 are deliberate departures, not drift.
-
----
-
-## 7) COMPONENT ← REFERENCE MAP (APPLY LITERALLY)
-
-| Chrome component | Study first | A+ craft goal |
-|---|---|---|
-| Wordmark lockup | repo screenshots, pentagram | navy + teal full-stop, optical alignment, dark-mode safe |
-| Primary nav row | linear, stripe, apple | correct rhythm, hover intent, `aria-current` state |
-| Mega-menu panel | shopify, adobe, tailwindui | column grid, feature tile, 35 ms child stagger, Esc to close |
-| Search / ⌘K | airbnb, linear, shadcn | large inline search or palette, empty state, keyboard nav |
-| Dual-audience switcher | upwork, fiverr, contra | client ⇄ freelancer segmented control, state persist |
-| Category rail / chips | etsy, flipkart, myntra | scroll-snap chips, active pill morph (m-15) |
-| Theme toggle | repo screenshots | sun/moon icon, View-Transition cross-fade (m-12) |
-| Primary CTA | uiverse, hover.css, magicui (restrained) | teal pill, one shine sweep, press 0.98, focus ring |
-| Announcement bar | stripe, webflow | dismiss + `localStorage`, 220 ms collapse, never re-show |
-| Ticker / marquee | repo ticker row, magicui | 28 s linear, pause on hover, reduced-motion off |
-| Footer sitemap columns | stripe, apple, atlassian | mono eyebrows, 3–6 cols, hover roll-up (m-28) |
-| Newsletter form | uiverse, codemyui, substack | clear focus, inline validation, button→tick morph (m-34) |
-| Legal / compliance row | zerodha, razorpay, cred | tabular ₹, DPDP/GST line, muted 12 px, never crowded |
-| Social row | hover.css, bucket G | monochrome SVG icons, 40 ms stagger pop (m-27) |
-| Locale / currency | booking, wise, zerodha | listbox with INR/USD + en-IN, 180 ms slide |
-| Status / live pill | repo pills, linear | `Intake open` dot pulse (m-25), honest labels only |
-| Back-to-top | keyframes.app, codemyui | appears after 60 vh, orbit icon rotate, spring |
-| Footer reveal | cuberto, bucket K, motion.dev | IO-triggered 600 ms with column stagger, or `animation-timeline: view()` |
-| Accordion footer | flowbite, preline | `grid-template-rows` collapse, chevron rotate, `aria-expanded` |
-| App / QR block | consumer apps | QR + store badges as inline SVG placeholders (never real store logos) |
-
----
-
-## 8) EXECUTION WORKFLOW
-
-### Phase 0 — Orient
-1. Clone `ui-designing.git`; confirm `Nestlancer-public-screenshots/public/*.webp` (17 files) and this prompt.
-2. Open `013-marketing-homepage.webp` at full size and crop-open the header and footer regions. Note gutters, pill radius, hairline weight, eyebrow spacing.
-3. Create the tree, write `.gitignore` (`research/raw/`, `tmp/`, `node_modules/`).
-4. Confirm workspace root + free space vs the 128 MB budget.
-
-### Phase R — Reference Gate (§3)
-Lock `research/top-200.json` from live rankings, complete capture until **≥200 world-top sites captured**, run the motion probe, cluster patterns, print the **Research Gate** block. Then per batch: ≥6 searches, ≥5 fetches from the locked list, ≥2 screenshot re-opens, and the **Reference Contract**.
-
-### Phase 1 — Foundation (do once, before variants)
-- `chrome-lab/tokens/tokens.css` + `tokens.json` from §2.2 (light + dark + reduced-motion block).
-- `chrome-lab/runtime/chrome.css` — shared primitives: pill CTA, hairline, eyebrow, glass utility, focus ring, skip link, scroll-progress, `.rise` reveal, `color-scheme` per theme.
-- `chrome-lab/runtime/chrome-motion.js` — one small runtime implementing m-01…m-34 as opt-in data attributes (`data-motion="m-03"`), with a global reduced-motion short-circuit.
-- `chrome-lab/runtime/demo.css` — the demo-page shell (§0C rule 3): styles `main`/H1/mount snippet/axis chips/placeholder blocks around every variant page; never loaded by mounted chrome.
-- `chrome-lab/gallery/index.html` + `app.js` (isolated iframes, lazy mount) **first**, so every variant is visible as you go — header frames ≈ 264 px, footer frames ≈ 600 px, theme switch themes the page itself.
-- Repo-root `index.html` redirecting to `chrome-lab/gallery/` (§0C rule 1).
-
-### Phase 2 — Variant batches (strict P0 → P4 order)
-For each batch of 10:
-1. Print the **Reference Contract** (≥5 rows) for that batch.
-2. Build variants one family at a time — never generate two families from the same template mentally. Lock **A7 surface skin first**, then change the **container**, then the paradigm, then the motion. Emit CSS from modules for that HTML only (§5.8) — never clone a previous family’s stylesheet.
-3. Write `index.html`, `style.css`, `script.js`, `meta.json` straight into the workspace tree.
-4. **Critique loop** — serve the repo (`python3 -m http.server 8123`) and render at **1440 px and 390 px**, light and dark, in a real browser (never from `file://`). Ask as a harsh design director:
-   - Does this look like the repo, or like a generic template wearing teal?
-   - Is there exactly one signature motion, and is it *seen*?
-   - Is the hierarchy confident at a glance, or busy?
-   - **Cover the ID — can you name the family from the surface skin alone?** If it is “the same white bar,” fail and change A7.
-   - Does `style.css` only style classes that exist in this HTML? Print the §5.8 CSS Ownership block.
-   - In the browser (§0C): real fonts loaded? demo shell styled? no 404s, no console errors, no light-flash with `?theme=dark`? burger far-right and drawer working at 390 px?
-   Fix, re-render, max 3 loops, then note leftovers in `QA-REPORT.md`.
-5. Run gates G1, G3, G4, G5, G6, G8, **G14** on the batch before starting the next.
-6. Print the **Research Gate** + **Workspace Delivery Check** counters.
-
-### Phase 3 — QA & acceptance (full set)
-Run §9's gates over all 200 programmatically. Regenerate failures (max 3 attempts each), then flag for human review with a reason.
-
----
-
-## 9) QA ACCEPTANCE GATES
-
-| # | Gate | Test | Fail → |
-|---|---|---|---|
-| G1 | **Uniqueness** | pairwise diff on the **7** axes ⇒ every pair differs ≥3 **and** at least one differing axis is A1/A2/A3/A7; within a family, no shared motion id; neighbouring families do not share A7 | regenerate variant |
-| G2 | **Count** | exactly 100 headers + 100 footers; IDs H001–H100 / F001–F100 contiguous, no gaps, no stubs | build the missing ones |
-| G3 | Brand fidelity | only §2.2 tokens (+ documented dark literals); no second accent hue; **no Bootstrap/Tailwind/framework CDN**; contrast ≥4.5:1 light **and** dark | fix tokens / strip CDN |
-| G4 | Responsive | Playwright: no horizontal scroll + chrome height within budget at 360/768/1024/1440/1920 | fix layout |
-| G5 | A11y | axe-core zero critical/serious; keyboard path: skip link → every action reachable · Esc closes · focus returns | fix |
-| G6 | Reduced motion | with `prefers-reduced-motion: reduce` → zero transform/scroll-linked animations remain | fix |
-| G7 | Performance | §5.6 budgets (JS ≤12 KB, DOM caps, CLS 0, no externals beyond the locked font link) | trim |
-| G8 | Traceability | every `meta.json` cites ≥2 captured sites + ≥1 measured `m-XX`, and states `diff_from_prev` axes | add citations |
-| G9 | Attribution & originality | zero copied logos, images, or proprietary copy; `docs/RESEARCH-NOTES.md` credits every source URL | strip & rewrite |
-| G10 | Integration | one-line mount API works; CSS scoped, zero global leakage; page works with JS disabled | fix scoping |
-| G11 | Content fidelity | all strings from §2.4; ₹ values tabular and correct; no invented features/clients | restore copy |
-| G12 | Workspace delivery | §0A manifest lists real files in the workspace; `research/*.json` present; size ≤128 MB | sync & trim |
-| G13 | **Browser-serve** | §0C contract, run statically by `tools/qa.mjs`: locked font link + `demo.css` + theme-boot + color-scheme meta in every page; all relative assets resolve (no 404s over `python3 -m http.server`); no malformed glued selectors; mobile burger ordered after actions; repo-root redirect present | fix & re-serve |
-| G14 | **Visual skin + CSS ownership** | every `meta.json` has `A7_surface_skin` from §5.0; ≥8 distinct A7 values used across header families and ≥6 across footer families; dead-class selectors in each `style.css` ≤ 15% of class selectors (state classes on existing nodes allowed); no megatemplate fingerprint (same normalised CSS hash on >4 variants after stripping the chrome id); zero framework CDN / `bootstrap` / `tailwind` / `bulma` string hits in variant HTML/CSS; header `style.css` ≤ 8 KB and footer ≤ 7 KB unless `meta.budget.css_exception` justifies mega/overlay | rebuild CSS from modules; change A7 |
-
-`docs/QA-REPORT.md` ends with: `gate · passed · failed · regenerated · notes` + a **family × status** table proving every family is complete (include A7 skin column).
-
----
-
-## 10) SESSION I/O FORMAT
-
-### Start of session (print all seven)
-1. Confirmed: research gate status (`top-200 locked` · `captured <n>/200`) and batch to be worked.
-2. User workspace root path.
-3. Families in this batch + variant IDs.
-4. Repo screenshots re-opened for this batch.
-5. The **Reference Contract** table (≥5 rows).
-6. A+ definition for this batch (3 bullets) + the 7 axes claimed (incl. A7 skin).
-7. Files that will exist when the batch is done.
-
-### After each batch
-- `ls` proof of the variant paths in the workspace (not the sandbox).
-- Gate results for G1/G3/G4/G5/G6/G8/**G13**/**G14**.
-- Updated counters: `<n>/100` headers, `<n>/100` footers · A7 skins used this batch: `<list>`.
-- The §0C serve statement: “served at localhost:8123 and looked at 1440/390, both themes” — or the printed limitation that no browser exists in the sandbox.
-- The CSS Ownership block for each variant in the batch.
-
-### End of session
-1. Files changed (workspace paths only).
-2. Per family: variants built · inspiration cited · signature motion.
-3. Critique-loop notes — what read as “C template”, what became A+.
-4. **Research Gate** block.
-5. **Workspace Delivery Check** block (§0A).
-6. Remaining batches from §6.3.
-7. Any variant flagged for human review with a reason.
-
-### Refusal rules
-- Do not proceed past Phase R without `top-200.json` locked and ≥200 ranked sites captured.
-- Do not pad research with random / unranked / obscure URLs.
-- Do not ship recolours as “different types”.
-- Do not ship structure-clones that share one white-bar / one footer surface (fail G14).
-- Do not stub, skip, or `TODO` any variant.
-- Do not use a colour, font, or asset outside §2.2; do not add Bootstrap/Tailwind/other CSS framework CDNs.
-- Do not emit megatemplate CSS (dead-class rate > 15%).
-- Do not leave deliverables outside the workspace tree.
-- Do not claim completion while any gate in §9 is failing.
-- Do not edit anything under `Nestlancer-public-screenshots/`.
-
----
+## 10) REFUSAL RULES
+- Do not build more than 20 headers or 20 footers. Do not build a header without its matching footer (or vice-versa).
+- Do not redraw, recolour, or replace the Nestlancer logo; do not use emoji or a CDN icon font as icons.
+- Do not add Bootstrap / Tailwind / any CSS framework, a font CDN, or any external request.
+- Do not ship recolours as different pairs; do not stub, `TODO`, or write "same as above".
+- Do not invent copy, clients, prices, certifications or features outside §2.3.
+- Never edit anything under `Nestlancer-public-screenshots/`.
 
 ## 11) START COMMAND
-
-Begin now:
-1. Clone `https://github.com/nestlancer/ui-designing.git`; verify this prompt (and Nestlancer screenshots if present).
-2. Create `chrome-lab/` (tokens, runtime, headers, footers, gallery, docs), `research/`, `tools/`, `docs/`; write `.gitignore`; confirm workspace root and size budget.
-3. Open `013-marketing-homepage.webp`; crop and study the real header and footer. Record measured values (you should reproduce `#24877f`, `#0a2543`, `#f9fbfc`, 72 px, 1200 px, pill CTAs).
-4. Write `tools/capture.mjs` (Playwright, §3.4) and `tools/analyse.mjs`.
-5. **Fetch live world rankings** (§3.1.0) → write `research/top-200.json` (exactly 200 ranked hosts). Print the TOP-200 LIST LOCKED block.
-6. Run Phase R capture over that list until **≥200 sites captured**; extract chrome skeletons + computed styles + cropped references.
-7. Run the motion probe (§3.5); build `research/motion-index.json` with **≥30 primitives** and real ms/easing/trigger values.
-8. Build `research/pattern-index.json` (≥25 header archetypes, ≥20 footer archetypes) and `docs/RESEARCH-NOTES.md` (≥200 lines, each with rank cite).
-9. **Print the Research Gate block.** If it does not PASS, substitute next suitable **ranked** sites and re-run — do not continue, do not pad with random URLs.
-10. Write `tokens.css` + `chrome.css` + `chrome-motion.js` + the gallery shell in the workspace.
-11. Run **P0** (H001–H008, H061–H064, F001–F010): Reference Contract → build → critique loop at 1440/390 in both themes → gates → manifest.
-12. Continue **P1 → P2 → P3 → P4**, 10 variants at a time, printing the Reference Contract and Delivery Check per batch. Never stub, never recolour.
-13. Run the §0C **browser-serve sign-off**: `python3 -m http.server 8123` from the repo root → open `/`, the gallery, and 3–5 variants at 1440 px and 390 px in both themes; verify fonts, demo shell, footer thumbnails, zero 404s, zero console errors, working mobile drawer. Print the result.
-14. Finish with `docs/QA-REPORT.md` (all **14** gates), the final **Workspace Delivery Check**, and the honest count: `top-200 locked`, `sites captured / attempted`, `primitives`, `headers built`, `footers built`, `A7 skins used`, `gates passed`, `flagged for review`.
-
-If context runs short: finish the current batch + foundation files, sync everything, print the manifest, and hand off with the exact next batch id — never leave a half-written variant behind.
-
----
-
-## APPENDIX A — Differentiation cheat sheet (use when you feel a variant going stale)
-
-Ask: *what would a different studio do with the same seven links?* Then change **one axis at a time** and re-render:
-
-| Stuck on… | Rotate to |
-|---|---|
-| Container | full-bleed → 1200 contained → floating pill inset 16 → split 50/50 → asymmetric 8/4 → docked rail |
-| Paradigm | inline → dropdown → mega → overlay → drawer → tab bar → segmented → breadcrumb → search-first → palette |
-| Scroll | static → sticky → shrink → auto-hide → transparent→solid → progress-linked → pinned-then-release |
-| Motion | pull a **different** `m-XX`; if the family already used one, exclude it |
-| Disclosure | hover → click → keyboard-first → hover-intent 120 ms → always-visible → accordion |
-| CTA | teal pill → outline pill → split-arrow pill → ghost text → dual equal CTA → gradient edge → icon-only → sticky mobile bar |
-| **Surface skin (A7)** | solid-canvas → glass-hairline → ink-band → tint-wash → mesh-zone → elevated-soft → editorial-rules → dual-surface → invert-chrome → pill-float |
-| Theme | force the variant to be beautiful in **dark first**, then reconcile light |
-| Density | go one step calmer *or* one step denser than the repo — never both in one variant |
-| CSS bloat | delete every selector whose class is not in this HTML; rebuild from modules — never scope a kitchen-sink blob |
-
-## APPENDIX B — Ready recipes for the six most-used primitives
-
-```css
-/* m-03 glass engage — toggled by class at a measured threshold */
-.chrome[data-scrolled="true"]{
-  background: color-mix(in oklab, var(--n-bg) 78%, transparent);
-  backdrop-filter: blur(14px) saturate(1.4);
-  -webkit-backdrop-filter: blur(14px) saturate(1.4);
-  border-bottom-color: var(--n-hairline);
-  transition: background-color .24s linear;
-}
-@supports not (backdrop-filter: blur(2px)){ .chrome[data-scrolled="true"]{ background: var(--n-bg) } }
-
-/* m-01 sticky shrink */
-.chrome{ --h:72px; height:var(--h); transition: height .2s cubic-bezier(.2,.8,.2,1) }
-.chrome[data-scrolled="true"]{ --h:56px }
-.chrome__logo{ transform-origin:left center; transition: transform .2s cubic-bezier(.2,.8,.2,1) }
-.chrome[data-scrolled="true"] .chrome__logo{ transform:scale(.92) }
-
-/* m-05 sliding nav ink bar */
-.nav__ink{ position:absolute; bottom:-1px; height:2px; background:var(--n-teal);
-  transition: transform .22s cubic-bezier(.2,.8,.2,1), width .22s cubic-bezier(.2,.8,.2,1) }
-
-/* m-25 live status dot */
-.dot{ position:relative; width:7px; height:7px; border-radius:50%; background:var(--n-live) }
-.dot::after{ content:''; position:absolute; inset:-4px; border-radius:50%;
-  border:1px solid var(--n-live); animation: pulse 2s ease-in-out infinite }
-@keyframes pulse{ 0%,100%{ transform:scale(.8); opacity:.9 } 50%{ transform:scale(1.4); opacity:0 } }
-
-/* m-19 footer reveal (native scroll timeline, JS fallback via IntersectionObserver) */
-@supports (animation-timeline: view()){
-  .footer__col{ animation: rise .6s both; animation-timeline: view();
-    animation-range: entry 10% cover 30% }
-}
-@keyframes rise{ from{ opacity:0; transform:translateY(16px) } to{ opacity:1; transform:none } }
-
-/* m-06 magnetic CTA + press depth */
-.cta{ transition: transform .18s cubic-bezier(.2,.8,.2,1) }
-.cta:active{ transform: scale(.98) }
-
-/* reduced-motion contract — global, non-negotiable (G6) */
-@media (prefers-reduced-motion: reduce){
-  *, *::before, *::after{
-    animation-duration:.001ms !important; animation-iteration-count:1 !important;
-    transition-duration:150ms !important; transition-property: opacity, color, background-color, border-color !important;
-  }
-  .footer__col, .nav__ink, .cta{ transform:none !important }
-  [data-motion^="m-"]{ animation:none !important }
-}
-```
+1. Read `example-header.html`, `example-footer.html`, the logo SVGs, and screenshots 013 / 015 / 006.
+2. Set up `chrome-lab/assets/` (real logos + mark-only cuts) and the shared icon set.
+3. Build **P01–P05** (header → matching footer → pair page → pair.json), look at them in a browser, fix, then continue P06 → P20 in batches of 5.
+4. Gallery + root redirect + `docs/RESEARCH-NOTES.md` (20 lines). Print the §9 report.
 ````
 
 ---
 
-## How to use (operator notes)
+## Operator notes
+- **Review is easy now:** open `chrome-lab/index.html` — 20 cards, each a header + footer pair. If any card's footer looks like a different site from its header, say: *"P12 fails the pair test — rebuild its footer from the pair DNA."*
+- **Logo wrong?** *"Use the real logo-full-light/dark.svg — no redrawn glyph."*
+- **Too busy / too heavy?** *"Cut P09 CSS to the example's style — remove anything not used by the HTML."*
+- **Swap one pair:** *"Replace P14 with a pair built around a docs breadcrumb header + sitemap footer."*
+- **Freeze:** *"P01–P05 approved — never regenerate them."*
 
-### The run, end to end
-1. Clone the repo (or let the agent clone it) — `header-footer-prompt.md` must be present (Nestlancer screenshots if available; otherwise measure tokens from §2.2).
-2. Paste everything between the ```` ``` ```` fences into **Arena Agent Mode** (or Cursor).
-3. Watch for the **Research Gate** block first. If there is no `top-200.json`, or it prints `Captured: 64`, or URLs look random/unranked, say: *“Research gate failed — fetch Similarweb/Semrush world rankings, lock 200 top sites, capture ≥200, no random pads — then continue.”*
-4. Watch the **Workspace** panel: `chrome-lab/` should fill up batch by batch. If files only appear in chat, say: *“Sync chrome-lab to the User Workspace now — sandbox-only does not count.”*
-5. **Serve it yourself before believing “done”.** In the repo root: `python3 -m http.server 8123` → open `http://localhost:8123/`. You should land in the gallery with real Fraunces/Inter/Plex Mono, styled demo pages, and whole footer thumbnails (dark toggle included). If it looks raw — Georgia everywhere, text stuck to the screen edges, cropped footers — say: *“Browser-serve contract failed — re-check §0C (font link, demo.css, glued selectors, mobile bar) and re-run `node tools/qa.mjs` until G13 passes.”*
-6. **Glance the gallery for skins.** Cover the IDs. If two families look like the same white bar / same footer slab, say: *“G14 failed — assign distinct A7 surface skins and rebuild owned CSS (no megatemplate).”* Do not accept “axes differ in meta.json” as a substitute for a visible skin.
-7. Read `docs/QA-REPORT.md` at the end; if G1 or G14 shows failures, ask for regeneration of exactly those IDs. All **14** gates must pass.
-
-### Useful mid-run commands
-| Goal | Say |
+## What v4 fixes vs v3
+| v3 run | v4 |
 |---|---|
-| Different flavour of a batch | `Rebuild H017–H020 with dark-first treatment, a distinct A7 skin, and a different motion primitive each.` |
-| Same skin everywhere | `G14 fail — reassign A7 across families and rebuild owned style.css (no megatemplate).` |
-| Research looks random | `Rebuild research/top-200.json from Similarweb + Semrush live ranks; drop unranked hosts; capture until ≥200.` |
-| More range | `Add 5 footers that use m-20 curtain reveal, no duplicates of existing axes.` |
-| Audit only | `Run §9 gates over the existing set and output only failures with reasons.` |
-| Freeze | `Freeze F001–F010 — they're approved. Never regenerate them.` |
-| Integration | `Generate the one-line mount snippets for all 100 headers against /pricing and /portal.` |
-
-### Practical notes
-- Expect **Phase R to dominate runtime** — **200** world-top site captures with scroll-triggering is genuinely slow. Running ranking → capture → generation as separate turns is normal and keeps quality high.
-- Several top ranks will block automation or be unsuitable (NSFW, gambling, app shells). That is planned for: take the **next suitable ranked** host — never a random blog — until `captured ≥ 200`.
-- The **P0 batch is a control group.** Approve it before P1 — if P0 doesn't match the repo rhythm, every later variant inherits the drift.
-
-## What this prompt fixes vs a naive “make 100 headers” run
-
-| Naive run | This prompt |
-|---|---|
-| 100 random URLs listed as “inspiration”, never opened | **§0B + §3.1.0**: live world rankings → `top-200.json` → **≥200 ranked sites captured** |
-| Obscure blogs / inventing domains to hit a count | Banned; substitutes must be **next suitable ranked** host only |
-| 100 recolours of one template | **7-axis uniqueness test** (incl. A7 surface skin) + QA gate G1 rejects any pair differing on <3 axes |
-| Structure-unique but one shared white-bar skin | **A7 skins** + gallery glance + gate **G14** |
-| Megatemplate CSS / Bootstrap CDN / “no design” | **§5.8 CSS Ownership** — custom Nestlancer CSS only, dead-class ≤15%, no framework CDN |
-| Motion described in adjectives | `getAnimations()` + scroll probe capture **real ms/easing/thresholds** into `motion-index.json` |
-| Footers as an afterthought (90 identical bars) | **20 footer families × 5** with the same craft bar as headers, incl. curtain, marquee, compliance, accordion, locale |
-| Design drifts off-brand | **Measured tokens** pixel-sampled from the repo + gate G3 |
-| 40 done, 60 “same as above” | strict **P0 → P4 batching**, 10 at a time, no stubs, gate G2 |
-| Accessibility postponed | G5 (axe + keyboard) and G6 (reduced motion) are **pass/fail**, not polish |
-| “Done!” with nothing in the ZIP | **§0A Workspace Delivery Check** + manifest every batch, gate G12 |
-| Header breaks the host page | one-line mount API, scoped CSS, JS-off support, CLS 0, gate G10/G7 |
-| Files “work” but the browser shows raw, wrong-font, broken chrome over a local server | **§0C browser-serve contract** + gate **G13** + `runtime/demo.css` + the one locked font link + comment-safe CSS scoping |
+| 100 headers + 100 footers = 200 things to review | **20 pairs** (20 + 20) |
+| Header and footer designed separately → mismatched | **Pair DNA + pair test** (§3) |
+| Invented bird glyph + serif wordmark | **Real logo SVGs** + mark-only cuts, never redrawn |
+| Icons ad hoc / missing | One inline-SVG icon set shared by every header and footer |
+| Megatemplate CSS, 14 KB+ stylesheets | Example-style, hand-written, ≤ 16 KB files incl. the shared base block |
+| 200-site capture, 34 motion primitives, 14 gates, QA matrices | ~20 reference notes, 6 compact quality rules |
+| Fraunces/Inter/Plex via Google Fonts link | System/Inter sans stack, zero external requests |

@@ -1,0 +1,13 @@
+{
+  "id": "P09",
+  "name": "Search-forward",
+  "skin": "tint",
+  "header": "A wide pill search field is the centre of the bar; nav links sit in a quiet second row.",
+  "footer": "Newsletter-led: the same 52 px pill field (with an email input) dominates, link columns sit beneath.",
+  "signature_motion": "Field ring grows in 160 ms on focus; the footer’s submit button morphs into a tick (220 ms)",
+  "references": [
+    "airbnb.com",
+    "medium.com"
+  ],
+  "dna": "One 52 px pill field with a teal button is the hero element of both halves — search at the top, email capture at the bottom — on the same mint tint."
+}

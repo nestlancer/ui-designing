@@ -1,0 +1,13 @@
+{
+  "id": "P19",
+  "name": "Two-tier locale",
+  "skin": "dual",
+  "header": "Two stacked surfaces: a grey utility tier (status, language, INR / USD) above the white main bar.",
+  "footer": "Columns on white, closed by the same grey tier carrying language, INR / USD and the Razorpay line.",
+  "signature_motion": "Currency segment swaps its pressed state in 180 ms; selects get a teal focus ring",
+  "references": [
+    "wise.com",
+    "booking.com"
+  ],
+  "dna": "Dual surface: the grey utility tier with the language select and the INR / USD segment sits above the main bar in the header and below the columns in the footer."
+}
